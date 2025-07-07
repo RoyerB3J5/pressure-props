@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+type Translations = typeof import('../i18n/en').default;
+
+export interface Props {
+  lang: string;
+  t?: Translations;
+}
+
+const { lang, t } = Astro.props;
+---
+<!doctype html>
+<html lang={lang} class='overflow-x-hidden'>
+	<head>
+		<style is:inline>
+      body {
+        visibility: hidden;
+      }
+      body.visible {
+        visibility: visible;
+      }
+    </style>
+		<meta charset="UTF-8" />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Pressure Props</title>
+	</head>
+	<body class='font-family antialiased overflow-x-hidden bg-[#FAFAFA] flex flex-col justify-center items-center'>
+		<Header content={t?.header} />
+		<main class='flex flex-col w-full'>
+			<slot />
+		</main>
+		<Footer content={t?.footer}/>
+	</body>
+</html>
+
+

@@ -1,0 +1,118 @@
+---
+import { Icon } from 'astro-icon/components';
+import Button from './Button.astro';
+
+type Translations = typeof import('../i18n/en').default;
+type HeaderContent = Translations['header'];
+interface Props {
+  content?: HeaderContent;
+}
+const { content } = Astro.props as Props;
+const icons = [
+  {
+    name: 'email',
+    href: '',
+  },
+  {
+    name: 'map',
+    href: '',
+  },
+  {
+    name: 'instagram',
+    href: '',
+  },
+  {
+    name: 'facebook',
+    href: '',
+  },
+];
+---
+<header class="w-full flex flex-col justify-center items-center">
+  <div class="w-full bg-primary-dark flex justify-center">
+    <div class="w-full flex justify-between items-center max-w-[1154px]">
+      <div class="flex items-center gap-[6px]">
+        <Icon name={"map"} class={"w-[19px] h-[19px] text-white"}/>
+        <p class="text-[16px] font-semibold leading-[52px] text-white">Orlando Florida</p>
+      </div>
+      <div class="flex items-center gap-[22px]">
+        <div class="flex items-center gap-[6px]">
+          {icons.map(i => (
+            <a href={i.href} class="size-[31px] bg-white rounded-full flex justify-center items-center">
+              <Icon name={i.name} class={"w-5 h-5 text-primary-dark-bold"}/>
+            </a>
+          ))}
+        </div>
+        <div class="flex items-center gap-[6px]">
+          <Icon name={"es"} class={"w-[31px] h-[31px] cursor-pointer"} id={"button-es"}/>
+          <Icon name={"en"} class={"w-[31px] h-[31px] cursor-pointer"} id={"button-en"}/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-full max-w-[1178px] min-h-[141px] flex justify-between items-center">
+    <div class="size-[91px] bg-primary-light rounded-full"></div>
+    <div class="flex items-center">
+      <nav class="flex items-center">
+        {
+          content?.nav.map((item, index)=>(
+            <div class="flex items-center gap-[14px] px-[7px]">
+              <div class={`${index === 0 ? "hidden" : ""} w-[3px] h-[40px] bg-primary-dark-bold`}></div>
+              <a href={item.href} class="text-[18px] text-center font-semibold leading-[52px] relative group transition-colors duration-300 hover:text-primary-light">
+                {item.label}
+                <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-light transition-all duration-300 ease-out group-hover:w-full"></span>
+              </a>
+            </div>
+          ))
+        }
+      </nav>
+      <Button class="button-gradient ml-[27.5px] mr-[27px]">
+        {content?.button}
+      </Button>
+      <div class="flex items-center gap-[6px] px-[7px]">
+        <img src="/phone.svg" alt="Telefono" width="48" height="48">
+        <div class="text-primary-dark-bold text-[16px] font-semibold leading-[24px] flex flex-col items-start justify-center">
+          <p>{content?.phone}</p>
+          <a href="" class="hover:text-primary transition-all duration-300 ease-in-out cursor-pointer">+1 (407) 493-0858</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<script is:inline>
+  const btnEs = document.getElementById('button-es')
+  btnEs.onclick = () => {
+    sessionStorage.setItem('langScroll', window.scrollY);
+    const newPath = window.location.pathname.replace(
+      /^\/(es|en)/,
+      `/es`,
+    );
+    window.location.href = newPath;
+  };
+  const btnEn = document.getElementById('button-en')
+  btnEn.onclick = () => {
+    sessionStorage.setItem('langScroll', window.scrollY);
+    const newPath = window.location.pathname.replace(
+      /^\/(es|en)/,
+      `/en`,
+    );
+    window.location.href = newPath;
+  };
+</script>
+<script is:inline>
+  // Restauración de posición con prevención de parpadeo
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedPosition = sessionStorage.getItem('langScroll');
+
+    if (savedPosition !== null) {
+      // Restaurar posición antes de mostrar contenido
+      window.scrollTo({
+        top: parseInt(savedPosition, 10),
+        behavior: 'instant',
+      });
+      sessionStorage.removeItem('langScroll');
+    }
+
+    // Mostrar contenido después de restaurar posición
+    document.body.classList.add('visible');
+  });
+</script>

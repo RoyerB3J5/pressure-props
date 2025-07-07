@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300..700&display=swap');
+@import "tailwindcss";
+@theme {
+  --color-primary: #0568A6;
+  --color-primary-dark: #064073;
+  --color-primary-dark-bold: #042340;
+  --color-primary-light: #0f8dbf;
+  --color-primary-light-extra: #1ab6d9;
+  --color-backgorund: #D9D9D9;
+  --color-background-dark: #787878;
+  --font-family: 'Red Hat Text', sans-serif;
+}
+.button-gradient{
+  background: linear-gradient(10deg, #042340 -9.14%, #0A5BA6 100.49%);
+}
+.button-gradient-2 {
+  background: linear-gradient(10deg, #0F8DBF -9.14%, #19B6D9 100.49%);
+}
+.shadow{
+  box-shadow: 0px 13px 24.5px 0px rgba(0, 0, 0, 0.25);
+}

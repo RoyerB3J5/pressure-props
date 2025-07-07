@@ -1,0 +1,42 @@
+---
+import { Icon } from 'astro-icon/components';
+import Button from '../../components/Button.astro';
+
+type Translations = typeof import('../../i18n/es').default;
+type HeroContent = Translations['main']['hero'];
+interface Props {
+  content: HeroContent;
+}
+const { content } = Astro.props as Props;
+---
+<section class="w-full bg-backgorund min-h-[661px] flex items-center justify-center relative">
+  <div class="w-full max-w-[1117px] flex justify-center items-center gap-[104px]">
+    <div class="max-w-[463px] flex flex-col items-center justify-center ">
+      <h1 set:html={content.title} class="text-center text-[44px] leading-[46px] font-medium text-primary-dark-bold "></h1>
+      <Icon name={"separate"} class={"w-[205px] h-auto mt-[29px] mb-[8px]"}/>
+      <img src="/main/google.png" alt="Icono de Google" width="97px" height="54px" class="mb-[30px]">
+      <div class="flex justify-center items-center gap-[18px]">
+        <Button class='button-gradient'>
+          {content.button1}
+        </Button>
+        <Button class='button-gradient-2'>
+          {content.button2}
+        </Button>
+      </div>
+    </div>
+    <div class="bg-background-dark w-[550px] h-[316px] rounded-[15px]"></div>
+  </div>
+  <div class="shadow absolute bottom-0 translate-y-2/3 bg-[#FAFAFA] py-[35px] px-[95px] rounded-[20px] flex justify-between items-center gap-[68px]">
+    {content.lists.map(item=>(
+      <div class="flex flex-col justify-center items-center gap-[13px] w-full max-w-[271px]">
+        <img src={`/main/${item.icon}.svg`} alt={item.icon} width="70" height="68"class="max-h-[68px]"/>
+        <div class="flex flex-col justify-center items-center gap-[9px]">
+          <p class="text-[20px] font-semibold text-center text-primary-dark-bold">{item.title}</p>
+          <div class="w-full h-[2px] bg-[#0468A6]"></div>
+          <p class="text-[16px] leading-[20px] text-center">{item.description}</p>
+        </div>
+        
+      </div>
+    ))}
+  </div>
+</section>
