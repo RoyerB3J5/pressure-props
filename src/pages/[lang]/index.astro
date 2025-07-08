@@ -2,6 +2,7 @@
 import en from '../../i18n/en';
 import es from '../../i18n/es';
 import Layout from '../../layouts/Layout.astro';
+import Experience from '../../sections/main/Experience.astro';
 import Hero from '../../sections/main/Hero.astro';
 import type { Language } from '../../types/language.type';
 export function getStaticPaths() {
@@ -16,4 +17,5 @@ const t = translations[lang];
 ---
 <Layout lang={lang} t={t}>
   <Hero content={t.main.hero}/>
+  <Experience content={t.main.experience}/>
 </Layout>
