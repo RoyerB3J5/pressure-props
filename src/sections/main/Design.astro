@@ -1,0 +1,11 @@
+---
+type Translations = typeof import('../../i18n/es').default;
+type DesignContent = Translations['main']['information']['design'];
+interface Props {
+  content: DesignContent
+}
+const {content} = Astro.props as Props;
+---
+<div>
+  
+</div>

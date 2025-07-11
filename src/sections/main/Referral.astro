@@ -1,0 +1,21 @@
+---
+import Button from '../../components/Button.astro';
+
+type Translations = typeof import('../../i18n/es').default;
+type ReferralContent = Translations['main']['information']['referral'];
+interface Props {
+  content: ReferralContent;
+}
+const { content } = Astro.props as Props;
+---
+<div class="flex justify-center items-center gap-[53px]">
+  <div class="flex flex-col justify-center items-center max-w-[537px]">
+    <h2 class="text-primary-dark-bold text-center text-[40px] font-normal leading-[46px] mb-[18px]" set:html={content.title}></h2>
+    <p class="text-[16px] font-medium text-primary-dark-bold leading-[25px] text-start mb-[20px]">{content.text1}</p>
+    <p class="text-[16px] font-medium text-primary-light leading-[25px] text-start mb-[32px]">{content.text2}</p>
+    <Button class='button-gradient px-[38px] '>
+      {content.button}
+    </Button>
+  </div>
+  <div class="bg-[#787878] rounded-[15px] h-[316px] w-[550px]"></div>
+</div>

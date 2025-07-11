@@ -1,0 +1,20 @@
+---
+import Design from './Design.astro';
+import Referral from './Referral.astro';
+import Rendering from './Rendering.astro';
+import Working from './Working.astro';
+
+type Translations = typeof import('../../i18n/es').default;
+type InformationContent = Translations['main']['information']
+interface Props {
+  content: InformationContent
+}
+const {content} = Astro.props as Props;
+---
+
+<section class="py-[115px] flex justify-center items-center flex-col gap-[115px] max-w-[1201px]">
+  <Referral content={content.referral}/>
+  <Working content={content.working}/>
+  <Rendering content={content.rendering}/>
+  <Design content={content.design}/>
+</section>

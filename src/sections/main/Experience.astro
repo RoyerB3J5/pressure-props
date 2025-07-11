@@ -14,17 +14,17 @@ const { content } = Astro.props as Props;
     <div class="relative" style="width: 581px; height: 647px;">
       <!-- Experience 1: Fila 1, Columna 1 -->
       <div class="absolute top-0 left-0 w-[236px] h-[244px] rounded-[10px] overflow-hidden">
-        <img src="/main/experience1.webp" alt="Experiencia 1" width="1024" height="1024" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+        <img src="/main/experience1.webp" alt="Experiencia 1" width="1024" height="1024" style="display: block; width: 100%; height: 100%; object-fit: cover;" loading="lazy" >
       </div>
       
       <!-- Experience 2: Fila 2, Columna 1 -->
       <div class="absolute bottom-0 left-0 w-[236px] h-[382px] rounded-[10px] overflow-hidden">
-        <img src="/main/experience2.webp" alt="Experiencia 2" width="768" height="1344" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+        <img src="/main/experience2.webp" alt="Experiencia 2" width="768" height="1344" style="display: block; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
       </div>
       
       <!-- Experience 3: Toda la Columna 2 -->
       <div class="absolute top-0 right-0 w-[324px] h-[647px] rounded-[10px] overflow-hidden">
-        <img src="/main/experience3.webp" alt="Experiencia 3" width="800" height="1328" style="display: block; width: 100%; height: 100%; object-fit: cover;" class="scale-x-[-1]">
+        <img src="/main/experience3.webp" alt="Experiencia 3" width="800" height="1328" style="display: block; width: 100%; height: 100%; object-fit: cover;" class="scale-x-[-1]" loading="lazy">
       </div>
     </div>
     <div class="flex flex-col items-start justify-center max-w-[478px] max-h-[648px]">
@@ -46,7 +46,7 @@ const { content } = Astro.props as Props;
           <p class="text-[16px] uppercase font-semibold leading-[20px] text-center">{content.years}</p>
         </div>
       </div>
-      <Button class='button-gradient mt-[48.03px]'>
+      <Button class='button-gradient mt-[48.03px] px-[28px]'>
           {content.button}
         </Button>
     </div>

@@ -105,6 +105,65 @@ export default {
         },
       ],
     },
+    information: {
+      referral: {
+        title: 'Pressure props <br/> <span class="text-[48px] font-semibold text-primary-dark leading-[58px]">Referral Program</span>',
+        text1:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        text2:
+          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        button: 'CLICK HERE',
+      },
+      working: {
+        title: 'Our Working Process',
+        items: [
+          {
+            step: 'STEP 01',
+            title: 'Contact',
+            icon: 'contact',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          },
+          {
+            step: 'STEP 02',
+            title: 'Consultation on site',
+            icon: 'consultation',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          },
+          {
+            step: 'STEP 03',
+            title: 'Design',
+            icon: 'design',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          },
+          {
+            step: 'STEP 04',
+            title: 'Deal',
+            icon: 'deal',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          },
+          {
+            step: 'STEP 05',
+            title: 'Installation',
+            icon: 'installation',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          },
+        ],
+      },
+      rendering:{
+        title:"Design and <span class='text-[48px] font-semibold leading-[58px] text-primary-dark'>3D Rendering</span>",
+        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        button:"GET AN ESTIMATE"
+      },
+      design:{
+        title:"Already Have A <span class='text-[48px] font-semibold leading-[58px]'>Design?</span>",
+        description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate."
+      }
+    },
   },
   footer: {
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing e,elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
