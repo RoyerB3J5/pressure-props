@@ -127,14 +127,14 @@ export default {
           {
             step: 'PASO 02',
             title: 'Consulta en sitio',
-            icon: 'consultation',
+            icon: 'consultation2',
             description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           },
           {
             step: 'PASO 03',
             title: 'Diseño',
-            icon: 'design',
+            icon: 'design2',
             description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           },
@@ -156,7 +156,7 @@ export default {
       },
       rendering: {
         title:
-          "Diseño y <span class='text-[48px] font-semibold leading-[58px] text-primary-dark'>Renderizado 3D</span>",
+          "Diseño y <br/> <span class='text-[48px] font-semibold leading-[58px] text-primary-dark'>Renderizado 3D</span>",
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         button: 'SOLICITAR UNA COTIZACIÓN',
       },

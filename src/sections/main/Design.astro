@@ -1,11 +1,19 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 type Translations = typeof import('../../i18n/es').default;
 type DesignContent = Translations['main']['information']['design'];
 interface Props {
-  content: DesignContent
+  content: DesignContent;
 }
-const {content} = Astro.props as Props;
+const { content } = Astro.props as Props;
 ---
-<div>
+<div class="flex justify-center items-center gap-[53px] w-full">
+  <div class="w-[537px] flex-shrink-0 flex flex-col justify-center items-start gap-4">
+    <h3 set:html={content.title} class="text-[40px] font-normal leading-[46px] text-start text-primary-dark-bold "></h3>
+    <Icon name={"separate"} class={"w-[205px] h-auto"}/>
+    <p class="text-[16px] font-medium leading-[25px] text-primary-dark-bold">{content.description}</p>
+  </div>
+  <div class="flex-1 h-[316px] rounded-[15px] bg-[#787878] max-w-[550px]"></div>
   
 </div>

@@ -127,14 +127,14 @@ export default {
           {
             step: 'STEP 02',
             title: 'Consultation on site',
-            icon: 'consultation',
+            icon: 'consultation2',
             description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           },
           {
             step: 'STEP 03',
             title: 'Design',
-            icon: 'design',
+            icon: 'design2',
             description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           },
@@ -155,7 +155,7 @@ export default {
         ],
       },
       rendering:{
-        title:"Design and <span class='text-[48px] font-semibold leading-[58px] text-primary-dark'>3D Rendering</span>",
+        title:"Design and <br/> <span class='text-[48px] font-semibold leading-[58px] text-primary-dark'>3D Rendering</span>",
         text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         button:"GET AN ESTIMATE"
       },
