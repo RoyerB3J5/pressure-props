@@ -1,0 +1,66 @@
+---
+type Translations = typeof import('../../i18n/es').default;
+type ServicesContent = Translations['main']['services'];
+interface Props {
+  content: ServicesContent;
+}
+const { content } = Astro.props as Props;
+---
+<section class="w-full py-[86px] bg-backgorund mx-auto">
+  <div class="flex flex-col justify-center items-center gap-[78px] max-w-[1140px] mx-auto">
+    <h2 set:html={content.title} class="text-center text-[40px] font-normal leading-[46px] text-primary-dark-bold"></h2>
+    <div 
+  id="hover‑container"
+  class="w-full min-h-[489px] rounded-[15px] overflow-hidden flex"
+>
+  <div
+    id="col1"
+    class="min-h-[489px] bg-[#B2B2B1] transition‑all duration‑200 cursor-pointer transition-all duration-200"
+    style="width:20%"
+  ></div>
+  <div
+    id="col2"
+    class="min-h-[489px] bg-[#787878] transition‑all duration‑200 cursor-pointer transition-all duration-200" 
+    style="width:20%"
+  ></div>
+  <div
+    id="col3"
+    class="min-h-[489px] bg-[#414141] transition‑all duration‑200 cursor-pointer transition-all duration-200"
+    style="width:60%"
+  ></div>
+</div>
+  </div>
+</section>
+<script is:inline>
+  (() => {
+    const container = document.getElementById('hover‑container');
+    const [c1, c2, c3] = [
+      document.getElementById('col1'),
+      document.getElementById('col2'),
+      document.getElementById('col3')
+    ];
+    // Estado inicial
+    const reset = () => {
+      c1.style.width = '20%';
+      c2.style.width = '20%';
+      c3.style.width = '60%';
+    };
+    // Hover handlers
+    c1.addEventListener('mouseenter', () => {
+      c1.style.width = '40%';
+      c2.style.width = '20%';
+      c3.style.width = '40%';
+    });
+    c2.addEventListener('mouseenter', () => {
+      c1.style.width = '20%';
+      c2.style.width = '40%';
+      c3.style.width = '40%';
+    });
+    c3.addEventListener('mouseenter', () => {
+      // al hacer hover en la tercera, dejamos como está
+      reset();
+    });
+    // Cuando sales de todo el contenedor, vuelves al estado inicial
+    container.addEventListener('mouseleave', reset);
+  })();
+</script>

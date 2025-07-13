@@ -164,6 +164,46 @@ export default {
         description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate."
       }
     },
+    services:{
+      title:"Type of <span class='font-semibold text-[48px] leading-[58px] text-primary-dark'>Services</span>"
+    },
+    numbers : {
+      items:[
+        {
+          number:1000,
+          title:"Liters of water saved"
+        },
+        {
+          number:2000,
+          title:"Happy Clients"
+        },
+        {
+          number:300000,
+          title:"Leafs Removed"
+        },
+        {
+          number:50000,
+          title:"Client Hours Saved"
+        },
+      ]
+    },
+    completed:{
+      title:"Check out our Recent <br/> <span class='text-[48px] font-semibold leading-[58px] text-primary-dark'> Completed Projects</span>",
+      button:"VIEW ALL PROJECTS",
+      name:"pressureprops",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    catalog:{
+      title:"Download Here Our <span class='font-semibold text-[48px] leading-[58px] text-primary-dark'>Catalog</span>",
+      description:"Where you can see all the services and options that we have for you.",
+      button:"DOWNload now"
+    },
+    project:{
+      title:"READY TO START YOUR PROJECT?",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+      text:"Ut enim ad minim veniam",
+      button:"GET AN ESTIMATE"
+    }
   },
   footer: {
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing e,elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',

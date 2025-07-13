@@ -1,0 +1,21 @@
+---
+import Button from '../../components/Button.astro';
+
+type Translations = typeof import('../../i18n/es').default;
+type CatalogContent = Translations['main']['catalog'];
+interface Props {
+  content: CatalogContent;
+}
+const { content } = Astro.props as Props;
+---
+<section class="py-[115px] max-w-[1142px] flex justify-center items-center gap-[53px]">
+  <div class="flex flex-col justify-center items-center">
+    <h2 set:html={content.title} class="text-primary-dark-bold text-[40px] font-normal leading-[46px] text-center"></h2>
+    <p class="text-primary-dark-bold text-center text-[16px] font-medium leading-[25px] mt-[18px]">{content.description}</p>
+    <Button class='button-gradient mt-[32px] px-[38px] uppercase'>
+      {content.button}
+    </Button>
+  </div>
+  <div class="w-[550px] h-[316px] rounded-[15px] bg-[#787878]">
+  </div>
+</section>

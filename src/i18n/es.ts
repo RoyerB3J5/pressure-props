@@ -107,7 +107,8 @@ export default {
     },
     information: {
       referral: {
-        title: 'Pressure props <br/> <span class="text-[48px] font-semibold text-primary-dark leading-[58px]">Programa de Referidos</span>',
+        title:
+          'Pressure props <br/> <span class="text-[48px] font-semibold text-primary-dark leading-[58px]">Programa de Referidos</span>',
         text1:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         text2:
@@ -166,6 +167,53 @@ export default {
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate.',
       },
+    },
+    services: {
+      title:
+        "Tipos de <span class='font-semibold text-[48px] leading-[58px] text-primary-dark'>Servicios</span>",
+    },
+    completed: {
+      title:
+        "Mira nuestros Recientes <br/> <span class='text-[48px] font-semibold leading-[58px] text-primary-dark'>Proyectos  Completados</span>",
+      button: 'VER TODOS LOS PROYECTOS',
+      name: 'pressureprops',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+
+    numbers: {
+      items: [
+        {
+          number: 1000,
+          title: 'Litros de agua ahorrados',
+        },
+        {
+          number: 2000,
+          title: 'Clientes satisfechos',
+        },
+        {
+          number: 300000,
+          title: 'Hojas removidas',
+        },
+        {
+          number: 50000,
+          title: 'Horas de cliente ahorradas',
+        },
+      ],
+    },
+    catalog: {
+      title:
+        "Descarga aquí nuestro <span class='font-semibold text-[48px] leading-[58px] text-primary-dark'>Catálogo</span>",
+      description:
+        'Donde podrás ver todos los servicios y opciones que tenemos para ti.',
+      button: 'Descargar ahora',
+    },
+    project: {
+      title: '¿LISTO PARA COMENZAR TU PROYECTO?',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+      text: 'Ut enim ad minim veniam',
+      button: 'SOLICITAR UNA COTIZACIÓN',
     },
   },
   footer: {

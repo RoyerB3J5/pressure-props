@@ -1,0 +1,61 @@
+---
+import { Icon } from 'astro-icon/components';
+
+type Translations = typeof import('../../i18n/es').default;
+type SolutionsContent = Translations['main']['solutions'];
+interface Props {
+  content: SolutionsContent;
+}
+const { content } = Astro.props as Props;
+---
+<section class="relative w-full pt-[90px] pb-[130px] overflow-hidden">
+  <img src="/main/bg-solutions.webp" alt="Fondo de soluciones" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover -z-20" loading="lazy" decoding="async">
+  <div class="absolute inset-0 blue-gradient -z-10"></div>
+  <div class="relative z-0 flex flex-col justify-center items-center gap-[87px] max-w-[1126px] mx-auto">
+    <div class="flex  justify-center items-center gap-[32px]">
+      <div class="flex flex-col justify-center items-center gap-[26px]">
+        <h3 set:html={content.description} class="text-center text-[40px] font-medium leading-[46px] text-white"></h3>
+        <Icon name={"separate"} class={"w-[205px] h-auto"}/>
+      </div>
+      <div class="flex flex-col justify-center items-center gap-[26px] pb-[48px] pt-[21px] px-[18px] bg-primary-dark-bold max-w-[550px] rounded-[15px] text-[#FAFAFA]">
+        <h2 class="text-center text-[40px] font-semibold leading-[46px] ">{content.title}</h2>
+        <p class="text-center text-[16px] font-medium leading-[25px] ">{content.text}</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[22px]">
+      {content.items.map(item => (
+        <div
+  class="relative 
+         w-[265px] h-[415px] 
+         rounded-[15px] 
+         overflow-hidden 
+         bg-cover bg-center 
+         transition-all duration-200 
+         group
+         hover:border-white hover:border-[2px]"
+  style={`background-image: url('/main/${item.image}.webp')`}
+>
+  <!-- Overlay base permanente -->
+  <div class="absolute inset-0 bg-[rgba(4,35,64,0.32)] pointer-events-none"></div>
+
+  <!-- Overlay de hover: aparece encima del base -->
+  <div class="absolute inset-0 
+              bg-primary-dark-bold/30 
+              opacity-0 
+              group-hover:opacity-100 
+              transition-opacity 
+              duration-200 
+              pointer-events-none"></div>
+
+  <!-- Contenido -->
+  <div class="relative flex justify-center items-center h-full px-[32px]">
+    <p class="text-white text-[24px] font-semibold text-center leading-[25px]">
+      {item.title}
+    </p>
+  </div>
+</div>
+
+      ))}
+    </div>
+  </div>
+</section>

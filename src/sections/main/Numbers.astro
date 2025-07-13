@@ -1,0 +1,71 @@
+---
+type Translations = typeof import('../../i18n/es').default;
+type NumbersContent = Translations['main']['numbers'];
+interface Props {
+  content: NumbersContent;
+}
+const { content } = Astro.props as Props;
+---
+<section class="relative w-full pt-[200px] pb-[75px] overflow-hidden" id="numbers-section">
+  <img src="/main/bg-number.webp" alt="Fondo de chicha" width="1408" height="704" class="absolute inset-0 w-full h-full object-cover -z-20" loading="lazy" decoding="async">
+  <div class="absolute inset-0 blue-gradient -z-10"></div>
+  <div class="relative z-0 flex flex-col justify-center items-center gap-[70px] max-w-[1157px] mx-auto">
+    <div class="flex justify-center items-center gap-[79px]">
+      {content.items.map((item,idx) => (
+        <div class="flex flex-col justify-center items-center gap-[5px]">
+          <p class="text-[50px] font-bold leading-[55px] text-white">
+            <span>+</span>
+            <span class="counter" data-target={item.number.toString()} id={`counter-${idx}`}>0</span>
+          </p>
+          <p class="text-[16px] font-semibold leading-[20px] text-white">{item.title}</p>
+        </div>
+      ))}
+    </div>
+    <div class="w-full bg-[#787878] rounded-[15px] min-h-[348px]">
+    </div>
+  </div>
+</section>
+<script is:inline >
+  // la función de animación que ya tenías
+  function animateValue(el, start, end, duration) {
+    let startTime = null;
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const current  = Math.floor(progress * (end - start) + start);
+      el.textContent = current.toLocaleString('es-PE');
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const section = document.getElementById('numbers-section');
+    const counters = section.querySelectorAll('.counter');
+    let fired = false;
+
+    const onIntersect = (entries, observer) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting && !fired) {
+          // Desencadenamos la animación y marcamos fired=true
+          counters.forEach(el => {
+            const target = parseInt(el.dataset.target || '0', 10);
+            animateValue(el, 0, target, 1000);
+          });
+          fired = true;
+          observer.disconnect(); 
+          break;
+        }
+      }
+    };
+
+    const io = new IntersectionObserver(onIntersect, {
+      root: null,           // viewport
+      threshold: 0.5        // cuando el 50% del section sea visible
+    });
+
+    io.observe(section);
+  });
+</script>

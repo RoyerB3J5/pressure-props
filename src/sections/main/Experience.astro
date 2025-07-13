@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
+import BeforeAfter from '../../components/BeforeAfter.astro';
 import Button from '../../components/Button.astro';
 
 type Translations = typeof import('../../i18n/es').default;
@@ -51,8 +52,8 @@ const { content } = Astro.props as Props;
         </Button>
     </div>
   </div>
-  <div>
-    
-
+  <div class="flex justify-center items-center gap-[45px]">
+    <BeforeAfter beforeImage='/main/before-1-2.webp' afterImage='/main/before-1-1.webp'/>
+    <BeforeAfter beforeImage='/main/before-2-2.webp' afterImage='/main/before-2-1.webp'/>
   </div>
 </section>
