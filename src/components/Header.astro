@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import Button from './Button.astro';
+import ChangeLanguage from './ChangeLanguage.astro';
 
 type Translations = typeof import('../i18n/en').default;
 type HeaderContent = Translations['header'];
@@ -26,15 +27,17 @@ const icons = [
     href: '',
   },
 ];
+const currentPath = Astro.url.pathname;
+const normalized = currentPath.replace(/^\/(en|es)/, '') || '/';
 ---
-<header class="w-full flex flex-col justify-center items-center">
+<header class="relative w-full flex flex-col justify-center items-center">
   <div class="w-full bg-primary-dark flex justify-center">
-    <div class="w-full flex justify-between items-center max-w-[1154px]">
+    <div class="w-full flex justify-center md:justify-between items-center max-w-[1154px]">
       <div class="flex items-center gap-[6px]">
         <Icon name={"map"} class={"w-[19px] h-[19px] text-white"}/>
         <p class="text-[16px] font-semibold leading-[52px] text-white">Orlando Florida</p>
       </div>
-      <div class="flex items-center gap-[22px]">
+      <div class="hidden md:flex items-center gap-[22px]">
         <div class="flex items-center gap-[6px]">
           {icons.map(i => (
             <a href={i.href} class="size-[31px] bg-white rounded-full flex justify-center items-center">
@@ -42,77 +45,182 @@ const icons = [
             </a>
           ))}
         </div>
-        <div class="flex items-center gap-[6px]">
-          <Icon name={"es"} class={"w-[31px] h-[31px] cursor-pointer"} id={"button-es"}/>
-          <Icon name={"en"} class={"w-[31px] h-[31px] cursor-pointer"} id={"button-en"}/>
-        </div>
+        <ChangeLanguage/>
       </div>
     </div>
   </div>
-  <div class="w-full max-w-[1178px] min-h-[141px] flex justify-between items-center">
-    <div class="size-[91px] bg-primary-light rounded-full"></div>
-    <div class="flex items-center">
-      <nav class="flex items-center">
+  <div class="w-full max-w-screen sm:max-w-[1178px] min-h-[57px] md:min-h-[141px] flex justify-between items-center px-7 md:px-0">
+    <div class="size-[33px] md:size-[91px] bg-primary-light rounded-full"></div>
+    <div class="absolute md:relative flex items-center bg-primary-dark md:bg-transparent text-white md:text-primary-dark-bold flex-col justify-center md:flex-row h-screen md:h-auto w-[90%] md:w-auto z-10 top-0 right-0 py-6 md:py-0 gap-10 md:gap-0 transform translate-x-full md:translate-x-0 transition-transform duration-300 ease-out" id="mobile-menu">
+      <img src="/equis.svg" alt="Menu" width="24" height="24" class="md:hidden block absolute top-6 right-6 cursor-pointer" id="close-btn">
+      <nav class="relative flex items-center flex-col md:flex-row justify-center w-full md:w-auto">
         {
-          content?.nav.map((item, index)=>(
-            <div class="flex items-center gap-[14px] px-[7px]">
-              <div class={`${index === 0 ? "hidden" : ""} w-[3px] h-[40px] bg-primary-dark-bold`}></div>
-              <a href={item.href} class="text-[18px] text-center font-semibold leading-[52px] relative group transition-colors duration-300 hover:text-primary-light">
-                {item.label}
-                <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-light transition-all duration-300 ease-out group-hover:w-full"></span>
-              </a>
+          content?.nav.map((item, index)=>{
+            const isActive = normalized === item.href
+            const isServices = index === 1;
+            return(
+              <div class={`flex flex-col md:flex-row items-center justify-center gap-[14px] px-0 md:px-[7px] hover:text-primary-light w-full md:w-auto py-2 md:py-0 text-center ${isServices ? 'relative group' : ''} ${isActive ? 'bg-primary-light md:bg-transparent text-white  md:text-primary-light' : ''}`} id={`services-${index}`}>
+                <div class={`${index === 0 ? "hidden md:hidden" : ""} w-[3px] h-[40px] bg-primary-dark-bold hidden md:block`}></div>
+                <a href={item.href} class={`
+                text-[18px] text-center font-semibold leading-[52px] relative group transition-colors duration-300
+               
+                
+              `}>
+                  {item.label}
+                  <span
+              class={`
+                absolute bottom-0 left-0 h-[2px] bg-primary-light   transition-all duration-300 ease-out
+               ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}
+              `}
+              />
+                </a>
+                {isServices && (
+          <div
+            class="
+              absolute transform translate-y-[100px]
+              w-[170px] flex-col justify-center items-center bg-white z-20 translate-x-[10px]
+              opacity-0 pointer-events-none
+              group-hover:opacity-100 group-hover:pointer-events-auto
+              transition-all duration-300 ease-out hidden md:flex
+            "
+          >
+            {content.types.map(sub => (
+              <div
+                class="
+                  text-[18px] font-semibold text-primary-dark-bold 
+                  py-1.5 hover:bg-primary-dark-bold hover:text-white 
+                  transition-colors duration-300 ease-in-out
+                  cursor-pointer px-6 w-full text-center
+                "
+              >
+                <a href={`/services/${sub.href}`}>{sub.label}</a>
+              </div>
+            ))}
+          </div>
+          <div class="flex-col justify-center items-center w-full bg-primary divide-y divide-white md:hidden hidden" id="sub-menu-services">
+            {content.types.map(sub => (
+              <div
+                class="
+                  text-[18px] font-semibold text-white 
+                  py-3 
+                  transition-colors duration-300 ease-in-out
+                  cursor-pointer px-6 w-full text-center
+                "
+              >
+                <a href={`/services/${sub.href}`}>{sub.label}</a>
+              </div>
+            ))}
+          </div>
+        )}
+        
             </div>
-          ))
+            )
+            
+          })
         }
       </nav>
-      <Button class="button-gradient ml-[27.5px] mr-[27px]">
+      <Button class="button-gradient-3 ml-[27.5px] mr-[27px] ">
         {content?.button}
       </Button>
-      <div class="flex items-center gap-[6px] px-[7px]">
-        <img src="/phone.svg" alt="Telefono" width="48" height="48">
-        <div class="text-primary-dark-bold text-[16px] font-semibold leading-[24px] flex flex-col items-start justify-center">
+      <div class="flex justify-center  items-center gap-[6px] px-[7px]">
+        <img src="/phone.svg" alt="Telefono" width="48" height="48" class="hidden md:block">
+        <img src="/phone-white.svg" alt="Telefono Blanco" width="48" height="48" class="md:hidden block">
+        <div class="text-white md:text-primary-dark-bold text-[16px] font-semibold leading-[24px] flex flex-col items-start justify-center">
           <p>{content?.phone}</p>
           <a href="" class="hover:text-primary transition-all duration-300 ease-in-out cursor-pointer">+1 (407) 493-0858</a>
         </div>
       </div>
     </div>
+    <div class="flex md:hidden justify-center items-center gap-7">
+      <ChangeLanguage/>
+      <Icon name={"hamburger"} class={"w-6 h-6"} id="hamburger-btn"/>
+    </div>
   </div>
 </header>
 <script is:inline>
-  const btnEs = document.getElementById('button-es')
-  btnEs.onclick = () => {
-    sessionStorage.setItem('langScroll', window.scrollY);
-    const newPath = window.location.pathname.replace(
-      /^\/(es|en)/,
-      `/es`,
-    );
-    window.location.href = newPath;
-  };
-  const btnEn = document.getElementById('button-en')
-  btnEn.onclick = () => {
-    sessionStorage.setItem('langScroll', window.scrollY);
-    const newPath = window.location.pathname.replace(
-      /^\/(es|en)/,
-      `/en`,
-    );
-    window.location.href = newPath;
-  };
-</script>
-<script is:inline>
-  // Restauración de posición con prevención de parpadeo
   document.addEventListener('DOMContentLoaded', () => {
-    const savedPosition = sessionStorage.getItem('langScroll');
+  const menu = document.getElementById('mobile-menu');
+  const openBtn = document.getElementById('hamburger-btn');
+  const closeBtn = document.getElementById('close-btn');
+  const servicesDiv = document.getElementById('services-1');
+  const subMenuServices = document.getElementById('sub-menu-services');
+  const body = document.body;
 
-    if (savedPosition !== null) {
-      // Restaurar posición antes de mostrar contenido
-      window.scrollTo({
-        top: parseInt(savedPosition, 10),
-        behavior: 'instant',
-      });
-      sessionStorage.removeItem('langScroll');
+  const isMobile = () => window.innerWidth < 768;
+
+  function openMenu() {
+    if (isMobile()) {
+      menu.classList.replace('translate-x-full', 'translate-x-0');
+      body.classList.add('overflow-hidden');
     }
+  }
 
-    // Mostrar contenido después de restaurar posición
-    document.body.classList.add('visible');
+  function closeMenu() {
+    if (isMobile()) {
+      menu.classList.replace('translate-x-0', 'translate-x-full');
+      body.classList.remove('overflow-hidden');
+    }
+  }
+
+  function toggleSubMenu(event) {
+    if (isMobile()) {
+      const isSubMenuOpen = !subMenuServices.classList.contains('hidden');
+      
+      // Si el submenu está cerrado, prevenimos la navegación y lo abrimos
+      if (!isSubMenuOpen) {
+        event.preventDefault();
+        subMenuServices.classList.remove('hidden');
+        subMenuServices.classList.add('flex');
+      }
+      // Si el submenu está abierto, permitimos la navegación (no hacemos preventDefault)
+      // y cerramos el submenu después de un pequeño delay para permitir la navegación
+      else {
+        setTimeout(() => {
+          subMenuServices.classList.add('hidden');
+          subMenuServices.classList.remove('flex');
+        }, 100);
+      }
+    }
+  }
+
+  openBtn.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  
+  // Agregar event listener al enlace dentro del div services-1
+  const servicesLink = servicesDiv.querySelector('a');
+  if (servicesLink) {
+    servicesLink.addEventListener('click', toggleSubMenu);
+  }
+
+  // Asegurar estado inicial según tamaño
+  if (isMobile()) {
+    menu.classList.add('translate-x-full');
+    menu.classList.remove('translate-x-0');
+    body.classList.remove('overflow-hidden');
+    subMenuServices.classList.add('hidden');
+    subMenuServices.classList.remove('flex');
+  } else {
+    menu.classList.add('translate-x-0');
+    menu.classList.remove('translate-x-full');
+    body.classList.remove('overflow-hidden');
+  }
+
+  window.addEventListener('resize', () => {
+    if (!isMobile()) {
+      menu.classList.add('translate-x-0');
+      menu.classList.remove('translate-x-full');
+      body.classList.remove('overflow-hidden');
+      // Ocultar submenu en desktop
+      subMenuServices.classList.add('hidden');
+      subMenuServices.classList.remove('flex');
+    } else {
+      // Asegura que el menú esté oculto al volver a móvil
+      menu.classList.add('translate-x-full');
+      menu.classList.remove('translate-x-0');
+      body.classList.remove('overflow-hidden');
+      subMenuServices.classList.add('hidden');
+      subMenuServices.classList.remove('flex');
+    }
   });
+});
 </script>

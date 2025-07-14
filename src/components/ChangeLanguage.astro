@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div class="flex items-center gap-[6px]">
+  <Icon name="es" class="w-[31px] h-[31px] cursor-pointer" data-lang="es" />
+  <Icon name="en" class="w-[31px] h-[31px] cursor-pointer" data-lang="en" />
+</div>
+
+<script is:inline>
+  document.querySelectorAll('[data-lang]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      sessionStorage.setItem('langScroll', window.scrollY);
+      const newPath = window.location.pathname.replace(
+        /^\/(es|en)/,
+        `/${lang}`
+      );
+      window.location.href = newPath;
+    });
+  });
+</script>
+<script is:inline>
+  // Restauración de posición con prevención de parpadeo
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedPosition = sessionStorage.getItem('langScroll');
+
+    if (savedPosition !== null) {
+      // Restaurar posición antes de mostrar contenido
+      window.scrollTo({
+        top: parseInt(savedPosition, 10),
+        behavior: 'instant',
+      });
+      sessionStorage.removeItem('langScroll');
+    }
+
+    // Mostrar contenido después de restaurar posición
+    document.body.classList.add('visible');
+  });
+</script>

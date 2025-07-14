@@ -10,49 +10,51 @@ interface Props {
 }
 const { content } = Astro.props as Props;
 ---
-<section class="pt-[276px] pb-[115px] flex flex-col justify-center items-center gap-[52px] max-w-[1145px]">
-  <div class="w-full flex items-start justify-center gap-[86px]">
-    <div class="relative" style="width: 581px; height: 647px;">
+<section class="pt-[640px] md:pt-[276px] pb-9 md:pb-[115px] flex flex-col justify-center items-center gap-8 md:gap-[52px] max-w-screen md:max-w-[1145px] px-4 md:px-0">
+  <div class="w-full flex flex-col md:flex-row items-center md:items-start justify-center gap-8 md:gap-[86px]">
+    <div class="relative order-2 md:order-1 w-full md:w-[581px] h-[902px] md:h-[647px]" >
       <!-- Experience 1: Fila 1, Columna 1 -->
-      <div class="absolute top-0 left-0 w-[236px] h-[244px] rounded-[10px] overflow-hidden">
+      <div class="absolute top-0 left-0 w-full md:w-[236px] h-[347px] md:h-[244px] rounded-[10px] overflow-hidden">
         <img src="/main/experience1.webp" alt="Experiencia 1" width="1024" height="1024" style="display: block; width: 100%; height: 100%; object-fit: cover;" loading="lazy" >
       </div>
       
       <!-- Experience 2: Fila 2, Columna 1 -->
-      <div class="absolute bottom-0 left-0 w-[236px] h-[382px] rounded-[10px] overflow-hidden">
+      <div class="absolute bottom-0 left-0 w-full md:w-[236px] h-[544px] md:h-[382px] rounded-[10px] overflow-hidden">
         <img src="/main/experience2.webp" alt="Experiencia 2" width="768" height="1344" style="display: block; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
       </div>
       
       <!-- Experience 3: Toda la Columna 2 -->
-      <div class="absolute top-0 right-0 w-[324px] h-[647px] rounded-[10px] overflow-hidden">
+      <div class="hidden md:block absolute top-0 right-0 w-[324px] h-[647px] rounded-[10px] overflow-hidden">
         <img src="/main/experience3.webp" alt="Experiencia 3" width="800" height="1328" style="display: block; width: 100%; height: 100%; object-fit: cover;" class="scale-x-[-1]" loading="lazy">
       </div>
     </div>
-    <div class="flex flex-col items-start justify-center max-w-[478px] max-h-[648px]">
+    <div class="order-1 md:order-1 flex flex-col items-center md:items-start justify-center py-[37px] md:py-0 max-w-none md:max-w-[478px] max-h-none md:max-h-[648px]">
       <Icon name={"separate"} class={"w-[205px] h-auto"}/>
-      <h2 class="text-[44px] font-semibold leading-[24px] text-primary-light mt-1 h-[72px] flex items-center">Pressure <span class="ml-1 text-primary-dark">Props</span></h2>
-      <p class="text-[16px] leading-[25px] text-start">{content.description}</p>
-      <p class="mt-5 text-[16px] leading-[25px] text-start font-semibold">{content.description2}</p>
-      <div class="flex justify-between items-center gap-[43px] mt-[73px] w-full">
-        <div class="flex flex-col gap-[14px]">
-          {content.items.map(item=>(
-            <div class="flex items-center gap-4">
-              <Icon name={"check"} class={"h-[44px] w-[44px]"}/>
-              <p class="text-[16px] font-medium leading-[25px] text-primary-dark-bold">{item}</p>
-            </div>
-          ))}
+      <h2 class="text-[24px] md:text-[44px] font-semibold leading-[24px] text-primary-light mt-1 h-[43px] md:h-[72px] flex items-center">Pressure <span class="ml-1 text-primary-dark">Props</span></h2>
+      <p class="text-[13px] md:text-[16px] leading-[20px] md:leading-[25px] text-center md:text-start">{content.description}</p>
+      <p class="mt-5 text-[13px] md:text-[16px] leading-[25px] text-center md:text-start font-semibold">{content.description2}</p>
+      <div class="flex flex-col md:flex-row justify-center items-center md:items-start gap-[29px] md:gap-[43px] mt-[29px] md:mt-[73px] w-full py-1 md:py-0">
+        <div class="flex flex-col justify-between items-center md:items-start gap-[29px] md:gap-[62px] w-full">
+          <div class="flex flex-col gap-2 md:gap-[14px]">
+            {content.items.map(item=>(
+              <div class="flex items-center gap-[7px] md:gap-4">
+                <Icon name={"check"} class={"h-[23px] md:h-[44px] w-[23px] md:w-[44px]"}/>
+                <p class="text-[15px] md:text-[16px] font-medium leading-[25px] text-primary-dark-bold">{item}</p>
+              </div>
+            ))}
+          </div>
+          <Button class='button-gradient px-[37px] md:px-[28px]'>
+            {content.button}
+          </Button>
         </div>
-        <div class="max-w-[173px] flex flex-col justify-center items-center gap-[3px] px-[35.67px] pt-[22px] pb-[39px] border-t-[5px] border-primary-dark-bold bg-[#B2B2B1] text-white">
-          <p class="text-[50px] text-center font-semibold leading-[65px]">3+</p>
-          <p class="text-[16px] uppercase font-semibold leading-[20px] text-center">{content.years}</p>
+        <div class="max-w-none md:max-w-[173px] flex flex-col justify-center items-center gap-[3px] px-[24px] md:px-[35.67px] pt-[9.5px] md:pt-[22px] pb-[13.5px] md:pb-[39px] border-t-[5px] border-primary-dark-bold bg-[#B2B2B1] text-white">
+          <p class="text-[36px] md:text-[50px] text-center font-semibold leading-[65px]">3+</p>
+          <p class="text-[15px] md:text-[16px] uppercase font-semibold leading-[20px] text-center">{content.years}</p>
         </div>
       </div>
-      <Button class='button-gradient mt-[48.03px] px-[28px]'>
-          {content.button}
-        </Button>
     </div>
   </div>
-  <div class="flex justify-center items-center gap-[45px]">
+  <div class="flex flex-col md:flex-row justify-center items-center gap-[18px] md:gap-[45px] w-full">
     <BeforeAfter beforeImage='/main/before-1-2.webp' afterImage='/main/before-1-1.webp'/>
     <BeforeAfter beforeImage='/main/before-2-2.webp' afterImage='/main/before-2-1.webp'/>
   </div>

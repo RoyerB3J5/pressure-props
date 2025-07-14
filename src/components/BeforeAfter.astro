@@ -30,15 +30,14 @@ const uniqueId = Math.random().toString(36).substr(2, 9);
 
 <div
   id={`ba-container-${uniqueId}`}
-  class="relative mx-auto overflow-hidden select-none rounded-[15px]"
-  style={`width: ${width}px; height: ${height}px;`}
+  class={`relative mx-auto overflow-hidden select-none rounded-[15px] w-full h-[254px] md:w-[${width}px] md:h-[${height}px]`}
+
 >
   <!-- Imagen de fondo: siempre al tamaño natural -->
   <img
     src={beforeImage}
     alt={altBefore}
-    class="absolute top-0 left-0"
-    style={`width: ${width}px; height: ${height}px;`}
+    class={`absolute top-0 left-0 w-full h-[254px] md:w-[${width}px] md:h-[${height}px] `}
     loading="lazy"
     decoding="async"
   />
@@ -47,8 +46,8 @@ const uniqueId = Math.random().toString(36).substr(2, 9);
   <img
     src={afterImage}
     alt={altAfter}
-    class="absolute top-0 left-0"
-    style={`width: ${width}px; height: ${height}px; clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);`}
+    class={`absolute top-0 left-0 w-full h-[254px] md:w-[${width}px] md:h-[${height}px] `}
+    style={` clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);`}
     loading="lazy"
     decoding="async"
   />

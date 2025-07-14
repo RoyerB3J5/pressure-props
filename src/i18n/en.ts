@@ -7,20 +7,35 @@ export default {
       },
       {
         label: 'Type of Services',
-        href: '/',
+        href: '/services',
       },
       {
         label: 'Gallery',
-        href: '/',
+        href: '/gallery',
       },
       {
         label: 'About Us',
-        href: '/',
+        href: '/about-us',
       },
       {
         label: 'Contact Us',
-        href: '/',
+        href: '/contact',
       },
+    ],
+    types:[
+      {
+        label: 'Classic',
+        href:'classic'
+      },
+      {
+        label: 'Semi Premium',
+        href:'semipremium'
+      },
+      {
+        label: 'Premium',
+        href:'premium'
+      },
+
     ],
     button: 'Get Estimate',
     phone: 'CALL US',

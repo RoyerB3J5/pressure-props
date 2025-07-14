@@ -10,8 +10,18 @@
   --color-background-dark: #787878;
   --font-family: 'Red Hat Text', sans-serif;
 }
-.button-gradient{
-  background: linear-gradient(10deg, #042340 -9.14%, #0A5BA6 100.49%);
+.button-gradient-3 {
+  background: linear-gradient(10deg, #0F8DBF -9.14%, #19B6D9 100.49%);
+}
+
+/* ≥ 768px (md) => gradiente 1 */
+@media (min-width: 768px) {
+  .button-gradient-3 {
+    background: linear-gradient(10deg, #042340 -9.14%, #0A5BA6 100.49%);
+  }
+}
+.button-gradient {
+    background: linear-gradient(10deg, #042340 -9.14%, #0A5BA6 100.49%);
 }
 .button-gradient-2 {
   background: linear-gradient(10deg, #0F8DBF -9.14%, #19B6D9 100.49%);

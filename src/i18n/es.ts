@@ -22,6 +22,21 @@ export default {
         href: '/',
       },
     ],
+    types:[
+      {
+        label: 'Clásico',
+        href:'classic'
+      },
+      {
+        label: 'Semipremium',
+        href:'semipremium'
+      },
+      {
+        label: 'Premium',
+        href:'premium'
+      },
+
+    ],
     button: 'Cotización',
     phone: 'LLÁMANOS',
   },
