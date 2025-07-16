@@ -7,7 +7,7 @@ export default {
       },
       {
         label: 'Type of Services',
-        href: '/services',
+        href: '/service',
       },
       {
         label: 'Gallery',
@@ -43,86 +43,85 @@ export default {
   main: {
     hero: {
       title:
-        "Luxury Finished Low Maintenance <span class='text-primary-light'>Yards</span> Design And Installation",
-      button1: 'Type of Gardens',
-      button2: 'Get an Estimate',
+        "Orlando Pressure Washing Experts with Guaranteed Results or It’s Free",
+      button1: 'Call now',
+      button2: 'Get Your Free Quote Now',
       lists: [
         {
-          title: 'Consultation',
+          title: '100% Guaranteed',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'If you’re not happy, the wash is on us. No questions asked.',
           icon: 'consultation',
         },
         {
-          title: 'Design',
+          title: 'Exclusive Discounts',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'Up to 25% OFF + Plans from $60/month.',
           icon: 'design',
         },
         {
-          title: 'Execution',
+          title: ' Serving Orlando',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'We cover 50 miles – homes & businesses.',
           icon: 'execution',
         },
       ],
     },
     experience: {
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        'Orlando Pressure Washing Experts – Guaranteed Results or It’s Free',
       description2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        'A clean exterior can increase your property value, improve curb appeal, and create a welcoming environment for guests and potential buyers. <br/>At Jz Pressure Pro, we provide high-quality pressure washing services in Orlando and surrounding areas. Our expert team removes built-up dirt, mold, and grime from driveways, fences, sidewalks, gutters, and more. <br/> We use professional equipment, safe products, and years of experience to deliver long-lasting results. You’ll see the difference after just one visit.',
       items: [
-        'We are expert gardeners',
-        'Expert team members',
-        'Afordable quality services',
+        'Experienced Technicians',
+        'Affordable, Honest Pricing',
+        'Trusted in Orlando and Central Florida',
       ],
       years: 'YEARS OF  EXPERIENCE',
-      button: 'LEARN MORE',
     },
     solutions: {
       description:
-        "We offer a  comprehensive range of <span class='font-semibold'>Landscaping</span> services including",
-      title: 'Hardscape Solutions',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        "Our Pressure Washing Services in Orlando",
+      title: 'Residential and Commercial Exterior Cleaning with Guaranteed Results',
+      text: 'We offer a full range of pressure washing solutions to keep your property clean, safe, and beautiful all year round. From driveways to dumpsters, our expert team handles every surface with care and precision. Whether you need a one-time deep clean or a maintenance plan, we’ve got Orlando and nearby areas covered.',
       items: [
         {
-          title: 'Paver Patios and Paver Sealing',
+          title: 'House Washing',
           image: 'patios',
         },
         {
-          title: 'Retainer Walls',
+          title: 'Driveway & Sidewalk Cleaning',
           image: 'retainer',
         },
         {
-          title: 'Walkways and Diveway Extensions',
+          title: 'Fence & Wall Cleaning',
           image: 'wakways',
         },
         {
-          title: 'Firepits',
+          title: 'Gutter Cleaning',
           image: 'firepits',
         },
         {
-          title: 'Drainage',
+          title: 'Dumpster & Trash Bin Washing',
           image: 'drainage',
         },
         {
-          title: 'Turn and Artificial Grass',
+          title: 'Mobile Car Wash (at your door)',
           image: 'turn',
         },
         {
-          title: 'Pool Areas Landscape',
+          title: 'Paver Cleaning',
           image: 'pool',
         },
         {
-          title: 'Pergolas',
+          title: 'Soft Wash Roof Cleaning',
           image: 'pergolas',
         },
       ],
     },
     information: {
       referral: {
-        title: 'Pressure props <br/> <span class="text-[48px] font-semibold text-primary-dark leading-[58px]">Referral Program</span>',
+        title: 'Pressure props <br/> <span class="text-[24px] md:text-[48px] font-semibold text-primary-dark leading-[33px] md:leading-[58px]">Referral Program</span>',
         text1:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         text2:
@@ -170,17 +169,17 @@ export default {
         ],
       },
       rendering:{
-        title:"Design and <br/> <span class='text-[48px] font-semibold leading-[58px] text-primary-dark'>3D Rendering</span>",
+        title:"Design and <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>3D Rendering</span>",
         text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         button:"GET AN ESTIMATE"
       },
       design:{
-        title:"Already Have A <span class='text-[48px] font-semibold leading-[58px]'>Design?</span>",
+        title:"Already Have A <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px]'>Design?</span>",
         description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate."
       }
     },
     services:{
-      title:"Type of <span class='font-semibold text-[48px] leading-[58px] text-primary-dark'>Services</span>"
+      title:"Type of <span class='font-semibold text-[24px] md:text-[48px] leading-[58px] text-primary-dark'>Services</span>"
     },
     numbers : {
       items:[
@@ -203,13 +202,13 @@ export default {
       ]
     },
     completed:{
-      title:"Check out our Recent <br/> <span class='text-[48px] font-semibold leading-[58px] text-primary-dark'> Completed Projects</span>",
+      title:"Check out our Recent <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'> Completed Projects</span>",
       button:"VIEW ALL PROJECTS",
       name:"pressureprops",
       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     catalog:{
-      title:"Download Here Our <span class='font-semibold text-[48px] leading-[58px] text-primary-dark'>Catalog</span>",
+      title:"Download Here Our <span class='font-semibold text-[24px] md:text-[48px] leading-[33px] md:leading-[58px] text-primary-dark'>Catalog</span>",
       description:"Where you can see all the services and options that we have for you.",
       button:"DOWNload now"
     },

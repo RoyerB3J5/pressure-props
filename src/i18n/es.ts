@@ -7,35 +7,34 @@ export default {
       },
       {
         label: 'Tipos Servicios',
-        href: '/',
+        href: '/service',
       },
       {
         label: 'Galería',
-        href: '/',
+        href: '/gallery',
       },
       {
         label: 'Nosotros',
-        href: '/',
+        href: '/about-us',
       },
       {
         label: 'Contáctanos',
-        href: '/',
+        href: '/contact',
       },
     ],
-    types:[
+    types: [
       {
         label: 'Clásico',
-        href:'classic'
+        href: 'classic',
       },
       {
         label: 'Semipremium',
-        href:'semipremium'
+        href: 'semipremium',
       },
       {
         label: 'Premium',
-        href:'premium'
+        href: 'premium',
       },
-
     ],
     button: 'Cotización',
     phone: 'LLÁMANOS',
@@ -43,79 +42,76 @@ export default {
   main: {
     hero: {
       title:
-        "Diseño e Instalación de <span class='text-primary-light'>Jardines</span> de Lujo de Bajo Mantenimiento",
-      button1: 'Tipos de Jardines',
-      button2: 'Obtener Cotización',
+        'Expertos en lavado a presión en Orlando con resultados garantizados o ¡es gratis!',
+      button1: 'Llama ahora',
+      button2: 'Cotización gratuita ahora',
       lists: [
         {
-          title: 'Consulta',
+          title: '100% Garantizado',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'Si no estás satisfecho, el lavado corre por nuestra cuenta. Sin preguntas.',
           icon: 'consultation',
         },
         {
-          title: 'Diseño',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          title: 'Descuentos exclusivos',
+          description: 'Hasta 25% de DESCUENTO + planes desde $60/mes.',
           icon: 'design',
         },
         {
-          title: 'Ejecución',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          title: 'Sirviendo Orlando',
+          description: 'Cubrimos un radio de 50 millas – hogares y negocios.',
           icon: 'execution',
         },
       ],
     },
     experience: {
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        'Expertos en lavado a presión en Orlando – resultados garantizados o ¡es gratis!',
       description2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        'Un exterior limpio puede aumentar el valor de tu propiedad, mejorar el atractivo y crear un ambiente acogedor para invitados y posibles compradores. <br/>En Jz Pressure Pro ofrecemos servicios de lavado a presión de alta calidad en Orlando y áreas cercanas. Nuestro equipo experto elimina la suciedad acumulada, moho y mugre de entradas de vehículos, cercas, aceras, canaletas y más. <br/> Utilizamos equipo profesional, productos seguros y años de experiencia para ofrecer resultados duraderos. Verás la diferencia después de una sola visita.',
       items: [
-        'Somos jardineros expertos',
-        'Miembros del equipo con experiencia',
-        'Servicios de calidad a precios accesibles',
+        'Técnicos experimentados',
+        'Precios asequibles y honestos',
+        'De confianza en Orlando y Florida Central',
       ],
       years: 'AÑOS DE EXPERIENCIA',
-      button: 'SABER MÁS',
     },
     solutions: {
-      description:
-        "Ofrecemos una amplia gama de servicios de <span class='font-semibold'>paisajismo</span>, incluyendo",
-      title: 'Soluciones de Hardscape',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'Nuestros servicios de lavado a presión en Orlando',
+      title:
+        'Limpieza exterior residencial y comercial con resultados garantizados',
+      text: 'Ofrecemos una amplia gama de soluciones de lavado a presión para mantener tu propiedad limpia, segura y hermosa todo el año. Desde entradas de vehículos hasta contenedores de basura, nuestro equipo experto maneja cada superficie con cuidado y precisión. Ya sea que necesites una limpieza profunda puntual o un plan de mantenimiento, tenemos cubierto Orlando y áreas cercanas.',
       items: [
         {
-          title: 'Patios con adoquines y sellado',
+          title: 'Lavado de casas',
           image: 'patios',
         },
         {
-          title: 'Muros de contención',
+          title: 'Limpieza de entradas y aceras',
           image: 'retainer',
         },
         {
-          title: 'Caminos y extensiones de entrada',
+          title: 'Limpieza de cercas y muros',
           image: 'wakways',
         },
         {
-          title: 'Fogatas',
+          title: 'Limpieza de canaletas',
           image: 'firepits',
         },
         {
-          title: 'Drenaje',
+          title: 'Lavado de contenedores y cubos de basura',
           image: 'drainage',
         },
         {
-          title: 'Césped natural y artificial',
+          title: 'Lavado de autos móvil (a domicilio)',
           image: 'turn',
         },
         {
-          title: 'Paisajismo en áreas de piscina',
+          title: 'Limpieza de adoquines',
           image: 'pool',
         },
         {
-          title: 'Pérgolas',
+          title: 'Limpieza de techos con lavado suave',
           image: 'pergolas',
         },
       ],
@@ -123,7 +119,7 @@ export default {
     information: {
       referral: {
         title:
-          'Pressure props <br/> <span class="text-[48px] font-semibold text-primary-dark leading-[58px]">Programa de Referidos</span>',
+          'Pressure props <br/> <span class="text-[24px] md:text-[48px] font-semibold text-primary-dark leading-[33px] md:leading-[58px]">Programa de Referidos</span>',
         text1:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         text2:
@@ -178,18 +174,18 @@ export default {
       },
       design: {
         title:
-          "¿Ya Tienes un <span class='text-[48px] font-semibold leading-[58px]'>Diseño?</span>",
+          "¿Ya Tienes un <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px]'>Diseño?</span>",
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate.',
       },
     },
     services: {
       title:
-        "Tipos de <span class='font-semibold text-[48px] leading-[58px] text-primary-dark'>Servicios</span>",
+        "Tipos de <span class='font-semibold text-[24px] md:text-[48px] leading-[58px] text-primary-dark'>Servicios</span>",
     },
     completed: {
       title:
-        "Mira nuestros Recientes <br/> <span class='text-[48px] font-semibold leading-[58px] text-primary-dark'>Proyectos  Completados</span>",
+        "Mira nuestros Recientes <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>Proyectos  Completados</span>",
       button: 'VER TODOS LOS PROYECTOS',
       name: 'pressureprops',
       description:
@@ -218,7 +214,7 @@ export default {
     },
     catalog: {
       title:
-        "Descarga aquí nuestro <span class='font-semibold text-[48px] leading-[58px] text-primary-dark'>Catálogo</span>",
+        "Descarga aquí nuestro <span class='font-semibold text-[24px] md:text-[48px] leading-[33px] md:leading-[58px] text-primary-dark'>Catálogo</span>",
       description:
         'Donde podrás ver todos los servicios y opciones que tenemos para ti.',
       button: 'Descargar ahora',

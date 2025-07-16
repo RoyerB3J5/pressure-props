@@ -12,7 +12,7 @@ interface Props {
 const {content} = Astro.props as Props;
 ---
 
-<section class="py-[115px] flex justify-center items-center flex-col gap-[115px] max-w-[1201px]">
+<section class="mt-[35px] pb-[69px] md:py-[115px] flex justify-center items-center flex-col gap-0 md:gap-[115px] max-w-screen md:max-w-[1201px] px-4 md:px-0">
   <Referral content={content.referral}/>
   <Working content={content.working}/>
   <Rendering content={content.rendering}/>

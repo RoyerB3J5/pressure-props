@@ -12,7 +12,7 @@ const { content } = Astro.props as Props;
 <section class="w-full bg-backgorund min-h-[661px] flex items-center justify-center relative">
   <div class="w-full max-w-screen md:max-w-[1117px] flex flex-col md:flex-row justify-center items-center gap-4 md:gap-[104px] px-4 md:px-0 pt-[35px] pb-[78px] md:py-0">
     <div class="max-w-[463px] flex flex-col items-center justify-center ">
-      <h1 set:html={content.title} class="text-center text-[24px] md:text-[44px] leading-[33px] md:leading-[46px] font-medium text-primary-dark-bold max-w-[336px] md:max-w-none"></h1>
+      <h1 class="text-center text-[24px] md:text-[44px] leading-[33px] md:leading-[46px] font-medium text-primary-dark-bold max-w-[336px] md:max-w-none">{content.title}</h1>
       <Icon name={"separate"} class={"w-[205px] h-auto mt-[29px] mb-[8px]"}/>
       <img src="/main/google.png" alt="Icono de Google" width="97px" height="54px" class="mb-[30px]">
       <div class="flex flex-col md:flex-row justify-center items-center gap-[18px]">

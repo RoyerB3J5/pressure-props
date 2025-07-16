@@ -8,22 +8,22 @@ interface Props {
 }
 const { content } = Astro.props as Props;
 ---
-<div class="flex flex-col justify-center items-center gap-11">
+<div class="flex flex-col justify-center items-center gap-[22px] md:gap-11 mb-[54px] md:mb-0">
   <Icon name={"separate"} class={"w-[205px] h-auto"}/>
-  <h2 class="text-[48px] text-center font-semibold leading-[58px] text-primary-dark-bold">{content.title}</h2>
-  <div class="flex justify-center items-center border-[1px] border-[#0468A6] rounded-[15px]">
+  <h2 class="text-[24px] md:text-[48px] text-center font-semibold leading-[58px] text-primary-dark-bold">{content.title}</h2>
+  <div class="flex flex-col md:flex-row justify-center items-center border-[1px] border-[#0468A6] rounded-[15px] max-w-[241px] md:max-w-none">
     {content.items.map((item, index) => (
       <>
-        <div class="relative flex flex-col justify-start items-center pt-[60px] px-5 min-h-[488px] h-full">
+        <div class="relative flex flex-col justify-start items-center pt-[57.5px] md:pt-[60px] px-5 min-h-[356px] md:min-h-[488px] h-full">
           <div class="absolute top-0 -translate-y-1/2 bg-primary-dark-bold rounded-[15px] p-[10px] w-[114px]">
             <p class="text-[16px] font-medium text-center text-white">{item.step}</p>
           </div>
-          <img src={`/main/${item.icon}.svg`} alt={item.title} class="w-[87px] h-[87px] mb-[38px]" width="87" height="87"/>
-          <h3 class="mb-[20px] text-[30px] font-semibold leading-[30px] text-primary-dark-bold text-center">{item.title}</h3>
-          <p class="text-[16px] font-medium leading-[25px] text-primary-dark-bold text-center">{item.description}</p>
+          <img src={`/main/${item.icon}.svg`} alt={item.title} class="w-[82px] md:w-[87px] h-[82px] md:h-[87px] mb-4 md:mb-[38px]" width="87" height="87"/>
+          <h3 class="mb-[20px] text-[18px] md:text-[30px] font-semibold leading-[30px] text-primary-dark-bold text-center">{item.title}</h3>
+          <p class="text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px] text-primary-dark-bold text-center">{item.description}</p>
         </div>
         {index < content.items.length - 1 && (
-          <div class="w-[1px] min-h-[488px] bg-[#0468A6] "></div>
+          <div class="w-full md:w-[1px] h-[1px] md:min-h-[488px] bg-[#0468A6] "></div>
         )}
       </>
     ))}

@@ -8,12 +8,11 @@ interface Props {
 }
 const { content } = Astro.props as Props;
 ---
-<div class="flex justify-center items-center gap-[53px] w-full">
-  <div class="w-[537px] flex-shrink-0 flex flex-col justify-center items-start gap-4">
-    <h3 set:html={content.title} class="text-[40px] font-normal leading-[46px] text-start text-primary-dark-bold "></h3>
+<div class="flex flex-col md:flex-row justify-center items-center gap-[53px] w-screen md:w-full px-4 md:px-0 ">
+  <div class="w-full md:w-[537px] md:flex-shrink-0 flex flex-col justify-center items-center md:items-start gap-4">
+    <h3 set:html={content.title} class="text-[24px] md:text-[40px] font-normal leading-[33px] md:leading-[46px] text-center md:text-start text-primary-dark-bold max-w-[250px] "></h3>
     <Icon name={"separate"} class={"w-[205px] h-auto"}/>
-    <p class="text-[16px] font-medium leading-[25px] text-primary-dark-bold">{content.description}</p>
+    <p class="text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px] text-primary-dark-bold text-center md:text-start ">{content.description}</p>
   </div>
-  <div class="flex-1 h-[316px] rounded-[15px] bg-[#787878] max-w-[550px]"></div>
-  
+  <div class="md:flex-1 h-[193px] md:h-[316px] rounded-[15px] bg-[#787878] w-full md:w-auto max-w-none md:max-w-[550px]"></div>
 </div>

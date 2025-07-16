@@ -6,61 +6,89 @@ interface Props {
 }
 const { content } = Astro.props as Props;
 ---
-<section class="w-full py-[86px] bg-backgorund mx-auto">
-  <div class="flex flex-col justify-center items-center gap-[78px] max-w-[1140px] mx-auto">
-    <h2 set:html={content.title} class="text-center text-[40px] font-normal leading-[46px] text-primary-dark-bold"></h2>
+<section class="w-full py-[90px] md:py-[86px] bg-backgorund mx-auto">
+  <div class="flex flex-col justify-center items-center gap-[31px] md:gap-[78px] max-w-screen md:max-w-[1140px] mx-auto px-4 md:px-0">
+    <h2 set:html={content.title} class="text-center text-[24px] md:text-[40px] font-normal leading-[46px] text-primary-dark-bold"></h2>
     <div 
   id="hover‑container"
-  class="w-full min-h-[489px] rounded-[15px] overflow-hidden flex"
+  class="w-full min-h-none md:min-h-[489px] rounded-[15px] overflow-hidden flex flex-col md:flex-row"
 >
   <div
     id="col1"
-    class="min-h-[489px] bg-[#B2B2B1] transition‑all duration‑200 cursor-pointer transition-all duration-200"
-    style="width:20%"
+    class="w-full md:w-1/5 h-[178px] md:min-h-[489px] bg-[#B2B2B1] transition‑all duration‑200 cursor-pointer transition-all duration-200"
+
   ></div>
   <div
     id="col2"
-    class="min-h-[489px] bg-[#787878] transition‑all duration‑200 cursor-pointer transition-all duration-200" 
-    style="width:20%"
+    class="w-full md:w-1/5 h-[178px] md:min-h-[489px] bg-[#787878] transition‑all duration‑200 cursor-pointer transition-all duration-200" 
   ></div>
   <div
     id="col3"
-    class="min-h-[489px] bg-[#414141] transition‑all duration‑200 cursor-pointer transition-all duration-200"
-    style="width:60%"
+    class="w-full md:w-3/5 h-[178px] md:min-h-[489px] bg-[#414141] transition‑all duration‑200 cursor-pointer transition-all duration-200"
   ></div>
 </div>
   </div>
 </section>
 <script is:inline>
-  (() => {
-    const container = document.getElementById('hover‑container');
-    const [c1, c2, c3] = [
+(() => {
+  const container = document.getElementById('hover‑container');
+  const [c1, c2, c3] = [
+    document.getElementById('col1'),
+    document.getElementById('col2'),
+    document.getElementById('col3')
+  ];
+
+  // función que resetea al estado inicial
+  const reset = () => {
+    c1.style.width = '20%';
+    c2.style.width = '20%';
+    c3.style.width = '60%';
+  };
+
+  // media query para md (≥768px)
+  const mql = window.matchMedia('(min-width: 768px)');
+
+  // inicializa o deshabilita el hover según el ancho
+  const setupHover = () => {
+    // primero, quitamos posibles listeners previos
+    c1.replaceWith(c1.cloneNode(true));
+    c2.replaceWith(c2.cloneNode(true));
+    c3.replaceWith(c3.cloneNode(true));
+
+    // reobtenemos los nodos después del replace
+    const [nc1, nc2, nc3] = [
       document.getElementById('col1'),
       document.getElementById('col2'),
       document.getElementById('col3')
     ];
-    // Estado inicial
-    const reset = () => {
-      c1.style.width = '20%';
-      c2.style.width = '20%';
-      c3.style.width = '60%';
-    };
-    // Hover handlers
-    c1.addEventListener('mouseenter', () => {
-      c1.style.width = '40%';
-      c2.style.width = '20%';
-      c3.style.width = '40%';
-    });
-    c2.addEventListener('mouseenter', () => {
-      c1.style.width = '20%';
-      c2.style.width = '40%';
-      c3.style.width = '40%';
-    });
-    c3.addEventListener('mouseenter', () => {
-      // al hacer hover en la tercera, dejamos como está
+
+    if (mql.matches) {
+      // solo en md+ aplicamos hover
+      nc1.addEventListener('mouseenter', () => {
+        nc1.style.width = '40%';
+        nc2.style.width = '20%';
+        nc3.style.width = '40%';
+      });
+      nc2.addEventListener('mouseenter', () => {
+        nc1.style.width = '20%';
+        nc2.style.width = '40%';
+        nc3.style.width = '40%';
+      });
+      nc3.addEventListener('mouseenter', reset);
+      container.addEventListener('mouseleave', reset);
+      // y reseteamos para asegurar estado inicial
       reset();
-    });
-    // Cuando sales de todo el contenedor, vuelves al estado inicial
-    container.addEventListener('mouseleave', reset);
-  })();
+    } else {
+      // en <md devolvemos todo a full width
+      nc1.style.width = '100%';
+      nc2.style.width = '100%';
+      nc3.style.width = '100%';
+    }
+  };
+
+  // corre al cargar
+  setupHover();
+  // y cada vez que cambie el tamaño de pantalla
+  mql.addEventListener('change', setupHover);
+})();
 </script>

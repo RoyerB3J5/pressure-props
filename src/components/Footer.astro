@@ -26,11 +26,11 @@ const icons = [
   },
 ];
 ---
-<footer class="w-full flex justify-between items-center max-w-[1149px] py-[57px]">
+<footer class="w-full flex flex-col md:flex-row justify-center md:justify-between items-center max-w-screen md:max-w-[1149px] px-4 md:px-0 pt-[37px] pb-[47px] md:py-[57px] gap-9 md:gap-0">
   <div class="w-[173px] h-[173px] rounded-full bg-primary-light"></div>
-  <div class="w-full flex justify-between items-start max-w-[851px]">
-    <div class="flex flex-col items-start justify-center gap-[32px] max-w-[389px]">
-      <p class="text-[16px] leading-[25px] font-medium text-start">{content?.text}</p>
+  <div class="w-full flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start max-w-[851px] gap-9 md:gap-0">
+    <div class="flex flex-col items-center md:items-start justify-center gap-9 md:gap-[32px] max-w-[389px]">
+      <p class="text-[13px] md:text-[16px] leading-[25px] font-medium text-center md:text-start">{content?.text}</p>
       <div class="flex items-center gap-[6px]">
           {icons.map(i => (
             <a href={i.href} class="size-[31px] bg-primary-dark-bold rounded-full flex justify-center items-center">
@@ -39,21 +39,21 @@ const icons = [
           ))}
         </div>
     </div>
-    <div class="flex flex-col items-center justify-center gap-[55px]">
+    <div class="flex flex-col items-center justify-center gap-9 md:gap-[55px]">
       <div class="flex flex-col items-center justify-center gap-[13px]">
-        <p class="text-[24px] font-semibold leading-[20px] text-center text-primary-dark-bold">{content?.hours}</p>
-        <p class="text-[24px] leading-[20px] text-center text-primary-dark-bold">9:00am - 8:00pm</p>
+        <p class="text-[20px] md:text-[24px] font-semibold leading-[20px] text-center text-primary-dark-bold">{content?.hours}</p>
+        <p class="text-[20px] md:text-[24px] leading-[20px] text-center text-primary-dark-bold">9:00am - 8:00pm</p>
       </div>
       <div class="flex flex-col items-center justify-center gap-[13px]">
         <p class="text-[15px] font-semibold leading-[20px] text-center text-primary-dark-bold">{content?.call}</p>
-        <a href="" class="text-center text-[20px] font-bold leading-[22px] text-primary-dark">(407) 493-0858</a>
+        <a href="" class="text-center text-[18px] md:text-[20px] font-bold leading-[22px] text-primary-dark">(407) 493-0858</a>
       </div>
     </div>
-    <div class="flex flex-col justify-center items-end gap-[18px]">
+    <div class="flex flex-col justify-center items-center md:items-end gap-[18px]">
       <p class="text-[16px] leading-[20px] font-semibold text-right text-primary-dark-bold">{content?.links_title}</p>
-      <div class="flex flex-col items-end gap-[26px]">
+      <div class="flex flex-col items-center md:items-end gap-[11px] md:gap-[26px]">
         {content?.links.map(item => (
-          <a href={item.href} class="text-right text-[15px] font-normal leading-[20px] text-primary-dark-bold uppercase hover:font-bold transition-all duration-300 ease-in-out">{item.label}</a>
+          <a href={item.href} class="text-center md:text-right text-[13px] md:text-[15px] font-normal leading-[20px] text-primary-dark-bold uppercase hover:font-bold transition-all duration-300 ease-in-out">{item.label}</a>
         ))}
       </div>
     </div>
