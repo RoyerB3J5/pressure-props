@@ -118,80 +118,67 @@ export default {
     },
     information: {
       referral: {
-        title:
-          'Pressure props <br/> <span class="text-[24px] md:text-[48px] font-semibold text-primary-dark leading-[33px] md:leading-[58px]">Programa de Referidos</span>',
+        title: 'Refiere y Gana Recompensas',
         text1:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        text2:
-          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          '¿Te encanta nuestro servicio? ¡Recomiéndalo y gana recompensas! Cuando refieres a 5 nuevos clientes, recibirás un 20% de descuento en tu próximo servicio. No hay límite: cuanto más refieras, más ahorras. Tus amigos y vecinos reciben un lavado a presión de alta calidad, y tú obtienes grandes recompensas. Es un ganar-ganar para hogares limpios y bolsillos felices.',
         button: 'HAZ CLIC AQUÍ',
       },
       working: {
-        title: 'Nuestro Proceso de Trabajo',
+        title: 'Cómo Funciona Nuestro Servicio de Lavado a Presión',
         items: [
           {
             step: 'PASO 01',
-            title: 'Contacto',
+            title: 'Contáctanos',
             icon: 'contact',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              'Llámanos, envíanos un mensaje o completa nuestro formulario para solicitar tu cotización gratuita.',
           },
           {
             step: 'PASO 02',
-            title: 'Consulta en sitio',
+            title: 'Visita al Sitio',
             icon: 'consultation2',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              'Visitamos tu propiedad para evaluar el área y darte una estimación precisa.',
           },
           {
             step: 'PASO 03',
-            title: 'Diseño',
+            title: 'Confirma tu Servicio',
             icon: 'design2',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              'Revisamos tus necesidades, explicamos el proceso y programamos la fecha que prefieras.',
           },
           {
             step: 'PASO 04',
-            title: 'Acuerdo',
+            title: 'Nos Ponemos a Trabajar',
             icon: 'deal',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              'Nuestro equipo llega puntualmente con equipo profesional y limpia cada detalle.',
           },
           {
             step: 'PASO 05',
-            title: 'Instalación',
+            title: 'Revisión Final y Seguimiento',
             icon: 'installation',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              'Inspeccionamos todo contigo, nos aseguramos de que estés satisfecho y aplicamos cualquier beneficio por recomendación o fidelidad.',
           },
         ],
       },
       rendering: {
         title:
-          "Diseño y <br/> <span class='text-[48px] font-semibold leading-[58px] text-primary-dark'>Renderizado 3D</span>",
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        button: 'SOLICITAR UNA COTIZACIÓN',
+          "Limpieza Profesional de Exteriores <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>con Resultados Reales</span>",
+        text: 'Restaura la belleza y el valor de tu propiedad con servicios expertos de lavado a presión. Limpiamos entradas, cercas, fachadas, canaletas y más. Nuestro equipo utiliza métodos seguros, prácticas ecológicas y equipos potentes para entregar resultados impecables en todo momento.',
+        button: 'SOLICITA UNA COTIZACIÓN',
       },
       design: {
         title:
-          "¿Ya Tienes un <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px]'>Diseño?</span>",
+          "¿Ya Reservaste <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>o Fuiste Recomendado?</span>",
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate.',
+          'Si fuiste recomendado por un amigo, o estás listo para agendar tu próximo servicio de lavado a presión, completa el formulario y te responderemos en un plazo de 24 horas. No olvides mencionar cualquier descuento o código de recomendación que tengas.',
       },
     },
     services: {
-      title:
-        "Tipos de <span class='font-semibold text-[24px] md:text-[48px] leading-[58px] text-primary-dark'>Servicios</span>",
+      title: 'Nuestros Planes de Limpieza',
     },
-    completed: {
-      title:
-        "Mira nuestros Recientes <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>Proyectos  Completados</span>",
-      button: 'VER TODOS LOS PROYECTOS',
-      name: 'pressureprops',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-
     numbers: {
       items: [
         {
@@ -204,31 +191,38 @@ export default {
         },
         {
           number: 300000,
-          title: 'Hojas removidas',
+          title: 'Hojas eliminadas',
         },
         {
           number: 50000,
-          title: 'Horas de cliente ahorradas',
+          title: 'Horas ahorradas a nuestros clientes',
         },
       ],
     },
+    completed: {
+      title:
+        "Mira nuestros Recientes <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>Proyectos de Lavado a Presión</span>",
+      button: 'VER TODOS LOS PROYECTOS',
+      name: 'pressureprops',
+      description: 'Texto del IG de pressurepros, es un widget de IG',
+    },
     catalog: {
       title:
-        "Descarga aquí nuestro <span class='font-semibold text-[24px] md:text-[48px] leading-[33px] md:leading-[58px] text-primary-dark'>Catálogo</span>",
+        "Descarga Aquí Nuestro <span class='font-semibold text-[24px] md:text-[48px] leading-[33px] md:leading-[58px] text-primary-dark'>Catálogo</span>",
       description:
-        'Donde podrás ver todos los servicios y opciones que tenemos para ti.',
-      button: 'Descargar ahora',
+        'Donde puedes ver todos los servicios y opciones que tenemos para ti.',
+      button: 'DESCARGAR AHORA',
     },
     project: {
-      title: '¿LISTO PARA COMENZAR TU PROYECTO?',
+      title: '¿Listo para Devolverle la Vida a tu Propiedad?',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
-      text: 'Ut enim ad minim veniam',
-      button: 'SOLICITAR UNA COTIZACIÓN',
+        'En Jz Pressure Pro, no solo lavamos. Restauramos y protegemos las superficies que más importan. Desde hogares hasta negocios, nuestro equipo experto está listo para entregar resultados impecables con satisfacción garantizada.',
+      text: 'Hagamos que tu propiedad vuelva a destacar.',
+      button: 'Solicita una Cotización Gratis',
     },
   },
   footer: {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    text: 'En Jz Pressure Pro, ofrecemos servicios de lavado a presión de alta calidad que restauran la belleza y el valor de tu propiedad. Desde entradas hasta fachadas, nuestra misión es mantener impecables los hogares y negocios de Orlando. Contáctanos hoy y devolvamos la vida a tu propiedad.',
     hours: 'HORARIOS DE SERVICIO',
     call: 'LLÁMANOS',
     links_title: 'LINKS',

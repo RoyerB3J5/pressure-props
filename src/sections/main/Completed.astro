@@ -10,23 +10,23 @@ const { content } = Astro.props as Props;
 ---
 <section class="flex flex-col justify-center items-center gap-[61px] md:gap-[115px] pt-[50px] pb-[70px] md:py-[115px] overflow-y-visible ">
   <div class="flex flex-col justify-center items-center gap-[53px] max-w-screen md:max-w-[1215px] w-full px-4 md:px-0">
-    <div class="flex flex-col md:flex-row justify-center md:justify-between items-center px-0 md:px-8 w-full gap-[18px] md:gap-0">
-      <h2 set:html={content.title} class="text-primary-dark-bold text-[24px] md:text-[40px] font-normal leading-[33px] md:leading-[46px] text-start"></h2>
+    <div class="flex flex-col md:flex-row justify-center md:justify-between md:items-center items-end px-0 md:px-8 w-full gap-[18px] md:gap-0">
+      <h2 set:html={content.title} class="text-primary-dark-bold text-[24px] md:text-[40px] font-normal leading-[33px] md:leading-[46px] text-start max-w-none md:max-w-[537px] "></h2>
       <Button class='button-gradient px-[38px]'>
           {content.button}
         </Button>
     </div>
   </div>
   <div class="flex flex-col justify-center items-center gap-7 w-full max-w-screen md:max-w-[1138] px-4 md:px-0">
-    <div class="w-full flex justify-center items-center gap-[26px] px-3">
+    <div class="w-full flex md:justify-start justify-center items-center gap-[26px] px-3">
       <img src="/main/logo.webp" alt="Logo de PressureProps" width="1024" height="1024" class="w-[62px] h-[62px] rounded-full border-[2px] border-primary-dark-bold"/>
-      <div class="flex flex-col md:flex-row justify-center md:justify-start items-start md:items-center gap-[3px]">
+      <div class="flex flex-col justify-center md:justify-start items-start  gap-[3px]">
         <h3 class="text-[20px] font-bold leading-[28px] text-start text-primary-dark-bold">{content.name}</h3>
         <p class="text-[16px] font-normal leading-[19.6px] text-start text-primary-light">{content.description}</p>
       </div>
     </div>
     <div class="grid grid-cols sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[10px] w-full -mb-56 justify-center">
-      {Array.from({ length: 16 }).map((_, index) => (
+      {Array.from({ length: 8 }).map((_, index) => (
         <div class="w-[277px] h-[277px] bg-[#D9D9D9] flex justify-center items-center">
         </div>
       ))}

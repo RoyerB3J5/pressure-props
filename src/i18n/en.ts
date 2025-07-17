@@ -121,65 +121,63 @@ export default {
     },
     information: {
       referral: {
-        title: 'Pressure props <br/> <span class="text-[24px] md:text-[48px] font-semibold text-primary-dark leading-[33px] md:leading-[58px]">Referral Program</span>',
+        title: 'Refer and Get Rewarded',
         text1:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        text2:
-          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          "Love our service? Spread the word and get rewarded! When you refer 5 new clients, you'll receive a 20% discount on your next service. There's no limit — the more you refer, the more you save. Your friends and neighbors get high-quality pressure washing, and you get big rewards. It's a win-win for clean homes and happy wallets.",
         button: 'CLICK HERE',
       },
       working: {
-        title: 'Our Working Process',
+        title: 'How Our Pressure Washing Service Works',
         items: [
           {
             step: 'STEP 01',
-            title: 'Contact',
+            title: 'Get in Touch',
             icon: 'contact',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              'Call, message, or fill out our form to request your free quote.',
           },
           {
             step: 'STEP 02',
-            title: 'Consultation on site',
+            title: 'On-Site Visit',
             icon: 'consultation2',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              'We visit your property to assess the area and give you an accurate estimate.',
           },
           {
             step: 'STEP 03',
-            title: 'Design',
+            title: 'Confirm Your Service',
             icon: 'design2',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              'We review your needs, explain the process, and schedule your preferred date.',
           },
           {
             step: 'STEP 04',
-            title: 'Deal',
+            title: 'We Get to Work',
             icon: 'deal',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              'Our team arrives on time with professional equipment and cleans every detail.',
           },
           {
             step: 'STEP 05',
-            title: 'Installation',
+            title: 'Final Check & Follow-Up',
             icon: 'installation',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              "We inspect everything with you, ensure you're satisfied, and apply any referral or loyalty benefits.",
           },
         ],
       },
       rendering:{
-        title:"Design and <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>3D Rendering</span>",
-        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        title:"Professional Exterior Cleaning <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>with Real Results</span>",
+        text:"Restore your property’s beauty and value with expert pressure washing services. We clean driveways, fences, siding, gutters, and more. Our team uses safe methods, eco-friendly practices, and powerful equipment to deliver spotless results every time.",
         button:"GET AN ESTIMATE"
       },
       design:{
-        title:"Already Have A <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px]'>Design?</span>",
-        description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate."
+        title:"Already Booked  <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>or Referred?</span>",
+        description:"If you’ve been referred by a friend, or you’re ready to schedule your next pressure washing service, complete the form and we’ll get back to you within 24 hours. Don’t forget to mention any discounts or referral codes you may have."
       }
     },
     services:{
-      title:"Type of <span class='font-semibold text-[24px] md:text-[48px] leading-[58px] text-primary-dark'>Services</span>"
+      title:"Our Cleaning Plans"
     },
     numbers : {
       items:[
@@ -202,10 +200,10 @@ export default {
       ]
     },
     completed:{
-      title:"Check out our Recent <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'> Completed Projects</span>",
+      title:"Check out our Recent <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>Pressure Washing Projects</span>",
       button:"VIEW ALL PROJECTS",
       name:"pressureprops",
-      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      description:"Texto del ig de pressurepros es widget de IG"
     },
     catalog:{
       title:"Download Here Our <span class='font-semibold text-[24px] md:text-[48px] leading-[33px] md:leading-[58px] text-primary-dark'>Catalog</span>",
@@ -213,14 +211,14 @@ export default {
       button:"DOWNload now"
     },
     project:{
-      title:"READY TO START YOUR PROJECT?",
-      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      text:"Ut enim ad minim veniam",
-      button:"GET AN ESTIMATE"
+      title:"Ready to Bring Your Property Back to Life?",
+      description:"At Jz Pressure Pro, we don’t just wash. We restore and protect the surfaces that matter most. From homes to businesses, our expert team is ready to deliver spotless results with guaranteed satisfaction. ",
+      text:"Let’s make your property stand out again.",
+      button:"Get a Free Estimate"
     }
   },
   footer: {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing e,elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    text: 'At Jz Pressure Pro, we deliver high-quality pressure washing services that restore the beauty and value of your property. From driveways to siding, our mission is to keep Orlando homes and businesses spotless. Contact us today and let’s bring your property back to life.',
     hours: 'SERVICE HOURS',
     call: 'CALL US',
     links_title: 'QUICK LINKS',
@@ -231,19 +229,19 @@ export default {
       },
       {
         label: 'Type of Services',
-        href: '/',
+        href: '/service',
       },
       {
         label: 'Gallery',
-        href: '/',
+        href: '/gallery',
       },
       {
         label: 'About Us',
-        href: '/',
+        href: '/about-us',
       },
       {
         label: 'Contact Us',
-        href: '/',
+        href: '/contact',
       },
     ],
   },

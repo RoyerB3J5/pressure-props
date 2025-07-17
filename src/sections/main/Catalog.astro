@@ -9,9 +9,9 @@ interface Props {
 const { content } = Astro.props as Props;
 ---
 <section class="py-[70px] md:py-[115px] max-w-screen md:max-w-[1142px] flex flex-col md:flex-row justify-center items-center gap-[18px] md:gap-[53px] px-4 md:px-0 w-full">
-  <div class="flex flex-col justify-center items-center w-full">
+  <div class="flex flex-col justify-center items-center w-auto">
     <h2 set:html={content.title} class="text-primary-dark-bold text-[24px] md:text-[40px] font-normal leading-[33px] md:leading-[46px] text-center max-w-[250px] md:max-w-none"></h2>
-    <p class="text-primary-dark-bold text-center text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px] mt-[18px] max-w-[336px] md:max-w-none">{content.description}</p>
+    <p class="text-primary-dark-bold text-center text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px] mt-[18px] max-w-[336px] md:max-w-[385px]">{content.description}</p>
     <Button class='button-gradient mt-[32px] px-[38px] uppercase'>
       {content.button}
     </Button>

@@ -10,7 +10,7 @@ const { content } = Astro.props as Props;
 ---
 <div class="flex flex-col md:flex-row justify-center items-center gap-[53px] w-screen md:w-full px-4 md:px-0 ">
   <div class="w-full md:w-[537px] md:flex-shrink-0 flex flex-col justify-center items-center md:items-start gap-4">
-    <h3 set:html={content.title} class="text-[24px] md:text-[40px] font-normal leading-[33px] md:leading-[46px] text-center md:text-start text-primary-dark-bold max-w-[250px] "></h3>
+    <h3 set:html={content.title} class="text-[24px] md:text-[40px] font-normal leading-[33px] md:leading-[46px] text-center md:text-start text-primary-dark-bold max-w-[300px] "></h3>
     <Icon name={"separate"} class={"w-[205px] h-auto"}/>
     <p class="text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px] text-primary-dark-bold text-center md:text-start ">{content.description}</p>
   </div>

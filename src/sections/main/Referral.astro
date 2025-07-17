@@ -10,9 +10,9 @@ const { content } = Astro.props as Props;
 ---
 <div class="flex flex-col md:flex-row justify-center items-center gap-[53px] mb-[94px] md:pb-0">
   <div class="flex flex-col justify-center items-center max-w-none md:max-w-[537px]">
-    <h2 class="text-primary-dark-bold text-center text-[24px] md:text-[40px] font-normal leading-[33px] md:leading-[46px] mb-[18px]" set:html={content.title}></h2>
-    <p class="text-[13px] md:text-[16px] font-medium text-primary-dark-bold leading-[20px] md:leading-[25px] text-center md:text-start mb-[20px]">{content.text1}</p>
-    <p class="text-[13px] md:text-[16px] font-medium text-primary-light leading-[20px] md:leading-[25px] text-center md:text-start mb-[32px]">{content.text2}</p>
+    <h2 class="text-primary-dark text-center text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] mb-[18px]">{content.title}</h2>
+    <p class="text-[13px] md:text-[16px] font-medium text-primary-dark-bold leading-[20px] md:leading-[25px] text-center md:text-start mb-[32px]">{content.text1}</p>
+
     <Button class='button-gradient px-[38px] '>
       {content.button}
     </Button>
