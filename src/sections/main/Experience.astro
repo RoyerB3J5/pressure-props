@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import BeforeAfter from '../../components/BeforeAfter.astro';
+import Button from '../../components/Button.astro';
 
 type Translations = typeof import('../../i18n/es').default;
 type ExperienceContent = Translations['main']['experience'];
@@ -9,7 +10,7 @@ interface Props {
 }
 const { content } = Astro.props as Props;
 ---
-<section class="pt-[640px] md:pt-[276px] pb-9 md:pb-[115px] flex flex-col justify-center items-center gap-8 md:gap-[52px] max-w-screen md:max-w-[1145px] px-4 md:px-0">
+<section class="pt-[600px] md:pt-[276px] pb-9 md:pb-[115px] flex flex-col justify-center items-center gap-8 md:gap-[52px] max-w-screen md:max-w-[1145px] px-4 md:px-0">
   <div class="w-full flex flex-col md:flex-row items-center md:items-start justify-center gap-8 md:gap-[86px]">
     <div class="relative order-2 md:order-1 w-full md:w-[581px] h-[902px] md:h-[647px]" >
       <!-- Experience 1: Fila 1, Columna 1 -->
@@ -29,19 +30,22 @@ const { content } = Astro.props as Props;
     </div>
     <div class="order-1 md:order-1 flex flex-col items-center md:items-start justify-center py-[37px] md:py-0 max-w-none md:max-w-[478px] max-h-none md:max-h-[648px]">
       <Icon name={"separate"} class={"w-[205px] h-auto"}/>
-      <h2 class="text-[24px] md:text-[44px] font-semibold leading-[24px] text-primary-light mt-1 h-[43px] md:h-[72px] flex items-center">Pressure <span class="ml-1 text-primary-dark">Props</span></h2>
-      <p class="text-[13px] md:text-[16px] leading-[20px] md:leading-[25px] text-center md:text-start font-bold">{content.description}</p>
-      <p set:html={content.description2} class="mt-5 text-[13px] md:text-[16px] leading-[25px] text-center md:text-start font-semibold "></p>
-      <div class="flex flex-col md:flex-row justify-center items-center md:items-start gap-[29px] md:gap-[43px] mt-[29px] md:mt-[73px] w-full py-1 md:py-0">
+      <h2 class="text-[22px] md:text-[44px] font-semibold leading-[24px] text-primary-light mt-1 h-[43px] md:h-[72px] flex items-center">Pressure <span class="ml-1 text-primary-dark">Props</span></h2>
+      <p class="text-[13px] md:text-[16px] leading-[20px] md:leading-[25px] text-center md:text-start font-bold max-w-[336px]">{content.description}</p>
+      <p set:html={content.description2} class="mt-[7px] md:mt-5 text-[13px] md:text-[16px] leading-[18px] md:leading-[25px] text-center md:text-start font-normal "></p>
+      <div class="flex flex-col md:flex-row justify-center items-center md:items-start gap-[29px] md:gap-[43px] mt-[28px] md:mt-[73px] w-full py-1 md:py-0">
         <div class="flex flex-col justify-between items-center md:items-start gap-[29px] md:gap-[62px] w-full">
           <div class="flex flex-col gap-2 md:gap-[14px]">
             {content.items.map(item=>(
               <div class="flex items-center gap-[7px] md:gap-4">
-                <Icon name={"check"} class={"h-[23px] md:h-[44px] w-[23px] md:w-[44px]"}/>
-                <p class="text-[15px] md:text-[16px] font-medium leading-[25px] text-primary-dark-bold">{item}</p>
+                <Icon name={"check"} class={"h-[15px] md:h-[44px] w-[15px] md:w-[44px]"}/>
+                <p class="text-[14px] md:text-[16px] font-medium leading-[25px] text-primary-dark-bold">{item}</p>
               </div>
             ))}
           </div>
+          <Button class='button-gradient block md:hidden'>
+              {content.button}
+          </Button> 
         </div>
         <div class="max-w-none md:max-w-[173px] flex flex-col justify-center items-center gap-[3px] px-[24px] md:px-[35.67px] pt-[9.5px] md:pt-[22px] pb-[13.5px] md:pb-[39px] border-t-[5px] border-primary-dark-bold bg-[#B2B2B1] text-white">
           <p class="text-[36px] md:text-[50px] text-center font-semibold leading-[65px]">7+</p>

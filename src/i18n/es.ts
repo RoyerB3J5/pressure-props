@@ -74,6 +74,7 @@ export default {
         'Precios asequibles y honestos',
         'De confianza en Orlando y Florida Central',
       ],
+      button:'VER MÁS',
       years: 'AÑOS DE EXPERIENCIA',
     },
     solutions: {
@@ -124,7 +125,7 @@ export default {
         button: 'HAZ CLIC AQUÍ',
       },
       working: {
-        title: 'Cómo Funciona Nuestro Servicio de Lavado a Presión',
+        title: 'Nuestro Proceso de Trabajo',
         items: [
           {
             step: 'PASO 01',
@@ -165,13 +166,13 @@ export default {
       },
       rendering: {
         title:
-          "Limpieza Profesional de Exteriores <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>con Resultados Reales</span>",
+          "Limpieza Profesional de Exteriores <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-primary-dark'>con Resultados Reales</span>",
         text: 'Restaura la belleza y el valor de tu propiedad con servicios expertos de lavado a presión. Limpiamos entradas, cercas, fachadas, canaletas y más. Nuestro equipo utiliza métodos seguros, prácticas ecológicas y equipos potentes para entregar resultados impecables en todo momento.',
         button: 'SOLICITA UNA COTIZACIÓN',
       },
       design: {
         title:
-          "¿Ya Reservaste <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>o Fuiste Recomendado?</span>",
+          "¿Ya Reservaste <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-primary-dark'>o Fuiste Recomendado?</span>",
         description:
           'Si fuiste recomendado por un amigo, o estás listo para agendar tu próximo servicio de lavado a presión, completa el formulario y te responderemos en un plazo de 24 horas. No olvides mencionar cualquier descuento o código de recomendación que tengas.',
       },

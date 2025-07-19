@@ -35,7 +35,7 @@ const match = currentPath.match(/^\/(en|es)/);
 const lang = match ? match[1] : 'en';
 ---
 <header class="relative w-full flex flex-col justify-center items-center">
-  <div class="w-full bg-primary-dark flex justify-center">
+  <div class="w-full bg-primary-dark justify-center hidden md:flex">
     <div class="w-full flex justify-center md:justify-between items-center max-w-[1154px]">
       <div class="flex items-center gap-[6px]">
         <Icon name={"map"} class={"w-[19px] h-[19px] text-white"}/>
@@ -53,7 +53,7 @@ const lang = match ? match[1] : 'en';
       </div>
     </div>
   </div>
-  <div class="w-full max-w-screen sm:max-w-[1178px] min-h-[57px] md:min-h-[141px] flex justify-between items-center px-7 md:px-0">
+  <div class="w-full max-w-screen sm:max-w-[1178px] py-3 md:min-h-[141px] flex justify-between items-center px-7 md:px-0">
     <div class="size-[33px] md:size-[91px] bg-primary-light rounded-full"></div>
     <div class="absolute md:relative flex items-center bg-primary-dark md:bg-transparent text-white md:text-primary-dark-bold flex-col justify-center md:flex-row h-screen md:h-auto w-[90%] md:w-auto z-10 top-0 right-0 py-6 md:py-0 gap-10 md:gap-0 transform translate-x-full md:translate-x-0 transition-transform duration-300 ease-out" id="mobile-menu">
       <img src="/equis.svg" alt="Menu" width="24" height="24" class="md:hidden block absolute top-6 right-6 cursor-pointer" id="close-btn">

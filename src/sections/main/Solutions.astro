@@ -8,18 +8,18 @@ interface Props {
 }
 const { content } = Astro.props as Props;
 ---
-<section class="relative w-full pt-[69px] pb-[90px] md:pt-[90px] md:pb-[130px] overflow-hidden">
+<section class="relative w-full pt-[192px] pb-[115px] md:pt-[90px] md:pb-[130px] overflow-hidden">
   <img src="/main/bg-solutions.webp" alt="Fondo de soluciones" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover -z-20 opacity-50" loading="lazy" decoding="async">
   <div class="absolute inset-0 blue-gradient -z-10"></div>
   <div class="relative z-0 flex flex-col justify-center items-center gap-5 md:gap-[87px] max-w-screen md:max-w-[1126px] mx-auto px-4 md:px-0">
     <div class="flex flex-col md:flex-row justify-center items-center gap-[32px]">
       <div class="flex flex-col justify-center items-center gap-[26px]">
-        <h3 set:html={content.description} class="text-center text-[24px] md:text-[40px] font-medium leading-[33px] md:leading-[46px] text-white max-w-[336px] md:max-w-none"></h3>
+        <h3 set:html={content.description} class="text-center text-[32px] md:text-[40px] font-medium leading-[35px] md:leading-[46px] text-white max-w-[336px] md:max-w-none"></h3>
         <Icon name={"separate"} class={"w-[205px] h-auto"}/>
       </div>
-      <div class="flex flex-col justify-center items-center gap-[30px] md:gap-[26px] py-[30px] md:pb-[48px] md:pt-[21px] px-[24px] md:px-[18px] bg-primary-dark-bold max-w-[550px] rounded-[15px] text-[#FAFAFA]">
-        <h2 class="text-center text-[24px] md:text-[40px] font-semibold leading-[46px] ">{content.title}</h2>
-        <p class="text-center text-[13px] md:text-[16px] font-medium leading-[25px] ">{content.text}</p>
+      <div class="flex flex-col justify-center items-center gap-[20px] md:gap-[26px] py-[31px] md:pb-[48px] md:pt-[21px] px-[27px] md:px-[18px] bg-primary-dark-bold max-w-[550px] rounded-[15px] text-[#FAFAFA]">
+        <h2 class="text-center text-[20px] md:text-[40px] font-semibold leading-[25px] md:leading-[46px] max-w-[279px] md:max-w-none">{content.title}</h2>
+        <p class="text-center text-[13px] md:text-[16px] font-normal md:font-medium leading-[18px] md:leading-[25px] ">{content.text}</p>
       </div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[22px]">

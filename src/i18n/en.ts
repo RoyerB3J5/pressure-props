@@ -77,6 +77,7 @@ export default {
         'Affordable, Honest Pricing',
         'Trusted in Orlando and Central Florida',
       ],
+      button:'LEARN MORE',
       years: 'YEARS OF  EXPERIENCE',
     },
     solutions: {
@@ -127,7 +128,7 @@ export default {
         button: 'CLICK HERE',
       },
       working: {
-        title: 'How Our Pressure Washing Service Works',
+        title: 'Our Working Process',
         items: [
           {
             step: 'STEP 01',
@@ -167,12 +168,12 @@ export default {
         ],
       },
       rendering:{
-        title:"Professional Exterior Cleaning <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>with Real Results</span>",
+        title:"Professional Exterior Cleaning <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-primary-dark'>with Real Results</span>",
         text:"Restore your property’s beauty and value with expert pressure washing services. We clean driveways, fences, siding, gutters, and more. Our team uses safe methods, eco-friendly practices, and powerful equipment to deliver spotless results every time.",
         button:"GET AN ESTIMATE"
       },
       design:{
-        title:"Already Booked  <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>or Referred?</span>",
+        title:"Already Booked  <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-primary-dark'>or Referred?</span>",
         description:"If you’ve been referred by a friend, or you’re ready to schedule your next pressure washing service, complete the form and we’ll get back to you within 24 hours. Don’t forget to mention any discounts or referral codes you may have."
       }
     },
