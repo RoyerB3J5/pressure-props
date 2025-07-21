@@ -6,11 +6,11 @@ interface Props {
 }
 const { content } = Astro.props as Props;
 ---
-<section class="relative w-full pt-[200px] pb-[55px] md:pb-[75px] overflow-hidden" id="numbers-section">
+<section class="relative w-full pt-[200px] pb-[138px] md:pb-[75px] overflow-hidden" id="numbers-section">
   <img src="/main/bg-number.webp" alt="Fondo de chicha" width="1408" height="704" class="absolute inset-0 w-full h-full object-cover -z-20 opacity-50" loading="lazy" decoding="async">
   <div class="absolute inset-0 blue-gradient -z-10"></div>
-  <div class="relative z-0 flex flex-col justify-center items-center gap-8 md:gap-[70px] max-w-screen md:max-w-[1157px] mx-auto px-4 md:px-0">
-    <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-[79px]">
+  <div class="relative z-0 flex flex-col justify-center items-center gap-[70px] max-w-screen md:max-w-[1157px] mx-auto px-4 md:px-0">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-[71px] md:gap-[79px]">
       {content.items.map((item,idx) => (
         <div class="flex flex-col justify-center items-center gap-[5px]">
           <p class="text-[24px] md:text-[50px] font-bold leading-[55px] text-white">

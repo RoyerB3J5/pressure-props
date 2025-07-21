@@ -1,0 +1,49 @@
+---
+import { Icon } from 'astro-icon/components';
+import en from '../../../i18n/en';
+import es from '../../../i18n/es';
+import Layout from '../../../layouts/Layout.astro';
+import type { Language } from '../../../types/language.type';
+
+export function getStaticPaths() {
+  const services = ['classic', 'semi-premium', 'premium'];
+  const languages = ['es', 'en'];
+
+  return languages.flatMap(lang =>
+    services.map(service => ({
+      params: { lang, service },
+    }))
+  );
+}
+
+export const defaultRedirect = '/en';
+
+const { lang, service } = Astro.params as { lang: Language; service: string };
+const translations = { es, en };
+const t = translations[lang];
+
+// Obtener los datos del servicio específico
+const serviceData = t.services[service as keyof typeof t.services];
+---
+
+<Layout lang={lang} t={t}>
+  <section class="pt-[160px] pb-[180px] flex flex-col justify-center items-center w-full relative overflow-hidden">
+    <img src={`/${service}.webp`} alt="Fondos de servicios" width="3072" height="4096" class="absolute inset-0 w-full h-full object-cover -z-20 opacity-50" loading="lazy" decoding="async">
+    <div class="absolute inset-0 blue-gradient -z-10"></div>
+    <div class="flex flex-col justify-center items-center gap-8">
+      <h1 class="text-[89px] font-semibold leading-[96px] text-center text-white " set:html={serviceData.title}></h1>
+    <Icon name={"separate"} class={"w-[205px] h-auto"}/>
+    </div>
+  </section>
+  <section class="max-w-[1058px] mx-auto flex justify-center items-start gap-[110px] pt-[73px] pb-[51px]">
+    <p set:html={serviceData.description} class="text-[16px] font-normal leading-[25px] max-w-[486px] "></p>
+    <div class="flex flex-col justify-center items-start gap-1 ">
+      {serviceData.list.map(item => (
+        <div class="flex justify-start items-center gap-[7px] md:gap-4 w-full">
+                <Icon name={"check"} class={"h-[15px] md:h-[44px] w-[15px] md:w-[44px] shrink-0"}/>
+                <p class="text-[14px] md:text-[16px] font-medium leading-[25px] text-primary-dark-bold">{item}</p>
+              </div>
+      ))}
+    </div>
+  </section>
+</Layout>

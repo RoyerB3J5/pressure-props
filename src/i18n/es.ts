@@ -29,7 +29,7 @@ export default {
       },
       {
         label: 'Semipremium',
-        href: 'semipremium',
+        href: 'semi-premium',
       },
       {
         label: 'Premium',
@@ -74,7 +74,7 @@ export default {
         'Precios asequibles y honestos',
         'De confianza en Orlando y Florida Central',
       ],
-      button:'VER MÁS',
+      button: 'VER MÁS',
       years: 'AÑOS DE EXPERIENCIA',
     },
     solutions: {
@@ -202,14 +202,14 @@ export default {
     },
     completed: {
       title:
-        "Mira nuestros Recientes <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[33px] md:leading-[58px] text-primary-dark'>Proyectos de Lavado a Presión</span>",
+        "Mira nuestros Recientes <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-primary-dark'>Proyectos de Lavado a Presión</span>",
       button: 'VER TODOS LOS PROYECTOS',
       name: 'pressureprops',
       description: 'Texto del IG de pressurepros, es un widget de IG',
     },
     catalog: {
       title:
-        "Descarga Aquí Nuestro <span class='font-semibold text-[24px] md:text-[48px] leading-[33px] md:leading-[58px] text-primary-dark'>Catálogo</span>",
+        "Descarga Aquí Nuestro <span class='font-semibold text-[20px] md:text-[48px] leading-[26px] md:leading-[58px] text-primary-dark'>Catálogo</span>",
       description:
         'Donde puedes ver todos los servicios y opciones que tenemos para ti.',
       button: 'DESCARGAR AHORA',
@@ -222,6 +222,109 @@ export default {
       button: 'Solicita una Cotización Gratis',
     },
   },
+  services: {
+    classic: {
+      image: 'classic',
+      title: 'Lavado a Presión Residencial',
+      description:
+        "<span class='text-[16px] font-medium leading-[25px]'>Lavado a Presión Puntual en Orlando – Servicio de Limpieza Básica</span> <br/> ¿Buscas una limpieza rápida o profunda por temporada? Nuestro servicio de Limpieza Básica está diseñado para propietarios de viviendas y pequeños negocios en Orlando que necesitan una solución de lavado a presión puntual y potente. Ya sea para preparar tu propiedad para la venta, un evento o simplemente eliminar suciedad, moho o hongos acumulados. Este servicio ofrece resultados rápidos y de alta calidad. <br/> Limpiamos entradas, pasillos, patios, cercas, revestimientos y más usando equipos profesionales y productos ecológicos. Sin compromiso a largo plazo. Solo una visita sólida y efectiva de los expertos de Jz Pressure Pro.",
+      list: [
+        'Limpieza Exterior de Casas',
+        'Lavado Suave de Tejados',
+        'Lavado a Presión de Ventanas',
+        'Limpieza de Entradas y Pasillos',
+        'Restauración de Áreas de Piscina',
+        'Limpieza de Cocheras',
+        'Limpieza de Cercas',
+      ],
+    },
+    'semi-premium': {
+      image: 'semipremium',
+      title: 'Lavado a Presión Comercial',
+      description:
+        "<span class='text-[16px] font-medium leading-[25px]'>Plan de Mantenimiento Mensual de Lavado a Presión en Orlando</span> <br/> Mantén tu propiedad en excelente estado mes a mes con nuestro Plan Mensual. Es la solución perfecta para propietarios ocupados, agentes inmobiliarios, anfitriones de Airbnb y administradores de propiedades en Orlando que desean exteriores limpios sin preocuparse por agendar cada visita.<br/> Elige entre servicio mensual o quincenal, desde solo $60/mes, con opciones para incluir servicios adicionales como lavado de autos móvil o cuidado de patios. Nuestro equipo se adapta a tu horario para ofrecer resultados constantes. Menos manchas. Sin acumulación. Una propiedad que siempre se ve impecable.<br/> Ahorra dinero, ahorra tiempo y protege tu propiedad a largo plazo.",
+      list: [
+        'Negocios de Alto Tráfico (I-Drive)',
+        'Hoteles y Restaurantes',
+        'Locales Comerciales',
+        'Edificios de Oficinas',
+      ],
+    },
+    premium: {
+      image: 'premium',
+      title: 'Servicios de Lavado de Autos',
+      description:
+        "<span class='text-[16px] font-medium leading-[25px]'>Plan Trimestral de Lavado a Presión – Cuidado a Largo Plazo para tu Propiedad en Orlando</span> <br/> El clima de Florida puede deteriorar rápidamente tu propiedad. Por eso, nuestro Plan Trimestral es una forma inteligente y económica de mantener la limpieza y el valor durante todo el año. Recibirás 4 servicios completos de lavado a presión al año, estratégicamente programados por temporada para combatir la suciedad, el daño climático y las manchas. <br/> Este plan incluye un 20% DE DESCUENTO en comparación con las visitas individuales, además tu 5º servicio es GRATIS como parte de nuestro programa de fidelidad. Es ideal para clientes residenciales y comerciales que se preocupan por la apariencia, el mantenimiento y el valor a largo plazo.<br/> Disfruta de tranquilidad, mejor apariencia exterior y una propiedad que siempre luce cuidada — todo sin mover un dedo.",
+      list: [
+        'Básico: Lavado exterior + limpieza de llantas',
+        'Completo: Exterior + detallado interior, brillo de tablero, aspirado completo',
+        'Premium: Completo + recubrimiento de cera exterior',
+        'Limpieza Detallada: Limpieza de techo, limpieza profunda de asientos, restauración de alfombras + necesidades específicas personalizadas',
+      ],
+    },
+  },
+  gallery: {
+    title: 'Galería',
+    image: 'gallery',
+  },
+  'about-us': {
+    image: 'about',
+    title: 'Sobre Nosotros',
+    description:
+      'En Jz Pressure Pro, nos especializamos en servicios de lavado a presión de alta calidad para hogares y negocios en Orlando y sus alrededores. Desde restaurar entradas hasta limpiar cercas, revestimientos, canaletas y más, nos comprometemos a transformar cada propiedad con profesionalismo, precisión y cuidado.<br/> Lo que nos distingue no son solo los resultados que ofrecemos, sino cómo los logramos — con integridad, transparencia y enfoque en la satisfacción del cliente. Creemos que una propiedad limpia no solo es hermosa, sino también valiosa y segura.',
+    team: {
+      title: 'Nuestro Equipo',
+      description:
+        'Nuestro equipo se apasiona por ofrecer a cada cliente una experiencia sin complicaciones. Desde el momento en que nos contactas hasta el enjuague final, aseguramos que cada paso se maneje con atención al detalle y respeto total por tu propiedad. Nos tomamos el tiempo para escuchar tus necesidades, evaluar tu espacio y recomendar la solución más efectiva. Cada decisión se toma pensando en tu tiempo, presupuesto y expectativas. En Jz Pressure Pro, no solo lavamos superficies. Construimos confianza con cada proyecto completado.',
+      stand: {
+        title: 'JZ PRO<br/> Nuestros Valores',
+        list: [
+          {
+            letter: 'J',
+            title: 'Resultados Reales',
+            description:
+              'Sin presiones, sin trucos. Solo resultados constantes y de alto impacto, respaldados por garantía de satisfacción.',
+          },
+          {
+            letter: 'Z',
+            title: 'Mentalidad de Cero Desperdicio',
+            description:
+              'Estamos comprometidos con una limpieza más inteligente y sostenible. Usamos productos ecológicos y buscamos minimizar el desperdicio de agua.',
+          },
+          {
+            letter: 'P',
+            title: 'Servicio Profesional',
+            description:
+              'Desde nuestros uniformes hasta nuestras herramientas, desde la programación hasta la revisión final — todo se hace de la manera correcta. Siempre.',
+          },
+          {
+            letter: 'R',
+            title: 'Resultados Confiables',
+            description:
+              'Llegamos a tiempo, cumplimos lo prometido y nos aseguramos de que estés 100% satisfecho con los resultados.',
+          },
+          {
+            letter: 'O',
+            title: 'Enfocados en Orlando',
+            description:
+              'Conocemos esta ciudad, su clima y sus superficies. Por eso nuestro servicio está optimizado para hogares y negocios de Florida.',
+          },
+        ],
+      },
+    },
+  },
+  contact: {
+    image: 'contact',
+    title: 'Contáctanos',
+    text: 'Formas de Contactarnos',
+    description: 'Contáctanos hoy y un asesor experto te ayudará',
+    schedules: {
+      title: 'Atención',
+      description: 'Lun-Sáb',
+      text: 'Dom',
+    },
+  },
+
   footer: {
     text: 'En Jz Pressure Pro, ofrecemos servicios de lavado a presión de alta calidad que restauran la belleza y el valor de tu propiedad. Desde entradas hasta fachadas, nuestra misión es mantener impecables los hogares y negocios de Orlando. Contáctanos hoy y devolvamos la vida a tu propiedad.',
     hours: 'HORARIOS DE SERVICIO',

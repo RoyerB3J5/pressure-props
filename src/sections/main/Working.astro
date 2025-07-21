@@ -14,12 +14,12 @@ const { content } = Astro.props as Props;
   <div class="flex flex-col md:flex-row justify-center items-center border-[1px] border-[#0468A6] rounded-[15px] max-w-[241px] md:max-w-none">
     {content.items.map((item, index) => (
       <>
-        <div class="relative flex flex-col justify-start items-center pt-[55.5px] md:pt-[60px] px-5 min-h-[354px] md:min-h-[413px] h-full max-w-none md:max-w-[240px]">
+        <div class="relative flex flex-col justify-start items-center pt-[65.5px] md:pt-[60px] px-5 min-h-[354px] md:min-h-[413px] h-full max-w-none md:max-w-[240px]">
           <div class="absolute top-0 -translate-y-1/2 bg-primary-dark-bold rounded-[15px] p-[10px] w-[114px]">
             <p class="text-[12px] md:text-[16px] font-normal md:font-medium text-center text-white ">{item.step}</p>
           </div>
           <img src={`/main/${item.icon}.svg`} alt={item.title} class="w-[55px] md:w-[87px] h-[55px] md:h-[87px] mb-[30px] md:mb-[38px]" width="87" height="87"/>
-          <h3 class="mb-[6px] md:mb-[20px] text-[18px] md:text-[30px] font-semibold leading-[58px] md:leading-[30px] text-primary-dark-bold text-center">{item.title}</h3>
+          <h3 class="mb-[30px] md:mb-[20px] text-[18px] md:text-[30px] font-semibold leading-[18px] md:leading-[30px] text-primary-dark-bold text-center mt-[10px] md:mt-0">{item.title}</h3>
           <p class="text-[13px] md:text-[16px] font-medium leading-[18px] md:leading-[25px] text-primary-dark-bold text-center">{item.description}</p>
         </div>
         {index < content.items.length - 1 && (
