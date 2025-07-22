@@ -3,6 +3,7 @@ import { Icon } from 'astro-icon/components';
 import en from '../../../i18n/en';
 import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
+import ContactInfo from '../../../sections/services/ContactInfo.astro';
 import type { Language } from '../../../types/language.type';
 
 export function getStaticPaths() {
@@ -24,6 +25,15 @@ const t = translations[lang];
 
 // Obtener los datos del servicio específico
 const serviceData = t.services[service as keyof typeof t.services];
+const items = serviceData.list;
+const isTwoCols = items.length > 5;
+let columns = [];
+
+if (isTwoCols) {
+  columns = [items.slice(0, 5), items.slice(5, 10)];
+} else {
+  columns = [items];
+}
 ---
 
 <Layout lang={lang} t={t}>
@@ -37,13 +47,20 @@ const serviceData = t.services[service as keyof typeof t.services];
   </section>
   <section class="max-w-[1058px] mx-auto flex justify-center items-start gap-[110px] pt-[73px] pb-[51px]">
     <p set:html={serviceData.description} class="text-[16px] font-normal leading-[25px] max-w-[486px] "></p>
-    <div class="flex flex-col justify-center items-start gap-1 ">
-      {serviceData.list.map(item => (
+    <div class={isTwoCols ? 'grid grid-cols-2 gap-[6px] items-start' : 'grid grid-cols-1 gap-4'}>
+  {columns.map((col) => (
+    <div class="flex flex-col justify-center items-start gap-[6px]">
+      {col.map((item) => (
         <div class="flex justify-start items-center gap-[7px] md:gap-4 w-full">
-                <Icon name={"check"} class={"h-[15px] md:h-[44px] w-[15px] md:w-[44px] shrink-0"}/>
-                <p class="text-[14px] md:text-[16px] font-medium leading-[25px] text-primary-dark-bold">{item}</p>
-              </div>
+          <Icon name="check" class="h-[15px] md:h-[44px] w-[15px] md:w-[44px] shrink-0" />
+          <p class="text-[14px] md:text-[16px] font-medium leading-[25px] text-primary-dark-bold">
+            {item}
+          </p>
+        </div>
       ))}
     </div>
+  ))}
+</div>
   </section>
+  <ContactInfo />
 </Layout>

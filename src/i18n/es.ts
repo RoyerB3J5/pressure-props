@@ -271,46 +271,46 @@ export default {
     image: 'about',
     title: 'Sobre Nosotros',
     description:
-      'En Jz Pressure Pro, nos especializamos en servicios de lavado a presión de alta calidad para hogares y negocios en Orlando y sus alrededores. Desde restaurar entradas hasta limpiar cercas, revestimientos, canaletas y más, nos comprometemos a transformar cada propiedad con profesionalismo, precisión y cuidado.<br/> Lo que nos distingue no son solo los resultados que ofrecemos, sino cómo los logramos — con integridad, transparencia y enfoque en la satisfacción del cliente. Creemos que una propiedad limpia no solo es hermosa, sino también valiosa y segura.',
+      'En Jz Pressure Pro, nos especializamos en servicios de lavado a presión de alta calidad para hogares y negocios en Orlando y sus alrededores. Desde restaurar entradas hasta limpiar cercas, revestimientos, canaletas y más, nos comprometemos a transformar cada propiedad con profesionalismo, precisión y cuidado.<br/> <br/> Lo que nos distingue no son solo los resultados que ofrecemos, sino cómo los logramos — con integridad, transparencia y enfoque en la satisfacción del cliente. Creemos que una propiedad limpia no solo es hermosa, sino también valiosa y segura.',
     team: {
       title: 'Nuestro Equipo',
       description:
-        'Nuestro equipo se apasiona por ofrecer a cada cliente una experiencia sin complicaciones. Desde el momento en que nos contactas hasta el enjuague final, aseguramos que cada paso se maneje con atención al detalle y respeto total por tu propiedad. Nos tomamos el tiempo para escuchar tus necesidades, evaluar tu espacio y recomendar la solución más efectiva. Cada decisión se toma pensando en tu tiempo, presupuesto y expectativas. En Jz Pressure Pro, no solo lavamos superficies. Construimos confianza con cada proyecto completado.',
-      stand: {
-        title: 'JZ PRO<br/> Nuestros Valores',
-        list: [
-          {
-            letter: 'J',
-            title: 'Resultados Reales',
-            description:
-              'Sin presiones, sin trucos. Solo resultados constantes y de alto impacto, respaldados por garantía de satisfacción.',
-          },
-          {
-            letter: 'Z',
-            title: 'Mentalidad de Cero Desperdicio',
-            description:
-              'Estamos comprometidos con una limpieza más inteligente y sostenible. Usamos productos ecológicos y buscamos minimizar el desperdicio de agua.',
-          },
-          {
-            letter: 'P',
-            title: 'Servicio Profesional',
-            description:
-              'Desde nuestros uniformes hasta nuestras herramientas, desde la programación hasta la revisión final — todo se hace de la manera correcta. Siempre.',
-          },
-          {
-            letter: 'R',
-            title: 'Resultados Confiables',
-            description:
-              'Llegamos a tiempo, cumplimos lo prometido y nos aseguramos de que estés 100% satisfecho con los resultados.',
-          },
-          {
-            letter: 'O',
-            title: 'Enfocados en Orlando',
-            description:
-              'Conocemos esta ciudad, su clima y sus superficies. Por eso nuestro servicio está optimizado para hogares y negocios de Florida.',
-          },
-        ],
-      },
+        'Nuestro equipo se apasiona por ofrecer a cada cliente una experiencia sin complicaciones. Desde el momento en que nos contactas hasta el enjuague final, aseguramos que cada paso se maneje con atención al detalle y respeto total por tu propiedad. Nos tomamos el tiempo para escuchar tus necesidades, evaluar tu espacio y recomendar la solución más efectiva. Cada decisión se toma pensando en tu tiempo, presupuesto y expectativas.<br/> <br/> En Jz Pressure Pro, no solo lavamos superficies. Construimos confianza con cada proyecto completado.',
+    },
+    stand: {
+      title: 'JZ PRO<br/> <span class="text-primary-dark text-[48px] font-semibold">Nuestros Valores</span>',
+      list: [
+        {
+          letter: 'J',
+          title: 'Resultados Reales',
+          description:
+            'Sin presiones, sin trucos. Solo resultados constantes y de alto impacto, respaldados por garantía de satisfacción.',
+        },
+        {
+          letter: 'Z',
+          title: 'Mentalidad de Cero Desperdicio',
+          description:
+            'Estamos comprometidos con una limpieza más inteligente y sostenible. Usamos productos ecológicos y buscamos minimizar el desperdicio de agua.',
+        },
+        {
+          letter: 'P',
+          title: 'Servicio Profesional',
+          description:
+            'Desde nuestros uniformes hasta nuestras herramientas, desde la programación hasta la revisión final — todo se hace de la manera correcta. Siempre.',
+        },
+        {
+          letter: 'R',
+          title: 'Resultados Confiables',
+          description:
+            'Llegamos a tiempo, cumplimos lo prometido y nos aseguramos de que estés 100% satisfecho con los resultados.',
+        },
+        {
+          letter: 'O',
+          title: 'Enfocados en Orlando',
+          description:
+            'Conocemos esta ciudad, su clima y sus superficies. Por eso nuestro servicio está optimizado para hogares y negocios de Florida.',
+        },
+      ],
     },
   },
   contact: {

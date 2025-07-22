@@ -271,46 +271,46 @@ export default {
     image: 'about',
     title: 'About Us',
     description:
-      'At Jz Pressure Pro, we specialize in high-quality pressure washing services for homes and businesses throughout Orlando and nearby areas. From restoring driveways to cleaning fences, siding, gutters, and more, we’re committed to transforming each property with professionalism, precision, and care.<br/> What sets us apart is not just the results we deliver, but how we deliver them — with integrity, transparency, and a focus on customer satisfaction. We believe that a clean property is not only beautiful but also valuable and safe.',
+      'At Jz Pressure Pro, we specialize in high-quality pressure washing services for homes and businesses throughout Orlando and nearby areas. From restoring driveways to cleaning fences, siding, gutters, and more, we’re committed to transforming each property with professionalism, precision, and care.<br/> <br/> What sets us apart is not just the results we deliver, but how we deliver them — with integrity, transparency, and a focus on customer satisfaction. We believe that a clean property is not only beautiful but also valuable and safe.',
     team: {
       title: 'Our Team',
       description:
-        'Our team is passionate about giving every client a seamless experience. From the moment you contact us to the final rinse, we ensure each step is handled with attention to detail and full respect for your property. We take the time to listen to your needs, evaluate your space, and recommend the most effective solution. Every decision is made with your time, budget, and expectations in mind. At Jz Pressure Pro, we don’t just wash surfaces. We build trust through every project we complete.',
-      stand: {
-        title: ' JZ PRO<br/> What We Stand For',
-        list: [
-          {
-            letter: 'J',
-            title: 'Just Results',
-            description:
-              'No pressure, no gimmicks. Just consistent, high-impact results backed by a satisfaction guarantee.',
-          },
-          {
-            letter: 'Z',
-            title: 'Zero Waste Mindset',
-            description:
-              'We’re committed to smarter, more sustainable cleaning. We use eco-friendly products and explore ways to minimize water waste.',
-          },
-          {
-            letter: 'P',
-            title: 'Professional Service',
-            description:
-              'From our uniforms to our tools, from scheduling to final walkthroughs — everything is done the right way. Every time.',
-          },
-          {
-            letter: 'R',
-            title: 'Reliable Outcomes',
-            description:
-              "We show up on time, do what we promise, and make sure you're 100% happy with the results.",
-          },
-          {
-            letter: 'O',
-            title: 'Orlando-Focused',
-            description:
-              'We know this city, its weather, and its surfaces. That’s why our service is optimized for Florida homes and businesses.',
-          },
-        ],
-      },
+        'Our team is passionate about giving every client a seamless experience. From the moment you contact us to the final rinse, we ensure each step is handled with attention to detail and full respect for your property. We take the time to listen to your needs, evaluate your space, and recommend the most effective solution. Every decision is made with your time, budget, and expectations in mind.<br/> <br/> At Jz Pressure Pro, we don’t just wash surfaces. We build trust through every project we complete.',
+    },
+    stand: {
+      title: ' JZ PRO<br/> <span class="text-primary-dark text-[48px] font-semibold"> What We Stand For</span>',
+      list: [
+        {
+          letter: 'J',
+          title: 'Just Results',
+          description:
+            'No pressure, no gimmicks. Just consistent, high-impact results backed by a satisfaction guarantee.',
+        },
+        {
+          letter: 'Z',
+          title: 'Zero Waste Mindset',
+          description:
+            'We’re committed to smarter, more sustainable cleaning. We use eco-friendly products and explore ways to minimize water waste.',
+        },
+        {
+          letter: 'P',
+          title: 'Professional Service',
+          description:
+            'From our uniforms to our tools, from scheduling to final walkthroughs — everything is done the right way. Every time.',
+        },
+        {
+          letter: 'R',
+          title: 'Reliable Outcomes',
+          description:
+            "We show up on time, do what we promise, and make sure you're 100% happy with the results.",
+        },
+        {
+          letter: 'O',
+          title: 'Orlando-Focused',
+          description:
+            'We know this city, its weather, and its surfaces. That’s why our service is optimized for Florida homes and businesses.',
+        },
+      ],
     },
   },
   contact: {

@@ -27,7 +27,7 @@ const { content } = Astro.props as Props;
     <div class="bg-background-dark w-full md:w-[550px] h-[193px] md:h-[316px] rounded-[15px]"></div>
   </div>
   <div class="absolute bottom-0  w-screen md:w-auto px-4 md:0">
-  <div class="shadow translate-y-[93%] md:translate-y-2/3 bg-[#FAFAFA] pt-[24px] pb-[55px] md:py-[35px] rounded-[20px] flex flex-col md:flex-row justify-between items-center gap-[64px]  md:gap-[68px] w-full px-[32px] md:px-[95px] ">
+  <div class="shadow-div translate-y-[93%] md:translate-y-2/3 bg-[#FAFAFA] pt-[24px] pb-[55px] md:py-[35px] rounded-[20px] flex flex-col md:flex-row justify-between items-center gap-[64px]  md:gap-[68px] w-full px-[32px] md:px-[95px] ">
     {content.lists.map(item => (
       <div class="flex flex-col justify-center items-center gap-[13px] w-full max-w-none md:max-w-[271px]">
         <img src={`/main/${item.icon}.svg`} alt={item.icon} width="70" height="68" class="max-h-[57px] md:max-h-[68px]" />
