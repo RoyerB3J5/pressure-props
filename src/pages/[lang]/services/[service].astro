@@ -37,17 +37,17 @@ if (isTwoCols) {
 ---
 
 <Layout lang={lang} t={t}>
-  <section class="pt-[160px] pb-[180px] flex flex-col justify-center items-center w-full relative overflow-hidden">
+  <section class="py-[160px] md:pt-[160px] md:pb-[180px] flex flex-col justify-center items-center w-full relative overflow-hidden">
     <img src={`/${service}.webp`} alt="Fondos de servicios" width="3072" height="4096" class="absolute inset-0 w-full h-full object-cover -z-20 opacity-50" loading="lazy" decoding="async">
     <div class="absolute inset-0 blue-gradient -z-10"></div>
-    <div class="flex flex-col justify-center items-center gap-8">
-      <h1 class="text-[89px] font-semibold leading-[96px] text-center text-white " set:html={serviceData.title}></h1>
-    <Icon name={"separate"} class={"w-[205px] h-auto"}/>
+    <div class="flex flex-col justify-center items-center gap-2 md:gap-8">
+      <h1 class="text-[32px] md:text-[89px] font-semibold leading-[46px] md:leading-[96px] text-center text-white " set:html={serviceData.title}></h1>
+    <Icon name={"separate"} class={"w-[156px] md:w-[205px] h-auto"}/>
     </div>
   </section>
-  <section class="max-w-[1058px] mx-auto flex justify-center items-start gap-[110px] pt-[73px] pb-[51px]">
-    <p set:html={serviceData.description} class="text-[16px] font-normal leading-[25px] max-w-[486px] "></p>
-    <div class={isTwoCols ? 'grid grid-cols-2 gap-[6px] items-start' : 'grid grid-cols-1 gap-4'}>
+  <section class="max-w-screen md:max-w-[1058px] px-4 md:px-0 mx-auto flex justify-center items-start gap-[110px] pt-[38px] md:pt-[73px] pb-[42px] md:pb-[51px]">
+    <p set:html={serviceData.description} class="text-[13px] md:text-[16px] font-normal leading-[20px] md:leading-[25px] max-w-[486px] "></p>
+    <div class={`hidden md:block ${isTwoCols ? 'grid grid-cols-2 gap-[6px] items-start' : 'grid grid-cols-1 gap-4'}`}>
   {columns.map((col) => (
     <div class="flex flex-col justify-center items-start gap-[6px]">
       {col.map((item) => (

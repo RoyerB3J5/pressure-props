@@ -178,7 +178,21 @@ export default {
       },
     },
     services: {
-      title: 'Our Cleaning Plans',
+      title: 'Complete Cleaning Solutions for Every Need',
+      items:[
+        {
+          title:"Residential Pressure Washing",
+          image:"classic"
+        },
+        {
+          title:"Commercial Pressure Washing",
+          image:"semipremium"
+        },
+        {
+          title:"Car Wash Services",
+          image:"premium"
+        }
+      ]
     },
     numbers: {
       items: [
@@ -227,7 +241,7 @@ export default {
       image: 'classic',
       title: 'Residential<br/> Pressure Washing',
       description:
-        "<span class='text-[16px] font-medium leading-[25px]'>One-Time Pressure Washing in Orlando – Basic Clean Service</span> <br/> Looking for a quick refresh or a seasonal deep clean? Our Basic Clean service is designed for homeowners and small business owners in Orlando who need a powerful one time pressure washing solution. Whether it’s prepping your property for sale, getting ready for an event, or just removing built-up dirt, mold, or mildew. This service delivers fast, high-quality results. <br/> We clean driveways, walkways, patios, fences, siding, and more using professional equipment and eco-safe products. No long-term commitment. Just one solid, effective visit from the experts at Jz Pressure Pro. ",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>One-Time Pressure Washing in Orlando – Basic Clean Service</span> <br/> Looking for a quick refresh or a seasonal deep clean? Our Basic Clean service is designed for homeowners and small business owners in Orlando who need a powerful one time pressure washing solution. Whether it’s prepping your property for sale, getting ready for an event, or just removing built-up dirt, mold, or mildew. This service delivers fast, high-quality results. <br/> We clean driveways, walkways, patios, fences, siding, and more using professional equipment and eco-safe products. No long-term commitment. Just one solid, effective visit from the experts at Jz Pressure Pro. ",
       list: [
         'House Exterior Cleaning',
         'Roof Soft Washing',
@@ -242,7 +256,7 @@ export default {
       image: 'semipremium',
       title: 'Commercial <br/> Pressure Washing',
       description:
-        "<span class='text-[16px] font-medium leading-[25px]'>Monthly Pressure Washing Maintenance Plan in Orlando</span> <br/> Keep your property looking its best month after month with our Monthly Plan. This is the perfect solution for busy homeowners, real estate agents, Airbnb hosts, and property managers in Orlando who want a clean exterior — without the hassle of booking each visit.<br/> Choose between monthly or bi-weekly service, starting at just $60/month, with options to include additional services like mobile car wash or patio care. Our team works around your schedule to deliver consistent results. Fewer stains. No buildup. A home or business that always looks its best.<br/> You save money, save time, and protect your property long-term. ",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Monthly Pressure Washing Maintenance Plan in Orlando</span> <br/> Keep your property looking its best month after month with our Monthly Plan. This is the perfect solution for busy homeowners, real estate agents, Airbnb hosts, and property managers in Orlando who want a clean exterior — without the hassle of booking each visit.<br/> Choose between monthly or bi-weekly service, starting at just $60/month, with options to include additional services like mobile car wash or patio care. Our team works around your schedule to deliver consistent results. Fewer stains. No buildup. A home or business that always looks its best.<br/> You save money, save time, and protect your property long-term. ",
       list: [
         'High Drive Businesses (I-Drive)',
         'Hotels & Restaurants',
@@ -254,7 +268,7 @@ export default {
       image: 'premium',
       title: 'Car Wash <br/> Services',
       description:
-        "<span class='text-[16px] font-medium leading-[25px]'>Quarterly Pressure Washing Plan – Long-Term Property Care in Orlando</span> <br/> Florida’s climate can wear down your property fast. That’s why our Quarterly Plan is a smart, affordable way to maintain cleanliness and value throughout the year. You’ll receive 4 full pressure washing services per year, strategically scheduled by season to fight buildup, weather damage, and stains. <br/> This plan includes 20% OFF compared to single visits, plus your 5th service is FREE as part of our loyalty program. It’s ideal for residential and commercial clients who care about appearances, maintenance, and long-term value.<br/> Enjoy peace of mind, better curb appeal, and a home that always looks cared for all without lifting a finger.",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Quarterly Pressure Washing Plan – Long-Term Property Care in Orlando</span> <br/> Florida’s climate can wear down your property fast. That’s why our Quarterly Plan is a smart, affordable way to maintain cleanliness and value throughout the year. You’ll receive 4 full pressure washing services per year, strategically scheduled by season to fight buildup, weather damage, and stains. <br/> This plan includes 20% OFF compared to single visits, plus your 5th service is FREE as part of our loyalty program. It’s ideal for residential and commercial clients who care about appearances, maintenance, and long-term value.<br/> Enjoy peace of mind, better curb appeal, and a home that always looks cared for all without lifting a finger.",
       list: [
         'Basic: Exterior wash + tire cleaning',
         'Complete: Exterior + interior detailing, dashboard shine, full vacuum',
@@ -278,7 +292,7 @@ export default {
         'Our team is passionate about giving every client a seamless experience. From the moment you contact us to the final rinse, we ensure each step is handled with attention to detail and full respect for your property. We take the time to listen to your needs, evaluate your space, and recommend the most effective solution. Every decision is made with your time, budget, and expectations in mind.<br/> <br/> At Jz Pressure Pro, we don’t just wash surfaces. We build trust through every project we complete.',
     },
     stand: {
-      title: ' JZ PRO<br/> <span class="text-primary-dark text-[48px] font-semibold"> What We Stand For</span>',
+      title: ' JZ PRO<br/> <span class="text-primary-dark-bold text-[24px] md:text-[48px] font-semibold"> What We Stand For</span>',
       list: [
         {
           letter: 'J',

@@ -35,7 +35,7 @@ const match = currentPath.match(/^\/(en|es)/);
 const lang = match ? match[1] : 'en';
 ---
 <header class="relative w-full flex flex-col justify-center items-center">
-  <div class="w-full bg-primary-dark justify-center hidden md:flex">
+  <div class="w-full bg-main justify-center hidden md:flex">
     <div class="w-full flex justify-center md:justify-between items-center max-w-[1154px]">
       <div class="flex items-center gap-[6px]">
         <Icon name={"map"} class={"w-[19px] h-[19px] text-white"}/>
@@ -44,8 +44,8 @@ const lang = match ? match[1] : 'en';
       <div class="hidden md:flex items-center gap-[22px]">
         <div class="flex items-center gap-[6px]">
           {icons.map(i => (
-            <a href={i.href} class="size-[31px] bg-white rounded-full flex justify-center items-center">
-              <Icon name={i.name} class={"w-5 h-5 text-primary-dark-bold"}/>
+            <a href={i.href} class="size-[31px]rounded-full flex justify-center items-center">
+              <Icon name={i.name} class={"w-5 h-5 text-white"}/>
             </a>
           ))}
         </div>
@@ -53,9 +53,9 @@ const lang = match ? match[1] : 'en';
       </div>
     </div>
   </div>
-  <div class="w-full max-w-screen sm:max-w-[1178px] py-3 md:min-h-[141px] flex justify-between items-center px-7 md:px-0">
-    <div class="size-[33px] md:size-[91px] bg-primary-light rounded-full"></div>
-    <div class="absolute md:relative flex items-center bg-primary-dark md:bg-transparent text-white md:text-primary-dark-bold flex-col justify-center md:flex-row h-screen md:h-auto w-[90%] md:w-auto z-10 top-0 right-0 py-6 md:py-0 gap-10 md:gap-0 transform translate-x-full md:translate-x-0 transition-transform duration-300 ease-out" id="mobile-menu">
+  <div class="w-full max-w-screen sm:max-w-[1178px] py-3 md:min-h-[141px] flex justify-between items-center px-7 md:px-0 bg-secondary">
+    <div class="size-[33px] md:size-[91px] bg-main rounded-full"></div>
+    <div class="absolute md:relative flex items-center bg-primary-dark md:bg-transparent text-white  flex-col justify-center md:flex-row h-screen md:h-auto w-[90%] md:w-auto z-10 top-0 right-0 py-6 md:py-0 gap-10 md:gap-0 transform translate-x-full md:translate-x-0 transition-transform duration-300 ease-out" id="mobile-menu">
       <img src="/equis.svg" alt="Menu" width="24" height="24" class="md:hidden block absolute top-6 right-6 cursor-pointer" id="close-btn">
       <nav class="relative flex items-center flex-col md:flex-row justify-center w-full md:w-auto">
         {
@@ -63,8 +63,7 @@ const lang = match ? match[1] : 'en';
             const isActive = normalized === item.href
             const isServices = index === 1;
             return(
-              <div class={`flex flex-col md:flex-row items-center justify-center gap-[14px] px-0 md:px-[7px] hover:text-primary-light w-full md:w-auto py-2 md:py-0 text-center ${isServices ? 'relative group' : ''} ${isActive ? 'bg-primary-light md:bg-transparent text-white  md:text-primary-light' : ''}`} id={`services-${index}`}>
-                <div class={`${index === 0 ? "hidden md:hidden" : ""} w-[3px] h-[40px] bg-primary-dark-bold hidden md:block`}></div>
+              <div class={`flex flex-col md:flex-row items-center justify-center gap-[14px] px-0 md:px-[7px] hover:text-main w-full md:w-auto py-2 md:py-0 text-center ${isServices ? 'relative group' : ''} ${isActive ? 'bg-main md:bg-transparent text-white  md:text-main' : ''}`} id={`services-${index}`}>
                 <a href={`/${lang}${item.href}`}  class={`
                 text-[18px] text-center font-semibold leading-[52px] relative group transition-colors duration-300
                
@@ -73,7 +72,7 @@ const lang = match ? match[1] : 'en';
                   {item.label}
                   <span
               class={`
-                absolute bottom-0 left-0 h-[2px] bg-primary-light   transition-all duration-300 ease-out
+                absolute bottom-0 left-0 h-[2px] bg-main  transition-all duration-300 ease-out
                ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}
               `}
               />
@@ -123,15 +122,14 @@ const lang = match ? match[1] : 'en';
           })
         }
       </nav>
-      <Button class="button-gradient-3 ml-[27.5px] mr-[27px] ">
+      <Button class="bg-main ml-[27.5px] mr-[27px] ">
         {content?.button}
       </Button>
       <div class="flex justify-center  items-center gap-[6px] px-[7px]">
-        <img src="/phone.svg" alt="Telefono" width="48" height="48" class="hidden md:block">
-        <img src="/phone-white.svg" alt="Telefono Blanco" width="48" height="48" class="md:hidden block">
-        <div class="text-white md:text-primary-dark-bold text-[16px] font-semibold leading-[24px] flex flex-col items-start justify-center">
+        <img src="/phone-white.svg" alt="Telefono Blanco" width="48" height="48" class=" block">
+        <div class="text-white text-[16px] font-semibold leading-[24px] flex flex-col items-start justify-center">
           <p>{content?.phone}</p>
-          <a href="" class="hover:text-primary transition-all duration-300 ease-in-out cursor-pointer">+1 (407) 493-0858</a>
+          <a href="" class="hover:text-main transition-all duration-300 ease-in-out cursor-pointer">+1 (407) 493-0858</a>
         </div>
       </div>
     </div>

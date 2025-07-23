@@ -16,17 +16,17 @@ const t = translations[lang];
 
 ---
 <Layout lang={lang} t={t}>
-  <section class="pt-[160px] pb-[180px] flex flex-col justify-center items-center w-full relative overflow-hidden">
+  <section class="py-[160px] md:pt-[160px] md:pb-[180px] flex flex-col justify-center items-center w-full relative overflow-hidden">
     <img src={`/gallery.webp`} alt="Fondos de Galeria" width="3072" height="4096" class="absolute inset-0 w-full h-full object-cover -z-20 opacity-50" loading="lazy" decoding="async">
     <div class="absolute inset-0 blue-gradient -z-10"></div>
-    <div class="flex flex-col justify-center items-center gap-8">
-      <h1 class="text-[89px] font-semibold leading-[96px] text-center text-white " set:html={t.gallery.title}></h1>
-    <Icon name={"separate"} class={"w-[205px] h-auto"}/>
+    <div class="flex flex-col justify-center items-center gap-2 md:gap-8">
+      <h1 class="text-[32px] md:text-[89px] font-semibold leading-[46px] md:leading-[96px] text-center text-white" set:html={t.gallery.title}></h1>
+    <Icon name={"separate"} class={"w-[156px] md:w-[205px] h-auto"}/>
     </div>
   </section>
-  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[10px] max-w-screen lg:max-w-[1142px] py-[93px] w-full px-4 lg:px-0 justify-center items-center mx-auto">
+  <section class="grid grid-cols-3 gap-[10px] max-w-screen lg:max-w-[1142px] py-10 md:py-[93px] w-full px-4 lg:px-0 justify-center items-center mx-auto">
     {Array.from({ length: 12 }).map((_, index) => (
-        <div class="w-full h-[336px] md:h-[537px] bg-[#D9D9D9] flex justify-center items-center rounded-[15px]">
+        <div class="w-full h-[153px] sm:h-[350px] lg:h-[537px] bg-[#D9D9D9] flex justify-center items-center rounded-[15px]">
         </div>
       ))}
   </section>

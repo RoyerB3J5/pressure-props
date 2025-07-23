@@ -15,17 +15,17 @@ const { content } = Astro.props as Props;
     <div class="relative order-2 md:order-1 w-full md:w-[581px] h-[902px] md:h-[647px]" >
       <!-- Experience 1: Fila 1, Columna 1 -->
       <div class="absolute top-0 left-0 w-full md:w-[236px] h-[347px] md:h-[244px] rounded-[10px] overflow-hidden">
-        <img src="/main/experience1.webp" alt="Experiencia 1" width="1024" height="1024" style="display: block; width: 100%; height: 100%; object-fit: cover;" loading="lazy" >
+        <img src="/main/experience1.webp" alt="Experiencia 1" width="802" height="454" style="display: block; width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
       </div>
       
       <!-- Experience 2: Fila 2, Columna 1 -->
       <div class="absolute bottom-0 left-0 w-full md:w-[236px] h-[544px] md:h-[382px] rounded-[10px] overflow-hidden">
-        <img src="/main/experience2.webp" alt="Experiencia 2" width="768" height="1344" style="display: block; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+        <img src="/main/experience2.webp" alt="Experiencia 2" width="2048" height="1536" style="display: block; width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
       </div>
       
       <!-- Experience 3: Toda la Columna 2 -->
       <div class="hidden md:block absolute top-0 right-0 w-[324px] h-[647px] rounded-[10px] overflow-hidden">
-        <img src="/main/experience3.webp" alt="Experiencia 3" width="800" height="1328" style="display: block; width: 100%; height: 100%; object-fit: cover;" class="scale-x-[-1]" loading="lazy">
+        <img src="/main/experience3.webp" alt="Experiencia 3" width="1500" height="100" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 17% center;"  loading="lazy" decoding="async">
       </div>
     </div>
     <div class="order-1 md:order-1 flex flex-col items-center md:items-start justify-center py-[37px] md:py-0 max-w-none md:max-w-[478px] max-h-none md:max-h-[648px]">
@@ -35,10 +35,10 @@ const { content } = Astro.props as Props;
       <p set:html={content.description2} class="mt-[7px] md:mt-5 text-[13px] md:text-[16px] leading-[18px] md:leading-[25px] text-center md:text-start font-normal "></p>
       <div class="flex flex-col md:flex-row justify-center items-center md:items-start gap-[29px] md:gap-[43px] mt-[28px] md:mt-[73px] w-full py-1 md:py-0">
         <div class="flex flex-col justify-between items-center md:items-start gap-[29px] md:gap-[62px] w-full">
-          <div class="flex flex-col gap-2 md:gap-[14px]">
+          <div class="flex flex-col gap-2 md:gap-[16px]">
             {content.items.map(item=>(
               <div class="flex items-center gap-[7px] md:gap-4">
-                <Icon name={"check"} class={"h-[15px] md:h-[44px] w-[15px] md:w-[44px]"}/>
+                <Icon name={"check"} class={"shrink-0 h-[15px] md:h-[44px] w-[15px] md:w-[44px]"}/>
                 <p class="text-[14px] md:text-[16px] font-medium leading-[25px] text-primary-dark-bold">{item}</p>
               </div>
             ))}
@@ -47,7 +47,7 @@ const { content } = Astro.props as Props;
               {content.button}
           </Button> 
         </div>
-        <div class="max-w-none md:max-w-[173px] flex flex-col justify-center items-center gap-[3px] px-[24px] md:px-[35.67px] pt-[9.5px] md:pt-[22px] pb-[13.5px] md:pb-[39px] border-t-[5px] border-primary-dark-bold bg-[#19B6D9] text-white">
+        <div class="max-w-none md:max-w-[173px] flex flex-col justify-center items-center gap-[3px] px-[24px] md:px-[35.67px] pt-[9.5px] md:pt-[27px] pb-[13.5px] md:pb-[39px] border-t-[5px] border-primary-dark-bold bg-[#19B6D9] text-white">
           <p class="text-[36px] md:text-[50px] text-center font-semibold leading-[65px]">7+</p>
           <p class="text-[15px] md:text-[16px] uppercase font-semibold leading-[20px] text-center">{content.years}</p>
         </div>

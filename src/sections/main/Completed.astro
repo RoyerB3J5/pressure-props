@@ -8,8 +8,8 @@ interface Props {
 }
 const { content } = Astro.props as Props;
 ---
-<section class="flex flex-col justify-center items-center gap-[61px] md:gap-[115px] pt-[26px] pb-[70px] md:py-[115px] overflow-y-visible ">
-  <div class="flex flex-col justify-center items-center gap-[53px] max-w-screen md:max-w-[1215px] w-full px-4 md:px-0">
+<section class="flex flex-col justify-center items-center gap-[61px] md:gap-[115px] pt-[26px] pb-[70px] md:py-[115px] overflow-y-visible max-w-screen md:max-w-[1215px] w-full px-4 md:px-0">
+  <div class="flex flex-col justify-center items-center gap-[53px] w-full">
     <div class="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end px-0 md:px-8 w-full gap-[18px] md:gap-0">
       <h2 set:html={content.title} class="text-primary-dark-bold text-[24px] md:text-[40px] font-normal leading-[26px] md:leading-[46px] text-center md:text-start max-w-none md:max-w-[537px] "></h2>
       <Button class='button-gradient px-[38px]'>
