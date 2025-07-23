@@ -119,13 +119,13 @@ export default {
     },
     information: {
       referral: {
-        title: 'Refer and Get Rewarded',
+        title: 'Refer and Get <br/> <span class="text-main">Rewarded</span>',
         text1:
           "Love our service? Spread the word and get rewarded! When you refer 5 new clients, you'll receive a 20% discount on your next service. There's no limit — the more you refer, the more you save. Your friends and neighbors get high-quality pressure washing, and you get big rewards. It's a win-win for clean homes and happy wallets.",
         button: 'CLICK HERE',
       },
       working: {
-        title: 'Our Working Process',
+        title: 'How Our Pressure Washing Service Works',
         items: [
           {
             step: 'STEP 01',
@@ -166,13 +166,13 @@ export default {
       },
       rendering: {
         title:
-          "Professional Exterior Cleaning <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-primary-dark'>with Real Results</span>",
+          "Professional Exterior Cleaning <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>with Real Results</span>",
         text: 'Restore your property’s beauty and value with expert pressure washing services. We clean driveways, fences, siding, gutters, and more. Our team uses safe methods, eco-friendly practices, and powerful equipment to deliver spotless results every time.',
         button: 'GET AN ESTIMATE',
       },
       design: {
         title:
-          "Already Booked  <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-primary-dark'>or Referred?</span>",
+          "Already Booked  <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>or Referred?</span>",
         description:
           'If you’ve been referred by a friend, or you’re ready to schedule your next pressure washing service, complete the form and we’ll get back to you within 24 hours. Don’t forget to mention any discounts or referral codes you may have.',
       },
@@ -216,14 +216,14 @@ export default {
     },
     completed: {
       title:
-        "Check out our Recent <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-primary-dark'>Pressure Washing Projects</span>",
+        "Check out our Recent <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>Pressure Washing Projects</span>",
       button: 'VIEW ALL PROJECTS',
       name: 'pressureprops',
       description: 'Texto del ig de pressurepros es widget de IG',
     },
     catalog: {
       title:
-        "Download Here Our <span class='font-semibold text-[20px] md:text-[48px] leading-[26px] md:leading-[58px] text-primary-dark'>Catalog</span>",
+        "Download Here Our <span class='font-semibold text-[20px] md:text-[48px] leading-[26px] md:leading-[58px] text-main'>Flyer</span>",
       description:
         'Where you can see all the services and options that we have for you.',
       button: 'DOWNload now',

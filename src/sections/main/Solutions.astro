@@ -9,16 +9,14 @@ interface Props {
 const { content } = Astro.props as Props;
 ---
 <section class="relative w-full pt-[192px] pb-[115px] md:pt-[90px] md:pb-[130px] overflow-hidden">
-  <img src="/main/bg-solutions.webp" alt="Fondo de soluciones" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover -z-20 opacity-50" loading="lazy" decoding="async">
-  <div class="absolute inset-0 blue-gradient -z-10"></div>
+  <img src="/main/bg-solutions.webp" alt="Fondo de soluciones" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover -z-20 scale-x-[-1]" loading="lazy" decoding="async">
   <div class="relative z-0 flex flex-col justify-center items-center gap-5 md:gap-[87px] max-w-screen md:max-w-[1126px] mx-auto px-4 md:px-0">
     <div class="flex flex-col md:flex-row justify-center items-center gap-[32px]">
       <div class="flex flex-col justify-center items-center gap-[26px]">
-        <h3 set:html={content.description} class="text-center text-[32px] md:text-[40px] font-medium leading-[35px] md:leading-[46px] text-white max-w-[336px] md:max-w-none"></h3>
-        <Icon name={"separate"} class={"w-[205px] h-auto"}/>
+        <h3 set:html={content.description} class="text-center text-[32px] md:text-[40px] font-semibold leading-[35px] md:leading-[46px] text-white max-w-[336px] md:max-w-none"></h3>
       </div>
-      <div class="flex flex-col justify-center items-center gap-[20px] md:gap-[26px] py-[31px] md:pb-[48px] md:pt-[21px] px-[27px] md:px-[18px] bg-primary-dark-bold max-w-[550px] rounded-[15px] text-[#FAFAFA]">
-        <h2 class="text-center text-[20px] md:text-[40px] font-semibold leading-[25px] md:leading-[46px] max-w-[279px] md:max-w-none">{content.title}</h2>
+      <div class="flex flex-col justify-center items-center gap-[20px] md:gap-[22px] py-[31px] md:pb-[21px] md:pt-[28px] px-[27px] md:px-[18px] bg-secondary max-w-[550px] rounded-[15px] text-[#FAFAFA]">
+        <h2 class="text-center text-[20px] md:text-[32px] font-semibold leading-[25px] md:leading-[46px] max-w-[279px] md:max-w-none">{content.title}</h2>
         <p class="text-center text-[13px] md:text-[16px] font-normal md:font-medium leading-[18px] md:leading-[25px] ">{content.text}</p>
       </div>
     </div>
@@ -40,7 +38,7 @@ const { content } = Astro.props as Props;
 
   <!-- Overlay de hover: aparece encima del base -->
   <div class="absolute inset-0 
-              bg-primary-dark-bold/30 
+              bg-secondary/30 
               opacity-0 
               group-hover:opacity-100 
               transition-opacity 
@@ -48,7 +46,7 @@ const { content } = Astro.props as Props;
               pointer-events-none"></div>
 
   <!-- Contenido -->
-  <div class="relative flex justify-center items-center h-full px-[32px]">
+  <div class="relative flex justify-center items-center h-full px-[25px]">
     <p class="text-white text-[24px] font-semibold text-center leading-[25px]">
       {item.title}
     </p>

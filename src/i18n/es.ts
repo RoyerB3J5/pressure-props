@@ -119,13 +119,13 @@ export default {
     },
     information: {
       referral: {
-        title: 'Refiere y Gana Recompensas',
+        title: 'Refiere y Gana <br/> <span class="text-main">Recompensas</span>',
         text1:
           '¿Te encanta nuestro servicio? ¡Recomiéndalo y gana recompensas! Cuando refieres a 5 nuevos clientes, recibirás un 20% de descuento en tu próximo servicio. No hay límite: cuanto más refieras, más ahorras. Tus amigos y vecinos reciben un lavado a presión de alta calidad, y tú obtienes grandes recompensas. Es un ganar-ganar para hogares limpios y bolsillos felices.',
         button: 'HAZ CLIC AQUÍ',
       },
       working: {
-        title: 'Nuestro Proceso de Trabajo',
+        title: 'Cómo Funciona Nuestro Servicio de Lavado a Presión',
         items: [
           {
             step: 'PASO 01',
@@ -166,13 +166,13 @@ export default {
       },
       rendering: {
         title:
-          "Limpieza Profesional de Exteriores <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-primary-dark'>con Resultados Reales</span>",
+          "Limpieza Profesional de Exteriores <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>con Resultados Reales</span>",
         text: 'Restaura la belleza y el valor de tu propiedad con servicios expertos de lavado a presión. Limpiamos entradas, cercas, fachadas, canaletas y más. Nuestro equipo utiliza métodos seguros, prácticas ecológicas y equipos potentes para entregar resultados impecables en todo momento.',
         button: 'SOLICITA UNA COTIZACIÓN',
       },
       design: {
         title:
-          "¿Ya Reservaste <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-primary-dark'>o Fuiste Recomendado?</span>",
+          "¿Ya Reservaste <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>o Fuiste Recomendado?</span>",
         description:
           'Si fuiste recomendado por un amigo, o estás listo para agendar tu próximo servicio de lavado a presión, completa el formulario y te responderemos en un plazo de 24 horas. No olvides mencionar cualquier descuento o código de recomendación que tengas.',
       },
@@ -216,14 +216,14 @@ export default {
     },
     completed: {
       title:
-        "Mira nuestros Recientes <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-primary-dark'>Proyectos de Lavado a Presión</span>",
+        "Mira nuestros Recientes <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>Proyectos de Lavado a Presión</span>",
       button: 'VER TODOS LOS PROYECTOS',
       name: 'pressureprops',
       description: 'Texto del IG de pressurepros, es un widget de IG',
     },
     catalog: {
       title:
-        "Descarga Aquí Nuestro <span class='font-semibold text-[20px] md:text-[48px] leading-[26px] md:leading-[58px] text-primary-dark'>Catálogo</span>",
+        "Descarga Aquí Nuestro <span class='font-semibold text-[20px] md:text-[48px] leading-[26px] md:leading-[58px] text-main'>Volante</span>",
       description:
         'Donde puedes ver todos los servicios y opciones que tenemos para ti.',
       button: 'DESCARGAR AHORA',
