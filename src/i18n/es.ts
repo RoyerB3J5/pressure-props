@@ -6,8 +6,8 @@ export default {
         href: '/',
       },
       {
-        label: 'Tipos Servicios',
-        href: '/service',
+        label: 'Servicios',
+        href: '#',
       },
       {
         label: 'Galería',
@@ -24,16 +24,16 @@ export default {
     ],
     types: [
       {
-        label: 'Clásico',
-        href: 'classic',
+        label: 'Residencial',
+        href: 'residential',
       },
       {
-        label: 'Semipremium',
-        href: 'semi-premium',
+        label: 'Comercial',
+        href: 'commercial',
       },
       {
-        label: 'Premium',
-        href: 'premium',
+        label: 'Car Wash',
+        href: 'car-wash',
       },
     ],
     button: 'Cotización',
@@ -119,7 +119,8 @@ export default {
     },
     information: {
       referral: {
-        title: 'Refiere y Gana <br/> <span class="text-main">Recompensas</span>',
+        title:
+          'Refiere y Gana <br/> <span class="text-main">Recompensas</span>',
         text1:
           '¿Te encanta nuestro servicio? ¡Recomiéndalo y gana recompensas! Cuando refieres a 5 nuevos clientes, recibirás un 20% de descuento en tu próximo servicio. No hay límite: cuanto más refieras, más ahorras. Tus amigos y vecinos reciben un lavado a presión de alta calidad, y tú obtienes grandes recompensas. Es un ganar-ganar para hogares limpios y bolsillos felices.',
         button: 'HAZ CLIC AQUÍ',
@@ -136,10 +137,10 @@ export default {
           },
           {
             step: 'PASO 02',
-            title: 'Visita al Sitio',
+            title: 'Recibir un presupuesto',
             icon: 'consultation2',
             description:
-              'Visitamos tu propiedad para evaluar el área y darte una estimación precisa.',
+              'Revisaremos tu proyecto y te proporcionaremos una cotización detallada basada en las medidas del trabajo.',
           },
           {
             step: 'PASO 03',
@@ -189,7 +190,7 @@ export default {
           image: 'semi premium',
         },
         {
-          title: 'Servicios de lavado de autos',
+          title: 'Lavado de autos a domicilio',
           image: 'premium',
         },
       ],
@@ -217,7 +218,21 @@ export default {
     completed: {
       title:
         "Mira nuestros Recientes <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>Proyectos de Lavado a Presión</span>",
-      button: 'VER TODOS LOS PROYECTOS',
+      button: 'VER PROYECTOS',
+      images: [
+        '/main/carousel-4.png',
+        '/main/carousel-5.png',
+        '/main/carousel-6.png',
+        '/main/carousel-4.png',
+        '/main/carousel-5.png',
+        '/main/carousel-6.png',
+        '/main/carousel-4.png',
+        '/main/carousel-5.png',
+        '/main/carousel-6.png',
+        '/main/carousel-4.png',
+        '/main/carousel-5.png',
+        '/main/carousel-6.png',
+      ],
       name: 'pressureprops',
       description: 'Texto del IG de pressurepros, es un widget de IG',
     },
@@ -237,43 +252,43 @@ export default {
     },
   },
   services: {
-    classic: {
-      image: 'classic',
-      title: 'Lavado a Presión Residencial',
+    residential: {
+      image: 'residential',
+      title: 'Servicios de Lavado a Presión Residencial en Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Lavado a Presión Puntual en Orlando – Servicio de Limpieza Básica</span> <br/> ¿Buscas una limpieza rápida o profunda por temporada? Nuestro servicio de Limpieza Básica está diseñado para propietarios de viviendas y pequeños negocios en Orlando que necesitan una solución de lavado a presión puntual y potente. Ya sea para preparar tu propiedad para la venta, un evento o simplemente eliminar suciedad, moho o hongos acumulados. Este servicio ofrece resultados rápidos y de alta calidad. <br/> Limpiamos entradas, pasillos, patios, cercas, revestimientos y más usando equipos profesionales y productos ecológicos. Sin compromiso a largo plazo. Solo una visita sólida y efectiva de los expertos de Jz Pressure Pro.",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Recupere la belleza de su hogar y manténgalo limpio todo el año</span> <br/> En JZ Pressure Pro ofrecemos servicios especializados de lavado a presión residencial que ayudan a los familias de Orlando a proteger y realzar la apariencia de sus propiedades. Ya sea que quiera limpiar el exterior de su casa, eliminar algas del techo o darle brillo a la entrada y la terraza de la piscina, nuestro equipo garantiza resultados excepcionales en cada visita. Empleamos técnicas seguras y adaptadas a cada superficie para eliminar suciedad, manchas, moho y mugre, dejando su hogar con un aspecto fresco, pulido y bien cuidado.",
       list: [
-        'Limpieza Exterior de Casas',
-        'Lavado Suave de Tejados',
-        'Lavado a Presión de Ventanas',
-        'Limpieza de Entradas y Pasillos',
-        'Restauración de Áreas de Piscina',
-        'Limpieza de Cocheras',
-        'Limpieza de Cercas',
+        'Limpieza del exterior de la vivienda',
+        'Lavado suave de techos',
+        'Lavado a presión de ventanas',
+        'Limpieza de entrada y acera',
+        'Restauración de terraza de piscina',
+        'Limpieza de garaje',
+        'Limpieza de cercas',
       ],
     },
-    'semi-premium': {
-      image: 'semipremium',
-      title: 'Lavado a Presión Comercial',
+    commercial: {
+      image: 'commercial',
+      title: 'Lavado a Presión Comercial para Negocios en Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Plan de Mantenimiento Mensual de Lavado a Presión en Orlando</span> <br/> Mantén tu propiedad en excelente estado mes a mes con nuestro Plan Mensual. Es la solución perfecta para propietarios ocupados, agentes inmobiliarios, anfitriones de Airbnb y administradores de propiedades en Orlando que desean exteriores limpios sin preocuparse por agendar cada visita.<br/> Elige entre servicio mensual o quincenal, desde solo $60/mes, con opciones para incluir servicios adicionales como lavado de autos móvil o cuidado de patios. Nuestro equipo se adapta a tu horario para ofrecer resultados constantes. Menos manchas. Sin acumulación. Una propiedad que siempre se ve impecable.<br/> Ahorra dinero, ahorra tiempo y protege tu propiedad a largo plazo.",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Dé a su propiedad el aspecto limpio y profesional que merece</span> <br/> En JZ Pressure Pro ayudamos a negocios de Orlando a destacarse con servicios confiables y eficaces de lavado a presión comercial. Desde zonas de alto tráfico como I‑Drive hasta hoteles, restaurantes, locales de venta al por menor y edificios de oficinas, sabemos lo importante que es un exterior impecable para la imagen de su marca. Nuestro equipo experimentado elimina grasa, suciedad y acumulaciones ambientales usando las herramientas adecuadas para cada tarea. Trabajamos con rapidez, minimizamos interrupciones y dejamos su espacio impecable para que reciba a sus clientes con total confianza.",
       list: [
-        'Negocios de Alto Tráfico (I-Drive)',
-        'Hoteles y Restaurantes',
-        'Locales Comerciales',
-        'Edificios de Oficinas',
+        'Negocios en zonas de alto tráfico (I‑Drive)',
+        'Hoteles y restaurantes',
+        'Locales comerciales',
+        'Edificios de oficinas',
       ],
     },
-    premium: {
-      image: 'premium',
-      title: 'Servicios de Lavado de Autos',
+    'car-wash': {
+      image: 'carwash',
+      title: 'Servicios Móviles de Lavado de Autos en Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Plan Trimestral de Lavado a Presión – Cuidado a Largo Plazo para tu Propiedad en Orlando</span> <br/> El clima de Florida puede deteriorar rápidamente tu propiedad. Por eso, nuestro Plan Trimestral es una forma inteligente y económica de mantener la limpieza y el valor durante todo el año. Recibirás 4 servicios completos de lavado a presión al año, estratégicamente programados por temporada para combatir la suciedad, el daño climático y las manchas. <br/> Este plan incluye un 20% DE DESCUENTO en comparación con las visitas individuales, además tu 5º servicio es GRATIS como parte de nuestro programa de fidelidad. Es ideal para clientes residenciales y comerciales que se preocupan por la apariencia, el mantenimiento y el valor a largo plazo.<br/> Disfruta de tranquilidad, mejor apariencia exterior y una propiedad que siempre luce cuidada — todo sin mover un dedo.",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Llevamos el detallado profesional directamente a su puerta</span> <br/> En JZ Pressure Pro facilitamos el cuidado de su vehículo con nuestros servicios móviles de lavado de autos. Nuestro equipo llega a su ubicación totalmente equipado y ofrece cuatro niveles de servicio para cada necesidad. Puede elegir un lavado básico para un refresco rápido, optar por una limpieza completa de interior y exterior o seleccionar nuestros paquetes premium o detallados para una restauración profunda y un brillo excepcional. Sea cual sea su elección, nos comprometemos a brindar un acabado impecable y una experiencia que le ahorra tiempo cuidando su vehículo.",
       list: [
-        'Básico: Lavado exterior + limpieza de llantas',
-        'Completo: Exterior + detallado interior, brillo de tablero, aspirado completo',
-        'Premium: Completo + recubrimiento de cera exterior',
-        'Limpieza Detallada: Limpieza de techo, limpieza profunda de asientos, restauración de alfombras + necesidades específicas personalizadas',
+        'Básico: lavado exterior + limpieza de neumáticos',
+        'Completo: detallado exterior e interior, brillo de tablero y aspirado total',
+        'Premium: completo + capa de cera exterior',
+        'Limpieza Detallada: limpieza de techo, limpieza profunda de asientos, restauración de alfombras y servicios personalizados',
       ],
     },
   },
@@ -293,7 +308,7 @@ export default {
     },
     stand: {
       title:
-        'JZ PRO<br/> <span class="text-primary-dark text-[48px] font-semibold">Nuestros Valores</span>',
+        'JZ PRO<br/> <span class="text-main text-[24px] md:text-[48px] font-semibold">Nuestros Valores</span>',
       list: [
         {
           letter: 'J',
@@ -352,19 +367,19 @@ export default {
       },
       {
         label: 'Tipos de Servicios',
-        href: '/',
+        href: '#',
       },
       {
         label: 'Galería',
-        href: '/',
+        href: '/gallery',
       },
       {
         label: 'Nosotros',
-        href: '/',
+        href: '/about-us',
       },
       {
         label: 'Contáctanos',
-        href: '/',
+        href: '/contact',
       },
     ],
   },

@@ -6,8 +6,8 @@ export default {
         href: '/',
       },
       {
-        label: 'Type of Services',
-        href: '/service',
+        label: 'Services',
+        href: '#',
       },
       {
         label: 'Gallery',
@@ -24,16 +24,16 @@ export default {
     ],
     types: [
       {
-        label: 'Classic',
-        href: 'classic',
+        label: 'Residential',
+        href: 'residential',
       },
       {
-        label: 'Semi Premium',
-        href: 'semi-premium',
+        label: 'Commercial',
+        href: 'commercial',
       },
       {
-        label: 'Premium',
-        href: 'premium',
+        label: 'Car Wash',
+        href: 'car-wash',
       },
     ],
     button: 'Get Estimate',
@@ -136,10 +136,10 @@ export default {
           },
           {
             step: 'STEP 02',
-            title: 'On-Site Visit',
+            title: 'Receive an Estimate',
             icon: 'consultation2',
             description:
-              'We visit your property to assess the area and give you an accurate estimate.',
+              'We’ll review your project and provide a detailed quote based on the job’s measurements.',
           },
           {
             step: 'STEP 03',
@@ -179,20 +179,20 @@ export default {
     },
     services: {
       title: 'Complete Cleaning Solutions for Every Need',
-      items:[
+      items: [
         {
-          title:"Residential Pressure Washing",
-          image:"classic"
+          title: 'Residential Pressure Washing',
+          image: 'classic',
         },
         {
-          title:"Commercial Pressure Washing",
-          image:"semipremium"
+          title: 'Commercial Pressure Washing',
+          image: 'semipremium',
         },
         {
-          title:"Car Wash Services",
-          image:"premium"
-        }
-      ]
+          title: 'Car Wash At Your Door',
+          image: 'premium',
+        },
+      ],
     },
     numbers: {
       items: [
@@ -218,6 +218,20 @@ export default {
       title:
         "Check out our Recent <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>Pressure Washing Projects</span>",
       button: 'VIEW ALL PROJECTS',
+      images:[
+        "/main/carousel-4.png",
+        "/main/carousel-5.png",
+        "/main/carousel-6.png",
+        "/main/carousel-4.png",
+        "/main/carousel-5.png",
+        "/main/carousel-6.png",
+        "/main/carousel-4.png",
+        "/main/carousel-5.png",
+        "/main/carousel-6.png",
+        "/main/carousel-4.png",
+        "/main/carousel-5.png",
+        "/main/carousel-6.png",
+      ],
       name: 'pressureprops',
       description: 'Texto del ig de pressurepros es widget de IG',
     },
@@ -237,11 +251,11 @@ export default {
     },
   },
   services: {
-    classic: {
-      image: 'classic',
-      title: 'Residential<br/> Pressure Washing',
+    residential: {
+      image: 'residential',
+      title: 'Residential Pressure <br/> Washing Services in Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>One-Time Pressure Washing in Orlando – Basic Clean Service</span> <br/> Looking for a quick refresh or a seasonal deep clean? Our Basic Clean service is designed for homeowners and small business owners in Orlando who need a powerful one time pressure washing solution. Whether it’s prepping your property for sale, getting ready for an event, or just removing built-up dirt, mold, or mildew. This service delivers fast, high-quality results. <br/> We clean driveways, walkways, patios, fences, siding, and more using professional equipment and eco-safe products. No long-term commitment. Just one solid, effective visit from the experts at Jz Pressure Pro. ",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Restore Your Home’s Beauty and Keep It Clean Year-Round</span> <br/> At JZ Pressure Pro, we provide specialized residential pressure washing services that help homeowners in Orlando protect and enhance their property’s appearance. Whether you're looking to clean your home’s exterior, remove algae from your roof, or brighten up your driveway and pool deck, our team delivers exceptional results with every visit. We use safe techniques tailored to each surface to remove dirt, stains, mold, and grime, leaving your home looking fresh, polished, and well cared for.",
       list: [
         'House Exterior Cleaning',
         'Roof Soft Washing',
@@ -252,11 +266,11 @@ export default {
         'Fence Cleaning',
       ],
     },
-    'semi-premium': {
-      image: 'semipremium',
-      title: 'Commercial <br/> Pressure Washing',
+    commercial: {
+      image: 'commercial',
+      title: 'Commercial Pressure Washing <br/> for Orlando Businesses',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Monthly Pressure Washing Maintenance Plan in Orlando</span> <br/> Keep your property looking its best month after month with our Monthly Plan. This is the perfect solution for busy homeowners, real estate agents, Airbnb hosts, and property managers in Orlando who want a clean exterior — without the hassle of booking each visit.<br/> Choose between monthly or bi-weekly service, starting at just $60/month, with options to include additional services like mobile car wash or patio care. Our team works around your schedule to deliver consistent results. Fewer stains. No buildup. A home or business that always looks its best.<br/> You save money, save time, and protect your property long-term. ",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Give Your Property the Clean, Professional Look It Deserves</span> <br/> JZ Pressure Pro helps businesses across Orlando stand out with reliable and effective commercial pressure washing services. From high-traffic locations like I-Drive to hotels, restaurants, retail spaces, and office buildings, we understand how important a clean exterior is to your brand image. Our experienced team removes grease, grime, and environmental buildup using the right tools for every job. We work quickly, minimize disruptions, and leave your space looking spotless so you can welcome customers with confidence.",
       list: [
         'High Drive Businesses (I-Drive)',
         'Hotels & Restaurants',
@@ -264,11 +278,11 @@ export default {
         'Office Buildings',
       ],
     },
-    premium: {
-      image: 'premium',
-      title: 'Car Wash <br/> Services',
+    'car-wash': {
+      image: 'carwash',
+      title: 'Mobile Car Wash <br/> Services in Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Quarterly Pressure Washing Plan – Long-Term Property Care in Orlando</span> <br/> Florida’s climate can wear down your property fast. That’s why our Quarterly Plan is a smart, affordable way to maintain cleanliness and value throughout the year. You’ll receive 4 full pressure washing services per year, strategically scheduled by season to fight buildup, weather damage, and stains. <br/> This plan includes 20% OFF compared to single visits, plus your 5th service is FREE as part of our loyalty program. It’s ideal for residential and commercial clients who care about appearances, maintenance, and long-term value.<br/> Enjoy peace of mind, better curb appeal, and a home that always looks cared for all without lifting a finger.",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>We Bring Professional Detailing Right to Your Door</span> <br/> At JZ Pressure Pro, we make car care simple and convenient with our mobile car wash services. Our team comes to your location fully equipped, offering four levels of service to suit every need. Choose a basic wash for a quick refresh, go for a full interior and exterior clean, or select our premium or detailed packages for deep restoration and shine. Whatever option you choose, we’re committed to delivering a spotless finish and a service experience that saves you time while protecting your vehicle.",
       list: [
         'Basic: Exterior wash + tire cleaning',
         'Complete: Exterior + interior detailing, dashboard shine, full vacuum',
@@ -292,7 +306,8 @@ export default {
         'Our team is passionate about giving every client a seamless experience. From the moment you contact us to the final rinse, we ensure each step is handled with attention to detail and full respect for your property. We take the time to listen to your needs, evaluate your space, and recommend the most effective solution. Every decision is made with your time, budget, and expectations in mind.<br/> <br/> At Jz Pressure Pro, we don’t just wash surfaces. We build trust through every project we complete.',
     },
     stand: {
-      title: ' JZ PRO<br/> <span class="text-primary-dark-bold text-[24px] md:text-[48px] font-semibold"> What We Stand For</span>',
+      title:
+        ' JZ PRO<br/> <span class="text-main text-[24px] md:text-[48px] font-semibold"> What We Stand For</span>',
       list: [
         {
           letter: 'J',
@@ -350,7 +365,7 @@ export default {
       },
       {
         label: 'Type of Services',
-        href: '/service',
+        href: '#',
       },
       {
         label: 'Gallery',

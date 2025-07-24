@@ -1,5 +1,6 @@
 ---
 import Button from '../../components/Button.astro';
+import CarouselHero from '../../components/CarouselHero.astro';
 
 type Translations = typeof import('../../i18n/es').default;
 type CompletedContent = Translations['main']['completed'];
@@ -8,8 +9,8 @@ interface Props {
 }
 const { content } = Astro.props as Props;
 ---
-<section class="flex flex-col justify-center items-center gap-[61px] md:gap-[115px] pt-[26px] pb-[70px] md:py-[115px] overflow-y-visible max-w-screen md:max-w-[1215px] w-full px-4 md:px-0">
-  <div class="flex flex-col justify-center items-center gap-[53px] w-full">
+<section class="flex flex-col justify-center items-center gap-[61px] md:gap-0 pt-[26px] pb-[70px] md:py-[115px] overflow-y-visible max-w-screen md:max-w-[1215px] w-full px-4 md:px-0">
+  <div class="flex flex-col justify-center items-center gap-[53px] w-full mb-0 md:mb-[53px]">
     <div class="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end px-0 md:px-8 w-full gap-[18px] md:gap-0">
       <h2 set:html={content.title} class="text-secondary text-[24px] md:text-[40px] font-normal leading-[26px] md:leading-[46px] text-center md:text-start max-w-none md:max-w-[537px] "></h2>
       <Button class='bg-main px-[38px]'>
@@ -17,12 +18,13 @@ const { content } = Astro.props as Props;
         </Button>
     </div>
   </div>
-  <div class="flex flex-col justify-center items-center gap-7 w-full max-w-screen md:max-w-[1138] px-4 md:px-0">
+  <CarouselHero images={content.images} />
+  <div class="flex flex-col justify-center items-center gap-7 w-full max-w-screen md:max-w-[1138] px-4 md:px-0 mt-0 md:mt-[130px]">
     <div class="w-full flex md:justify-start justify-center items-center gap-[26px] px-3">
-      <img src="/main/logo.webp" alt="Logo de PressureProps" width="1024" height="1024" class="w-[34px] md:w-[62px] h-[34px] md:h-[62px] rounded-full border-[2px] border-primary-dark-bold"/>
+      <img src="/main/logo.webp" alt="Logo de PressureProps" width="1024" height="1024" class="w-[34px] md:w-[62px] h-[34px] md:h-[62px] rounded-full border-[2px] border-secondary"/>
       <div class="flex flex-col justify-center md:justify-start items-start  gap-[3px]">
-        <h3 class="text-[20px] font-bold leading-[28px] text-start text-main">{content.name}</h3>
-        <p class="text-[16px] font-medium leading-[19.6px] text-start text-secondary">{content.description}</p>
+        <h3 class="text-[14px] md:text-[20px] font-bold leading-[28px] text-start text-main">{content.name}</h3>
+        <p class="text-[13px] md:text-[16px] font-medium leading-[16px] md:leading-[19.6px] text-start text-secondary">{content.description}</p>
       </div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-[10px] w-full -mb-56">

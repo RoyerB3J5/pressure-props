@@ -15,16 +15,14 @@ const translations = { es, en };
 const t = translations[lang];
 ---
 <Layout lang={lang} t={t}>
-  <section class="py-[160px] md:pt-[160px] md:pb-[180px] flex flex-col justify-center items-center w-full relative overflow-hidden">
-    <img src={`/about.webp`} alt="Fondos de Galeria" width="3072" height="4096" class="absolute inset-0 w-full h-full object-cover -z-20 opacity-50" loading="lazy" decoding="async">
-    <div class="absolute inset-0 blue-gradient -z-10"></div>
-    <div class="flex flex-col justify-center items-center gap-2 md:gap-8">
-      <h1 class="text-[32px] md:text-[89px] font-semibold leading-[46px] md:leading-[96px] text-center text-white" set:html={t['about-us'].title}></h1>
-    <Icon name={"separate"} class={"w-[156px] md:w-[205px] h-auto"}/>
+  <section class="py-[165px] md:pt-[371px] md:pb-[250px] flex flex-col justify-center items-center w-full relative overflow-hidden">
+    <img src={`/commercial.webp`} alt="Fondos de Galeria" width="3072" height="4096" class="absolute inset-0 w-full h-full object-cover -z-20" loading="lazy" decoding="async">
+    <div class="flex flex-col justify-center items-center">
+      <h1 class="text-[32px] md:text-[96px] font-semibold leading-[46px] md:leading-[96px] text-center text-white" set:html={t['about-us'].title}></h1>
     </div>
   </section>
   <section class="flex flex-col md:flex-row justify-center items-center gap-[50px] md:gap-[121px] mt-[9px] md:mt-[58px] pt-[31px] pb-[25px] md:py-[27.5px] max-w-scree md:max-w-none px-4 md:px-0">
-    <div class="size-[214px] rounded-full bg-primary-light"></div>
+    <div class="size-[173px] md:size-[214px] rounded-full bg-main"></div>
     <p class="text-[13px] md:text-[16px] font-normal text-center md:text-start leading-[20px] md:leading-[25px] max-w-[478px]" set:html={t['about-us'].description}></p>
   </section>
   <section class="flex justify-center items-center gap-[18px] md:gap-[79px] mt-[47px] md:mt-[151px] max-w-screen md:max-w-none px-4 md:px-0">
@@ -36,24 +34,23 @@ const t = translations[lang];
       ))
     }
   </section>
-  <section class="flex flex-col md:flex-row justify-center items-start gap-8 md:gap-[38px] max-w-screen md:max-w-[1134px] px-4 md:px-0 mt-[30px] md:mt-[151px] pb-[35.5px] md:pb-8">
+  <section class="flex flex-col md:flex-row justify-center items-start gap-8 md:gap-[38px] max-w-screen md:max-w-[1134px] px-4 md:px-0 mt-[40px] md:mt-[151px] pb-[35.5px] md:pb-8">
     <div class="order-2 md:order-1 w-full md:w-[560px] h-[193px] md:h-[322px] rounded-[15px] bg-[#787878]">
     </div>
     <div class="order-1 md:order-2 flex flex-col justify-center items-center  md:items-start gap-2">
-      <Icon name={"separate"} class={"w-[156px] md:w-[205px] h-auto"}/>
-      <h2 class="text-[24px] md:text-[44px] font-semibold text-primary-dark-bold">{t['about-us'].team.title}</h2>
-      <p class="text-[13px] md:text-[16px] font-normal leading-[25px] max-w-[478px] text-center md:text-start" set:html={t['about-us'].team.description}></p>
+      <h2 class="text-[24px] md:text-[44px] font-semibold text-main">{t['about-us'].team.title}</h2>
+      <p class="text-[13px] md:text-[16px] font-normal leading-[25px] max-w-[478px] text-center md:text-start text-secondary" set:html={t['about-us'].team.description}></p>
     </div>
   </section>
   <section class="flex flex-col justify-center items-center mt-0 md:mt-[151px] mb-[40px] md:mb-[96px] gap-10 max-w-screen md:max-w-[1134-px] px-4 md:px-0">
-    <h2 set:html={t['about-us'].stand.title} class="text-[24px] md:text-[40px] text-primary-dark-bold font-normal text-center"></h2>
+    <h2 set:html={t['about-us'].stand.title} class="text-[24px] md:text-[40px] text-secondary font-normal text-center md:[-webkit-text-stroke-width:1px] md:[-webkit-text-stroke-color:var(--color-main)]"></h2>
     <div class="w-full flex flex-col justify-center items-center gap-10">
       {t['about-us'].stand.list.map(item=>(
-        <div class="w-full flex justify-center items-center gap-[18px] md:gap-[40px] lg:gap-[115px] py-10 px-[18px] md:px-[96px] rounded-[15px] border-[1px] md:border-[3px] border-[#0468A6]">
-          <p class="text-[105px] md:text-[128px] font-semibold text-center text-primary-dark-bold">{item.letter}</p>
+        <div class="w-full flex justify-center items-center gap-[18px] md:gap-[40px] lg:gap-[115px] py-10 px-[18px] md:px-[96px] rounded-[15px] border-[1px] md:border-[3px] border-secondary">
+          <p class="text-[105px] md:text-[128px] font-semibold text-center text-secondary">{item.letter}</p>
           <div class="flex flex-col justify-center items-start gap-[15px] w-full"   >
-            <div class="w-full bg-primary-dark-bold text-white rounded-[15px] px-[13px] md:px-[25px] py-[14px] h-[86px] md:h-auto flex items-center">
-              <p class="text-[24px] md:text-[64px] font-semibold text-start leading-[29px] md:leading-[64px]">{item.title}</p>
+            <div class="w-full bg-main text-white rounded-[15px] px-[13px] md:px-[25px] py-[14px] h-[86px] md:h-auto flex items-center">
+              <p class="text-[24px] md:text-[64px] font-semibold text-start leading-[29px] md:leading-[58px]">{item.title}</p>
             </div> 
             <p class="text-[13px] md:text-[16px] leading-[20px] md:leading-[25px] text-normal text-start">{item.description}</p>
           </div>

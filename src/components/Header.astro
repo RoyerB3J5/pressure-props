@@ -34,7 +34,8 @@ const normalized = currentPath.replace(/^\/(en|es)/, '') || '/';
 const match = currentPath.match(/^\/(en|es)/);
 const lang = match ? match[1] : 'en';
 ---
-<header class="relative w-full flex flex-col justify-center items-center bg-secondary">
+<header class="fixed top-0 left-0 right-0 z-50 w-full flex flex-col justify-center items-center transition-top duration-300 ease-in-out"
+  id="site-header">
   <div class="w-full bg-main justify-center hidden md:flex">
     <div class="w-full flex justify-center md:justify-between items-center max-w-[1154px]">
       <div class="flex items-center gap-[6px]">
@@ -53,9 +54,9 @@ const lang = match ? match[1] : 'en';
       </div>
     </div>
   </div>
-  <div class="w-full max-w-screen sm:max-w-[1178px] py-3 md:min-h-[141px] flex justify-between items-center px-7 md:px-0 ">
+  <div class="bg-secondary w-full max-w-screen sm:max-w-[1223px] py-3 md:min-h-[141px] flex justify-between items-center px-7 md:px-[38px] relative md:relative top-0 md:top-[23px] rounded-0 md:rounded-[20px]">
     <div class="size-[33px] md:size-[91px] bg-main rounded-full"></div>
-    <div class="absolute md:relative flex items-center bg-primary-dark md:bg-transparent text-white  flex-col justify-center md:flex-row h-screen md:h-auto w-[90%] md:w-auto z-10 top-0 right-0 py-6 md:py-0 gap-10 md:gap-0 transform translate-x-full md:translate-x-0 transition-transform duration-300 ease-out" id="mobile-menu">
+    <div class="absolute md:relative flex items-center bg-secondary md:bg-transparent text-white  flex-col justify-center md:flex-row h-screen md:h-auto w-[90%] md:w-auto z-50 md:z-10 top-0 right-0 py-6 md:py-0 gap-10 md:gap-0 transform translate-x-full md:translate-x-0 transition-transform duration-300 ease-out" id="mobile-menu">
       <img src="/equis.svg" alt="Menu" width="24" height="24" class="md:hidden block absolute top-6 right-6 cursor-pointer" id="close-btn">
       <nav class="relative flex items-center flex-col md:flex-row justify-center w-full md:w-auto gap-0 md:gap-4">
         {
@@ -65,7 +66,7 @@ const lang = match ? match[1] : 'en';
             return(
               <div class={`flex flex-col md:flex-row items-center justify-center gap-[14px] px-0 md:px-[7px] hover:text-main w-full md:w-auto py-2 md:py-0 text-center ${isServices ? 'relative group' : ''} ${isActive ? 'bg-main md:bg-transparent text-white  md:text-main' : ''}`} id={`services-${index}`}>
                 <a href={`/${lang}${item.href}`}  class={`
-                text-[18px] text-center font-semibold leading-[52px] relative group transition-colors duration-300
+                text-[18px] text-center font-semibold leading-[52px] relative transition-colors duration-300
                
                 
               `}>
@@ -80,18 +81,14 @@ const lang = match ? match[1] : 'en';
                 {isServices && (
           <div
             class="
-              absolute transform translate-y-[100px]
-              w-[170px] flex-col justify-center items-center bg-white z-20 translate-x-[10px]
-              opacity-0 pointer-events-none
-              group-hover:opacity-100 group-hover:pointer-events-auto
-              transition-all duration-300 ease-out hidden md:flex
+              absolute top-full left-0 mt-1 w-[170px] flex-col items-center bg-white z-40 hidden md:hidden md:group-hover:flex opacity-0 group-hover:opacity-0 md:group-hover:opacity-100 pointer-events-none md:group-hover:pointer-events-auto transition-all duration-300 ease-out -translate-x-[20%]
             "
           >
             {content.types.map(sub => (
               <div
                 class="
-                  text-[18px] font-semibold text-primary-dark-bold 
-                  py-1.5 hover:bg-primary-dark-bold hover:text-white 
+                  text-[18px] font-semibold text-secondary 
+                  py-1.5 hover:bg-main hover:text-white 
                   transition-colors duration-300 ease-in-out
                   cursor-pointer px-6 w-full text-center
                 "
@@ -100,32 +97,27 @@ const lang = match ? match[1] : 'en';
               </div>
             ))}
           </div>
-          <div class="flex-col justify-center items-center w-full bg-primary divide-y divide-white md:hidden hidden" id="sub-menu-services">
+          <div class="flex-col justify-center items-center w-full bg-[#0366FF] divide-y divide-white md:hidden hidden" id="sub-menu-services">
             {content.types.map(sub => (
-              <div
-                class="
+                <a href={`/${lang}/services/${sub.href}`} class="
                   text-[18px] font-semibold text-white 
                   py-3 
                   transition-colors duration-300 ease-in-out
                   cursor-pointer px-6 w-full text-center
-                "
-              >
-                <a href={`/${lang}/services/${sub.href}`}>{sub.label}</a>
-              </div>
+                ">{sub.label}</a>
             ))}
           </div>
         )}
-        
             </div>
             )
             
           })
         }
       </nav>
-      <Button class="bg-main ml-[27.5px] mr-[27px] ">
+      <Button class="bg-main ml-[27.5px] mr-[27px] h-[58px]">
         {content?.button}
       </Button>
-      <div class="flex justify-center  items-center gap-[6px] px-[7px]">
+      <div class="flex justify-center  items-center gap-4 md:gap-[6px] px-[7px]">
         <img src="/phone.webp" alt="Telefono Blanco" width="33" height="48" class=" block w-[33px] h-[48px]">
         <div class="text-white text-[16px] font-semibold leading-[24px] flex flex-col items-start justify-center">
           <p>{content?.phone}</p>
@@ -135,7 +127,7 @@ const lang = match ? match[1] : 'en';
     </div>
     <div class="flex md:hidden justify-center items-center gap-7">
       <ChangeLanguage/>
-      <Icon name={"hamburger"} class={"w-6 h-6"} id="hamburger-btn"/>
+      <Icon name={"hamburger"} class={"w-6 h-6 "} id="hamburger-btn"/>
     </div>
   </div>
 </header>
@@ -224,5 +216,21 @@ const lang = match ? match[1] : 'en';
       subMenuServices.classList.remove('flex');
     }
   });
+  const header = document.getElementById('site-header');
+    let lastScroll = window.pageYOffset;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        // Scroll hacia abajo: escondemos el header completo
+        header.style.transform = 'translateY(-120%)';
+      } else {
+        // Scroll hacia arriba: lo mostramos
+        header.style.transform = 'translateY(0)';
+      }
+
+      lastScroll = currentScroll;
+    });
 });
 </script>

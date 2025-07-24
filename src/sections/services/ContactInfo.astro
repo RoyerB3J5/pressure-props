@@ -1,8 +1,20 @@
+---
+import CarwashForm from '../../components/CarwashForm.astro';
+import CommercialForm from '../../components/CommercialForm.astro';
+import ResidentialForm from '../../components/ResidentialForm.astro';
+
+interface Props {
+  formType: string;
+}
+const { formType } = Astro.props as Props;
+---
+
 <section class="flex flex-col md:flex-row justify-center items-stretch gap-7 pb-10 md:pb-[140px] max-w-screen md:max-w-[1150px] px-4 md:px-0 w-full min-h-[660px] h-full">
   <div class="flex-none md:flex-1 max-w-[678px] bg-[#787878] rounded-[15px] text-white flex justify-center items-center h-[339px] md:h-auto">
     <p>Carousel de Fotos</p>
   </div>
-  <div class="flex-none md:flex-1 max-w-[444px] bg-[#787878] rounded-[15px] text-white flex justify-center items-center h-[499px] md:h-auto">
-    <p>Formulario propietario</p>
-  </div>
+  {formType === 'residential' && <ResidentialForm />}
+  {formType === 'commercial' && <CommercialForm/>}
+  {formType === 'carwash' && <CarwashForm />}
+
 </section>
