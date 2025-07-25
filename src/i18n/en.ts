@@ -189,7 +189,7 @@ export default {
           image: 'semipremium',
         },
         {
-          title: 'Car Wash At Your Door',
+          title: 'Doorstep Car Wash',
           image: 'premium',
         },
       ],

@@ -11,10 +11,10 @@ const { content } = Astro.props as Props;
 ---
 <section class="w-full flex items-center justify-center relative ">
   <img src="/main/hero.webp" alt="Fondo de soluciones" width="2048" height="1536" class="absolute inset-0 w-full h-full object-cover -z-20 object-[60%_center] md:object-center" loading="lazy" decoding="async">
-  <div class="w-full max-w-screen md:max-w-[1117px] flex flex-col md:flex-row justify-start items-center gap-4 md:gap-[104px] px-4 md:px-0 pt-[35px] pb-[80px] md:pt-[285px] md:pb-[185px] h-[calc(100vh-57px)] md:h-auto">
+  <div class="w-full max-w-screen md:max-w-[1117px] flex flex-col md:flex-row justify-start items-center gap-4 md:gap-[104px] px-4 md:px-0 pt-[114px] pb-[80px] md:pt-[336px] md:pb-[185px] h-[calc(100vh-57px)] md:h-auto">
     <div class=" flex flex-col items-center justify-center w-full pt-[22px] md:pt-0 max-w-[463px]">
-      <h1 class="text-center text-[22px] md:text-[44px] leading-[26px] md:leading-[46px] font-semibold text-white max-w-[315px] md:max-w-none mb-4 md:mb-2">{content.title}</h1>
-      <img src="/main/google.png" alt="Icono de Google" width="97px" height="54px" class="mb-[30px] h-[69px] w-[122px] md:h-[54px] md:w-[97px]">
+      <h1 class="text-center text-[38px] md:text-[44px] leading-[45px] md:leading-[46px] font-semibold text-white max-w-[315px] md:max-w-none mb-8 md:mb-2">{content.title}</h1>
+      <img src="/main/google.png" alt="Icono de Google" width="97px" height="54px" class="mb-[26px] md:mb-[30px] h-[69px] w-[122px] md:h-[54px] md:w-[97px]">
       <div class="flex flex-col md:flex-row justify-center items-center gap-[18px] w-full md:w-auto relative z-40">
         <Button class='bg-main w-full md:w-auto'>
           {content.button1}
@@ -26,7 +26,7 @@ const { content } = Astro.props as Props;
     </div>
   </div>
   <div class="absolute bottom-0  w-screen md:w-auto px-4 md:0">
-  <div class="shadow-div translate-y-[89%] md:translate-y-2/3 bg-[#E8E8E8] pt-[24px] pb-[55px] md:py-[35px] rounded-[20px] flex flex-col md:flex-row justify-between items-center gap-[64px]  md:gap-[68px] w-full px-[32px] md:px-[95px] ">
+  <div class="shadow-div translate-y-[89%] md:translate-y-2/3 bg-[#E8E8E8] py-10 md:py-[35px] rounded-[20px] flex flex-col md:flex-row justify-between items-center gap-[28px]  md:gap-[68px] w-full px-[32px] md:px-[95px] ">
     {content.lists.map(item => (
       <div class="flex flex-col justify-center items-center gap-[18px] md:gap-[13px] w-full max-w-none md:max-w-[271px]">
         <img src={`/main/${item.icon}.svg`} alt={item.icon} width="70" height="68" class="max-h-[57px] md:max-h-[68px]" />

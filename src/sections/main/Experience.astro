@@ -10,21 +10,21 @@ interface Props {
 }
 const { content } = Astro.props as Props;
 ---
-<section class="pt-[590px] md:pt-[276px] pb-[58px] md:pb-[115px] flex flex-col justify-center items-center gap-8 md:gap-[52px] max-w-screen md:max-w-[1145px] px-4 md:px-0">
+<section class="pt-[510px] md:pt-[276px] pb-[58px] md:pb-[115px] flex flex-col justify-center items-center gap-8 md:gap-[52px] max-w-screen md:max-w-[1145px] px-4 md:px-0">
   <div class="w-full flex flex-col md:flex-row items-center md:items-start justify-center gap-8 md:gap-[86px]">
-    <div class="relative order-2 md:order-1 w-full md:w-[581px] h-[902px] md:h-[647px]" >
+    <div class="relative order-2 md:order-1 w-full md:w-[581px] h-[574px] md:h-[647px]" >
       <!-- Experience 1: Fila 1, Columna 1 -->
-      <div class="absolute top-0 left-0 w-full md:w-[236px] h-[347px] md:h-[244px] rounded-[10px] overflow-hidden">
+      <div class="absolute bottom-0 md:top-0 left-0 w-full md:w-[236px] h-[288px] md:h-[244px] rounded-[10px] overflow-hidden">
         <img src="/main/experience1.webp" alt="Experiencia 1" width="802" height="454" style="display: block; width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
       </div>
       
       <!-- Experience 2: Fila 2, Columna 1 -->
-      <div class="absolute bottom-0 left-0 w-full md:w-[236px] h-[544px] md:h-[382px] rounded-[10px] overflow-hidden">
+      <div class="hidden md:block absolute bottom-0 left-0 w-full md:w-[236px] h-[544px] md:h-[382px] rounded-[10px] overflow-hidden">
         <img src="/main/experience2.webp" alt="Experiencia 2" width="2048" height="1536" style="display: block; width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
       </div>
       
       <!-- Experience 3: Toda la Columna 2 -->
-      <div class="hidden md:block absolute top-0 right-0 w-[324px] h-[647px] rounded-[10px] overflow-hidden">
+      <div class="absolute top-0 right-0 w-full md:w-[324px] h-[254px] md:h-[647px] rounded-[10px] overflow-hidden">
         <img src="/main/experience3.webp" alt="Experiencia 3" width="1500" height="100" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 17% center;"  loading="lazy" decoding="async">
       </div>
     </div>
