@@ -218,19 +218,19 @@ export default {
       title:
         "Check out our Recent <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>Pressure Washing Projects</span>",
       button: 'VIEW ALL PROJECTS',
-      images:[
-        "/main/carousel-4.png",
-        "/main/carousel-5.png",
-        "/main/carousel-6.png",
-        "/main/carousel-4.png",
-        "/main/carousel-5.png",
-        "/main/carousel-6.png",
-        "/main/carousel-4.png",
-        "/main/carousel-5.png",
-        "/main/carousel-6.png",
-        "/main/carousel-4.png",
-        "/main/carousel-5.png",
-        "/main/carousel-6.png",
+      images: [
+        '/main/carousel-4.png',
+        '/main/carousel-5.png',
+        '/main/carousel-6.png',
+        '/main/carousel-4.png',
+        '/main/carousel-5.png',
+        '/main/carousel-6.png',
+        '/main/carousel-4.png',
+        '/main/carousel-5.png',
+        '/main/carousel-6.png',
+        '/main/carousel-4.png',
+        '/main/carousel-5.png',
+        '/main/carousel-6.png',
       ],
       name: 'pressureprops',
       description: 'Texto del ig de pressurepros es widget de IG',
@@ -336,6 +336,12 @@ export default {
         {
           letter: 'O',
           title: 'Orlando-Focused',
+          description:
+            'We know this city, its weather, its surfaces and the problems it generates. That’s why our service is optimized for Florida homes and businesses.',
+        },
+        {
+          letter: 'S',
+          title: 'Standards for JZ Pros',
           description:
             'We know this city, its weather, and its surfaces. That’s why our service is optimized for Florida homes and businesses.',
         },

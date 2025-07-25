@@ -338,7 +338,13 @@ export default {
           letter: 'O',
           title: 'Enfocados en Orlando',
           description:
-            'Conocemos esta ciudad, su clima y sus superficies. Por eso nuestro servicio está optimizado para hogares y negocios de Florida.',
+            'Conocemos esta ciudad, su clima, sus superficies y sus problemas generados. Por eso nuestro servicio está optimizado para hogares y negocios de Florida.',
+        },
+        {
+          letter: 'S',
+          title: 'Estándares de JZ Pros',
+          description:
+            'Conocemos esta ciudad, su clima y sus superficies. Por eso, nuestro servicio está optimizado para los hogares y negocios de Florida.',
         },
       ],
     },
