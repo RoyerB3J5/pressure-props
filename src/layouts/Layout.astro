@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import 'aos/dist/aos.css';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Project from '../sections/main/Project.astro';
@@ -37,6 +38,21 @@ const { lang, t } = Astro.props;
 			<Project content={t?.main.project}/>
 		</main>
 		<Footer content={t?.footer}/>
+		
+		<script>
+			import AOS from 'aos';
+			
+			AOS.init({
+				duration: 1000,
+				once: true,
+				offset: 100,
+				delay: 100,
+				disable: 'mobile'
+			});
+			
+			document.body.classList.add('visible');
+		</script>
+	</body>
 	</body>
 </html>
 

@@ -12,7 +12,7 @@ const { content } = Astro.props as Props;
 ---
 <section class="pt-[510px] md:pt-[276px] pb-[58px] md:pb-[115px] flex flex-col justify-center items-center gap-8 md:gap-[52px] max-w-screen md:max-w-[1145px] px-4 md:px-0">
   <div class="w-full flex flex-col md:flex-row items-center md:items-start justify-center gap-8 md:gap-[86px]">
-    <div class="relative order-2 md:order-1 w-full md:w-[581px] h-[574px] md:h-[647px]" >
+    <div class="relative order-2 md:order-1 w-full md:w-[581px] h-[574px] md:h-[647px]" data-aos="fade-right">
       <!-- Experience 1: Fila 1, Columna 1 -->
       <div class="absolute bottom-0 md:top-0 left-0 w-full md:w-[236px] h-[288px] md:h-[244px] rounded-[10px] overflow-hidden">
         <img src="/main/experience1.webp" alt="Experiencia 1" width="802" height="454" style="display: block; width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
@@ -28,7 +28,7 @@ const { content } = Astro.props as Props;
         <img src="/main/experience3.webp" alt="Experiencia 3" width="1500" height="100" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 17% center;"  loading="lazy" decoding="async">
       </div>
     </div>
-    <div class="order-1 md:order-1 flex flex-col items-center md:items-start justify-center py-[37px] md:py-0 max-w-none md:max-w-[478px] max-h-none md:max-h-[648px]">
+    <div class="order-1 md:order-1 flex flex-col items-center md:items-start justify-center py-[37px] md:py-0 max-w-none md:max-w-[478px] max-h-none md:max-h-[648px]" data-aos="fade-left">
       <h2 class="text-[22px] md:text-[44px] font-semibold leading-[24px] text-main h-[43px] md:h-[72px] flex items-center">JZ Pressure <span class="ml-1 text-secondary">Props</span></h2>
       <p class="text-[14px] md:text-[18px] leading-[20px] md:leading-[25px] text-center md:text-start font-bold max-w-[336px] text-secondary">{content.description}</p>
       <p set:html={content.description2} class="mt-[7px] md:mt-5 text-[13px] md:text-[16px] leading-[18px] md:leading-[25px] text-center md:text-start font-medium text-secondary"></p>

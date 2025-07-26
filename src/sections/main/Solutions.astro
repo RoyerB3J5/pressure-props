@@ -11,7 +11,7 @@ const { content } = Astro.props as Props;
 <section class="relative w-full pt-[192px] pb-[115px] md:pt-[90px] md:pb-[130px] overflow-hidden">
   <img src="/main/bg-solutions.webp" alt="Fondo de soluciones" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover -z-20 scale-x-[-1] object-[80%_center] md:object-center" loading="lazy" decoding="async">
   <div class="relative z-0 flex flex-col justify-center items-center gap-5 md:gap-[87px] max-w-screen md:max-w-[1126px] mx-auto px-4 md:px-0">
-    <div class="flex flex-col md:flex-row justify-center items-center gap-[87px] md:gap-[32px]">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-[87px] md:gap-[32px]" data-aos="zoom-in">
       <div class="flex flex-col justify-center items-center gap-[26px]">
         <h3 set:html={content.description} class="text-center text-[32px] md:text-[40px] font-semibold leading-[35px] md:leading-[46px] text-white max-w-[336px] md:max-w-none"></h3>
       </div>
