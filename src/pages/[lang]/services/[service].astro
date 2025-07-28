@@ -40,10 +40,10 @@ if (isTwoCols) {
   <section class="py-[160px] md:pt-[285px] md:pb-[185px] flex flex-col justify-center items-center w-full relative overflow-hidden px-4 md:px-0">
     <img src={`/${service}.webp`} alt="Fondos de servicios" width="3072" height="4096" class="absolute inset-0 w-full h-full object-cover -z-20" loading="lazy" decoding="async">
     <div class="flex flex-col justify-center items-center gap-2 md:gap-8">
-      <h1 class="text-[32px] md:text-[75px] font-semibold leading-[46px] md:leading-[77px] text-center text-white " set:html={serviceData.title}></h1>
+      <h1 class="text-[32px] md:text-[75px] font-semibold leading-[46px] md:leading-[77px] text-center text-white " set:html={serviceData.title} data-aos="flip-down"></h1>
     </div>
   </section>
-  <section class="max-w-screen md:max-w-[1058px] px-4 md:px-0 mx-auto flex flex-col md:flex-row justify-center items-start gap-[30px] md:gap-[110px] pt-[38px] md:pt-[73px] pb-[42px] md:pb-[51px]">
+  <section class="max-w-screen md:max-w-[1058px] px-4 md:px-0 mx-auto flex flex-col md:flex-row justify-center items-start gap-[30px] md:gap-[110px] pt-[38px] md:pt-[73px] pb-[42px] md:pb-[51px]" data-aos="zoom-in-up" data-aos-offset="200">
     <p set:html={serviceData.description} class="text-[13px] md:text-[16px] font-normal leading-[20px] md:leading-[25px] max-w-[486px] text-secondary"></p>
     <div class={`block ${isTwoCols ? 'grid grid-cols-2 gap-[3px] md:gap-[6px] items-start' : 'grid grid-cols-1 gap-4'}`}>
   {columns.map((col) => (

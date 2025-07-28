@@ -61,7 +61,7 @@ const lang = match ? match[1] : 'en';
       <nav class="relative flex items-center flex-col md:flex-row justify-center w-full md:w-auto gap-0 md:gap-4">
         {
           content?.nav.map((item, index)=>{
-            const isActive = normalized === item.href
+            const isActive = normalized === item.href || (index === 1 && normalized.startsWith('/services'))
             const isServices = index === 1;
             return(
               <div class={`flex flex-col md:flex-row items-center justify-center gap-[14px] px-0 md:px-[7px] hover:text-main w-full md:w-auto py-2 md:py-0 text-center ${isServices ? 'relative group' : ''} ${isActive ? 'bg-main md:bg-transparent text-white  md:text-main' : ''}`} id={`services-${index}`}>

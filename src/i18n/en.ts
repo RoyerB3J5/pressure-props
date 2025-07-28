@@ -189,7 +189,7 @@ export default {
           image: 'semipremium',
         },
         {
-          title: 'Doorstep Car Wash',
+          title: 'Car Wash At Your Door',
           image: 'premium',
         },
       ],
@@ -370,7 +370,7 @@ export default {
         href: '/',
       },
       {
-        label: 'Type of Services',
+        label: 'Services',
         href: '#',
       },
       {

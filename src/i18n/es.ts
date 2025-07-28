@@ -372,7 +372,7 @@ export default {
         href: '/',
       },
       {
-        label: 'Tipos de Servicios',
+        label: 'Servicios',
         href: '#',
       },
       {

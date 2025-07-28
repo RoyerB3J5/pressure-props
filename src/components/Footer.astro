@@ -59,8 +59,8 @@ const lang = match ? match[1] : 'en';
     <div class="w-full md:w-auto order-first md:order-last flex flex-col justify-center items-center md:items-end gap-[23px] md:gap-[18px]">
       <p class="text-[16px] leading-[20px] font-semibold text-right text-main">{content?.links_title}</p>
       <div class="flex flex-col items-center md:items-end gap-5 w-full md:gap-[26px]">
-        {content?.links.map(item => {
-          const isActive = normalized === item.href
+        {content?.links.map((item,index) => {
+          const isActive = normalized === item.href || (index === 1 && normalized.startsWith('/services'))
           return (
             <a href={`/${lang}${item.href}`} class={`w-full text-left  md:text-right text-[13px] md:text-[15px] font-medium leading-[20px]  uppercase hover:font-bold transition-all duration-300 ease-in-out ${isActive?'text-main':'text-secondary'}`}>{item.label}</a>
           )  
