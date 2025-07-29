@@ -21,8 +21,8 @@ const t = translations[lang];
       <h1 class="text-[32px] md:text-[96px] font-semibold leading-[46px] md:leading-[96px] text-center text-white" set:html={t['about-us'].title} data-aos="flip-down" data-aos-offset="300"></h1>
     </div>
   </section>
-  <section class="flex flex-col md:flex-row justify-center items-center gap-[50px] md:gap-[121px] mt-[9px] md:mt-[58px] pt-[31px] pb-[25px] md:py-[27.5px] max-w-scree md:max-w-none px-4 md:px-0" data-aos="zoom-out-up" data-aos-offset="200">
-    <div class="size-[173px] md:size-[214px] rounded-full bg-main"></div>
+  <section class="flex flex-col md:flex-row justify-center items-center gap-[15px] md:gap-[121px] mt-[9px] md:mt-[58px] pt-[31px] pb-[25px] md:py-[0px] max-w-scree md:max-w-none px-4 md:px-0" data-aos="zoom-out-up" data-aos-offset="200">
+    <img src="/logo-2.svg" alt="Logo de PresureProps" width="218" height="218" class="w-[173px] md:w-[305px] h-[173px] md:h-[305px]">
     <p class="text-[13px] md:text-[16px] font-normal text-center md:text-start leading-[20px] md:leading-[25px] max-w-[478px]" set:html={t['about-us'].description}></p>
   </section>
   <section class="flex justify-center items-center gap-[18px] md:gap-[79px] mt-[47px] md:mt-[151px] max-w-screen md:max-w-none px-4 md:px-0">
@@ -42,13 +42,13 @@ const t = translations[lang];
       <p class="text-[13px] md:text-[16px] font-normal leading-[25px] max-w-[478px] text-center md:text-start text-secondary" set:html={t['about-us'].team.description}></p>
     </div>
   </section>
-  <section class="flex flex-col justify-center items-center mt-0 md:mt-[151px] mb-[40px] md:mb-[96px] gap-10 max-w-screen md:max-w-[1134-px] px-4 md:px-0">
+  <section class="flex flex-col justify-center items-center mt-0 md:mt-[151px] mb-[40px] md:mb-[96px] gap-10 max-w-screen md:max-w-[1134px] px-4 md:px-0">
     <h2 set:html={t['about-us'].stand.title} class="text-[24px] md:text-[40px] text-secondary font-normal text-center md:[-webkit-text-stroke-width:1px] md:[-webkit-text-stroke-color:var(--color-main)]"></h2>
     <div class="w-full flex flex-col justify-center items-center gap-10">
       {t['about-us'].stand.list.map((item,index)=>{
         const transition = index % 2 === 0 ? 'fade-right' : 'fade-left';
         return (
-          <div class="w-full flex justify-center items-center gap-[18px] md:gap-[40px] lg:gap-[115px] py-10 px-[18px] md:px-[96px] rounded-[15px] border-[1px] md:border-[3px] border-secondary" data-aos={transition}>
+          <div class="w-full flex justify-center items-center gap-[18px] md:gap-[40px] lg:gap-[115px] py-10 px-[18px] md:px-[96px] rounded-[15px] border-[1px] md:border-[3px] border-secondary max-h-none md:max-h-[231px]" data-aos={transition}>
             <p class="text-[105px] md:text-[128px] font-semibold text-center text-secondary">{item.letter}</p>
             <div class="flex flex-col justify-center items-start gap-[15px] w-full"   >
               <div class="w-full bg-main text-white rounded-[15px] px-[13px] md:px-[25px] py-[14px] h-[86px] md:h-auto flex items-center">

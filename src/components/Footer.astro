@@ -32,10 +32,10 @@ const match = currentPath.match(/^\/(en|es)/);
 const lang = match ? match[1] : 'en';
 ---
 <footer class="flex flex-col justify-center items-center w-full">
-<div class="w-full flex flex-col md:flex-row justify-center md:justify-between items-center max-w-screen md:max-w-[1149px] px-4 md:px-0 pt-[85px] pb-[96px] md:py-[57px] gap-9 md:gap-0">
-  <div class="hidden md:block w-[173px] h-[173px] rounded-full bg-main"></div>
-  <div class="w-full flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start max-w-[851px] gap-9 md:gap-0">
-    <div class="block md:hidden w-[89px] h-[89px] rounded-full bg-main"></div>
+<div class="w-full flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start max-w-screen md:max-w-[1149px] px-4 md:px-0 pt-[85px] pb-[96px] md:py-[57px] gap-9 md:gap-0 min-h-none md:min-h-[438px]">
+  <img src="/logo-2.svg" alt="Logo de PresureProps" width="218" height="218" class="hidden md:block w-[218px] h-[218px]">
+  <div class="w-full flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start max-w-[851px] gap-7 md:gap-0">
+    <img src="/logo-2.svg" alt="Logo de PresureProps" width="218" height="218" class="md:hidden block w-[105px] h-[105px]">
     <div class="flex flex-col items-center md:items-start justify-center gap-[13px] md:gap-[32px] max-w-[389px]">
       <p class="text-[13px] md:text-[16px] leading-[17px] md:leading-[25px] font-medium text-center md:text-start">{content?.text}</p>
       <div class="flex items-center gap-[6px]">
