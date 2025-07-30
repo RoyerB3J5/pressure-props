@@ -35,7 +35,6 @@ const { lang, t } = Astro.props;
 		<Header content={t?.header} />
 		<main class='flex flex-col w-full items-center'>
 			<slot />
-			<Project content={t?.main.project}/>
 		</main>
 		<Footer content={t?.footer}/>
 		

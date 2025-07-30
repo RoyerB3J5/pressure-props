@@ -5,6 +5,7 @@ import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
 import ContactInfo from '../../../sections/services/ContactInfo.astro';
 import type { Language } from '../../../types/language.type';
+import Project from '../../../sections/main/Project.astro';
 
 export function getStaticPaths() {
   const services = ['residential', 'commercial', 'car-wash'];
@@ -61,4 +62,5 @@ if (isTwoCols) {
 </div>
   </section>
   <ContactInfo formType={serviceData.image}/>
+  <Project content={serviceData.project}/>
 </Layout>

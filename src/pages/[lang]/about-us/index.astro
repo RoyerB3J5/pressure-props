@@ -4,6 +4,7 @@ import en from '../../../i18n/en';
 import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
 import type { Language } from '../../../types/language.type';
+import Project from '../../../sections/main/Project.astro';
 export function getStaticPaths() {
   return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
 }
@@ -61,4 +62,5 @@ const t = translations[lang];
        })}
     </div>
   </section>
+  <Project content={t['about-us'].project}/>
 </Layout>

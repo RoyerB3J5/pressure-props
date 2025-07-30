@@ -88,7 +88,7 @@ export default {
           image: 'patios',
         },
         {
-          title: 'Driveway & Sidewalk Cleaning',
+          title: 'Driveway Cleaning',
           image: 'retainer',
         },
         {
@@ -100,11 +100,11 @@ export default {
           image: 'firepits',
         },
         {
-          title: 'Dumpster & Trash Bin Washing',
+          title: 'Dumpster Wash',
           image: 'drainage',
         },
         {
-          title: 'Mobile Car Wash (at your door)',
+          title: 'Car Wash',
           image: 'turn',
         },
         {
@@ -189,7 +189,7 @@ export default {
           image: 'semipremium',
         },
         {
-          title: 'Car Wash At Your Door',
+          title: 'Car Wash',
           image: 'premium',
         },
       ],
@@ -265,6 +265,13 @@ export default {
         'Garage Cleaning',
         'Fence Cleaning',
       ],
+      project: {
+        title: 'Focus on What Matters',
+        description:
+          'Protect your family by keeping your home clean and safe. JZ Pressure Pro handles the washing so you can enjoy peace of mind.',
+        text: 'Your home deserves more than clean—it deserves care.',
+        button: 'Get a Free Estimate',
+      },
     },
     commercial: {
       image: 'commercial',
@@ -277,23 +284,44 @@ export default {
         'Retail Spaces',
         'Office Buildings',
       ],
+      project: {
+        title: 'Mold Is Common in Orlando',
+        description:
+          'Humidity leads to mold, algae, and bacteria on driveways and patios. These release spores and allergens that may affect your health.',
+        text: 'Breathe easier. Live cleaner.',
+        button: 'Get a Free Estimate',
+      },
     },
     'car-wash': {
       image: 'carwash',
       title: 'Mobile Car Wash <br/> Services in Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>We Bring Professional Detailing Right to Your Door</span> <br/> At JZ Pressure Pro, we make car care simple and convenient with our mobile car wash services. Our team comes to your location fully equipped, offering four levels of service to suit every need. Choose a basic wash for a quick refresh, go for a full interior and exterior clean, or select our premium or detailed packages for deep restoration and shine. Whatever option you choose, we’re committed to delivering a spotless finish and a service experience that saves you time while protecting your vehicle.",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>We Bring Professional Detailing Right to Your Door</span> <br/> At JZ Pressure Pro, we make car care simple and convenient with our mobile car wash services. Our team travels directly to you, whether at your home, business, or commercial site. We clean both personal and commercial vehicles, including family cars, company trucks, and fleet vans. Choose from four service levels—from a quick exterior wash to deep restoration and interior detailing. No matter which option you select, we’re committed to delivering spotless results and a seamless experience that saves you time and keeps your vehicle looking its best.",
       list: [
         'Basic: Exterior wash + tire cleaning',
         'Complete: Exterior + interior detailing, dashboard shine, full vacuum',
         'Premium: Complete + exterior wax coating',
         'Detailed Cleaning: Roof cleaning, seat deep cleaning, carpet restoration, + custom specific needs',
       ],
+      project: {
+        title: 'Stop Mold Before It Spreads',
+        description:
+          'Outdoor mold can release spores that enter your home. We clean and seal surfaces to protect your indoor air.',
+        text: 'Keep your home safe for everyone.',
+        button: 'Get a Free Estimate',
+      },
     },
   },
   gallery: {
     title: 'Gallery',
     image: 'gallery',
+    project: {
+      title: 'Clean Surfaces, Healthier Air',
+      description:
+        'We remove mold, mildew, and bacteria that affect the air your family breathes. Your home feels fresher with every wash.',
+      text: 'Fresh air starts with clean surfaces.',
+      button: 'Get a Free Estimate',
+    },
   },
   'about-us': {
     image: 'about',
@@ -317,9 +345,9 @@ export default {
         },
         {
           letter: 'Z',
-          title: 'Zero Waste Mindset',
+          title: 'Zero Health Hazards',
           description:
-            'We’re committed to smarter, more sustainable cleaning. We use eco-friendly products and explore ways to minimize water waste.',
+            'We eliminate harmful mold, mildew, and bacteria from your exterior surfaces, helping to reduce allergy triggers and protect the air quality around your family and pets.',
         },
         {
           letter: 'P',
@@ -347,6 +375,13 @@ export default {
         },
       ],
     },
+    project: {
+      title: 'Allergy Relief Starts Outside',
+      description:
+        'Pressure washing clears spores that cause itchy eyes, coughing, and nasal issues. A cleaner exterior means fewer symptoms.',
+      text: 'Small changes bring real relief.',
+      button: 'Get a Free Estimate',
+    },
   },
   contact: {
     image: 'contact',
@@ -357,6 +392,13 @@ export default {
       title: 'Atention',
       description: 'Mon-Sat',
       text: 'Sunday',
+    },
+    project: {
+      title: 'Help Your Family Breathe Better',
+      description:
+        'Mold increases asthma and lung stress. We eliminate it so your family breathes easier every day.',
+      text: 'One wash can improve well-being.',
+      button: 'Get a Free Estimate',
     },
   },
   footer: {

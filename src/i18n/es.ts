@@ -88,7 +88,7 @@ export default {
           image: 'patios',
         },
         {
-          title: 'Limpieza de entradas y aceras',
+          title: 'Limpieza de entradas de autos',
           image: 'retainer',
         },
         {
@@ -100,19 +100,19 @@ export default {
           image: 'firepits',
         },
         {
-          title: 'Lavado de contenedores y cubos de basura',
+          title: 'Lavado de contenedores de basura',
           image: 'drainage',
         },
         {
-          title: 'Lavado de autos móvil (a domicilio)',
+          title: 'Lavado de autos',
           image: 'turn',
         },
         {
-          title: 'Limpieza de adoquines',
+          title: 'Limpieza de pavimentos',
           image: 'pool',
         },
         {
-          title: 'Limpieza de techos con lavado suave',
+          title: 'Limpieza suave de techos',
           image: 'pergolas',
         },
       ],
@@ -190,7 +190,7 @@ export default {
           image: 'semi premium',
         },
         {
-          title: 'Lavado de autos a domicilio',
+          title: 'Lavado de autos',
           image: 'premium',
         },
       ],
@@ -248,7 +248,7 @@ export default {
       description:
         'En Jz Pressure Pro, no solo lavamos. Restauramos y protegemos las superficies que más importan. Desde hogares hasta negocios, nuestro equipo experto está listo para entregar resultados impecables con satisfacción garantizada.',
       text: 'Hagamos que tu propiedad vuelva a destacar.',
-      button: 'Solicita una Cotización Gratis',
+      button: 'Cotización Gratis',
     },
   },
   services: {
@@ -266,6 +266,13 @@ export default {
         'Limpieza de garaje',
         'Limpieza de cercas',
       ],
+      project: {
+        title: 'Enfócate en lo que Importa',
+        description:
+          'Protege a tu familia manteniendo tu hogar limpio y seguro. JZ Pressure Pro se encarga del lavado para que tengas tranquilidad.',
+        text: 'Tu hogar merece más que limpieza: merece cuidado.',
+        button: 'Cotización Gratuita',
+      },
     },
     commercial: {
       image: 'commercial',
@@ -278,23 +285,44 @@ export default {
         'Locales comerciales',
         'Edificios de oficinas',
       ],
+      project: {
+        title: 'El moho es común en Orlando',
+        description:
+          'La humedad provoca moho, algas y bacterias en entradas de autos y patios. Estos liberan esporas y alérgenos que pueden afectar tu salud.',
+        text: 'Respira mejor. Vive más limpio.',
+        button: 'Cotización Gratuita',
+      },
     },
     'car-wash': {
       image: 'carwash',
       title: 'Servicios Móviles de Lavado de Autos en Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Llevamos el detallado profesional directamente a su puerta</span> <br/> En JZ Pressure Pro facilitamos el cuidado de su vehículo con nuestros servicios móviles de lavado de autos. Nuestro equipo llega a su ubicación totalmente equipado y ofrece cuatro niveles de servicio para cada necesidad. Puede elegir un lavado básico para un refresco rápido, optar por una limpieza completa de interior y exterior o seleccionar nuestros paquetes premium o detallados para una restauración profunda y un brillo excepcional. Sea cual sea su elección, nos comprometemos a brindar un acabado impecable y una experiencia que le ahorra tiempo cuidando su vehículo.",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Llevamos el detallado profesional directamente a tu puerta </span> <br/> En JZ Pressure Pro, hacemos que el cuidado de tu auto sea simple y conveniente con nuestros servicios de lavado móvil. Nuestro equipo va directamente a ti, ya sea en tu hogar, negocio o sitio comercial. Limpiamos vehículos personales y comerciales, incluidos autos familiares, camiones de empresa y furgonetas de flota. Elige entre cuatro niveles de servicio: desde un lavado exterior rápido hasta una restauración profunda con detallado interior. No importa la opción que elijas, nos comprometemos a ofrecer resultados impecables y una experiencia sin complicaciones que te ahorre tiempo y mantenga tu vehículo en su mejor estado.",
       list: [
         'Básico: lavado exterior + limpieza de neumáticos',
         'Completo: detallado exterior e interior, brillo de tablero y aspirado total',
         'Premium: completo + capa de cera exterior',
         'Limpieza Detallada: limpieza de techo, limpieza profunda de asientos, restauración de alfombras y servicios personalizados',
       ],
+      project: {
+        title: 'Detén el moho antes de que se propague',
+        description:
+          'El moho exterior puede liberar esporas que ingresan a tu hogar. Limpiamos y sellamos las superficies para proteger la calidad del aire en tu interior.',
+        text: 'Mantén tu hogar seguro para todos.',
+        button: 'Cotización Gratuita',
+      },
     },
   },
   gallery: {
     title: 'Galería',
     image: 'gallery',
+    project: {
+      title: 'Superficies limpias, aire más saludable',
+      description:
+        'Eliminamos moho, hongos y bacterias que afectan el aire que respira tu familia. Tu hogar se siente más fresco con cada lavado.',
+      text: 'El aire fresco comienza con superficies limpias.',
+      button: 'Cotización Gratuita',
+    },
   },
   'about-us': {
     image: 'about',
@@ -318,9 +346,9 @@ export default {
         },
         {
           letter: 'Z',
-          title: 'Mentalidad de Cero Desperdicio',
+          title: 'Cero riesgos para la salud',
           description:
-            'Estamos comprometidos con una limpieza más inteligente y sostenible. Usamos productos ecológicos y buscamos minimizar el desperdicio de agua.',
+            'Eliminamos moho, hongos y bacterias dañinas de las superficies exteriores, ayudando a reducir los desencadenantes de alergias y a proteger la calidad del aire para tu familia y tus mascotas.',
         },
         {
           letter: 'P',
@@ -348,6 +376,13 @@ export default {
         },
       ],
     },
+    project: {
+      title: 'El alivio de las alergias comienza afuera',
+      description:
+        'El lavado a presión elimina esporas que provocan picazón en los ojos, tos y problemas nasales. Un exterior más limpio significa menos síntomas.',
+      text: 'Pequeños cambios traen un verdadero alivio.',
+      button: 'Cotización Gratuita',
+    },
   },
   contact: {
     image: 'contact',
@@ -358,6 +393,13 @@ export default {
       title: 'Atención',
       description: 'Lun-Sáb',
       text: 'Dom',
+    },
+    project: {
+      title: 'Ayuda a tu familia a respirar mejor',
+      description:
+        'El moho incrementa el asma y el estrés pulmonar. Nosotros lo eliminamos para que tu familia respire con mayor facilidad cada día.',
+      text: 'Un solo lavado puede mejorar el bienestar.',
+      button: 'Cotización Gratuita',
     },
   },
 

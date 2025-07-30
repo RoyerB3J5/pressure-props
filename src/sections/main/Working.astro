@@ -13,7 +13,7 @@ const { content } = Astro.props as Props;
   <div class="flex flex-col md:flex-row justify-center items-center border-[1px] border-main rounded-[15px] max-w-[241px] md:max-w-none">
     {content.items.map((item, index) => (
       <>
-        <div class="relative flex flex-col justify-start items-center pt-[65.5px] lg:pt-[60px] px-5 min-h-[354px] md:min-h-[413px] h-full max-w-none md:max-w-[240px]" data-aos="fade-up" data-aos-offset={`${index * 80}`}>
+        <div class="relative flex flex-col justify-start items-center pt-[65.5px] lg:pt-[60px] px-5 min-h-[354px] lg:min-h-[413px] h-full max-w-none md:max-w-[240px]" data-aos="fade-up" data-aos-offset={`${index * 80}`}>
           <div class="absolute top-0 -translate-y-1/2 bg-main rounded-[15px] p-[10px] w-[114px]">
             <p class="text-[12px] lg:text-[16px] font-normal lg:font-medium text-center text-white ">{item.step}</p>
           </div>
@@ -22,7 +22,7 @@ const { content } = Astro.props as Props;
           <p class="text-[13px] lg:text-[16px] font-medium leading-[18px] lg:leading-[25px] text-secondary text-center">{item.description}</p>
         </div>
         {index < content.items.length - 1 && (
-          <div class="w-full md:w-[1px] h-[1px] md:min-h-[413px] bg-main"></div>
+          <div class="w-full md:w-[1px] h-[1px] md:min-h-[354px] lg:min-h-[413px] bg-main"></div>
         )}
       </>
     ))}
