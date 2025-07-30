@@ -166,7 +166,7 @@ export default {
       },
       rendering: {
         title:
-          "Professional Exterior Cleaning <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>with Real Results</span>",
+          "Professional Exterior Cleaning <br/> <span class='text-[24px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>with Real Results</span>",
         text: 'Restore your property’s beauty and value with expert pressure washing services. We clean driveways, fences, siding, gutters, and more. Our team uses safe methods, eco-friendly practices, and powerful equipment to deliver spotless results every time.',
         button: 'GET AN ESTIMATE',
       },
@@ -216,7 +216,7 @@ export default {
     },
     completed: {
       title:
-        "Check out our Recent <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>Pressure Washing Projects</span>",
+        "Check out our Recent <br/> <span class='text-[24px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>Pressure Washing Projects</span>",
       button: 'VIEW ALL PROJECTS',
       images: [
         '/main/carousel-4.png',

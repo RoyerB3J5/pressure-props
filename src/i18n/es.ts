@@ -167,7 +167,7 @@ export default {
       },
       rendering: {
         title:
-          "Limpieza Profesional de Exteriores <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>con Resultados Reales</span>",
+          "Limpieza Profesional de Exteriores <br/> <span class='text-[24px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>con Resultados Reales</span>",
         text: 'Restaura la belleza y el valor de tu propiedad con servicios expertos de lavado a presión. Limpiamos entradas, cercas, fachadas, canaletas y más. Nuestro equipo utiliza métodos seguros, prácticas ecológicas y equipos potentes para entregar resultados impecables en todo momento.',
         button: 'SOLICITA UNA COTIZACIÓN',
       },
@@ -217,7 +217,7 @@ export default {
     },
     completed: {
       title:
-        "Mira nuestros Recientes <br/> <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>Proyectos de Lavado a Presión</span>",
+        "Mira nuestros Recientes <br/> <span class='text-[24px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>Proyectos de Lavado a Presión</span>",
       button: 'VER PROYECTOS',
       images: [
         '/main/carousel-4.png',

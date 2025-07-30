@@ -43,8 +43,8 @@ if (isTwoCols) {
       <h1 class="text-[32px] md:text-[75px] font-semibold leading-[46px] md:leading-[77px] text-center text-white " set:html={serviceData.title} data-aos="flip-down"></h1>
     </div>
   </section>
-  <section class="max-w-screen md:max-w-[1058px] px-4 md:px-0 mx-auto flex flex-col md:flex-row justify-center items-start gap-[30px] md:gap-[110px] pt-[38px] md:pt-[73px] pb-[42px] md:pb-[51px]" data-aos="zoom-in-up" data-aos-offset="200">
-    <p set:html={serviceData.description} class="text-[13px] md:text-[16px] font-normal leading-[20px] md:leading-[25px] max-w-[486px] text-secondary"></p>
+  <section class="max-w-screen lg:max-w-[1058px] px-4 lg:px-0 mx-auto flex flex-col lg:flex-row justify-center items-center lg:items-start gap-[30px] lg:gap-[110px] pt-[38px] md:pt-[73px] pb-[42px] md:pb-[51px]" data-aos="zoom-in-up" data-aos-offset="200">
+    <p set:html={serviceData.description} class="text-[13px] md:text-[16px] font-normal leading-[20px] md:leading-[25px] max-w-none lg:max-w-[486px] text-secondary"></p>
     <div class={`block ${isTwoCols ? 'grid grid-cols-2 gap-[3px] md:gap-[6px] items-start' : 'grid grid-cols-1 gap-4'}`}>
   {columns.map((col) => (
     <div class="flex flex-col justify-center items-start gap-[6px]">

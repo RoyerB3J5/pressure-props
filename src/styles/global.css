@@ -6,8 +6,8 @@
   --color-backgorund: #D9D9D9;
   --color-background-dark: #787878;
   --font-family: 'Red Hat Text', sans-serif;
-  --breakpoint-xs:400px;
-  --breakpoint-super:1800px;
+  --breakpoint-xs: 25rem;
+  --breakpoint-3xl: 106rem;
 }
 .shadow-div{
   box-shadow: 0px 13px 24.5px 0px rgba(0, 0, 0, 0.25);
