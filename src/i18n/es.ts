@@ -115,6 +115,22 @@ export default {
           title: 'Limpieza suave de techos',
           image: 'pergolas',
         },
+        {
+          title: 'Limpieza de veredas',
+          image: 'sidewalks',
+        },
+        {
+          title: 'Lavado de tachos de basura',
+          image: 'tacho',
+        },
+        {
+          title: 'Limpieza comercial',
+          image: 'com-clean',
+        },
+        {
+          title: 'Lavado de autos comerciales',
+          image: 'com-car',
+        },
       ],
     },
     information: {
@@ -167,7 +183,7 @@ export default {
       },
       rendering: {
         title:
-          "Limpieza Profesional de Exteriores <br/> <span class='text-[24px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>con Resultados Reales</span>",
+          "Limpieza<br/> <span class='text-[24px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>con Resultados Reales</span>",
         text: 'Restaura la belleza y el valor de tu propiedad con servicios expertos de lavado a presión. Limpiamos entradas, cercas, fachadas, canaletas y más. Nuestro equipo utiliza métodos seguros, prácticas ecológicas y equipos potentes para entregar resultados impecables en todo momento.',
         button: 'SOLICITA UNA COTIZACIÓN',
       },
@@ -221,26 +237,24 @@ export default {
       button: 'VER PROYECTOS',
       images: [
         '/main/carousel-4.png',
-        '/main/carousel-5.png',
+        '/main/carousel-5.webp',
         '/main/carousel-6.png',
         '/main/carousel-4.png',
-        '/main/carousel-5.png',
+        '/main/carousel-5.webp',
         '/main/carousel-6.png',
         '/main/carousel-4.png',
-        '/main/carousel-5.png',
+        '/main/carousel-5.webp',
         '/main/carousel-6.png',
         '/main/carousel-4.png',
-        '/main/carousel-5.png',
+        '/main/carousel-5.webp',
         '/main/carousel-6.png',
       ],
       name: 'pressureprops',
       description: 'Texto del IG de pressurepros, es un widget de IG',
     },
     catalog: {
-      title:
-        "Descarga Aquí Nuestro <span class='font-semibold text-[20px] md:text-[48px] leading-[26px] md:leading-[58px] text-main'>Volante</span>",
-      description:
-        'Donde puedes ver todos los servicios y opciones que tenemos para ti.',
+      title: "Descarga nuestro folleto para desbloquear <br/> <span class='font-semibold text-[20px] md:text-[48px] leading-[26px] md:leading-[58px] text-main'>un descuento especial</span>",
+      description: "Consulta todos los servicios y opciones que ofrecemos en un solo lugar. Descarga nuestro folleto y preséntalo en tu próxima visita de servicio para recibir un descuento exclusivo.",
       button: 'DESCARGAR AHORA',
     },
     project: {
@@ -249,6 +263,7 @@ export default {
         'En Jz Pressure Pro, no solo lavamos. Restauramos y protegemos las superficies que más importan. Desde hogares hasta negocios, nuestro equipo experto está listo para entregar resultados impecables con satisfacción garantizada.',
       text: 'Hagamos que tu propiedad vuelva a destacar.',
       button: 'Cotización Gratis',
+      image:"bg-main.png"
     },
   },
   services: {
@@ -258,13 +273,18 @@ export default {
       description:
         "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Recupere la belleza de su hogar y manténgalo limpio todo el año</span> <br/> En JZ Pressure Pro ofrecemos servicios especializados de lavado a presión residencial que ayudan a los familias de Orlando a proteger y realzar la apariencia de sus propiedades. Ya sea que quiera limpiar el exterior de su casa, eliminar algas del techo o darle brillo a la entrada y la terraza de la piscina, nuestro equipo garantiza resultados excepcionales en cada visita. Empleamos técnicas seguras y adaptadas a cada superficie para eliminar suciedad, manchas, moho y mugre, dejando su hogar con un aspecto fresco, pulido y bien cuidado.",
       list: [
-        'Limpieza del exterior de la vivienda',
-        'Lavado suave de techos',
-        'Lavado a presión de ventanas',
-        'Limpieza de entrada y acera',
-        'Restauración de terraza de piscina',
-        'Limpieza de garaje',
-        'Limpieza de cercas',
+        'Lavado de casas',
+        'Limpieza de cercas y muros',
+        'Lavado de contenedores',
+        'Limpieza de adoquines',
+        'Limpieza de aceras',
+        'Limpieza comercial',
+        'Limpieza de entradas',
+        'Limpieza de canaletas',
+        'Lavado de autos',
+        'Limpieza suave de techos',
+        'Lavado de cubos de basura',
+        'Lavado de autos comercial',
       ],
       project: {
         title: 'Enfócate en lo que Importa',
@@ -272,7 +292,14 @@ export default {
           'Protege a tu familia manteniendo tu hogar limpio y seguro. JZ Pressure Pro se encarga del lavado para que tengas tranquilidad.',
         text: 'Tu hogar merece más que limpieza: merece cuidado.',
         button: 'Cotización Gratuita',
+        image:"bg-residential.webp"
       },
+      carousel:[
+        "/main/techo.webp",
+        "/main/patios.webp",
+        "/main/retainer.webp",
+        "/main/wakways.webp"
+      ]
     },
     commercial: {
       image: 'commercial',
@@ -280,10 +307,12 @@ export default {
       description:
         "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Dé a su propiedad el aspecto limpio y profesional que merece</span> <br/> En JZ Pressure Pro ayudamos a negocios de Orlando a destacarse con servicios confiables y eficaces de lavado a presión comercial. Desde zonas de alto tráfico como I‑Drive hasta hoteles, restaurantes, locales de venta al por menor y edificios de oficinas, sabemos lo importante que es un exterior impecable para la imagen de su marca. Nuestro equipo experimentado elimina grasa, suciedad y acumulaciones ambientales usando las herramientas adecuadas para cada tarea. Trabajamos con rapidez, minimizamos interrupciones y dejamos su espacio impecable para que reciba a sus clientes con total confianza.",
       list: [
-        'Negocios en zonas de alto tráfico (I‑Drive)',
+        'Negocios en zonas de alto tráfico',
         'Hoteles y restaurantes',
         'Locales comerciales',
         'Edificios de oficinas',
+        'Estacionamientos',
+        'Otras propiedades comerciales',
       ],
       project: {
         title: 'El moho es común en Orlando',
@@ -291,7 +320,14 @@ export default {
           'La humedad provoca moho, algas y bacterias en entradas de autos y patios. Estos liberan esporas y alérgenos que pueden afectar tu salud.',
         text: 'Respira mejor. Vive más limpio.',
         button: 'Cotización Gratuita',
+        image:"bg-commercial.webp"
       },
+      carousel:[
+        "/main/firepits.webp",
+        "/main/drainage.webp",
+        "/main/pool.webp",
+        "/main/pergolas.webp"
+      ]
     },
     'car-wash': {
       image: 'carwash',
@@ -310,7 +346,14 @@ export default {
           'El moho exterior puede liberar esporas que ingresan a tu hogar. Limpiamos y sellamos las superficies para proteger la calidad del aire en tu interior.',
         text: 'Mantén tu hogar seguro para todos.',
         button: 'Cotización Gratuita',
+        image:"bg-car.webp"
       },
+      carousel:[
+        "/main/turn.webp",
+        "/main/com-car.webp",
+        "/premium.webp",
+        "/main/wakways.webp"
+      ]
     },
   },
   gallery: {
@@ -322,6 +365,7 @@ export default {
         'Eliminamos moho, hongos y bacterias que afectan el aire que respira tu familia. Tu hogar se siente más fresco con cada lavado.',
       text: 'El aire fresco comienza con superficies limpias.',
       button: 'Cotización Gratuita',
+      image:"bg-gallery.webp"
     },
   },
   'about-us': {
@@ -372,7 +416,7 @@ export default {
           letter: 'S',
           title: 'Estándares de JZ Pros',
           description:
-            'Conocemos esta ciudad, su clima y sus superficies. Por eso, nuestro servicio está optimizado para los hogares y negocios de Florida.',
+            'Nuestro trabajo refleja nuestros valores. Seguimos protocolos de limpieza estrictos, respetamos cada propiedad que atendemos y nunca nos vamos hasta que el trabajo cumpla con nuestra promesa de calidad.',
         },
       ],
     },
@@ -382,6 +426,7 @@ export default {
         'El lavado a presión elimina esporas que provocan picazón en los ojos, tos y problemas nasales. Un exterior más limpio significa menos síntomas.',
       text: 'Pequeños cambios traen un verdadero alivio.',
       button: 'Cotización Gratuita',
+      image:"bg-about.webp"
     },
   },
   contact: {
@@ -400,6 +445,7 @@ export default {
         'El moho incrementa el asma y el estrés pulmonar. Nosotros lo eliminamos para que tu familia respire con mayor facilidad cada día.',
       text: 'Un solo lavado puede mejorar el bienestar.',
       button: 'Cotización Gratuita',
+      image:"bg-contact.webp"
     },
   },
 

@@ -115,6 +115,22 @@ export default {
           title: 'Soft Wash Roof Cleaning',
           image: 'pergolas',
         },
+        {
+          title: 'Sidewalks cleaning',
+          image: 'sidewalks',
+        },
+        {
+          title: 'Trash bin wash',
+          image: 'tacho',
+        },
+        {
+          title: 'Commercial cleaning',
+          image: 'com-clean',
+        },
+        {
+          title: 'Commercial carwash',
+          image: 'com-car',
+        },
       ],
     },
     information: {
@@ -166,7 +182,7 @@ export default {
       },
       rendering: {
         title:
-          "Professional Exterior Cleaning <br/> <span class='text-[24px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>with Real Results</span>",
+          "Cleaning <br/> <span class='text-[24px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>with Real Results</span>",
         text: 'Restore your property’s beauty and value with expert pressure washing services. We clean driveways, fences, siding, gutters, and more. Our team uses safe methods, eco-friendly practices, and powerful equipment to deliver spotless results every time.',
         button: 'GET AN ESTIMATE',
       },
@@ -220,16 +236,16 @@ export default {
       button: 'VIEW ALL PROJECTS',
       images: [
         '/main/carousel-4.png',
-        '/main/carousel-5.png',
+        '/main/carousel-5.webp',
         '/main/carousel-6.png',
         '/main/carousel-4.png',
-        '/main/carousel-5.png',
+        '/main/carousel-5.webp',
         '/main/carousel-6.png',
         '/main/carousel-4.png',
-        '/main/carousel-5.png',
+        '/main/carousel-5.webp',
         '/main/carousel-6.png',
         '/main/carousel-4.png',
-        '/main/carousel-5.png',
+        '/main/carousel-5.webp',
         '/main/carousel-6.png',
       ],
       name: 'pressureprops',
@@ -237,9 +253,9 @@ export default {
     },
     catalog: {
       title:
-        "Download Here Our <span class='font-semibold text-[20px] md:text-[48px] leading-[26px] md:leading-[58px] text-main'>Flyer</span>",
+        "Download Our Flyer to Unlock <br/> <span class='font-semibold text-[20px] md:text-[48px] leading-[26px] md:leading-[58px] text-main'>a Special Discount</span>",
       description:
-        'Where you can see all the services and options that we have for you.',
+        'See all the services and options we offer in one place. Download our flyer and present it during your next service visit to receive an exclusive discount.',
       button: 'DOWNload now',
     },
     project: {
@@ -248,6 +264,7 @@ export default {
         'At Jz Pressure Pro, we don’t just wash. We restore and protect the surfaces that matter most. From homes to businesses, our expert team is ready to deliver spotless results with guaranteed satisfaction. ',
       text: 'Let’s make your property stand out again.',
       button: 'Get a Free Estimate',
+      image:"bg-main.png"
     },
   },
   services: {
@@ -257,13 +274,18 @@ export default {
       description:
         "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Restore Your Home’s Beauty and Keep It Clean Year-Round</span> <br/> At JZ Pressure Pro, we provide specialized residential pressure washing services that help homeowners in Orlando protect and enhance their property’s appearance. Whether you're looking to clean your home’s exterior, remove algae from your roof, or brighten up your driveway and pool deck, our team delivers exceptional results with every visit. We use safe techniques tailored to each surface to remove dirt, stains, mold, and grime, leaving your home looking fresh, polished, and well cared for.",
       list: [
-        'House Exterior Cleaning',
-        'Roof Soft Washing',
-        'Window Pressure Washing',
-        'Driveway & Walkway Cleaning',
-        'Pool Deck Restoration',
-        'Garage Cleaning',
-        'Fence Cleaning',
+        'House Washing',
+        'Fence & Wall Cleaning',
+        'Dumpster Wash',
+        'Paver Cleaning',
+        'Sidewalks Cleaning',
+        'Commercial Cleaning',
+        'Driveway Cleaning',
+        'Gutter Cleaning',
+        'Car Wash',
+        'Soft Wash Roof Cleaning',
+        'Trash Bin Wash',
+        'Commercial Carwash',
       ],
       project: {
         title: 'Focus on What Matters',
@@ -271,7 +293,14 @@ export default {
           'Protect your family by keeping your home clean and safe. JZ Pressure Pro handles the washing so you can enjoy peace of mind.',
         text: 'Your home deserves more than clean—it deserves care.',
         button: 'Get a Free Estimate',
+        image:"bg-residential.webp"
       },
+      carousel:[
+        "/main/techo.webp",
+        "/main/patios.webp",
+        "/main/retainer.webp",
+        "/main/wakways.webp"
+      ]
     },
     commercial: {
       image: 'commercial',
@@ -279,10 +308,12 @@ export default {
       description:
         "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Give Your Property the Clean, Professional Look It Deserves</span> <br/> JZ Pressure Pro helps businesses across Orlando stand out with reliable and effective commercial pressure washing services. From high-traffic locations like I-Drive to hotels, restaurants, retail spaces, and office buildings, we understand how important a clean exterior is to your brand image. Our experienced team removes grease, grime, and environmental buildup using the right tools for every job. We work quickly, minimize disruptions, and leave your space looking spotless so you can welcome customers with confidence.",
       list: [
-        'High Drive Businesses (I-Drive)',
+        'High Drive Businesses ',
         'Hotels & Restaurants',
         'Retail Spaces',
         'Office Buildings',
+        'Parking Lots',
+        'Other Commercial Properties',
       ],
       project: {
         title: 'Mold Is Common in Orlando',
@@ -290,7 +321,14 @@ export default {
           'Humidity leads to mold, algae, and bacteria on driveways and patios. These release spores and allergens that may affect your health.',
         text: 'Breathe easier. Live cleaner.',
         button: 'Get a Free Estimate',
+        image:"bg-commercial.webp"
       },
+      carousel:[
+        "/main/firepits.webp",
+        "/main/drainage.webp",
+        "/main/pool.webp",
+        "/main/pergolas.webp"
+      ]
     },
     'car-wash': {
       image: 'carwash',
@@ -309,7 +347,14 @@ export default {
           'Outdoor mold can release spores that enter your home. We clean and seal surfaces to protect your indoor air.',
         text: 'Keep your home safe for everyone.',
         button: 'Get a Free Estimate',
+        image:"bg-car.webp"
       },
+      carousel:[
+        "/main/turn.webp",
+        "/main/com-car.webp",
+        "/premium.webp",
+        "/main/wakways.webp"
+      ]
     },
   },
   gallery: {
@@ -321,6 +366,7 @@ export default {
         'We remove mold, mildew, and bacteria that affect the air your family breathes. Your home feels fresher with every wash.',
       text: 'Fresh air starts with clean surfaces.',
       button: 'Get a Free Estimate',
+      image:"bg-gallery.webp"
     },
   },
   'about-us': {
@@ -371,7 +417,7 @@ export default {
           letter: 'S',
           title: 'Standards for JZ Pros',
           description:
-            'We know this city, its weather, and its surfaces. That’s why our service is optimized for Florida homes and businesses.',
+            'Our work reflects our values. We follow strict cleaning protocols, respect every property we touch, and never leave until the job meets our quality promise.',
         },
       ],
     },
@@ -381,6 +427,7 @@ export default {
         'Pressure washing clears spores that cause itchy eyes, coughing, and nasal issues. A cleaner exterior means fewer symptoms.',
       text: 'Small changes bring real relief.',
       button: 'Get a Free Estimate',
+      image:"bg-about.webp"
     },
   },
   contact: {
@@ -399,6 +446,7 @@ export default {
         'Mold increases asthma and lung stress. We eliminate it so your family breathes easier every day.',
       text: 'One wash can improve well-being.',
       button: 'Get a Free Estimate',
+      image:"bg-contact.webp"
     },
   },
   footer: {

@@ -7,7 +7,7 @@ interface Props {
 const { content } = Astro.props as Props;
 ---
 <section class="pt-[112px] pb-[92px] md:py-[110.5px]  flex flex-col justify-center items-center gap-[32px] w-full max-w-screen md:max-w-none px-4 md:px-0 relative overflow-hidden">
-  <img src="/main/bg-solutions.webp" alt="Fondo de chicha" width="1408" height="704" class="absolute inset-0 w-full h-full object-cover -z-20 " style="object-position: center 20%;" loading="lazy" decoding="async">
+  <img src={`/main/${content?.image}`} alt="Fondo de chicha" width="3001" height="1078" class="absolute inset-0 w-full h-full object-cover -z-20 " style="object-position: center center;" loading="lazy" decoding="async">
   <div class="flex flex-col justify-center items-center gap-[20px] max-w-[537px]">
     <h2 class="text-white font-semibold text-[20px] md:text-[40px] leading-[26px] md:leading-[46px] text-center max-w-[250px] md:max-w-none">{content?.title}</h2>
     <p  class="text-[13px] md:text-[16px] text-center font-medium leading-[17px] md:leading-[25px] text-white max-w-[389px]">{content?.description}</p>
