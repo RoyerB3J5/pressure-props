@@ -116,19 +116,19 @@ export default {
           image: 'pergolas',
         },
         {
-          title: 'Sidewalks cleaning',
+          title: 'Sidewalks Cleaning',
           image: 'sidewalks',
         },
         {
-          title: 'Trash bin wash',
+          title: 'Trash Bin Wash',
           image: 'tacho',
         },
         {
-          title: 'Commercial cleaning',
+          title: 'Commercial Cleaning',
           image: 'com-clean',
         },
         {
-          title: 'Commercial carwash',
+          title: 'Commercial Carwash',
           image: 'com-car',
         },
       ],
@@ -360,6 +360,20 @@ export default {
   gallery: {
     title: 'Gallery',
     image: 'gallery',
+    items:[
+      "/premium.webp",
+      "/classic.webp",
+      "/main/com-car.webp",
+      "/main/patios.webp",
+      "/main/pergolas.webp",
+      "/main/pool.webp",
+      "/main/turn.webp",
+      "/main/tacho.webp",
+      "/main/wakways.webp",
+      "/main/rendering.webp",
+      "/main/techo.webp",
+      "/main/experience2.webp"
+    ],
     project: {
       title: 'Clean Surfaces, Healthier Air',
       description:

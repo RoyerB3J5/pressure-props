@@ -12,7 +12,7 @@ const { content } = Astro.props as Props;
 const icons = [
   {
     name: 'email',
-    href: '',
+    href: 'mailto:jzpressurepros@gmail.com',
   },
   {
     name: 'map',
@@ -34,7 +34,7 @@ const normalized = currentPath.replace(/^\/(en|es)/, '') || '/';
 const match = currentPath.match(/^\/(en|es)/);
 const lang = match ? match[1] : 'en';
 ---
-<header class="fixed top-0 left-0 right-0 z-50 w-full flex flex-col justify-center items-center transition-top duration-300 ease-in-out"
+<header class="fixed top-0 left-0 right-0 z-20 w-full flex flex-col justify-center items-center transition-top duration-300 ease-in-out"
   id="site-header">
   <div class="w-full bg-main justify-center hidden lg:flex">
     <div class="w-full flex justify-center lg:justify-between items-center max-w-[1154px]">
@@ -55,7 +55,9 @@ const lang = match ? match[1] : 'en';
     </div>
   </div>
   <div class="bg-secondary w-full max-w-screen sm:max-w-[1223px] py-4 lg:min-h-[109px] flex justify-between items-center px-7 lg:px-[48px] relative top-0 lg:top-[23px] rounded-0 lg:rounded-[20px]">
-    <img src="/logo-1.svg" alt="Logo de PresureProps" width="169" height="41" class="w-[99px] lg:w-[169px] h-[24px] lg:h-[41px]">
+    <a href="/">
+      <img src="/logo-1.svg" alt="Logo de PresureProps" width="169" height="41" class="cursor-pointer w-[99px] lg:w-[169px] h-[24px] lg:h-[41px]">
+    </a>
     <div class="absolute lg:relative flex items-center bg-secondary lg:bg-transparent text-white  flex-col justify-center lg:flex-row h-screen lg:h-auto w-[90%] lg:w-auto z-50 lg:z-10 top-0 right-0 py-6 lg:py-0 gap-10 lg:gap-0 transform translate-x-full lg:translate-x-0 transition-transform duration-300 ease-out" id="mobile-menu">
       <img src="/equis.svg" alt="Menu" width="24" height="24" class="lg:hidden block absolute top-6 right-6 cursor-pointer" id="close-btn">
       <nav class="relative flex items-center flex-col lg:flex-row justify-center w-full lg:w-auto gap-0 lg:gap-4">
@@ -114,7 +116,7 @@ const lang = match ? match[1] : 'en';
           })
         }
       </nav>
-      <Button class="bg-main ml-[27.5px] mr-[27px] h-[52px]">
+      <Button class="bg-main ml-[27.5px] mr-[27px] h-[52px]" href={`/${lang}/contact`}>
         {content?.button}
       </Button>
       <div class="flex justify-center  items-center gap-4 lg:gap-[6px] px-[7px]">

@@ -3,9 +3,9 @@ import { Icon } from 'astro-icon/components';
 import en from '../../../i18n/en';
 import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
+import Project from '../../../sections/main/Project.astro';
 import ContactInfo from '../../../sections/services/ContactInfo.astro';
 import type { Language } from '../../../types/language.type';
-import Project from '../../../sections/main/Project.astro';
 
 export function getStaticPaths() {
   const services = ['residential', 'commercial', 'car-wash'];
@@ -27,13 +27,33 @@ const t = translations[lang];
 // Obtener los datos del servicio específico
 const serviceData = t.services[service as keyof typeof t.services];
 const items = serviceData.list;
-const isTwoCols = items.length > 6;
-let columns = [];
+const totalItems = items.length;
 
-if (isTwoCols) {
-  columns = [items.slice(0, 6), items.slice(6, 12)];
-} else {
+// Determinar el número de columnas basado en la cantidad de items
+let numColumns: number;
+let columns: string[][] = [];
+let gridClass: string;
+let justifyClass: string;
+
+if (totalItems <= 4) {
+  // 1 columna: hasta 4 items
+  numColumns = 1;
   columns = [items];
+  gridClass = 'grid grid-cols-1 gap-4';
+  justifyClass = 'justify-start';
+} else if (totalItems <= 8) {
+  // 2 columnas: 5-8 items, distribuir equitativamente
+  numColumns = 2;
+  const itemsPerCol = Math.ceil(totalItems / 2);
+  columns = [items.slice(0, itemsPerCol), items.slice(itemsPerCol)];
+  gridClass = 'grid grid-cols-2 gap-[3px] md:gap-[22px] items-start';
+  justifyClass = 'justify-start';
+} else {
+  // 3 columnas: 9+ items, máximo 4 por columna
+  numColumns = 3;
+  columns = [items.slice(0, 4), items.slice(4, 8), items.slice(8, 12)];
+  gridClass = 'grid grid-cols-3 gap-[3px] md:gap-[22px] items-start';
+  justifyClass = 'justify-between';
 }
 ---
 
@@ -44,22 +64,22 @@ if (isTwoCols) {
       <h1 class="text-[32px] md:text-[75px] font-semibold leading-[46px] md:leading-[77px] text-center text-white " set:html={serviceData.title} data-aos="flip-down"></h1>
     </div>
   </section>
-  <section class="max-w-screen lg:max-w-[1058px] px-4 lg:px-0 mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-[30px] lg:gap-[110px] pt-[38px] md:pt-[73px] pb-[42px] md:pb-[51px] w-full " data-aos="zoom-in-up" data-aos-offset="200">
+  <section class="max-w-screen lg:max-w-[1100px] px-4 lg:px-0 mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-[30px] lg:gap-[60px] pt-[38px] md:pt-[73px] pb-[42px] md:pb-[51px] w-full " data-aos="zoom-in-up" data-aos-offset="200">
     <p set:html={serviceData.description} class="text-[13px] md:text-[16px] font-normal leading-[20px] md:leading-[25px] max-w-none lg:max-w-[486px] text-secondary "></p>
-    <div class={`block ${isTwoCols ? 'grid grid-cols-2 gap-[3px] md:gap-[22px] items-start' : 'grid grid-cols-1 gap-4'}`}>
-  {columns.map((col) => (
-    <div class="flex flex-col justify-center items-start gap-[6px]">
-      {col.map((item) => (
-        <div class="flex justify-start items-center gap-[7px] md:gap-4 w-full">
-          <Icon name="check" class="h-[32px] md:h-[44px] w-[32px] md:w-[44px] shrink-0 text-main" />
-          <p class="text-[12px] md:text-[16px] font-medium leading-[25px] text-secondary">
-            {item}
-          </p>
+    <div class={gridClass}>
+      {columns.map((col) => (
+        <div class={`flex flex-col items-start gap-[6px] h-full ${justifyClass}`}>
+          {col.map((item) => (
+            <div class="flex justify-start items-center gap-[7px] md:gap-4 w-full">
+              <Icon name="check" class="h-[32px] md:h-[44px] w-[32px] md:w-[44px] shrink-0 text-main" />
+              <p class="text-[12px] md:text-[16px] font-medium leading-[25px] text-secondary">
+                {item}
+              </p>
+            </div>
+          ))}
         </div>
       ))}
     </div>
-  ))}
-</div>
   </section>
   <ContactInfo formType={serviceData.image} carouselImages={serviceData.carousel}/>
   <Project content={serviceData.project}/>

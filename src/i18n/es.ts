@@ -84,51 +84,51 @@ export default {
       text: 'Ofrecemos una amplia gama de soluciones de lavado a presión para mantener tu propiedad limpia, segura y hermosa todo el año. Desde entradas de vehículos hasta contenedores de basura, nuestro equipo experto maneja cada superficie con cuidado y precisión. Ya sea que necesites una limpieza profunda puntual o un plan de mantenimiento, tenemos cubierto Orlando y áreas cercanas.',
       items: [
         {
-          title: 'Lavado de casas',
+          title: 'Lavado de Casas',
           image: 'patios',
         },
         {
-          title: 'Limpieza de entradas de autos',
+          title: 'Limpieza de Entradas de Autos',
           image: 'retainer',
         },
         {
-          title: 'Limpieza de cercas y muros',
+          title: 'Limpieza de Cercas y Muros',
           image: 'wakways',
         },
         {
-          title: 'Limpieza de canaletas',
+          title: 'Limpieza de Canaletas',
           image: 'firepits',
         },
         {
-          title: 'Lavado de contenedores de basura',
+          title: 'Lavado de Contenedores de Basura',
           image: 'drainage',
         },
         {
-          title: 'Lavado de autos',
+          title: 'Lavado de Autos',
           image: 'turn',
         },
         {
-          title: 'Limpieza de pavimentos',
+          title: 'Limpieza de Pavimentos',
           image: 'pool',
         },
         {
-          title: 'Limpieza suave de techos',
+          title: 'Limpieza Suave de Techos',
           image: 'pergolas',
         },
         {
-          title: 'Limpieza de veredas',
+          title: 'Limpieza de Veredas',
           image: 'sidewalks',
         },
         {
-          title: 'Lavado de tachos de basura',
+          title: 'Lavado de Tachos de Basura',
           image: 'tacho',
         },
         {
-          title: 'Limpieza comercial',
+          title: 'Limpieza Comercial',
           image: 'com-clean',
         },
         {
-          title: 'Lavado de autos comerciales',
+          title: 'Lavado de Autos Comerciales',
           image: 'com-car',
         },
       ],
@@ -359,6 +359,20 @@ export default {
   gallery: {
     title: 'Galería',
     image: 'gallery',
+    items:[
+      "/premium.webp",
+      "/classic.webp",
+      "/main/com-car.webp",
+      "/main/patios.webp",
+      "/main/pergolas.webp",
+      "/main/pool.webp",
+      "/main/turn.webp",
+      "/main/tacho.webp",
+      "/main/wakways.webp",
+      "/main/rendering.webp",
+      "/main/techo.webp",
+      "/main/experience2.webp"
+    ],
     project: {
       title: 'Superficies limpias, aire más saludable',
       description:

@@ -9,10 +9,14 @@ interface Props {
 const { content } = Astro.props as Props;
 ---
 <div class="flex flex-col lg:flex-row justify-center items-center gap-[10px] md:gap-[53px] w-screen md:w-full px-4 md:px-0 ">
-  <div class="w-full md:w-[537px] md:flex-shrink-0 flex flex-col justify-center items-center lg:items-start gap-4">
-    <h3 set:html={content.title} class="text-[20px] md:text-[40px] font-normal leading-[26px] md:leading-[46px] text-center md:text-start text-secondary max-w-[150px] md:max-w-[300px] "></h3>
-    <p class="text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px] text-primary-dark-bold text-center md:text-start ">{content.description}</p>
+  <div class="w-full md:w-[537px] md:flex-shrink-0 flex flex-col justify-center items-center gap-6">
+    <div class="flex flex-col justify-center items-center lg:items-start gap-4">
+      <h3 set:html={content.title} class="text-[20px] md:text-[40px] font-normal leading-[26px] md:leading-[46px] text-center md:text-start text-secondary max-w-[150px] md:max-w-[300px] "></h3>
+      <p class="text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px] text-primary-dark-bold text-center md:text-start ">{content.description}</p>
+    </div>
+    <div class="relative w-full h-[254px] md:h-[647px] rounded-[10px] overflow-hidden hidden lg:block">
+      <img src="/main/experience3.webp" alt="Experiencia 3" width="1500" height="100" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 17% center;"  loading="lazy" decoding="async">
+    </div>
   </div>
-  <div class="md:flex-1 h-[193px] md:h-[316px] rounded-[15px] bg-[#787878] w-full md:w-auto max-w-none md:max-w-[550px] hidden"></div>
   <FormRefered1/>
 </div>

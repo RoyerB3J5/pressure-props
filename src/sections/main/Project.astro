@@ -5,15 +5,19 @@ interface Props {
   content?: ProjectContent;
 }
 const { content } = Astro.props as Props;
+const currentPath = Astro.url.pathname;
+// Detectar el idioma actual ('en' o 'es')
+const match = currentPath.match(/^\/(en|es)/);
+const lang = match ? match[1] : 'en';
 ---
 <section class="pt-[112px] pb-[92px] md:py-[110.5px]  flex flex-col justify-center items-center gap-[32px] w-full max-w-screen md:max-w-none px-4 md:px-0 relative overflow-hidden">
-  <img src={`/main/${content?.image}`} alt="Fondo de chicha" width="3001" height="1078" class="absolute inset-0 w-full h-full object-cover -z-20 " style="object-position: center center;" loading="lazy" decoding="async">
+  <img src={`/main/${content?.image}`} alt="Backgorunde de Projects" width="3001" height="1078" class="absolute inset-0 w-full h-full object-cover -z-20 object-[right_center] md:object-center" loading="lazy" decoding="async">
   <div class="flex flex-col justify-center items-center gap-[20px] max-w-[537px]">
     <h2 class="text-white font-semibold text-[20px] md:text-[40px] leading-[26px] md:leading-[46px] text-center max-w-[250px] md:max-w-none">{content?.title}</h2>
     <p  class="text-[13px] md:text-[16px] text-center font-medium leading-[17px] md:leading-[25px] text-white max-w-[389px]">{content?.description}</p>
     <p class="text-[13px] md:text-[15px] text-center font-medium leading-[17px] md:leading-[25px] text-white">{content?.text}</p>
   </div>
-  <a class="cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300 bg-secondary rounded-[10px] px-[38px] text-center text-white text-[13px] md:text-[18px] font-medium md:font-semibold leading-[35px] md:leading-[52px]" href="contact">
+  <a class="cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300 bg-secondary rounded-[10px] px-[38px] text-center text-white text-[13px] md:text-[18px] font-medium md:font-semibold leading-[35px] md:leading-[52px]" href={`/${lang}/contact`}>
       {content?.button}
   </a>
 </section>
