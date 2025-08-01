@@ -23,7 +23,7 @@ const { images, interval = 8000 } = Astro.props as Props;
               height="1536"
               loading="lazy"
               decoding="async"
-              class="absolute inset-0 w-full h-full object-cover z-20 oobject-center rounded-[15px] pointer-events-none"
+              class={`${src == '/main/firepits.webp'?"object-left md:object-center" :"object-center"} absolute inset-0 w-full h-full object-cover z-20 rounded-[15px] pointer-events-none`}
             />
           </section>
         </div>

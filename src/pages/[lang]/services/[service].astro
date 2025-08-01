@@ -26,34 +26,13 @@ const t = translations[lang];
 
 // Obtener los datos del servicio específico
 const serviceData = t.services[service as keyof typeof t.services];
-const items = serviceData.list;
-const totalItems = items.length;
-
-// Determinar el número de columnas basado en la cantidad de items
-let numColumns: number;
-let columns: string[][] = [];
-let gridClass: string;
-let justifyClass: string;
-
-if (totalItems <= 4) {
-  // 1 columna: hasta 4 items
-  numColumns = 1;
-  columns = [items];
-  gridClass = 'grid grid-cols-1 gap-4';
-  justifyClass = 'justify-start';
-} else if (totalItems <= 8) {
-  // 2 columnas: 5-8 items, distribuir equitativamente
-  numColumns = 2;
-  const itemsPerCol = Math.ceil(totalItems / 2);
-  columns = [items.slice(0, itemsPerCol), items.slice(itemsPerCol)];
-  gridClass = 'grid grid-cols-2 gap-[3px] md:gap-[22px] items-start';
-  justifyClass = 'justify-start';
+let cols:string 
+if (service == 'residential'){
+  cols = 'grid-cols-2 md:grid-cols-3'
+} else if (service == 'commercial') {
+  cols = 'grid-cols-2'
 } else {
-  // 3 columnas: 9+ items, máximo 4 por columna
-  numColumns = 3;
-  columns = [items.slice(0, 4), items.slice(4, 8), items.slice(8, 12)];
-  gridClass = 'grid grid-cols-3 gap-[3px] md:gap-[22px] items-start';
-  justifyClass = 'justify-between';
+  cols = 'grid-cols-1'
 }
 ---
 
@@ -66,17 +45,13 @@ if (totalItems <= 4) {
   </section>
   <section class="max-w-screen lg:max-w-[1100px] px-4 lg:px-0 mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-[30px] lg:gap-[60px] pt-[38px] md:pt-[73px] pb-[42px] md:pb-[51px] w-full " data-aos="zoom-in-up" data-aos-offset="200">
     <p set:html={serviceData.description} class="text-[13px] md:text-[16px] font-normal leading-[20px] md:leading-[25px] max-w-none lg:max-w-[486px] text-secondary "></p>
-    <div class={gridClass}>
-      {columns.map((col) => (
-        <div class={`flex flex-col items-start gap-[6px] h-full ${justifyClass}`}>
-          {col.map((item) => (
-            <div class="flex justify-start items-center gap-[7px] md:gap-4 w-full">
+    <div class={`grid ${cols} gap-[6px] md:gap-[22px] items-start`}>
+      {serviceData.list.map((item) => (
+        <div class={`flex justify-start items-center gap-[6px] h-full `}>
               <Icon name="check" class="h-[32px] md:h-[44px] w-[32px] md:w-[44px] shrink-0 text-main" />
               <p class="text-[12px] md:text-[16px] font-medium leading-[25px] text-secondary">
                 {item}
               </p>
-            </div>
-          ))}
         </div>
       ))}
     </div>
