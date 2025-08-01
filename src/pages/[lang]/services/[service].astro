@@ -26,13 +26,13 @@ const t = translations[lang];
 
 // Obtener los datos del servicio específico
 const serviceData = t.services[service as keyof typeof t.services];
-let cols:string 
-if (service == 'residential'){
-  cols = 'grid-cols-2 md:grid-cols-3'
-} else if (service == 'commercial') {
-  cols = 'grid-cols-2'
+let cols: string;
+if (service === 'residential') {
+  cols = 'grid-cols-2 md:grid-cols-3';
+} else if (service === 'commercial') {
+  cols = 'grid-cols-2';
 } else {
-  cols = 'grid-cols-1'
+  cols = 'grid-cols-1';
 }
 ---
 
