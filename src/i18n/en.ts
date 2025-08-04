@@ -229,6 +229,8 @@ export default {
           title: 'Client Hours Saved',
         },
       ],
+      text:"EXCELLENT",
+      description:"Base on <span class='font-semibold'>79 reviews</span>"
     },
     completed: {
       title:

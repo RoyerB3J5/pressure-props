@@ -230,6 +230,8 @@ export default {
           title: 'Horas ahorradas a nuestros clientes',
         },
       ],
+      text:"EXCELENTE",
+      description:"Basado en <span class='font-semibold'>79 reseñas</span>"
     },
     completed: {
       title:

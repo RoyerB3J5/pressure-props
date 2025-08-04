@@ -21,3 +21,12 @@
 .service-bg {
   background: rgba(4, 35, 64, 0.32);
 }
+.slide-hidden{
+  transform: translateX(-100%);
+  opacity: 0; 
+}
+.slide-visible{
+  transform: translateX(0);
+  opacity:1;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}

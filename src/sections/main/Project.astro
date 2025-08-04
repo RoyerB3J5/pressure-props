@@ -10,14 +10,75 @@ const currentPath = Astro.url.pathname;
 const match = currentPath.match(/^\/(en|es)/);
 const lang = match ? match[1] : 'en';
 ---
-<section class="pt-[112px] pb-[92px] md:py-[110.5px]  flex flex-col justify-center items-center gap-[32px] w-full max-w-screen md:max-w-none px-4 md:px-0 relative overflow-hidden">
+<section class="pt-[112px] pb-[92px] md:py-[110.5px] flex flex-col lg:flex-row gap-8 lg:gap-0 justify-center items-center w-full max-w-screen md:max-w-none px-4 md:px-0 relative overflow-hidden">
   <img src={`/main/${content?.image}`} alt="Backgorunde de Projects" width="3001" height="1078" class="absolute inset-0 w-full h-full object-cover -z-20 object-[right_center] md:object-center" loading="lazy" decoding="async">
-  <div class="flex flex-col justify-center items-center gap-[20px] max-w-[537px]">
-    <h2 class="text-white font-semibold text-[20px] md:text-[40px] leading-[26px] md:leading-[46px] text-center max-w-[250px] md:max-w-none">{content?.title}</h2>
-    <p  class="text-[13px] md:text-[16px] text-center font-medium leading-[17px] md:leading-[25px] text-white max-w-[389px]">{content?.description}</p>
-    <p class="text-[13px] md:text-[15px] text-center font-medium leading-[17px] md:leading-[25px] text-white">{content?.text}</p>
+  <div class="overflow-hidden w-auto h-[130px] md:h-[220px] rounded-[15px] slide-hidden" id="car-container">
+    <img src="/main/car.webp" alt="Carro Pressure Props" width="2468" height="968" style="display: block; width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" class="scale-x-[-1]">
   </div>
-  <a class="cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300 bg-secondary rounded-[10px] px-[38px] text-center text-white text-[13px] md:text-[18px] font-medium md:font-semibold leading-[35px] md:leading-[52px]" href={`/${lang}/contact`}>
-      {content?.button}
-  </a>
+  <div class="flex flex-col justify-center items-center gap-[32px] z-20">
+    <div class="flex flex-col justify-center items-center gap-[20px] max-w-[537px]">
+      <h2 class="text-white font-semibold text-[20px] md:text-[40px] leading-[26px] md:leading-[46px] text-center max-w-[250px] md:max-w-none">{content?.title}</h2>
+      <p  class="text-[13px] md:text-[16px] text-center font-medium leading-[17px] md:leading-[25px] text-white max-w-[389px]">{content?.description}</p>
+      <p class="text-[13px] md:text-[15px] text-center font-medium leading-[17px] md:leading-[25px] text-white">{content?.text}</p>
+    </div>
+    <a class="cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300 bg-secondary rounded-[10px] px-[38px] text-center text-white text-[13px] md:text-[18px] font-medium md:font-semibold leading-[35px] md:leading-[52px]" href={`/${lang}/contact`}>
+        {content?.button}
+    </a>
+  </div>
 </section>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const car = document.getElementById('car-container');
+    if (!car) return;
+    let activated = false;
+    let startScrollY = 0;
+    // Callback del IntersectionObserver
+    const onEntry = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !activated) {
+          activated = true;
+          startScrollY = window.scrollY;
+          car.classList.add('slide-visible');
+          observer.unobserve(car);
+          initScrollTracking();
+        }
+      });
+    };
+    // 1) IntersectionObserver para la animación inicial
+    const observer = new IntersectionObserver(onEntry, {
+      threshold: 0.5
+    });
+    observer.observe(car);
+    observer.takeRecords(); // fuerza la comprobación inicial
+    // 2) Fallback manual (en caso de que Observer falle)
+    const onInitialScroll = () => {
+      if (activated) return;
+      const rect = car.getBoundingClientRect();
+      if (rect.top <= window.innerHeight * 0.5) {
+        activated = true;
+        startScrollY = window.scrollY;
+        car.classList.add('slide-visible');
+        initScrollTracking();
+      }
+    };
+    window.addEventListener('scroll', onInitialScroll);
+    window.addEventListener('resize', onInitialScroll);
+    onInitialScroll();
+    // 3) Una vez activado, sigue el scroll para mover el carro en X
+    function initScrollTracking() {
+      // Ya no necesitamos estos listeners
+      observer.unobserve(car);
+      window.removeEventListener('scroll', onInitialScroll);
+      window.removeEventListener('resize', onInitialScroll);
+
+      // Listener para desplazar en X según scroll
+      window.addEventListener('scroll', () => {
+        const deltaY = window.scrollY - startScrollY;
+        // Ajusta este factor para mayor o menor movimiento horizontal
+        const factor = 0.4;
+        // Mueve el carro en X desde 0 hasta +X (o -X si subes)
+        car.style.transform = `translateX(${deltaY * factor}px)`;
+      });
+    }
+  });
+</script>
