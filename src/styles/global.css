@@ -22,7 +22,7 @@
   background: rgba(4, 35, 64, 0.32);
 }
 .slide-hidden{
-  transform: translateX(-100%);
+  transform: translateX(100%);
   opacity: 0; 
 }
 .slide-visible{

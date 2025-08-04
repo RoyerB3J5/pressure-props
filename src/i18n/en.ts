@@ -66,7 +66,7 @@ export default {
     },
     experience: {
       description:
-        'Orlando Pressure Washing Experts – Guaranteed Results or It’s Free',
+        'Orlando Pressure Washing Experts <br/>Guaranteed Results or It’s Free',
       description2:
         'A clean exterior can increase your property value, improve curb appeal, and create a welcoming environment for guests and potential buyers. <br/>At Jz Pressure Pro, we provide high-quality pressure washing services in Orlando and surrounding areas. Our expert team removes built-up dirt, mold, and grime from driveways, fences, sidewalks, gutters, and more. <br/> We use professional equipment, safe products, and years of experience to deliver long-lasting results. You’ll see the difference after just one visit.',
       items: [
@@ -135,7 +135,7 @@ export default {
     },
     information: {
       referral: {
-        title: 'Refer and Get <br/> <span class="text-main">Rewarded</span>',
+        title: 'Refer and Get <br/> <span class="text-main">Rewarded </span> ',
         text1:
           "Love our service? Spread the word and get rewarded! When you refer 5 new clients, you'll receive a 20% discount on your next service. There's no limit — the more you refer, the more you save. Your friends and neighbors get high-quality pressure washing, and you get big rewards. It's a win-win for clean homes and happy wallets.",
         button: 'CLICK HERE',
@@ -250,7 +250,7 @@ export default {
         '/main/carousel-5.webp',
         '/main/carousel-6.png',
       ],
-      name: 'pressureprops',
+      name: 'pressurepros',
       description: 'Texto del ig de pressurepros es widget de IG',
     },
     catalog: {
@@ -327,7 +327,7 @@ export default {
       },
       carousel:[
         "/main/firepits.webp",
-        "/main/drainage.webp",
+        "/main/com-clean.webp",
         "/main/pool.webp",
         "/main/pergolas.webp"
       ]

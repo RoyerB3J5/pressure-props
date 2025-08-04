@@ -66,7 +66,7 @@ export default {
     },
     experience: {
       description:
-        'Expertos en lavado a presión en Orlando – resultados garantizados o ¡es gratis!',
+        'Expertos en lavado a presión en Orlando <br/> Resultados garantizados o ¡es gratis!',
       description2:
         'Un exterior limpio puede aumentar el valor de tu propiedad, mejorar el atractivo y crear un ambiente acogedor para invitados y posibles compradores. <br/>En Jz Pressure Pro ofrecemos servicios de lavado a presión de alta calidad en Orlando y áreas cercanas. Nuestro equipo experto elimina la suciedad acumulada, moho y mugre de entradas de vehículos, cercas, aceras, canaletas y más. <br/> Utilizamos equipo profesional, productos seguros y años de experiencia para ofrecer resultados duraderos. Verás la diferencia después de una sola visita.',
       items: [
@@ -251,7 +251,7 @@ export default {
         '/main/carousel-5.webp',
         '/main/carousel-6.png',
       ],
-      name: 'pressureprops',
+      name: 'pressurepros',
       description: 'Texto del IG de pressurepros, es un widget de IG',
     },
     catalog: {
@@ -326,7 +326,7 @@ export default {
       },
       carousel:[
         "/main/firepits.webp",
-        "/main/drainage.webp",
+        "/main/com-clean.webp",
         "/main/pool.webp",
         "/main/pergolas.webp"
       ]
@@ -388,7 +388,7 @@ export default {
     image: 'about',
     title: 'Sobre Nosotros',
     description:
-      'En Jz Pressure Pro, nos especializamos en servicios de lavado a presión de alta calidad para hogares y negocios en Orlando y sus alrededores. Desde restaurar entradas hasta limpiar cercas, revestimientos, canaletas y más, nos comprometemos a transformar cada propiedad con profesionalismo, precisión y cuidado.<br/> <br/> Lo que nos distingue no son solo los resultados que ofrecemos, sino cómo los logramos — con integridad, transparencia y enfoque en la satisfacción del cliente. Creemos que una propiedad limpia no solo es hermosa, sino también valiosa y segura.',
+      'En Jz Pressure Pros, nos especializamos en servicios de lavado a presión de alta calidad para hogares y negocios en Orlando y sus alrededores. Desde restaurar entradas hasta limpiar cercas, revestimientos, canaletas y más, nos comprometemos a transformar cada propiedad con profesionalismo, precisión y cuidado.<br/> <br/> Lo que nos distingue no son solo los resultados que ofrecemos, sino cómo los logramos — con integridad, transparencia y enfoque en la satisfacción del cliente. Creemos que una propiedad limpia no solo es hermosa, sino también valiosa y segura.',
     team: {
       title: 'Nuestro Equipo',
       description:

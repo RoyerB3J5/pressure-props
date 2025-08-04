@@ -29,8 +29,8 @@ const { content } = Astro.props as Props;
       </div>
     </div>
     <div class="order-1 md:order-1 flex flex-col items-center md:items-start justify-center py-[37px] md:py-0 max-w-none md:max-w-[478px] max-h-none md:max-h-[648px]" data-aos="fade-left">
-      <h2 class="text-[22px] md:text-[44px] font-semibold leading-[24px] text-main h-[43px] md:h-[72px] flex items-center">JZ Pressure <span class="ml-1 text-secondary">Props</span></h2>
-      <p class="text-[14px] md:text-[18px] leading-[20px] md:leading-[25px] text-center md:text-start font-bold max-w-none md:max-w-[336px] text-secondary">{content.description}</p>
+      <h2 class="text-[28px] md:text-[44px] font-semibold leading-[24px] text-main h-[43px] md:h-[72px] flex items-center">JZ Pressure <span class="ml-1 text-secondary">Pros</span></h2>
+      <p class="text-[16px] md:text-[18px] leading-[20px] md:leading-[25px] text-center md:text-start font-bold max-w-none md:max-w-[336px] text-secondary" set:html={content.description}></p>
       <p set:html={content.description2} class="mt-[17px] md:mt-5 text-[13px] md:text-[16px] leading-[18px] md:leading-[25px] text-center md:text-start font-medium text-secondary"></p>
       <div class="flex flex-col md:flex-row justify-center items-center md:items-start gap-[29px] md:gap-[43px] mt-[28px] md:mt-[73px] w-full py-1 md:py-0">
         <div class="flex flex-col justify-between items-center md:items-start gap-[29px] md:gap-[62px] w-full">

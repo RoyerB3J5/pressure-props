@@ -19,8 +19,9 @@ const t = translations[lang];
 <Layout lang={lang} t={t}>
   <section class="py-[165px] md:pt-[371px] md:pb-[250px] flex flex-col justify-center items-center w-full relative overflow-hidden">
     <img src={`/car-wash.webp`} alt="Fondos de Contacto" width="3072" height="4096" class="absolute inset-0 w-full h-full object-cover -z-20" loading="lazy" decoding="async">
-    <div class="flex flex-col justify-center items-center gap-2 md:gap-8">
-      <h1 class="text-[32px] md:text-[96px] font-semibold leading-[46px] md:leading-[96px] text-center text-white" set:html={t.contact.title} data-aos="flip-down" data-aos-offset="300"></h1>
+    <div class="flex flex-col justify-center items-center gap-2 md:gap-8" data-aos-offset="300">
+      <h1 class="text-[32px] md:text-[96px] font-semibold leading-[46px] md:leading-[96px] text-center text-white" set:html={t.contact.title} data-aos="flip-down" ></h1>
+      <img src="/line.png" alt="Flecha izquierda" width="1286" height="600"  class="w-[80px] md:w-[200px] h-auto ">
     </div>
   </section>
   <section class="w-full py-10 md:pt-[110px] md:pb-[96px] flex flex-col justify-center items-center gap-[33px] md:gap-[0px] max-w-screen md:max-w-[1153px] px-4 md:px-0" data-aos="zoom-in-down" data-aos-offset="200">

@@ -24,8 +24,10 @@ const { interval = 8000 } = Astro.props as Props;
           <img
             src={`/main/item-0${i + 1}.png`}
             alt="Slide image"
+            width="400"
+            height="255"
             class="w-full h-full object-cover rounded-[15px]"
-            loading="lazy"
+            loading="eager"
             decoding="async"
           />
         </div>
@@ -179,16 +181,50 @@ const { interval = 8000 } = Astro.props as Props;
 
     // Reposicionar en carga y en resize
     function init() {
-      slides = Array.from(track.children);
-      goTo(1, false);
-      updateIndicators();
+      // Esperar a que las imágenes se carguen antes de calcular
+      const images = track.querySelectorAll('img');
+      let loadedImages = 0;
+      
+      function checkAllImagesLoaded() {
+        loadedImages++;
+        if (loadedImages === images.length * 2) { // *2 porque tenemos clones
+          slides = Array.from(track.children);
+          goTo(1, false);
+          updateIndicators();
+        }
+      }
+      
+      // Si las imágenes ya están cargadas
+      if (images[0] && images[0].complete) {
+        slides = Array.from(track.children);
+        goTo(1, false);
+        updateIndicators();
+      } else {
+        // Esperar a que todas las imágenes se carguen
+        images.forEach(img => {
+          if (img.complete) {
+            checkAllImagesLoaded();
+          } else {
+            img.addEventListener('load', checkAllImagesLoaded);
+            img.addEventListener('error', checkAllImagesLoaded);
+          }
+        });
+      }
     }
     
     window.addEventListener('resize', () => {
-      init();
+      // En resize, recalcular inmediatamente
+      setTimeout(() => {
+        goTo(currentIndex, false);
+        updateIndicators();
+      }, 100);
     });
 
     init();
-    startAuto();
+    
+    // Iniciar auto-slide después de un pequeño delay para asegurar que todo esté listo
+    setTimeout(() => {
+      startAuto();
+    }, 100);
   });
 </script>
