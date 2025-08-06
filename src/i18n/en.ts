@@ -19,7 +19,7 @@ export default {
       },
       {
         label: 'Contact Us',
-        href: '/contact',
+        href: '/contact#info',
       },
     ],
     types: [
@@ -68,7 +68,7 @@ export default {
       description:
         'Orlando Pressure Washing Experts <br/>Guaranteed Results or It’s Free',
       description2:
-        'A clean exterior can increase your property value, improve curb appeal, and create a welcoming environment for guests and potential buyers. <br/>At Jz Pressure Pro, we provide high-quality pressure washing services in Orlando and surrounding areas. Our expert team removes built-up dirt, mold, and grime from driveways, fences, sidewalks, gutters, and more. <br/> We use professional equipment, safe products, and years of experience to deliver long-lasting results. You’ll see the difference after just one visit.',
+        'A clean exterior can increase your property value, improve curb appeal, and create a welcoming environment for guests and potential buyers. <br/>At Jz Pressure Pros, we provide high-quality pressure washing services in Orlando and surrounding areas. Our expert team removes built-up dirt, mold, and grime from driveways, fences, sidewalks, gutters, and more. <br/> We use professional equipment, safe products, and years of experience to deliver long-lasting results. You’ll see the difference after just one visit.',
       items: [
         'Experienced Technicians',
         'Affordable, Honest Pricing',
@@ -199,14 +199,17 @@ export default {
         {
           title: 'Residential Pressure Washing',
           image: 'classic',
+          href: 'residential',
         },
         {
           title: 'Commercial Pressure Washing',
           image: 'semipremium',
+          href: 'commercial',
         },
         {
           title: 'Car Wash',
           image: 'premium',
+          href: 'car-wash',
         },
       ],
     },
@@ -250,8 +253,8 @@ export default {
         '/main/carousel-5.webp',
         '/main/carousel-6.png',
       ],
-      name: 'pressurepros',
-      description: 'Texto del ig de pressurepros es widget de IG',
+      name: 'jzpressurepros',
+      description: 'Professional house washing, roof cleaning, driveway and patio restoration, and mobile car detailing. We clean, protect, and refresh your space.',
     },
     catalog: {
       title:
@@ -263,7 +266,7 @@ export default {
     project: {
       title: 'Ready to Bring Your Property Back to Life?',
       description:
-        'At Jz Pressure Pro, we don’t just wash. We restore and protect the surfaces that matter most. From homes to businesses, our expert team is ready to deliver spotless results with guaranteed satisfaction. ',
+        'At Jz Pressure Pros, we don’t just wash. We restore and protect the surfaces that matter most. From homes to businesses, our expert team is ready to deliver spotless results with guaranteed satisfaction. ',
       text: 'Let’s make your property stand out again.',
       button: 'Get a Free Estimate',
       image:"bg-main.png"
@@ -274,7 +277,7 @@ export default {
       image: 'residential',
       title: 'Residential Pressure <br/> Washing Services in Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Restore Your Home’s Beauty and Keep It Clean Year-Round</span> <br/> At JZ Pressure Pro, we provide specialized residential pressure washing services that help homeowners in Orlando protect and enhance their property’s appearance. Whether you're looking to clean your home’s exterior, remove algae from your roof, or brighten up your driveway and pool deck, our team delivers exceptional results with every visit. We use safe techniques tailored to each surface to remove dirt, stains, mold, and grime, leaving your home looking fresh, polished, and well cared for.",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Restore Your Home’s Beauty and Keep It Clean Year-Round</span> <br/> At JZ Pressure Pros, we provide specialized residential pressure washing services that help homeowners in Orlando protect and enhance their property’s appearance. Whether you're looking to clean your home’s exterior, remove algae from your roof, or brighten up your driveway and pool deck, our team delivers exceptional results with every visit. We use safe techniques tailored to each surface to remove dirt, stains, mold, and grime, leaving your home looking fresh, polished, and well cared for.",
       list: [
         'House Washing',
         'Fence & Wall Cleaning',
@@ -292,7 +295,7 @@ export default {
       project: {
         title: 'Focus on What Matters',
         description:
-          'Protect your family by keeping your home clean and safe. JZ Pressure Pro handles the washing so you can enjoy peace of mind.',
+          'Protect your family by keeping your home clean and safe. JZ Pressure Pros handles the washing so you can enjoy peace of mind.',
         text: 'Your home deserves more than clean—it deserves care.',
         button: 'Get a Free Estimate',
         image:"bg-residential.webp"
@@ -308,7 +311,7 @@ export default {
       image: 'commercial',
       title: 'Commercial Pressure Washing <br/> for Orlando Businesses',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Give Your Property the Clean, Professional Look It Deserves</span> <br/> JZ Pressure Pro helps businesses across Orlando stand out with reliable and effective commercial pressure washing services. From high-traffic locations like I-Drive to hotels, restaurants, retail spaces, and office buildings, we understand how important a clean exterior is to your brand image. Our experienced team removes grease, grime, and environmental buildup using the right tools for every job. We work quickly, minimize disruptions, and leave your space looking spotless so you can welcome customers with confidence.",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Give Your Property the Clean, Professional Look It Deserves</span> <br/> JZ Pressure Pros helps businesses across Orlando stand out with reliable and effective commercial pressure washing services. From high-traffic locations like I-Drive to hotels, restaurants, retail spaces, and office buildings, we understand how important a clean exterior is to your brand image. Our experienced team removes grease, grime, and environmental buildup using the right tools for every job. We work quickly, minimize disruptions, and leave your space looking spotless so you can welcome customers with confidence.",
       list: [
         'High Drive Businesses ',
         'Hotels & Restaurants',
@@ -336,18 +339,18 @@ export default {
       image: 'carwash',
       title: 'Mobile Car Wash <br/> Services in Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>We Bring Professional Detailing Right to Your Door</span> <br/> At JZ Pressure Pro, we make car care simple and convenient with our mobile car wash services. Our team travels directly to you, whether at your home, business, or commercial site. We clean both personal and commercial vehicles, including family cars, company trucks, and fleet vans. Choose from four service levels—from a quick exterior wash to deep restoration and interior detailing. No matter which option you select, we’re committed to delivering spotless results and a seamless experience that saves you time and keeps your vehicle looking its best.",
+        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>We Bring Professional Detailing Right to Your Door</span> <br/> At JZ Pressure Pros, we make car care simple and convenient with our mobile car wash services. Our team travels directly to you, whether at your home, business, or commercial site. We clean both personal and commercial vehicles, including family cars, company trucks, and fleet vans. Choose from four service levels—from a quick exterior wash to deep restoration and interior detailing. No matter which option you select, we’re committed to delivering spotless results and a seamless experience that saves you time and keeps your vehicle looking its best.",
       list: [
         'Basic: Exterior wash + tire cleaning',
         'Complete: Exterior + interior detailing, dashboard shine, full vacuum',
         'Premium: Complete + exterior wax coating',
-        'Detailed Cleaning: Roof cleaning, seat deep cleaning, carpet restoration, + custom specific needs',
+        'Detailed Cleaning: Roof cleaning + custom specific needs',
       ],
       project: {
-        title: 'Stop Mold Before It Spreads',
+        title: 'We Bring the Shine to You',
         description:
-          'Outdoor mold can release spores that enter your home. We clean and seal surfaces to protect your indoor air.',
-        text: 'Keep your home safe for everyone.',
+          ' Skip the lines and the wait. Our mobile car wash service comes directly to your home or business. Every detail is handled with care, using eco-friendly products that protect your vehicle and the environmen',
+        text: 'Your car deserves more than a rinse, it deserves attention.',
         button: 'Get a Free Estimate',
         image:"bg-car.webp"
       },
@@ -389,15 +392,15 @@ export default {
     image: 'about',
     title: 'About Us',
     description:
-      'At Jz Pressure Pro, we specialize in high-quality pressure washing services for homes and businesses throughout Orlando and nearby areas. From restoring driveways to cleaning fences, siding, gutters, and more, we’re committed to transforming each property with professionalism, precision, and care.<br/> <br/> What sets us apart is not just the results we deliver, but how we deliver them — with integrity, transparency, and a focus on customer satisfaction. We believe that a clean property is not only beautiful but also valuable and safe.',
+      'At Jz Pressure Pros, we specialize in high-quality pressure washing services for homes and businesses throughout Orlando and nearby areas. From restoring driveways to cleaning fences, siding, gutters, and more, we’re committed to transforming each property with professionalism, precision, and care.<br/> <br/> What sets us apart is not just the results we deliver, but how we deliver them — with integrity, transparency, and a focus on customer satisfaction. We believe that a clean property is not only beautiful but also valuable and safe.',
     team: {
       title: 'Our Team',
       description:
-        'Our team is passionate about giving every client a seamless experience. From the moment you contact us to the final rinse, we ensure each step is handled with attention to detail and full respect for your property. We take the time to listen to your needs, evaluate your space, and recommend the most effective solution. Every decision is made with your time, budget, and expectations in mind.<br/> <br/> At Jz Pressure Pro, we don’t just wash surfaces. We build trust through every project we complete.',
+        'Our team is passionate about giving every client a seamless experience. From the moment you contact us to the final rinse, we ensure each step is handled with attention to detail and full respect for your property. We take the time to listen to your needs, evaluate your space, and recommend the most effective solution. Every decision is made with your time, budget, and expectations in mind.<br/> <br/> At Jz Pressure Pros, we don’t just wash surfaces. We build trust through every project we complete.',
     },
     stand: {
       title:
-        ' JZ PRO<br/> <span class="text-main text-[24px] md:text-[48px] font-semibold"> What We Stand For</span>',
+        ' JZ PROS<br/> <span class="text-main text-[24px] md:text-[48px] font-semibold"> What We Stand For</span>',
       list: [
         {
           letter: 'J',
@@ -466,7 +469,7 @@ export default {
     },
   },
   footer: {
-    text: 'At Jz Pressure Pro, we deliver high-quality pressure washing services that restore the beauty and value of your property. From driveways to siding, our mission is to keep Orlando homes and businesses spotless. Contact us today and let’s bring your property back to life.',
+    text: 'At Jz Pressure Pros, we deliver high-quality pressure washing services that restore the beauty and value of your property. From driveways to siding, our mission is to keep Orlando homes and businesses spotless. Contact us today and let’s bring your property back to life.',
     hours: 'SERVICE HOURS',
     call: 'CALL US',
     links_title: 'QUICK LINKS',
@@ -489,7 +492,7 @@ export default {
       },
       {
         label: 'Contact Us',
-        href: '/contact',
+        href: '/contact#info',
       },
     ],
   },

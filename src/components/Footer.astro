@@ -10,19 +10,19 @@ const { content } = Astro.props as Props;
 const icons = [
   {
     name: 'email',
-    href: 'mailto:jzpressurepros@gmail.com',
+    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=jzpressurepros@gmail.com',
   },
-  {
+  /*{
     name: 'map',
     href: '',
-  },
+  },*/
   {
     name: 'instagram',
-    href: '',
+    href: 'https://www.instagram.com/jzpressurepros/',
   },
   {
     name: 'facebook',
-    href: '',
+    href: 'https://www.facebook.com/jzpressurepros',
   },
 ];
 const currentPath = Astro.url.pathname;
@@ -64,9 +64,11 @@ const lang = match ? match[1] : 'en';
       <p class="text-[16px] leading-[20px] font-semibold text-right text-main">{content?.links_title}</p>
       <div class="flex flex-col items-center lg:items-end gap-5 w-full md:gap-[26px]">
         {content?.links.map((item,index) => {
-          const isActive = normalized === item.href || (index === 1 && normalized.startsWith('/services'))
+          const itemPathWithoutHash = item.href.split('#')[0]; // Quitar hash del item
+          const isActive = normalized === itemPathWithoutHash || 
+                            (index === 1 && normalized.startsWith('/services'));
           return (
-            <a href={`/${lang}${item.href}`} class={`w-full text-left  lg:text-right text-[13px] md:text-[15px] font-medium leading-[20px]  uppercase hover:font-bold transition-all duration-300 ease-in-out ${isActive?'text-main':'text-secondary'}`}>{item.label}</a>
+            <a href={`/${lang}${item.href}`} class={`w-full text-left  lg:text-right text-[13px] md:text-[15px] leading-[20px]  uppercase hover:font-bold transition-all duration-300 ease-in-out text-secondary ${isActive?'font-bold':'font-medium'}`}>{item.label}</a>
           )  
         })}
       </div>

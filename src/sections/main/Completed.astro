@@ -21,9 +21,13 @@ const { content } = Astro.props as Props;
   <CarouselHero images={content.images} />
   <div class="flex flex-col justify-center items-center gap-7 w-full max-w-screen md:max-w-[1138] px-4 md:px-0 mt-0 md:mt-[80px] lg:mt-[130px]">
     <div class="w-full flex md:justify-start justify-center items-center gap-[26px] px-3">
-      <img src="/main/logo.webp" alt="Logo de PressureProps" width="1024" height="1024" class="w-[34px] md:w-[62px] h-[34px] md:h-[62px] rounded-full border-[2px] border-secondary"/>
+      <div class="w-[42px] md:w-[62px] h-[42px] md:h-[62px] rounded-full border-[1px] border-secondary overflow-hidden flex items-center justify-center" >
+        <img src="/logo-2.svg" alt="Patios Pressure Pros" width="1024" height="1024" style="display: block; object-fit: cover;" loading="lazy" decoding="async" class="w-[35px] md:w-[50px] h-[35px] md:h-[50px]">
+      </div>
       <div class="flex flex-col justify-center md:justify-start items-start  gap-[3px]">
-        <h3 class="text-[14px] md:text-[20px] font-bold leading-[28px] text-start text-main">{content.name}</h3>
+        <a href="https://www.instagram.com/jzpressurepros/">
+          <h3 class="text-[14px] md:text-[20px] font-bold leading-[28px] text-start text-main cursor-pointer">{content.name}</h3>
+        </a>
         <p class="text-[13px] md:text-[16px] font-medium leading-[16px] md:leading-[19.6px] text-start text-secondary">{content.description}</p>
       </div>
     </div>

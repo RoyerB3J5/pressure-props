@@ -1,26 +1,29 @@
 ---
-import { Icon } from 'astro-icon/components';
-
 type Translations = typeof import('../../i18n/es').default;
 type ServicesContent = Translations['main']['services'];
 interface Props {
   content: ServicesContent;
 }
 const { content } = Astro.props as Props;
+const currentPath = Astro.url.pathname;
+// Detectar el idioma actual ('en' o 'es')
+const match = currentPath.match(/^\/(en|es)/);
+const lang = match ? match[1] : 'en';
+
 ---
 <section class="w-full pt-[40px] pb-[90px] md:pb-[86px] md:pt-[65px] mx-auto relative overflow-hidden">
   <img src="/main/bg-service.webp" alt="Fondo de soluciones" width="4096" height="2730" class="absolute inset-0 w-full h-full object-cover -z-30 " loading="lazy" decoding="async">
   <div class="flex flex-col justify-center items-center gap-[22px] md:gap-[65px] max-w-screen lg:max-w-[1140px] mx-auto px-4 lg:px-0">
     <h2 set:html={content.title} class="text-center text-[24px] md:text-[32px] lg:text-[48px] font-semibold leading-[46px] text-white max-w-[350px] md:max-w-[750px]"></h2>
-    <div class="w-full min-h-none lg:min-h-[489px] rounded-[15px] overflow-hidden flex flex-col lg:flex-row" data-aos="fade-up" data-aos-offset="100">
+    <div class="w-full min-h-none lg:min-h-[489px] rounded-[15px] flex flex-col lg:flex-row" data-aos="fade-up" data-aos-offset="100">
       {content.items.map(item=>(
-        <div class="flex flex-col justify-center lg:justify-start items-center w-full relative overflow-hidden h-[107px] lg:h-auto py-0 lg:py-[92px] min-h-none lg:min-h-[489px] px-10 md:px-7">
-          <img src={`/${item.image}.webp`} alt="Fondos de Galeria" width="3072" height="4096" class="absolute inset-0 w-full h-full object-cover -z-20 " loading="lazy" decoding="async"/>
-          <div class="absolute inset-0 service-bg -z-10"></div>
-          <div class="h-auto md:h-[143px] w-full flex justify-center items-center"> 
-            <h3 class="text-[15px] md:text-[24px] lg:text-[40px] font-semibold leading-[46px] text-center text-white">{item.title}</h3>
-          </div>
-        </div>
+        <a href={`/${lang}/services/${item.href}`} class={`flex flex-col justify-center lg:justify-start items-center w-full relative overflow-hidden h-[107px] lg:h-auto py-0 lg:py-[92px] min-h-none lg:min-h-[489px] px-10 md:px-7 cursor-pointer hover:-translate-y-2 transition-transform duration-300 ease-in-out ${item.href === 'residential' ? 'rounded-t-[15px] lg:rounded-l-[15px] lg:rounded-t-none' : ''} ${item.href === 'car-wash' ? 'rounded-b-[15px] lg:rounded-r-[15px] lg:rounded-bl-none' : ''}`}>
+            <img src={`/${item.image}.webp`} alt="Fondos de Galeria" width="3072" height="4096" class="absolute inset-0 w-full h-full object-cover -z-20 " loading="lazy" decoding="async"/>
+            <div class="absolute inset-0 service-bg -z-10"></div>
+            <div class="h-auto md:h-[143px] w-full flex justify-center items-center"> 
+              <h3 class="text-[15px] md:text-[24px] lg:text-[40px] font-semibold leading-[46px] text-center text-white">{item.title}</h3>
+            </div>
+        </a>
       ))}
     </div>
   </div>

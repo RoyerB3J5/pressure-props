@@ -12,19 +12,19 @@ const { content } = Astro.props as Props;
 const icons = [
   {
     name: 'email',
-    href: 'mailto:jzpressurepros@gmail.com',
+    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=jzpressurepros@gmail.com',
   },
-  {
+  /*{
     name: 'map',
     href: '',
-  },
+  },*/
   {
     name: 'instagram',
-    href: '',
+    href: 'https://www.instagram.com/jzpressurepros/',
   },
   {
     name: 'facebook',
-    href: '',
+    href: 'https://www.facebook.com/jzpressurepros',
   },
 ];
 // Obtener la ruta actual y normalizar el path sin prefijo de idioma
@@ -63,10 +63,13 @@ const lang = match ? match[1] : 'en';
       <nav class="relative flex items-center flex-col lg:flex-row justify-center w-full lg:w-auto gap-0 lg:gap-4">
         {
           content?.nav.map((item, index)=>{
-            const isActive = normalized === item.href || (index === 1 && normalized.startsWith('/services'))
+            // Para contact, comparar sin el hash - si la ruta es /contact y el item es /contact#info, debe ser activo
+            const itemPathWithoutHash = item.href.split('#')[0]; // Quitar hash del item
+            const isActive = normalized === itemPathWithoutHash || 
+                            (index === 1 && normalized.startsWith('/services'));
             const isServices = index === 1;
             return(
-              <div class={`flex flex-col lg:flex-row items-center justify-center gap-[14px] px-0 lg:px-[7px] hover:text-main w-full lg:w-auto py-2 lg:py-0 text-center ${isServices ? 'relative group' : ''} ${isActive ? 'bg-main lg:bg-transparent text-white  lg:text-main' : ''}`} id={`services-${index}`}>
+              <div class={`flex flex-col lg:flex-row items-center justify-center gap-[14px] px-0 lg:px-[7px] hover:text-main w-full lg:w-auto py-2 lg:py-0 text-center ${isServices ? 'relative group dropdown-parent' : ''} ${isActive ? 'bg-main lg:bg-transparent text-white  lg:text-main' : ''}`} id={`services-${index}`}>
                 <a href={`/${lang}${item.href}`}  class={`
                 text-[18px] text-center font-semibold leading-[52px] relative transition-colors duration-300
                
@@ -83,19 +86,19 @@ const lang = match ? match[1] : 'en';
                 {isServices && (
           <div
             class="
-              absolute top-full left-0 mt-1 w-[170px] flex-col items-center bg-white z-40 hidden lg:hidden lg:group-hover:flex opacity-0 group-hover:opacity-0 lg:group-hover:opacity-100 pointer-events-none lg:group-hover:pointer-events-auto transition-all duration-300 ease-out -translate-x-[20%]
+              dropdown-menu absolute top-full left-0 mt-0 w-[170px] flex-col items-center bg-white z-40 hidden lg:hidden lg:group-hover:flex opacity-0 group-hover:opacity-0 lg:group-hover:opacity-100 pointer-events-none lg:group-hover:pointer-events-auto transition-all duration-200 ease-out -translate-x-[20%] shadow-lg 
             "
           >
             {content.types.map(sub => (
               <div
                 class="
                   text-[18px] font-semibold text-secondary 
-                  py-1.5 hover:bg-main hover:text-white 
-                  transition-colors duration-300 ease-in-out
+                  py-2 hover:bg-main hover:text-white 
+                  transition-colors duration-200 ease-in-out
                   cursor-pointer px-6 w-full text-center
                 "
               >
-                <a href={`/${lang}/services/${sub.href}`}>{sub.label}</a>
+                <a href={`/${lang}/services/${sub.href}`} class="block w-full h-full">{sub.label}</a>
               </div>
             ))}
           </div>
@@ -133,6 +136,47 @@ const lang = match ? match[1] : 'en';
     </div>
   </div>
 </header>
+
+<style>
+  /* Mejorar el comportamiento del dropdown */
+  .dropdown-parent:hover .dropdown-menu {
+    display: flex !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+  
+  /* Crear un puente invisible entre el botón y el dropdown */
+  .dropdown-parent::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    right: -10px;
+    height: 4px;
+    background: transparent;
+    z-index: 39;
+    pointer-events: auto;
+  }
+  
+  /* Asegurar que el dropdown se mantenga visible cuando se hace hover */
+  .dropdown-menu:hover {
+    display: flex !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+  
+  /* Hacer que el dropdown mantenga el hover del padre */
+  .dropdown-menu {
+    margin-top: 0px;
+  }
+  
+  @media (max-width: 1023px) {
+    .dropdown-parent::after {
+      display: none;
+    }
+  }
+</style>
+
 <script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
   const menu = document.getElementById('mobile-menu');
