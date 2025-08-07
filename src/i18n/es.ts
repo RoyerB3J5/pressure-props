@@ -354,7 +354,7 @@ export default {
         image:"bg-car.webp"
       },
       carousel:[
-        "/main/turn.webp",
+        "/main/lavado.webp",
         "/main/com-car.webp",
         "/premium.webp",
         "/main/wakways.webp"
