@@ -208,7 +208,7 @@ export default {
         },
         {
           title: 'Car Wash',
-          image: 'premium',
+          image: 'lavado',
           href: 'car-wash',
         },
       ],
@@ -355,7 +355,7 @@ export default {
         image:"bg-car.webp"
       },
       carousel:[
-        "/main/lavado.webp",
+        "/lavado.webp",
         "/main/com-car.webp",
         "/premium.webp",
         "/main/wakways.webp"

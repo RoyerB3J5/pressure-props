@@ -47,7 +47,7 @@ const t = translations[lang];
       {t['about-us'].stand.list.map((item,index)=>{
         const transition = index % 2 === 0 ? 'fade-right' : 'fade-left';
         return (
-          <div class="w-full flex justify-center items-center gap-[18px] md:gap-[40px] lg:gap-[115px] py-10 px-[18px] md:px-[96px] rounded-[15px] border-[1px] md:border-[3px] border-secondary max-h-none md:max-h-[231px]" data-aos={transition}>
+          <div class="w-full flex justify-center items-center gap-[18px] md:gap-[40px] lg:gap-[115px] py-7 px-[18px] md:px-[96px] rounded-[15px] border-[1px] md:border-[3px] border-secondary max-h-none" data-aos={transition}>
             <p class="text-[105px] lg:text-[128px] font-semibold text-center text-secondary">{item.letter}</p>
             <div class="flex flex-col justify-center items-start gap-[15px] w-full"   >
               <div class="w-full bg-main text-white rounded-[15px] px-[13px] md:px-[25px] py-[14px] h-[86px] md:h-auto flex items-center">
