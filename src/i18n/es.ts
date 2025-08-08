@@ -256,6 +256,7 @@ export default {
       ],
       name: 'jzpressurepros',
       description: 'Lavado a presión de casas, limpieza de techos, restauración de entradas y patios, y detallado de autos a domicilio. Limpiamos, protegemos y renovamos tu espacio.',
+      buttonig:"Síguenos en Instagram"
     },
     catalog: {
       title: "Descarga nuestro folleto para desbloquear <br/> <span class='font-semibold text-[20px] md:text-[48px] leading-[26px] md:leading-[58px] text-main'>un descuento especial</span>",
@@ -356,7 +357,7 @@ export default {
       carousel:[
         "/lavado.webp",
         "/main/com-car.webp",
-        "/premium.webp",
+        "/main/turn.webp",
         "/main/wakways.webp"
       ]
     },
@@ -365,7 +366,7 @@ export default {
     title: 'Galería',
     image: 'gallery',
     items:[
-      "/premium.webp",
+      "/lavado.webp",
       "/classic.webp",
       "/main/com-car.webp",
       "/main/patios.webp",

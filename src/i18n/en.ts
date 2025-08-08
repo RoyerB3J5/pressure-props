@@ -243,18 +243,19 @@ export default {
         '/main/carousel-4.png',
         '/main/carousel-5.webp',
         '/main/carousel-6.png',
-        '/main/carousel-4.png',
-        '/main/carousel-5.webp',
-        '/main/carousel-6.png',
-        '/main/carousel-4.png',
-        '/main/carousel-5.webp',
-        '/main/carousel-6.png',
-        '/main/carousel-4.png',
-        '/main/carousel-5.webp',
-        '/main/carousel-6.png',
+        '/main/sidewalks.webp',
+        '/main/tacho.webp',
+        '/main/experience1.webp',
+        '/main/pool.webp',
+        '/main/com-clean.webp',
+        '/main/com-car.webp',
+        '/main/turn.webp',
+        '/main/wakways.webp',
+        '/lavado.webp',
       ],
       name: 'jzpressurepros',
       description: 'Professional house washing, roof cleaning, driveway and patio restoration, and mobile car detailing. We clean, protect, and refresh your space.',
+      buttonig:"Follow on Instagram"
     },
     catalog: {
       title:
@@ -357,7 +358,7 @@ export default {
       carousel:[
         "/lavado.webp",
         "/main/com-car.webp",
-        "/premium.webp",
+        "/main/turn.webp",
         "/main/wakways.webp"
       ]
     },
@@ -366,7 +367,7 @@ export default {
     title: 'Gallery',
     image: 'gallery',
     items:[
-      "/premium.webp",
+      "/lavado.webp",
       "/classic.webp",
       "/main/com-car.webp",
       "/main/patios.webp",
