@@ -11,7 +11,7 @@ interface Props {
 const { formType, carouselImages } = Astro.props as Props;
 ---
 
-<section class="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-7 pb-10 md:pb-[140px] max-w-screen md:max-w-[1150px] px-4 lg:px-0 w-full min-h-[660px] h-full">
+<section class="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-7 pb-10 md:pb-[50px] max-w-screen md:max-w-[1150px] px-4 lg:px-0 w-full min-h-[660px] h-full">
   <CarouselServices images={carouselImages}/>
   {formType === 'residential' && <ResidentialForm />}
   {formType === 'commercial' && <CommercialForm/>}

@@ -21,45 +21,52 @@ const { content } = Astro.props as Props;
         <p class="text-center text-[13px] lg:text-[16px] font-normal lg:font-medium leading-[18px] md:leading-[25px] ">{content.text}</p>
       </div>
     </div>
-    <div class="w-full grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-[22px]">
-      {content.items.map(item => (
-        <div class="w-full flex justify-center">
-              <div
-              class={`relative
-                    w-full md:w-[265px] h-[98px] md:h-[415px]
-                    rounded-[15px]
-                    overflow-hidden
-                    bg-cover
-                    transition-all duration-200
-                    group hover:border-white hover:border-[2px]
-                    ${item.image === 'firepits'
-                      ? 'bg-[position:10%_30%]'
-                      : 'bg-center'}`}
-            style={`background-image: url('/main/${item.image}.webp')`}
-            >
-              <!-- Overlay base permanente -->
-              <div class="absolute inset-0 bg-[rgba(4,35,64,0.32)] pointer-events-none"></div>
+    <div class="w-full flex flex-col gap-[22px]">
+      {Array.from({ length: Math.ceil(content.items.length / 4) }, (_, rowIndex) => {
+        const startIndex = rowIndex * 4;
+        const rowItems = content.items.slice(startIndex, startIndex + 4);
+        const isPar = rowIndex % 2 === 0;
+        return (
+          <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[22px]" data-aos={isPar ? 'fade-right' : 'fade-left'}>
+            {rowItems.map(item => (
+              <div class="w-full flex justify-center">
+                <div
+                  class={`relative
+                        w-full md:w-[265px] h-[98px] md:h-[415px]
+                        rounded-[15px]
+                        overflow-hidden
+                        bg-cover
+                        transition-all duration-200
+                        group hover:border-white hover:border-[2px]
+                        ${item.image === 'firepits'
+                          ? 'bg-[position:10%_30%]'
+                          : 'bg-center'}`}
+                  style={`background-image: url('/main/${item.image}.webp')`}
+                >
+                  <!-- Overlay base permanente -->
+                  <div class="absolute inset-0 bg-[rgba(4,35,64,0.32)] pointer-events-none"></div>
 
-              <!-- Overlay de hover: aparece encima del base -->
-              <div class="absolute inset-0 
-                          bg-secondary/30 
-                          opacity-0 
-                          group-hover:opacity-100 
-                          transition-opacity 
-                          duration-200 
-                          pointer-events-none"></div>
+                  <!-- Overlay de hover: aparece encima del base -->
+                  <div class="absolute inset-0 
+                              bg-secondary/30 
+                              opacity-0 
+                              group-hover:opacity-100 
+                              transition-opacity 
+                              duration-200 
+                              pointer-events-none"></div>
 
-              <!-- Contenido -->
-              <div class="relative flex justify-center items-center h-full px-[25px]">
-                <p class="text-white text-[20px] md:text-[24px] font-medium md:font-semibold text-center leading-[25px]">
-                  {item.title}
-                </p>
+                  <!-- Contenido -->
+                  <div class="relative flex justify-center items-center h-full px-[25px]">
+                    <p class="text-white text-[20px] md:text-[24px] font-medium md:font-semibold text-center leading-[25px]">
+                      {item.title}
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-        </div>
-        
-
-      ))}
+            ))}
+          </div>
+        );
+      })}
     </div>
   </div>
 </section>

@@ -6,7 +6,6 @@ interface Props {
 }
 const { content } = Astro.props as Props;
 const currentPath = Astro.url.pathname;
-// Detectar el idioma actual ('en' o 'es')
 const match = currentPath.match(/^\/(en|es)/);
 const lang = match ? match[1] : 'en';
 ---
@@ -44,13 +43,11 @@ const lang = match ? match[1] : 'en';
         }
       });
     };
-    // 1) IntersectionObserver para la animación inicial
     const observer = new IntersectionObserver(onEntry, {
       threshold: 0.5
     });
     observer.observe(car);
-    observer.takeRecords(); // fuerza la comprobación inicial
-    // 2) Fallback manual (en caso de que Observer falle)
+    observer.takeRecords(); 
     const onInitialScroll = () => {
       if (activated) return;
       const rect = car.getBoundingClientRect();
@@ -64,30 +61,21 @@ const lang = match ? match[1] : 'en';
     window.addEventListener('scroll', onInitialScroll);
     window.addEventListener('resize', onInitialScroll);
     onInitialScroll();
-    // 3) Una vez activado, sigue el scroll para mover el carro en X
     function initScrollTracking() {
-      // Ya no necesitamos estos listeners
       observer.unobserve(car);
       window.removeEventListener('scroll', onInitialScroll);
       window.removeEventListener('resize', onInitialScroll);
-
-      // Listener para desplazar en X según scroll
       window.addEventListener('scroll', () => {
         const deltaY = window.scrollY - startScrollY;
-        // Ajusta este factor para mayor o menor movimiento horizontal
         const factor = 0.4;
-        
-        // Verificar si estamos en pantalla grande (lg+)
         const isLargeScreen = window.innerWidth >= 1024;
         
         let translateX = deltaY * factor;
-        
-        // En pantallas grandes, limitar el movimiento hacia la izquierda
+
         if (isLargeScreen && translateX < 0) {
-          translateX = 0; // No permitir movimiento hacia la izquierda
+          translateX = 0; 
         }
         
-        // Mueve el carro en X desde 0 hasta +X (solo derecha en lg+)
         car.style.transform = `translateX(${translateX}px)`;
       });
     }

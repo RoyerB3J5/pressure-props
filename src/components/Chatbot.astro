@@ -1,0 +1,65 @@
+<div id='chatbot-placeholder' aria-hidden='true'></div>
+
+<script is:inline>
+  // Configuración (ajusta si hace falta)
+  const BREAKPOINT = 640; // sm
+  const SCROLL_THRESHOLD = 100; // px
+  const WIDGET_SRC = "https://widgets.leadconnectorhq.com/loader.js";
+  const WIDGET_RESOURCE =
+    "https://widgets.leadconnectorhq.com/chat-widget/loader.js";
+  const WIDGET_ID = "689ba71a0ec7aebbbf1e1e0b";
+
+  let widgetLoaded = false;
+  let showChat = false;
+  let ticking = false;
+
+  const isSmallScreen = () => window.innerWidth < BREAKPOINT;
+  const shouldShow = () =>
+    isSmallScreen() ? window.scrollY > SCROLL_THRESHOLD : true;
+
+  function setVisibility(val) {
+    // Solo carga el widget la primera vez que debe mostrarse
+    if (val && !widgetLoaded) loadWidgetScript();
+    showChat = val;
+  }
+
+  function loadWidgetScript() {
+    if (widgetLoaded) return;
+    const s = document.createElement('script');
+    s.src = WIDGET_SRC;
+    s.setAttribute('data-resources-url', WIDGET_RESOURCE);
+    s.setAttribute('data-widget-id', WIDGET_ID);
+    s.async = true;
+    document.body.appendChild(s);
+    widgetLoaded = true;
+  }
+
+  function update() {
+    const should = shouldShow();
+    setVisibility(should);
+  }
+
+  function onScrollResize() {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        update();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  // Ejecutar solo en cliente
+  if (typeof window !== 'undefined') {
+    // Update inicial
+    update();
+    window.addEventListener('scroll', onScrollResize, { passive: true });
+    window.addEventListener('resize', onScrollResize);
+
+    // Si quieres limpiar listeners cuando el usuario navegue fuera (opcional)
+    // window.addEventListener('beforeunload', () => {
+    //   window.removeEventListener('scroll', onScrollResize);
+    //   window.removeEventListener('resize', onScrollResize);
+    // });
+  }
+</script>

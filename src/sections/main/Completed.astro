@@ -11,15 +11,17 @@ interface Props {
 const { content } = Astro.props as Props;
 ---
 <section class="flex flex-col justify-center items-center gap-[61px] md:gap-0 pt-[26px] pb-[70px] md:py-[115px] overflow-y-visible max-w-screen lg:max-w-[1215px] w-full px-4 lg:px-0">
-  <div class="flex flex-col justify-center items-center gap-[53px] w-full mb-0 md:mb-[53px]">
-    <div class="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end px-0 md:px-8 w-full gap-[18px] md:gap-0">
-      <h2 set:html={content.title} class="text-secondary text-[24px] lg:text-[40px] font-normal leading-[26px] lg:leading-[46px] text-center md:text-start max-w-none md:max-w-[537px] "></h2>
-      <Button class='bg-main px-[38px]' href='gallery'>
-          {content.button}
-        </Button>
+  <div class="flex flex-col justify-center items-center gap-[61px] md:gap-0 w-full" data-aos="fade-down">  
+    <div class="flex flex-col justify-center items-center gap-[53px] w-full mb-0 md:mb-[53px]">
+      <div class="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end px-0 md:px-8 w-full gap-[18px] md:gap-0">
+        <h2 set:html={content.title} class="text-secondary text-[24px] lg:text-[40px] font-normal leading-[26px] lg:leading-[46px] text-center md:text-start max-w-none md:max-w-[537px] "></h2>
+        <Button class='bg-main px-[38px]' href='gallery'>
+            {content.button}
+          </Button>
+      </div>
     </div>
+    <CarouselHero images={content.images} />
   </div>
-  <CarouselHero images={content.images} />
   <div class="flex flex-col justify-center items-center gap-7 w-full max-w-screen md:max-w-[1138] px-4 md:px-0 mt-0 md:mt-[80px] lg:mt-[130px]">
     <div class="w-full flex md:justify-start justify-center items-center gap-[26px] px-3">
       <div class="w-[42px] md:w-[62px] h-[42px] md:h-[62px] rounded-full border-[1px] border-secondary overflow-hidden flex items-center justify-center flex-shrink-0">

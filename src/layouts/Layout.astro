@@ -1,9 +1,9 @@
 ---
 import '../styles/global.css';
 import 'aos/dist/aos.css';
+import Chatbot from '../components/Chatbot.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import Project from '../sections/main/Project.astro';
 
 type Translations = typeof import('../i18n/en').default;
 
@@ -37,6 +37,7 @@ const { lang, t } = Astro.props;
 		<main class='flex flex-col w-full items-center'>
 			<slot />
 		</main>
+		<Chatbot />
 		<Footer content={t?.footer}/>
 		
 		<script>
