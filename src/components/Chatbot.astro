@@ -1,65 +1,162 @@
-<div id='chatbot-placeholder' aria-hidden='true'></div>
+<div id='chatbot-placeholder' aria-hidden='true' style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; z-index: 1000;"></div>
 
 <script is:inline>
-  // Configuración (ajusta si hace falta)
-  const BREAKPOINT = 640; // sm
-  const SCROLL_THRESHOLD = 100; // px
+  // Configuración ultra-optimizada
+  const BREAKPOINT = 640;
+  const SCROLL_THRESHOLD = 100;
   const WIDGET_SRC = "https://widgets.leadconnectorhq.com/loader.js";
-  const WIDGET_RESOURCE =
-    "https://widgets.leadconnectorhq.com/chat-widget/loader.js";
+  const WIDGET_RESOURCE = "https://widgets.leadconnectorhq.com/chat-widget/loader.js";
   const WIDGET_ID = "689ba71a0ec7aebbbf1e1e0b";
+  
+  // Delays optimizados - más rápidos pero aún eficientes
+  const INITIAL_DELAY = 1500; // 1.5 segundos (reducido de 5)
+  const INTERACTION_DELAY = 500; // 0.5 segundos (reducido de 3)
+  const SCROLL_DELAY = 300; // 0.3 segundos (reducido de 2)
 
   let widgetLoaded = false;
-  let showChat = false;
-  let ticking = false;
+  let userInteracted = false;
+  let significantScroll = false;
+  let delayTimeout = null;
+  let scrollTimeout = null;
 
   const isSmallScreen = () => window.innerWidth < BREAKPOINT;
-  const shouldShow = () =>
-    isSmallScreen() ? window.scrollY > SCROLL_THRESHOLD : true;
-
-  function setVisibility(val) {
-    // Solo carga el widget la primera vez que debe mostrarse
-    if (val && !widgetLoaded) loadWidgetScript();
-    showChat = val;
-  }
+  const shouldLoadWidget = () => {
+    // Cargar más fácilmente - solo necesita interacción O scroll
+    return userInteracted || significantScroll;
+  };
 
   function loadWidgetScript() {
-    if (widgetLoaded) return;
-    const s = document.createElement('script');
-    s.src = WIDGET_SRC;
-    s.setAttribute('data-resources-url', WIDGET_RESOURCE);
-    s.setAttribute('data-widget-id', WIDGET_ID);
-    s.async = true;
-    document.body.appendChild(s);
-    widgetLoaded = true;
-  }
+    if (widgetLoaded || !shouldLoadWidget()) return;
+    
+    // Usar requestIdleCallback con timeout largo
+    const loadScript = () => {
+      // Verificar ancho de banda antes de cargar
+      if ('connection' in navigator) {
+        const conn = navigator.connection;
+        if (conn.effectiveType === 'slow-2g' || conn.effectiveType === '2g' || conn.saveData) {
+          console.log('Conexión lenta/datos limitados - widget de chat no cargado');
+          return;
+        }
+      }
 
-  function update() {
-    const should = shouldShow();
-    setVisibility(should);
-  }
+      const s = document.createElement('script');
+      s.src = WIDGET_SRC;
+      s.setAttribute('data-resources-url', WIDGET_RESOURCE);
+      s.setAttribute('data-widget-id', WIDGET_ID);
+      s.async = true;
+      s.defer = true;
+      
+      // Cargar en el próximo idle period
+      document.body.appendChild(s);
+      widgetLoaded = true;
+      console.log('Widget de chat cargado de forma diferida');
+    };
 
-  function onScrollResize() {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        update();
-        ticking = false;
-      });
-      ticking = true;
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadScript, { timeout: 3000 }); // Reducido de 10000
+    } else {
+      setTimeout(loadScript, 200); // Reducido de 1000
     }
   }
 
-  // Ejecutar solo en cliente
-  if (typeof window !== 'undefined') {
-    // Update inicial
-    update();
-    window.addEventListener('scroll', onScrollResize, { passive: true });
-    window.addEventListener('resize', onScrollResize);
+  function markUserInteraction() {
+    if (!userInteracted) {
+      userInteracted = true;
+      // Cargar inmediatamente después de interacción
+      setTimeout(() => {
+        if (shouldLoadWidget()) loadWidgetScript();
+      }, INTERACTION_DELAY);
+    }
+  }
 
-    // Si quieres limpiar listeners cuando el usuario navegue fuera (opcional)
-    // window.addEventListener('beforeunload', () => {
-    //   window.removeEventListener('scroll', onScrollResize);
-    //   window.removeEventListener('resize', onScrollResize);
-    // });
+  function handleScroll() {
+    if (window.scrollY > SCROLL_THRESHOLD) { // Reducido threshold
+      significantScroll = true;
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        if (shouldLoadWidget()) loadWidgetScript();
+      }, SCROLL_DELAY);
+    }
+  }
+
+  // Ejecutar solo en cliente con optimización balanceada
+  if (typeof window !== 'undefined') {
+    // Eventos de interacción más amplios para detectar interés
+    const interactionEvents = ['click', 'keydown', 'touchstart', 'mousemove'];
+    let interactionThrottled = false;
+    
+    function handleFirstInteraction() {
+      if (interactionThrottled) return;
+      interactionThrottled = true;
+      
+      setTimeout(() => {
+        markUserInteraction();
+        // Remover listeners después de la primera interacción
+        interactionEvents.forEach(event => {
+          document.removeEventListener(event, handleFirstInteraction, true);
+        });
+      }, 50); // Reducido de 100
+    }
+
+    // Throttled scroll handler
+    let scrollThrottled = false;
+    function handleScrollThrottled() {
+      if (scrollThrottled) return;
+      scrollThrottled = true;
+      
+      requestAnimationFrame(() => {
+        handleScroll();
+        scrollThrottled = false;
+      });
+    }
+
+    // Agregar listeners con opciones optimizadas
+    interactionEvents.forEach(event => {
+      document.addEventListener(event, handleFirstInteraction, { 
+        passive: true, 
+        once: true,
+        capture: true 
+      });
+    });
+
+    window.addEventListener('scroll', handleScrollThrottled, { passive: true });
+
+    // Cargar inmediatamente si el usuario hace hover sobre el área del chat
+    const chatPlaceholder = document.getElementById('chatbot-placeholder');
+    if (chatPlaceholder) {
+      chatPlaceholder.addEventListener('mouseenter', () => {
+        markUserInteraction();
+        loadWidgetScript(); // Cargar inmediatamente
+      }, { once: true });
+    }
+
+    // Fallback más rápido - solo si usuario usa la página activamente
+    delayTimeout = setTimeout(() => {
+      if (document.hasFocus() && !document.hidden) {
+        markUserInteraction();
+      }
+    }, INITIAL_DELAY);
+
+    // Optimización: pausar completamente si la página no es visible
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        if (delayTimeout) clearTimeout(delayTimeout);
+        if (scrollTimeout) clearTimeout(scrollTimeout);
+      } else if (!userInteracted && document.hasFocus()) {
+        delayTimeout = setTimeout(() => {
+          markUserInteraction();
+        }, INTERACTION_DELAY);
+      }
+    });
+
+    // Limpieza agresiva al salir
+    window.addEventListener('beforeunload', () => {
+      if (delayTimeout) clearTimeout(delayTimeout);
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+      window.removeEventListener('scroll', handleScrollThrottled);
+      interactionEvents.forEach(event => {
+        document.removeEventListener(event, handleFirstInteraction, true);
+      });
+    });
   }
 </script>

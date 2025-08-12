@@ -1,0 +1,83 @@
+---
+// Componente para cargar scripts de terceros de forma optimizada
+interface Props {
+  src: string;
+  strategy?: 'idle' | 'visible' | 'interaction' | 'delay';
+  delay?: number;
+  onLoad?: string;
+}
+
+const { src, strategy = 'idle', delay = 3000, onLoad } = Astro.props;
+---
+
+<script define:vars={{ src, strategy, delay, onLoad }} is:inline>
+  (function() {
+    let scriptLoaded = false;
+    
+    function loadScript() {
+      if (scriptLoaded) return;
+      
+      const script = document.createElement('script');
+      script.src = src;
+      script.async = true;
+      script.defer = true;
+      
+      if (onLoad) {
+        script.onload = new Function(onLoad);
+      }
+      
+      document.head.appendChild(script);
+      scriptLoaded = true;
+    }
+    
+    switch (strategy) {
+      case 'idle':
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadScript, { timeout: delay });
+        } else {
+          setTimeout(loadScript, Math.min(delay, 1000));
+        }
+        break;
+        
+      case 'visible':
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+              loadScript();
+              observer.disconnect();
+            }
+          });
+          observer.observe(document.body);
+        } else {
+          setTimeout(loadScript, 1000);
+        }
+        break;
+        
+      case 'interaction':
+        const events = ['mousedown', 'keydown', 'touchstart', 'scroll'];
+        const handleInteraction = () => {
+          loadScript();
+          events.forEach(event => {
+            document.removeEventListener(event, handleInteraction, true);
+          });
+        };
+        
+        events.forEach(event => {
+          document.addEventListener(event, handleInteraction, { 
+            passive: true, 
+            once: true, 
+            capture: true 
+          });
+        });
+        
+        // Fallback
+        setTimeout(loadScript, delay);
+        break;
+        
+      case 'delay':
+      default:
+        setTimeout(loadScript, delay);
+        break;
+    }
+  })();
+</script>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Página principal en inglés (por defecto) -->
+  <url>
+    <loc>https://pressurepros.com/en/</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pressurepros.com/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pressurepros.com/en/" />
+  </url>
+
+  <!-- Página principal en español -->
+  <url>
+    <loc>https://pressurepros.com/es/</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pressurepros.com/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://pressurepros.com/es/" />
+  </url>
+
+  <!-- Servicios - Inglés -->
+  <url>
+    <loc>https://pressurepros.com/en/services/</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pressurepros.com/es/services/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pressurepros.com/en/services/" />
+  </url>
+
+  <!-- Servicios - Español -->
+  <url>
+    <loc>https://pressurepros.com/es/services/</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pressurepros.com/en/services/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://pressurepros.com/es/services/" />
+  </url>
+
+  <!-- Acerca de nosotros - Inglés -->
+  <url>
+    <loc>https://pressurepros.com/en/about-us/</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pressurepros.com/es/about-us/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pressurepros.com/en/about-us/" />
+  </url>
+
+  <!-- Acerca de nosotros - Español -->
+  <url>
+    <loc>https://pressurepros.com/es/about-us/</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pressurepros.com/en/about-us/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://pressurepros.com/es/about-us/" />
+  </url>
+
+  <!-- Contacto - Inglés -->
+  <url>
+    <loc>https://pressurepros.com/en/contact/</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pressurepros.com/es/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pressurepros.com/en/contact/" />
+  </url>
+
+  <!-- Contacto - Español -->
+  <url>
+    <loc>https://pressurepros.com/es/contact/</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pressurepros.com/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://pressurepros.com/es/contact/" />
+  </url>
+
+  <!-- Galería - Inglés -->
+  <url>
+    <loc>https://pressurepros.com/en/gallery/</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pressurepros.com/es/gallery/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pressurepros.com/en/gallery/" />
+  </url>
+
+  <!-- Galería - Español -->
+  <url>
+    <loc>https://pressurepros.com/es/gallery/</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pressurepros.com/en/gallery/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://pressurepros.com/es/gallery/" />
+  </url>
+
+</urlset>

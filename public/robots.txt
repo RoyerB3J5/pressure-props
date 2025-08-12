@@ -1,0 +1,40 @@
+User-agent: *
+Allow: /
+
+# Permitir acceso a recursos estáticos importantes
+Allow: /favicon.ico
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+
+# Bloquear archivos que no queremos indexar
+Disallow: /api/
+Disallow: /_astro/
+Disallow: /.well-known/
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap para ayudar con la indexación
+Sitemap: https://pressurepros.com/sitemap.xml
+
+# Rastreadores específicos optimizados para búsqueda local
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Para rastreadores de SEO local (importante para Orlando)
+User-agent: *
+Allow: /en/
+Allow: /es/
+
+# Información adicional para Orlando pressure washing
+# Este robots.txt permite que Google indexe todas las páginas importantes
+# mientras protege recursos internos y APIs

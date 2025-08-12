@@ -1,6 +1,9 @@
 ---
+// Imports optimizados - solo lo esencial al inicio
 import '../styles/global.css';
 import 'aos/dist/aos.css';
+
+// Imports async para componentes no críticos
 import Chatbot from '../components/Chatbot.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
@@ -17,18 +20,63 @@ const { lang, t } = Astro.props;
 <!doctype html>
 <html lang={lang} class='overflow-x-hidden'>
 	<head>
+		<meta charset="UTF-8" />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<meta name="description" content="Orlando Pressure Washing Experts with Guaranteed Results or It's Free" />
+		
+		<!-- SEO Local para Orlando -->
+		<meta name="geo.region" content="US-FL" />
+		<meta name="geo.placename" content="Orlando" />
+		<meta name="geo.position" content="28.5383;-81.3792" />
+		<meta name="ICBM" content="28.5383, -81.3792" />
+		
+		<!-- Open Graph para redes sociales -->
+		<meta property="og:title" content="Pressure Pros - Orlando Pressure Washing" />
+		<meta property="og:description" content="Orlando Pressure Washing Experts with Guaranteed Results or It's Free" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://pressurepros.com" />
+		<meta property="og:locale" content={lang === 'es' ? 'es_US' : 'en_US'} />
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Pressure Pros - Orlando Pressure Washing" />
+		<meta name="twitter:description" content="Orlando Pressure Washing Experts with Guaranteed Results or It's Free" />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href={`https://pressurepros.com/${lang}/`} />
+		
+		<!-- Alternate language versions -->
+		<link rel="alternate" hreflang="en" href="https://pressurepros.com/en/" />
+		<link rel="alternate" hreflang="es" href="https://pressurepros.com/es/" />
+		<link rel="alternate" hreflang="x-default" href="https://pressurepros.com/en/" />
+		
+		<!-- Crítico: CSS inline para evitar FOUC -->
 		<style is:inline>
       body {
         visibility: hidden;
+        font-family: 'Red Hat Text', Arial, sans-serif;
       }
       body.visible {
         visibility: visible;
       }
     </style>
-		<meta charset="UTF-8" />
-		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		
+		<!-- Preconnect para DNS lookup temprano -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
+		<!-- Preconnect para widget de chat - optimización de terceros -->
+		<link rel="preconnect" href="https://widgets.leadconnectorhq.com">
+		<link rel="dns-prefetch" href="https://widgets.leadconnectorhq.com">
+		
+		<!-- Load Google Fonts de forma ultra-optimizada -->
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300..700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300..700&display=swap"></noscript>
+		
+		<!-- Icons -->
 		<link rel="icon" type="image/svg+xml" href="/icon.svg" />
 		<link rel="icon" type="image/x-icon" href="/icon.ico" />
+		
 		<meta name="generator" content={Astro.generator} />
 		<title>Pressure Pros</title>
 	</head>
@@ -43,16 +91,47 @@ const { lang, t } = Astro.props;
 		<script>
 			import AOS from 'aos';
 			
-			AOS.init({
-				duration: 1000,
-				once: true,
-				offset: 100,
-				delay: 100,
-			});
+			// Función simplificada para inicializar AOS
+			function initAOS() {
+				try {
+					AOS.init({
+						duration: 1000,
+						once: true,
+						offset: 100,
+						delay: 100,
+						disable: false // Habilitar en todos los dispositivos
+					});
+					console.log('AOS inicializado correctamente');
+				} catch (error) {
+					console.error('Error al inicializar AOS:', error);
+				}
+			}
+
+			function showContent() {
+				document.body.classList.add('visible');
+			}
+
+			// Inicialización optimizada pero funcional
+			function initializeApp() {
+				// Mostrar contenido inmediatamente
+				showContent();
+				
+				// Inicializar AOS con un pequeño delay
+				setTimeout(() => {
+					initAOS();
+				}, 100);
+			}
+
+			// Inicialización según el estado del documento
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', initializeApp);
+			} else {
+				initializeApp();
+			}
 			
-			document.body.classList.add('visible');
+			// Fallback garantizado para mostrar contenido
+			setTimeout(showContent, 500);
 		</script>
-	</body>
 	</body>
 </html>
 
