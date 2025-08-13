@@ -68,7 +68,7 @@ export default {
       description:
         'Orlando Pressure Washing Experts <br/>Guaranteed Results or It’s Free',
       description2:
-        'A clean exterior can increase your property value, improve curb appeal, and create a welcoming environment for guests and potential buyers. <br/>At Jz Pressure Pros, we provide high-quality pressure washing services in Orlando and surrounding areas. Our expert team removes built-up dirt, mold, and grime from driveways, fences, sidewalks, gutters, and more. <br/> We use professional equipment, safe products, and years of experience to deliver long-lasting results. You’ll see the difference after just one visit.',
+        'A clean exterior can increase your property value, improve curb appeal, and create a welcoming environment for guests and potential buyers. <br/> <br class="block md:hidden"/>At Jz Pressure Pros, we provide high-quality pressure washing services in Orlando and surrounding areas. Our expert team removes built-up dirt, mold, and grime from driveways, fences, sidewalks, gutters, and more. <br/> <br class="block md:hidden"/> <span class="font-bold">We use professional equipment, safe products, and years of experience to deliver long-lasting results. You’ll see the difference after just one visit.</span>',
       items: [
         'Experienced Technicians',
         'Affordable, Honest Pricing',

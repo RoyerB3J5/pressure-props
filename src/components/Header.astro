@@ -40,7 +40,7 @@ const normalized = currentPath.replace(/^\/(en|es)/, '') || '/';
 const match = currentPath.match(/^\/(en|es)/);
 const lang = match ? match[1] : 'en';
 ---
-<header class="fixed top-0 left-0 right-0 z-20 w-full flex flex-col justify-center items-center transition-top duration-300 ease-in-out"
+<header class="fixed top-3 lg:top-0 left-0 right-0 z-20 w-full flex flex-col justify-center items-center transition-top duration-300 ease-in-out "
   id="site-header">
   <div class="w-full bg-main justify-center hidden lg:flex">
     <div class="w-full flex justify-center lg:justify-between items-center max-w-[1154px]">
@@ -68,87 +68,45 @@ const lang = match ? match[1] : 'en';
       </div>
     </div>
   </div>
-  <div class="bg-secondary w-full max-w-screen sm:max-w-[1223px] py-4 lg:min-h-[89px] flex justify-between items-center px-7 lg:px-[48px] relative top-0 lg:top-[23px] rounded-0 lg:rounded-[20px]">
+  <div class="bg-secondary w-[calc(100%-24px)] sm:w-full sm:max-w-[1223px] py-4 lg:min-h-[89px] flex justify-between items-center px-7 lg:px-[48px] relative lg:top-[23px] rounded-[20px] mx-auto shadow-lg sm:shadow-none">
     <a href="/" aria-label="Ir a la página principal" title="Inicio - Pressure Pros">
       <img src="/logo-1.svg" alt="Logo de Pressure Pros - Servicio de lavado a presión en Orlando" width="169" height="41" class="cursor-pointer w-[99px] lg:w-[169px] h-[24px] lg:h-[41px]">
     </a>
-    <div class="absolute lg:relative flex items-center bg-secondary lg:bg-transparent text-white  flex-col justify-center lg:flex-row h-screen lg:h-auto w-[90%] lg:w-auto z-50 lg:z-10 top-0 right-0 py-6 lg:py-0 gap-10 lg:gap-0 transform translate-x-full lg:translate-x-0 transition-transform duration-300 ease-out" id="mobile-menu">
-      <img 
-        src="/equis.svg" 
-        alt="Cerrar menú" 
-        width="24" 
-        height="24" 
-        class="lg:hidden block absolute top-6 right-6 cursor-pointer" 
-        id="close-btn"
-        aria-label="Cerrar menú de navegación"
-        title="Cerrar menú"
-        role="button"
-        tabindex="0"
-      >
-      <nav class="relative flex items-center flex-col lg:flex-row justify-center w-full lg:w-auto gap-0 lg:gap-4">
+    
+    <!-- Menú desktop (lg y arriba) -->
+    <div class="hidden lg:relative lg:flex items-center bg-transparent text-white flex-row h-auto w-auto z-10 py-0 gap-0 transform translate-x-0 transition-transform duration-300 ease-out">
+      <nav class="relative flex items-center flex-row justify-center w-auto gap-4">
         {
           content?.nav.map((item, index)=>{
-            // Para contact, comparar sin el hash - si la ruta es /contact y el item es /contact#info, debe ser activo
-            const itemPathWithoutHash = item.href.split('#')[0]; // Quitar hash del item
+            const itemPathWithoutHash = item.href.split('#')[0];
             const isActive = normalized === itemPathWithoutHash || 
                             (index === 1 && normalized.startsWith('/services'));
             const isServices = index === 1;
             return(
-              <div class={`flex flex-col lg:flex-row items-center justify-center gap-[14px] px-0 lg:px-[7px] hover:text-main w-full lg:w-auto pt-2 lg:py-0 text-center ${isServices ? 'relative group dropdown-parent' : ''} ${isActive ? 'bg-main lg:bg-transparent text-white  lg:text-main' : ''}`} id={`services-${index}`}>
-                <a href={`/${lang}${item.href}`}  class={`
-                text-[18px] text-center font-semibold leading-[52px] relative transition-colors duration-300
-               
-                
-              `}>
+              <div class={`flex flex-row items-center justify-center gap-[14px] px-[7px] hover:text-main w-auto py-0 text-center ${isServices ? 'relative group dropdown-parent' : ''} ${isActive ? 'bg-transparent text-main' : ''}`} id={`services-${index}`}>
+                <a href={`/${lang}${item.href}`} class="text-[18px] text-center font-semibold leading-[52px] relative transition-colors duration-300">
                   {item.label}
-                  <span
-              class={`
-                absolute bottom-0 left-0 h-[2px] bg-main  transition-all duration-300 ease-out
-               ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}
-              `}
-              />
+                  <span class={`absolute bottom-0 left-0 h-[2px] bg-main transition-all duration-300 ease-out ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
                 </a>
                 {isServices && (
-          <div
-            class="
-              dropdown-menu absolute top-full left-0 mt-0 w-[170px] flex-col items-center bg-white z-40 hidden lg:group-hover:flex opacity-0 lg:group-hover:opacity-100 pointer-events-none lg:group-hover:pointer-events-auto transition-all duration-200 ease-out -translate-x-[20%] shadow-lg 
-            "
-          >
-            {content.types.map(sub => (
-              <div
-                class="
-                  text-[18px] font-semibold text-secondary 
-                  py-2 hover:bg-main hover:text-white 
-                  transition-colors duration-200 ease-in-out
-                  cursor-pointer px-6 w-full text-center
-                "
-              >
-                <a href={`/${lang}/services/${sub.href}`} class="block w-full h-full">{sub.label}</a>
+                  <div class="dropdown-menu absolute top-full left-0 mt-0 w-[170px] flex-col items-center bg-white z-40 hidden group-hover:flex opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 ease-out -translate-x-[20%] shadow-lg">
+                    {content.types.map(sub => (
+                      <div class="text-[18px] font-semibold text-secondary py-2 hover:bg-main hover:text-white transition-colors duration-200 ease-in-out cursor-pointer px-6 w-full text-center">
+                        <a href={`/${lang}/services/${sub.href}`} class="block w-full h-full">{sub.label}</a>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
-            ))}
-          </div>
-          <div class="flex-col justify-center items-center w-full bg-[#0366FF] divide-y divide-white lg:hidden hidden" id="sub-menu-services">
-            {content.types.map(sub => (
-                <a href={`/${lang}/services/${sub.href}`} class="
-                  text-[18px] font-semibold text-white 
-                  py-3 
-                  transition-colors duration-300 ease-in-out
-                  cursor-pointer px-6 w-full text-center
-                ">{sub.label}</a>
-            ))}
-          </div>
-        )}
-            </div>
             )
-            
           })
         }
       </nav>
       <Button class="bg-main ml-[27.5px] mr-[27px] h-[52px] flex items-center" href={`/${lang}/contact#info`}>
         {content?.button}
       </Button>
-      <div class="flex justify-center  items-center gap-4 lg:gap-[6px] px-[7px]">
-        <img src="/phone.webp" alt="Icono de teléfono" width="33" height="48" class=" block w-[33px] h-[48px]">
+      <div class="flex justify-center items-center gap-[6px] px-[7px]">
+        <img src="/phone.webp" alt="Icono de teléfono" width="33" height="48" class="block w-[33px] h-[48px]">
         <div class="text-white text-[16px] font-semibold leading-[24px] flex flex-col items-start justify-center">
           <p>{content?.phone}</p>
           <a 
@@ -162,6 +120,8 @@ const lang = match ? match[1] : 'en';
         </div>
       </div>
     </div>
+
+    <!-- Botones para móvil -->
     <div class="flex lg:hidden justify-center items-center gap-7">
       <ChangeLanguage/>
       <button 
@@ -176,6 +136,65 @@ const lang = match ? match[1] : 'en';
       </button>
     </div>
   </div>
+</header>
+
+<!-- Menú móvil independiente (lg para abajo) -->
+<div class="fixed top-0 right-0 bottom-0 lg:hidden flex items-center bg-secondary text-white flex-col justify-center h-screen w-[90%] z-[60] py-6 gap-10 transform translate-x-full transition-transform duration-300 ease-out" id="mobile-menu">
+  <img 
+    src="/equis.svg" 
+    alt="Cerrar menú" 
+    width="24" 
+    height="24" 
+    class="block absolute top-6 right-6 cursor-pointer" 
+    id="close-btn"
+    aria-label="Cerrar menú de navegación"
+    title="Cerrar menú"
+    role="button"
+    tabindex="0"
+  >
+  <nav class="relative flex items-center flex-col justify-center w-full gap-0">
+    {
+      content?.nav.map((item, index)=>{
+        const itemPathWithoutHash = item.href.split('#')[0];
+        const isActive = normalized === itemPathWithoutHash || 
+                        (index === 1 && normalized.startsWith('/services'));
+        const isServices = index === 1;
+        return(
+          <div class={`flex flex-col items-center justify-center gap-[14px] px-0 hover:text-main w-full pt-2 text-center ${isServices ? 'relative' : ''} ${isActive ? 'bg-main text-white' : ''}`} id={`mobile-services-${index}`}>
+            <a href={`/${lang}${item.href}`} class="text-[18px] text-center font-semibold leading-[52px] relative transition-colors duration-300">
+              {item.label}
+              <span class={`absolute bottom-0 left-0 h-[2px] bg-main transition-all duration-300 ease-out ${isActive ? 'w-full' : 'w-0'}`} />
+            </a>
+            {isServices && (
+              <div class="flex-col justify-center items-center w-full bg-[#0366FF] divide-y divide-white hidden" id="sub-menu-services">
+                {content.types.map(sub => (
+                  <a href={`/${lang}/services/${sub.href}`} class="text-[18px] font-semibold text-white py-3 transition-colors duration-300 ease-in-out cursor-pointer px-6 w-full text-center">{sub.label}</a>
+                ))}
+              </div>
+            )}
+          </div>
+        )
+      })
+    }
+  </nav>
+  <Button class="bg-main ml-[27.5px] mr-[27px] h-[52px] flex items-center" href={`/${lang}/contact#info`}>
+    {content?.button}
+  </Button>
+  <div class="flex justify-center items-center gap-4 px-[7px]">
+    <img src="/phone.webp" alt="Icono de teléfono" width="33" height="48" class="block w-[33px] h-[48px]">
+    <div class="text-white text-[16px] font-semibold leading-[24px] flex flex-col items-start justify-center">
+      <p>{content?.phone}</p>
+      <a 
+        href="tel:+14076206653" 
+        class="hover:text-main transition-all duration-300 ease-in-out cursor-pointer"
+        aria-label="Llamar al teléfono +1 (407) 620-6653"
+        title="Llamar ahora"
+      >
+        +1 (407) 620-6653
+      </a>
+    </div>
+  </div>
+</div>
 </header>
 
 <style>
@@ -245,7 +264,8 @@ const lang = match ? match[1] : 'en';
   const menu = document.getElementById('mobile-menu');
   const openBtn = document.getElementById('hamburger-btn');
   const closeBtn = document.getElementById('close-btn');
-  const servicesDiv = document.getElementById('services-1');
+  const servicesDiv = document.getElementById('services-1'); // Desktop services
+  const mobileServicesDiv = document.getElementById('mobile-services-1'); // Mobile services
   const subMenuServices = document.getElementById('sub-menu-services');
   const body = document.body;
 
@@ -289,10 +309,16 @@ const lang = match ? match[1] : 'en';
   openBtn.addEventListener('click', openMenu);
   closeBtn.addEventListener('click', closeMenu);
   
-  // Agregar event listener al enlace dentro del div services-1
-  const servicesLink = servicesDiv.querySelector('a');
+  // Agregar event listener al enlace dentro del div services-1 (desktop)
+  const servicesLink = servicesDiv?.querySelector('a');
   if (servicesLink) {
     servicesLink.addEventListener('click', toggleSubMenu);
+  }
+
+  // Agregar event listener al enlace dentro del div mobile-services-1 (móvil)
+  const mobileServicesLink = mobileServicesDiv?.querySelector('a');
+  if (mobileServicesLink) {
+    mobileServicesLink.addEventListener('click', toggleSubMenu);
   }
 
   // Asegurar estado inicial según tamaño
