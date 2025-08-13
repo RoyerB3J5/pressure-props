@@ -6,7 +6,7 @@ export default {
         href: '/',
       },
       {
-        label: 'Servicios',
+        label: 'Servicios <span class="text-[16px] ml-[1px]">▾</span>',
         href: '#',
       },
       {
@@ -68,7 +68,7 @@ export default {
       description:
         'Expertos en lavado a presión en Orlando <br/> Resultados garantizados o ¡es gratis!',
       description2:
-        'Un exterior limpio puede aumentar el valor de tu propiedad, mejorar el atractivo y crear un ambiente acogedor para invitados y posibles compradores. <br/>En Jz Pressure Pros ofrecemos servicios de lavado a presión de alta calidad en Orlando y áreas cercanas. Nuestro equipo experto elimina la suciedad acumulada, moho y mugre de entradas de vehículos, cercas, aceras, canaletas y más. <br/> Utilizamos equipo profesional, productos seguros y años de experiencia para ofrecer resultados duraderos. Verás la diferencia después de una sola visita.',
+        'Un exterior limpio puede aumentar el valor de tu propiedad, mejorar el atractivo y crear un ambiente acogedor para invitados y posibles compradores. <br/> <br class="block md:hidden"/>En Jz Pressure Pros ofrecemos servicios de lavado a presión de alta calidad en Orlando y áreas cercanas. Nuestro equipo experto elimina la suciedad acumulada, moho y mugre de entradas de vehículos, cercas, aceras, canaletas y más. <br/> <br class="block md:hidden"/> <span class="font-bold">Utilizamos equipo profesional, productos seguros y años de experiencia para ofrecer resultados duraderos. Verás la diferencia después de una sola visita.</span>',
       items: [
         'Técnicos experimentados',
         'Precios asequibles y honestos',
@@ -183,13 +183,13 @@ export default {
       },
       rendering: {
         title:
-          "Limpieza<br/> <span class='text-[24px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>con Resultados Reales</span>",
+          "Limpieza<br/> <span class='text-[28px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>con Resultados Reales</span>",
         text: 'Restaura la belleza y el valor de tu propiedad con servicios expertos de lavado a presión. Limpiamos entradas, cercas, fachadas, canaletas y más. Nuestro equipo utiliza métodos seguros, prácticas ecológicas y equipos potentes para entregar resultados impecables en todo momento.',
         button: 'SOLICITA UNA COTIZACIÓN',
       },
       design: {
         title:
-          "¿Ya Reservaste <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>o Fuiste Recomendado?</span>",
+          "¿Ya Reservaste <span class='text-[28px] md:text-[48px] font-semibold leading-[28px] md:leading-[58px] text-main'>o Fuiste Recomendado?</span>",
         description:
           'Si fuiste recomendado por un amigo, o estás listo para agendar tu próximo servicio de lavado a presión, completa el formulario y te responderemos en un plazo de 24 horas. No olvides mencionar cualquier descuento o código de recomendación que tengas.',
       },
@@ -238,7 +238,7 @@ export default {
     },
     completed: {
       title:
-        "Mira nuestros Recientes <br/> <span class='text-[24px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>Proyectos de Lavado a Presión</span>",
+        "Mira nuestros Recientes <br/> <span class='text-[28px] lg:text-[48px] font-semibold leading-[30px] lg:leading-[58px] text-main'>Proyectos de Lavado a Presión</span>",
       button: 'VER PROYECTOS',
       images: [
         '/main/carousel-4.png',
@@ -259,7 +259,7 @@ export default {
       buttonig:"Síguenos en Instagram"
     },
     catalog: {
-      title: "Descarga nuestro folleto para desbloquear <br/> <span class='font-semibold text-[20px] md:text-[48px] leading-[26px] md:leading-[58px] text-main'>un descuento especial</span>",
+      title: "Descarga nuestro folleto para desbloquear <br/> <span class='font-semibold text-[28px] md:text-[48px] leading-[30px] md:leading-[58px] text-main'>un descuento especial</span>",
       description: "Consulta todos los servicios y opciones que ofrecemos en un solo lugar. Descarga nuestro folleto y preséntalo en tu próxima visita de servicio para recibir un descuento exclusivo.",
       button: 'DESCARGAR AHORA',
     },
@@ -277,7 +277,7 @@ export default {
       image: 'residential',
       title: 'Servicios de Lavado a Presión Residencial en Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Recupere la belleza de su hogar y manténgalo limpio todo el año</span> <br/> En JZ Pressure Pros ofrecemos servicios especializados de lavado a presión residencial que ayudan a los familias de Orlando a proteger y realzar la apariencia de sus propiedades. Ya sea que quiera limpiar el exterior de su casa, eliminar algas del techo o darle brillo a la entrada y la terraza de la piscina, nuestro equipo garantiza resultados excepcionales en cada visita. Empleamos técnicas seguras y adaptadas a cada superficie para eliminar suciedad, manchas, moho y mugre, dejando su hogar con un aspecto fresco, pulido y bien cuidado.",
+        "<span class='text-[16px] font-medium leading-[20px] md:leading-[25px]'>Recupere la belleza de su hogar y manténgalo limpio todo el año</span> <br/> En JZ Pressure Pros ofrecemos servicios especializados de lavado a presión residencial que ayudan a los familias de Orlando a proteger y realzar la apariencia de sus propiedades. Ya sea que quiera limpiar el exterior de su casa, eliminar algas del techo o darle brillo a la entrada y la terraza de la piscina, nuestro equipo garantiza resultados excepcionales en cada visita. Empleamos técnicas seguras y adaptadas a cada superficie para eliminar suciedad, manchas, moho y mugre, dejando su hogar con un aspecto fresco, pulido y bien cuidado.",
       list: [
         'Lavado de casas',
         'Limpieza de cercas y muros',
@@ -311,7 +311,7 @@ export default {
       image: 'commercial',
       title: 'Lavado a Presión Comercial para Negocios en Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Dé a su propiedad el aspecto limpio y profesional que merece</span> <br/> En JZ Pressure Pros ayudamos a negocios de Orlando a destacarse con servicios confiables y eficaces de lavado a presión comercial. Desde zonas de alto tráfico como I‑Drive hasta hoteles, restaurantes, locales de venta al por menor y edificios de oficinas, sabemos lo importante que es un exterior impecable para la imagen de su marca. Nuestro equipo experimentado elimina grasa, suciedad y acumulaciones ambientales usando las herramientas adecuadas para cada tarea. Trabajamos con rapidez, minimizamos interrupciones y dejamos su espacio impecable para que reciba a sus clientes con total confianza.",
+        "<span class='text-[16px] font-medium leading-[20px] md:leading-[25px]'>Dé a su propiedad el aspecto limpio y profesional que merece</span> <br/> En JZ Pressure Pros ayudamos a negocios de Orlando a destacarse con servicios confiables y eficaces de lavado a presión comercial. Desde zonas de alto tráfico como I‑Drive hasta hoteles, restaurantes, locales de venta al por menor y edificios de oficinas, sabemos lo importante que es un exterior impecable para la imagen de su marca. Nuestro equipo experimentado elimina grasa, suciedad y acumulaciones ambientales usando las herramientas adecuadas para cada tarea. Trabajamos con rapidez, minimizamos interrupciones y dejamos su espacio impecable para que reciba a sus clientes con total confianza.",
       list: [
         'Negocios en zonas de alto tráfico',
         'Hoteles y restaurantes',
@@ -339,7 +339,7 @@ export default {
       image: 'carwash',
       title: 'Servicios Móviles de Lavado de Autos en Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Llevamos el detallado profesional directamente a tu puerta </span> <br/> En JZ Pressure Pros, hacemos que el cuidado de tu auto sea simple y conveniente con nuestros servicios de lavado móvil. Nuestro equipo va directamente a ti, ya sea en tu hogar, negocio o sitio comercial. Limpiamos vehículos personales y comerciales, incluidos autos familiares, camiones de empresa y furgonetas de flota. Elige entre cuatro niveles de servicio: desde un lavado exterior rápido hasta una restauración profunda con detallado interior. No importa la opción que elijas, nos comprometemos a ofrecer resultados impecables y una experiencia sin complicaciones que te ahorre tiempo y mantenga tu vehículo en su mejor estado.",
+        "<span class='text-[16px] font-medium leading-[20px] md:leading-[25px]'>Llevamos el detallado profesional directamente a tu puerta </span> <br/> En JZ Pressure Pros, hacemos que el cuidado de tu auto sea simple y conveniente con nuestros servicios de lavado móvil. Nuestro equipo va directamente a ti, ya sea en tu hogar, negocio o sitio comercial. Limpiamos vehículos personales y comerciales, incluidos autos familiares, camiones de empresa y furgonetas de flota. Elige entre cuatro niveles de servicio: desde un lavado exterior rápido hasta una restauración profunda con detallado interior. No importa la opción que elijas, nos comprometemos a ofrecer resultados impecables y una experiencia sin complicaciones que te ahorre tiempo y mantenga tu vehículo en su mejor estado.",
       list: [
         'Básico: lavado exterior + limpieza de neumáticos',
         'Completo: detallado exterior e interior, brillo de tablero y aspirado total',
@@ -400,7 +400,7 @@ export default {
     },
     stand: {
       title:
-        'JZ PROS<br/> <span class="text-main text-[24px] md:text-[48px] font-semibold">Nuestros Valores</span>',
+        'JZ PROS<br/> <span class="text-main text-[28px] md:text-[48px] font-semibold">Nuestros Valores</span>',
       list: [
         {
           letter: 'J',
@@ -480,7 +480,7 @@ export default {
         href: '/',
       },
       {
-        label: 'Servicios',
+        label: 'Servicios <span class="text-[16px] ml-[1px]">▾</span>',
         href: '#',
       },
       {
@@ -494,6 +494,20 @@ export default {
       {
         label: 'Contáctanos',
         href: '/contact#info',
+      },
+    ],
+    types: [
+      {
+        label: 'Residencial',
+        href: 'residential',
+      },
+      {
+        label: 'Comercial',
+        href: 'commercial',
+      },
+      {
+        label: 'Car Wash',
+        href: 'car-wash',
       },
     ],
   },

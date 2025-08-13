@@ -41,22 +41,22 @@ const lang = match ? match[1] : 'en';
       <img src="/logo-2.svg" alt="Logo de PresureProps" width="218" height="218" class="cursor-pointer w-[105px] h-[105px]">
     </a>    
     <div class="flex flex-col items-center lg:items-start justify-center gap-[13px] md:gap-[32px] max-w-[389px]">
-      <p class="text-[13px] md:text-[16px] leading-[17px] md:leading-[25px] font-medium text-center md:text-start">{content?.text}</p>
+      <p class="text-[16px] leading-[17px] md:leading-[25px] font-medium text-center md:text-start">{content?.text}</p>
       <div class="flex items-center gap-[6px]">
           {icons.map(i => (
             <a href={i.href} class="size-[27px] md:size-[31px]  rounded-full flex justify-center items-center">
-              <Icon name={i.name} class={"w-4 md:w-5 h-4 md:h-5 text-main"}/>
+              <Icon name={i.name} class={"w-5 h-5 text-main"}/>
             </a>
           ))}
         </div>
     </div>
     <div class="flex flex-col items-center justify-center gap-9 lg:gap-[55px]">
       <div class="flex flex-col items-center justify-center gap-2 md:gap-[13px]">
-        <p class="text-[14px] md:text-[24px] font-semibold leading-[20px] text-center text-main">{content?.hours}</p>
-        <p class="text-[12px] md:text-[24px] leading-[20px] text-center text-secondary">9:00am - 8:00pm</p>
+        <p class="text-[16px] md:text-[24px] font-semibold leading-[20px] text-center text-main">{content?.hours}</p>
+        <p class="text-[14px] md:text-[24px] leading-[20px] text-center text-secondary">9:00am - 8:00pm</p>
       </div>
       <div class="flex flex-col items-center justify-center gap-2 md:gap-[13px]">
-        <p class="text-[13px] md:text-[15px] font-semibold leading-[20px] text-center text-main">{content?.call}</p>
+        <p class="text-[16px] md:text-[15px] font-semibold leading-[20px] text-center text-main">{content?.call}</p>
         <a href="tel:+14076206653" class="text-center text-[14px] md:text-[20px] font-bold leading-[20px] md:leading-[22px] text-secondary">+1 (407) 620-6653</a>
       </div>
     </div>
@@ -67,9 +67,27 @@ const lang = match ? match[1] : 'en';
           const itemPathWithoutHash = item.href.split('#')[0]; // Quitar hash del item
           const isActive = normalized === itemPathWithoutHash || 
                             (index === 1 && normalized.startsWith('/services'));
+          const isServices = index === 1;
           return (
-            <a href={`/${lang}${item.href}`} class={`w-full text-left  lg:text-right text-[13px] md:text-[15px] leading-[20px]  uppercase hover:font-bold transition-all duration-300 ease-in-out text-secondary ${isActive?'font-bold':'font-medium'}`}>{item.label}</a>
-          )  
+            <div class="relative flex flex-col justify-center items-end">
+              {isServices ? (
+                <button 
+                  class={`services-toggle w-full text-center lg:text-right text-[14px] md:text-[15px] leading-[20px] uppercase hover:font-bold transition-all duration-300 ease-in-out text-secondary ${isActive?'font-bold':'font-medium'} cursor-pointer`}
+                  data-services-menu
+                  set:html={item.label}
+                ></button>
+              ) : (
+                <a href={`/${lang}${item.href}`} class={`w-full text-center lg:text-right text-[14px] md:text-[15px] leading-[20px] uppercase hover:font-bold transition-all duration-300 ease-in-out text-secondary ${isActive?'font-bold':'font-medium'}`} set:html={item.label}></a>
+              )}
+              {isServices && (
+                <div class="services-dropdown hidden flex-col items-end justify-center gap-2 bg-secondary mt-2 rounded-md shadow-lg overflow-hidden transition-all duration-300 ease-in-out">
+                  {content?.types.map(subItem => (
+                    <a href={`/${lang}/services/${subItem.href}`} class={`w-full text-center lg:text-right text-[14px] md:text-[15px] leading-[20px] uppercase hover:font-bold transition-all duration-300 ease-in-out text-white py-3 px-10 md:px-4 hover:bg-main`} set:html={subItem.label}></a>
+                  ))}
+                </div>
+              )}
+            </div>     
+          )
         })}
       </div>
     </div>
@@ -82,3 +100,35 @@ const lang = match ? match[1] : 'en';
   <p class="text-[#404040] text-[10px] md:text-[13px] leading-[17px] md:leading-[46px] text-center max-w-[304px] md:max-w-none">Copyright © 2025 by Inkshape Group | Privacy | Jz Pressure Pros | Orlando, Florida | Call Now:<a href="tel:+14076206653" class="hover:text-main">+1 (407) 620-6653</a></p>
 </div>
 </footer>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const servicesToggle = document.querySelector('[data-services-menu]');
+    const servicesDropdown = document.querySelector('.services-dropdown');
+    
+    if (servicesToggle && servicesDropdown) {
+      // Toggle del menu al hacer click
+      servicesToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isOpen = servicesDropdown.classList.contains('flex');
+        
+        if (isOpen) {
+          // Cerrar menu
+          servicesDropdown.classList.remove('flex');
+          servicesDropdown.classList.add('hidden');
+        } else {
+          // Abrir menu
+          servicesDropdown.classList.remove('hidden');
+          servicesDropdown.classList.add('flex');
+        }
+      });
+      
+      // Cerrar menu al hacer click fuera
+      document.addEventListener('click', (e) => {
+        if (!servicesToggle.contains(e.target) && !servicesDropdown.contains(e.target)) {
+          servicesDropdown.classList.remove('flex');
+          servicesDropdown.classList.add('hidden');
+        }
+      });
+    }
+  });
+</script>

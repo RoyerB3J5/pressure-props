@@ -68,7 +68,7 @@ const lang = match ? match[1] : 'en';
       </div>
     </div>
   </div>
-  <div class="bg-secondary w-[calc(100%-24px)] sm:w-full sm:max-w-[1223px] py-4 lg:min-h-[89px] flex justify-between items-center px-7 lg:px-[48px] relative lg:top-[23px] rounded-[20px] mx-auto shadow-lg sm:shadow-none">
+  <div class="bg-secondary w-[calc(100%-24px)] lg:w-full sm:max-w-[1223px] py-4 lg:min-h-[89px] flex justify-between items-center px-7 lg:px-[48px] relative lg:top-[23px] rounded-[20px] mx-auto shadow-lg sm:shadow-none">
     <a href="/" aria-label="Ir a la página principal" title="Inicio - Pressure Pros">
       <img src="/logo-1.svg" alt="Logo de Pressure Pros - Servicio de lavado a presión en Orlando" width="169" height="41" class="cursor-pointer w-[99px] lg:w-[169px] h-[24px] lg:h-[41px]">
     </a>
@@ -84,8 +84,7 @@ const lang = match ? match[1] : 'en';
             const isServices = index === 1;
             return(
               <div class={`flex flex-row items-center justify-center gap-[14px] px-[7px] hover:text-main w-auto py-0 text-center ${isServices ? 'relative group dropdown-parent' : ''} ${isActive ? 'bg-transparent text-main' : ''}`} id={`services-${index}`}>
-                <a href={`/${lang}${item.href}`} class="text-[18px] text-center font-semibold leading-[52px] relative transition-colors duration-300">
-                  {item.label}
+                <a href={`/${lang}${item.href}`} class="text-[18px] text-center font-semibold leading-[52px] relative transition-colors duration-300" set:html={item.label}>
                   <span class={`absolute bottom-0 left-0 h-[2px] bg-main transition-all duration-300 ease-out ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
                 </a>
                 {isServices && (
@@ -139,13 +138,13 @@ const lang = match ? match[1] : 'en';
 </header>
 
 <!-- Menú móvil independiente (lg para abajo) -->
-<div class="fixed top-0 right-0 bottom-0 lg:hidden flex items-center bg-secondary text-white flex-col justify-center h-screen w-[90%] z-[60] py-6 gap-10 transform translate-x-full transition-transform duration-300 ease-out" id="mobile-menu">
+<div class="fixed top-0 right-0 bottom-0 lg:hidden flex items-center bg-secondary text-white flex-col justify-center h-screen w-[90%] z-[60] py-6 gap-8 transform translate-x-full transition-transform duration-300 ease-out" id="mobile-menu">
   <img 
     src="/equis.svg" 
     alt="Cerrar menú" 
     width="24" 
     height="24" 
-    class="block absolute top-6 right-6 cursor-pointer" 
+    class="block absolute top-6 right-6 cursor-pointer z-[20]" 
     id="close-btn"
     aria-label="Cerrar menú de navegación"
     title="Cerrar menú"
@@ -161,8 +160,7 @@ const lang = match ? match[1] : 'en';
         const isServices = index === 1;
         return(
           <div class={`flex flex-col items-center justify-center gap-[14px] px-0 hover:text-main w-full pt-2 text-center ${isServices ? 'relative' : ''} ${isActive ? 'bg-main text-white' : ''}`} id={`mobile-services-${index}`}>
-            <a href={`/${lang}${item.href}`} class="text-[18px] text-center font-semibold leading-[52px] relative transition-colors duration-300">
-              {item.label}
+            <a href={`/${lang}${item.href}`} class="text-[18px] text-center font-semibold leading-[52px] relative transition-colors duration-300" set:html={item.label}>
               <span class={`absolute bottom-0 left-0 h-[2px] bg-main transition-all duration-300 ease-out ${isActive ? 'w-full' : 'w-0'}`} />
             </a>
             {isServices && (

@@ -6,7 +6,7 @@ export default {
         href: '/',
       },
       {
-        label: 'Services',
+        label: 'Services <span class="text-[16px] ml-[1px]">▾</span>',
         href: '#',
       },
       {
@@ -182,13 +182,13 @@ export default {
       },
       rendering: {
         title:
-          "Cleaning <br/> <span class='text-[24px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>with Real Results</span>",
+          "Cleaning <br/> <span class='text-[28px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>with Real Results</span>",
         text: 'Restore your property’s beauty and value with expert pressure washing services. We clean driveways, fences, siding, gutters, and more. Our team uses safe methods, eco-friendly practices, and powerful equipment to deliver spotless results every time.',
         button: 'GET AN ESTIMATE',
       },
       design: {
         title:
-          "Already Booked  <span class='text-[24px] md:text-[48px] font-semibold leading-[26px] md:leading-[58px] text-main'>or Referred?</span>",
+          "Already Booked  <span class='text-[28px] md:text-[48px] font-semibold leading-[28px] md:leading-[58px] text-main'>or Referred?</span>",
         description:
           'If you’ve been referred by a friend, or you’re ready to schedule your next pressure washing service, complete the form and we’ll get back to you within 24 hours. Don’t forget to mention any discounts or referral codes you may have.',
       },
@@ -237,7 +237,7 @@ export default {
     },
     completed: {
       title:
-        "Check out our Recent <br/> <span class='text-[24px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>Pressure Washing Projects</span>",
+        "Check out our Recent <br/> <span class='text-[28px] lg:text-[48px] font-semibold leading-[30px] lg:leading-[58px] text-main'>Pressure Washing Projects</span>",
       button: 'VIEW ALL PROJECTS',
       images: [
         '/main/carousel-4.png',
@@ -259,7 +259,7 @@ export default {
     },
     catalog: {
       title:
-        "Download Our Flyer to Unlock <br/> <span class='font-semibold text-[20px] md:text-[48px] leading-[26px] md:leading-[58px] text-main'>a Special Discount</span>",
+        "Download Our Flyer to Unlock <br/> <span class='font-semibold text-[28px] md:text-[48px] leading-[30px] md:leading-[58px] text-main'>a Special Discount</span>",
       description:
         'See all the services and options we offer in one place. Download our flyer and present it during your next service visit to receive an exclusive discount.',
       button: 'DOWNload now',
@@ -278,7 +278,7 @@ export default {
       image: 'residential',
       title: 'Residential Pressure <br/> Washing Services in Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Restore Your Home’s Beauty and Keep It Clean Year-Round</span> <br/> At JZ Pressure Pros, we provide specialized residential pressure washing services that help homeowners in Orlando protect and enhance their property’s appearance. Whether you're looking to clean your home’s exterior, remove algae from your roof, or brighten up your driveway and pool deck, our team delivers exceptional results with every visit. We use safe techniques tailored to each surface to remove dirt, stains, mold, and grime, leaving your home looking fresh, polished, and well cared for.",
+        "<span class='text-[16px] font-medium leading-[20px] md:leading-[25px]'>Restore Your Home’s Beauty and Keep It Clean Year-Round</span> <br/> At JZ Pressure Pros, we provide specialized residential pressure washing services that help homeowners in Orlando protect and enhance their property’s appearance. Whether you're looking to clean your home’s exterior, remove algae from your roof, or brighten up your driveway and pool deck, our team delivers exceptional results with every visit. We use safe techniques tailored to each surface to remove dirt, stains, mold, and grime, leaving your home looking fresh, polished, and well cared for.",
       list: [
         'House Washing',
         'Fence & Wall Cleaning',
@@ -312,7 +312,7 @@ export default {
       image: 'commercial',
       title: 'Commercial Pressure Washing <br/> for Orlando Businesses',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>Give Your Property the Clean, Professional Look It Deserves</span> <br/> JZ Pressure Pros helps businesses across Orlando stand out with reliable and effective commercial pressure washing services. From high-traffic locations like I-Drive to hotels, restaurants, retail spaces, and office buildings, we understand how important a clean exterior is to your brand image. Our experienced team removes grease, grime, and environmental buildup using the right tools for every job. We work quickly, minimize disruptions, and leave your space looking spotless so you can welcome customers with confidence.",
+        "<span class='text-[16px] font-medium leading-[20px] md:leading-[25px]'>Give Your Property the Clean, Professional Look It Deserves</span> <br/> JZ Pressure Pros helps businesses across Orlando stand out with reliable and effective commercial pressure washing services. From high-traffic locations like I-Drive to hotels, restaurants, retail spaces, and office buildings, we understand how important a clean exterior is to your brand image. Our experienced team removes grease, grime, and environmental buildup using the right tools for every job. We work quickly, minimize disruptions, and leave your space looking spotless so you can welcome customers with confidence.",
       list: [
         'High Drive Businesses ',
         'Hotels & Restaurants',
@@ -340,7 +340,7 @@ export default {
       image: 'carwash',
       title: 'Mobile Car Wash <br/> Services in Orlando',
       description:
-        "<span class='text-[13px] md:text-[16px] font-medium leading-[20px] md:leading-[25px]'>We Bring Professional Detailing Right to Your Door</span> <br/> At JZ Pressure Pros, we make car care simple and convenient with our mobile car wash services. Our team travels directly to you, whether at your home, business, or commercial site. We clean both personal and commercial vehicles, including family cars, company trucks, and fleet vans. Choose from four service levels—from a quick exterior wash to deep restoration and interior detailing. No matter which option you select, we’re committed to delivering spotless results and a seamless experience that saves you time and keeps your vehicle looking its best.",
+        "<span class='text-[16px] font-medium leading-[20px] md:leading-[25px]'>We Bring Professional Detailing Right to Your Door</span> <br/> At JZ Pressure Pros, we make car care simple and convenient with our mobile car wash services. Our team travels directly to you, whether at your home, business, or commercial site. We clean both personal and commercial vehicles, including family cars, company trucks, and fleet vans. Choose from four service levels—from a quick exterior wash to deep restoration and interior detailing. No matter which option you select, we’re committed to delivering spotless results and a seamless experience that saves you time and keeps your vehicle looking its best.",
       list: [
         'Basic: Exterior wash + tire cleaning',
         'Complete: Exterior + interior detailing, dashboard shine, full vacuum',
@@ -401,7 +401,7 @@ export default {
     },
     stand: {
       title:
-        ' JZ PROS<br/> <span class="text-main text-[24px] md:text-[48px] font-semibold"> What We Stand For</span>',
+        ' JZ PROS<br/> <span class="text-main text-[28px] md:text-[48px] font-semibold"> What We Stand For</span>',
       list: [
         {
           letter: 'J',
@@ -480,7 +480,7 @@ export default {
         href: '/',
       },
       {
-        label: 'Services',
+        label: 'Services <span class="text-[16px] ml-[1px]">▾</span>',
         href: '#',
       },
       {
@@ -494,6 +494,20 @@ export default {
       {
         label: 'Contact Us',
         href: '/contact#info',
+      },
+    ],
+    types: [
+      {
+        label: 'Residential',
+        href: 'residential',
+      },
+      {
+        label: 'Commercial',
+        href: 'commercial',
+      },
+      {
+        label: 'Car Wash',
+        href: 'car-wash',
       },
     ],
   },
