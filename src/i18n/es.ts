@@ -42,7 +42,7 @@ export default {
   main: {
     hero: {
       title:
-        'Expertos en <span class="font-black">lavado a presión en Orlando</span> <span class="font-bold">con resultados garantizados o ¡es gratis!</span>',
+        'Expertos en <span class="font-black md:font-semibold">lavado a presión en Orlando</span> <span class="font-bold md:font-semibold">con resultados garantizados o ¡es gratis!</span>',
       button1: 'Llama ahora',
       button2: 'Cotización gratuita ahora',
       lists: [

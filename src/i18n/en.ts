@@ -42,7 +42,7 @@ export default {
   main: {
     hero: {
       title:
-        'Orlando <span class="font-black">Pressure Washing Experts</span> <span class="font-bold">with Guaranteed Results or It’s Free</span>',
+        'Orlando <span class="font-black md:font-semibold">Pressure Washing Experts</span> <span class="font-bold md:font-semibold  ">with Guaranteed Results or It’s Free</span>',
       button1: 'Call now',
       button2: 'Get Your Free Quote Now',
       lists: [
