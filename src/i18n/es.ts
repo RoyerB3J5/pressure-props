@@ -42,7 +42,7 @@ export default {
   main: {
     hero: {
       title:
-        'Expertos en lavado a presión en Orlando con resultados garantizados o ¡es gratis!',
+        'Expertos en <span class="font-black">lavado a presión en Orlando</span> <span class="font-bold">con resultados garantizados o ¡es gratis!</span>',
       button1: 'Llama ahora',
       button2: 'Cotización gratuita ahora',
       lists: [
@@ -455,6 +455,7 @@ export default {
     text: 'Formas de Contactarnos',
     description: 'Contáctanos hoy y un asesor experto te ayudará',
     schedules: {
+      title2: 'Dirección',
       title: 'Atención',
       description: 'Lun-Sáb',
       text: 'Dom',

@@ -42,7 +42,7 @@ export default {
   main: {
     hero: {
       title:
-        'Orlando Pressure Washing Experts with Guaranteed Results or It’s Free',
+        'Orlando <span class="font-black">Pressure Washing Experts</span> <span class="font-bold">with Guaranteed Results or It’s Free</span>',
       button1: 'Call now',
       button2: 'Get Your Free Quote Now',
       lists: [
@@ -456,6 +456,7 @@ export default {
     text: 'Ways You Can Reach Out',
     description: 'Contact us today and an expert consultant will assist you',
     schedules: {
+      title2: 'Address',
       title: 'Atention',
       description: 'Mon-Sat',
       text: 'Sunday',
