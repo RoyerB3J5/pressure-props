@@ -1,0 +1,11 @@
+---
+type Translations = typeof import('../i18n/es').default;
+type CallContent = Translations['call'];
+interface Props {
+  content?: CallContent;
+}
+const { content } = Astro.props as Props;
+---
+<a href="https://link.jzpressurepros.com/widget/bookings/jzpressurepros-call" class="fixed bottom-5 left-[30%] md:left-[35%] z-[40] bg-main text-white text-[14px] md:text-[16px] font-semibold h-[41px] md:h-[49px] w-[162px] md:w-[173px] flex justify-center items-center hover:bg-secondary transition-all ease-in-out duration-300 rounded-full">
+  {content}
+</a>

@@ -39,6 +39,7 @@ export default {
     button: 'Get Estimate',
     phone: 'CALL US',
   },
+  call:"Schedule a Call",
   main: {
     hero: {
       title:

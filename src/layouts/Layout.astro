@@ -3,6 +3,7 @@
 import '../styles/global.css';
 import 'aos/dist/aos.css';
 
+import CallButton from '../components/CallButton.astro';
 // Imports async para componentes no críticos
 import Chatbot from '../components/Chatbot.astro';
 import Footer from '../components/Footer.astro';
@@ -86,6 +87,7 @@ const { lang, t } = Astro.props;
 			<slot />
 		</main>
 		<Chatbot />
+		<CallButton content={t?.call} />
 		<Footer content={t?.footer}/>
 		
 		<script>

@@ -39,6 +39,7 @@ export default {
     button: 'Cotización',
     phone: 'LLÁMANOS',
   },
+  call:"Programar una llamada",
   main: {
     hero: {
       title:
