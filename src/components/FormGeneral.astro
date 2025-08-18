@@ -1,25 +1,28 @@
 ---
-interface Props {
-  estilo: string;
-}
-const {estilo} = Astro.props as Props
+// Props si los usas
+const { estilo } = Astro.props;
 ---
-<iframe
-    src="https://link.jzpressurepros.com/widget/form/ykI4BbhApNCKAPVNm7UY"
+<div class="form-container" id="form-ykI4BbhApNCKAPVNm7UY-wrapper" style="min-height:120px;">
+  <div class="form-placeholder" style="display:flex;align-items:center;justify-content:center;">
+    <small>Cargando formulario…</small>
+  </div>
+
+  <iframe
+    id="inline-ykI4BbhApNCKAPVNm7UY"
+    data-src="https://link.jzpressurepros.com/widget/form/ykI4BbhApNCKAPVNm7UY"
     class={estilo}
-    id="inline-ykI4BbhApNCKAPVNm7UY" 
+    style="border:none;overflow:hidden;display:none;"
     data-layout="{'id':'INLINE'}"
     data-trigger-type="alwaysShow"
-    data-trigger-value=""
     data-activation-type="alwaysActivated"
-    data-activation-value=""
     data-deactivation-type="neverDeactivate"
-    data-deactivation-value=""
     data-form-name="Form General Website"
     data-height="936"
     data-layout-iframe-id="inline-ykI4BbhApNCKAPVNm7UY"
     data-form-id="ykI4BbhApNCKAPVNm7UY"
     title="Form General Website"
-  >
-</iframe>
-<script src="https://link.jzpressurepros.com/js/form_embed.js"></script>
+    scrolling="no"
+    loading="lazy"
+    sandbox="allow-forms allow-scripts allow-popups allow-same-origin"
+  ></iframe>
+</div>

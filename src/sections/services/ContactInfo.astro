@@ -15,6 +15,5 @@ const { formType, carouselImages } = Astro.props as Props;
   <CarouselServices images={carouselImages}/>
   {formType === 'residential' && <ResidentialForm />}
   {formType === 'commercial' && <CommercialForm/>}
-  {formType === 'carwash' && <CarwashForm />}
-
+  {formType === 'carwash' && <CarwashForm />} 
 </section>

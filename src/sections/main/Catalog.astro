@@ -1,6 +1,4 @@
 ---
-import Button from '../../components/Button.astro';
-
 type Translations = typeof import('../../i18n/es').default;
 type CatalogContent = Translations['main']['catalog'];
 interface Props {
@@ -22,26 +20,29 @@ const { content } = Astro.props as Props;
   <section id="catalogModal" class="hidden fixed bg-black/35 w-screen h-screen z-30 top-0 left-0 items-center">
     <div class="relative z-40 w-full h-auto flex justify-center items-center ">
       <div class="rounded-[15px] px-4 md:px-10  bg-white border-2 border-main w-[90%] md:w-[500px] lg:w-[700px] h-auto relative z-50 overflow-y-auto max-h-[calc(100vh-40px)]">
-        <img src="/equis-two.svg" alt="Cerrar imagen" class="absolute top-4 right-4 cursor-pointer w-4 h-4 z-[60]" id="closeCatalogModal">
-        <iframe
-          src="https://link.jzpressurepros.com/widget/form/fIwWcEJuSaPzsTvWOXVo"
-          style="width:100%;height:100%;border:none;border-radius:3px"
-          id="inline-fIwWcEJuSaPzsTvWOXVo" 
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="Pop Up Flyer (Falta agregar la url para descargar)"
-          data-height="undefined"
-          data-layout-iframe-id="inline-fIwWcEJuSaPzsTvWOXVo"
-          data-form-id="fIwWcEJuSaPzsTvWOXVo"
-          title="Pop Up Flyer (Falta agregar la url para descargar)"
-              >
-          </iframe>
-          <script src="https://link.jzpressurepros.com/js/form_embed.js"></script>
+        <img src="/equis-two.svg" alt="Cerrar imagen" class="absolute top-4 left-4 cursor-pointer w-4 h-4 z-[60]" id="closeCatalogModal">
+          <div class="form-container" id="form-fIwWcEJuSaPzsTvWOXVo-wrapper" style="min-height:120px;">
+            <div class="form-placeholder" style="display:flex;align-items:center;justify-content:center;">
+              <small>Cargando formulario…</small>
+            </div>
+
+            <iframe
+              id="inline-fIwWcEJuSaPzsTvWOXVo"
+              data-src="https://link.jzpressurepros.com/widget/form/fIwWcEJuSaPzsTvWOXVo"
+              style="width:100%;height:100%;border:none;border-radius:3px;display:none;"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-activation-type="alwaysActivated"
+              data-deactivation-type="neverDeactivate"
+              data-form-name="Pop Up Flyer (Falta agregar la url para descargar)"
+              data-layout-iframe-id="inline-fIwWcEJuSaPzsTvWOXVo"
+              data-form-id="fIwWcEJuSaPzsTvWOXVo"
+              title="Pop Up Flyer (Falta agregar la url para descargar)"
+              scrolling="no"
+              loading="lazy"
+              sandbox="allow-forms allow-scripts allow-popups allow-same-origin"
+            ></iframe>
+          </div>
       </div>
     </div>
   </section>

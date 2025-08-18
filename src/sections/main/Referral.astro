@@ -22,29 +22,31 @@ const { content } = Astro.props as Props;
   <div class="rounded-[15px] w-full lg:w-[550px] h-[193px] md:h-[316px] overflow-hidden">
     <img src="/main/patios.webp" alt="Patios Pressure Pros" width="3072" height="4096" style="display: block; width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
   </div>
-  <section id="referralModal" class="hidden fixed bg-black/35 w-screen h-screen z-30 top-0 left-0  items-center">
+  <section id="referralModal" class="hidden fixed inset-0 bg-black/35 w-full h-screen z-30 top-0 left-0 ">
     <div class="relative z-40 w-full h-auto flex justify-center items-center ">
-      <div class="rounded-[15px] px-4 md:px-10  bg-white border-2 border-main w-[90%] md:w-[500px] lg:w-[700px] h-auto relative z-50 overflow-y-auto max-h-[calc(100vh-40px)]">
-        <img src="/equis-two.svg" alt="Cerrar imagen" class="absolute top-4 right-4 cursor-pointer w-4 h-4 z-[60]" id="closeReferralModal">
-        <iframe
-          src="https://link.jzpressurepros.com/widget/form/wpIOXJ1C7xVydkSuLLmb"
-          style="width:100%;height:663px;border:none;border-radius:3px"
-          id="inline-wpIOXJ1C7xVydkSuLLmb" 
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="Form Referral Submission"
-          data-height="663"
-          data-layout-iframe-id="inline-wpIOXJ1C7xVydkSuLLmb"
-          data-form-id="wpIOXJ1C7xVydkSuLLmb"
-          title="Form Referral Submission"
-              >
-        </iframe>
-        <script src="https://link.jzpressurepros.com/js/form_embed.js"></script>
+      <div class="rounded-[15px] px-0 md:px-10  bg-white border-2 border-main w-[90%] md:w-[500px] lg:w-[700px] h-auto relative z-50 overflow-y-auto max-h-[calc(100vh-40px)] flex items-center justify-center">
+        <img src="/equis-two.svg" alt="Cerrar imagen" class="absolute top-4 left-4 cursor-pointer w-4 h-4 z-[60]" id="closeReferralModal">
+          <div class="form-container" id="form-wpIOXJ1C7xVydkSuLLmb-wrapper" style="min-height:120px;">
+            <div class="form-placeholder" style="display:flex;align-items:center;justify-content:center;">
+              <small>Cargando formulario…</small>
+            </div>
+            <iframe
+              id="inline-wpIOXJ1C7xVydkSuLLmb"
+              data-src="https://link.jzpressurepros.com/widget/form/wpIOXJ1C7xVydkSuLLmb"
+              class="w-full md:w-[400px] lg:w-[600px]"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-activation-type="alwaysActivated"
+              data-deactivation-type="neverDeactivate"
+              data-form-name="Form Referral Submission"
+              data-layout-iframe-id="inline-wpIOXJ1C7xVydkSuLLmb"
+              data-form-id="wpIOXJ1C7xVydkSuLLmb"
+              title="Form Referral Submission"
+              scrolling="no"
+              loading="lazy"
+              sandbox="allow-forms allow-scripts allow-popups allow-same-origin"
+            ></iframe>
+          </div>
       </div>
     </div>
   </section>
@@ -99,7 +101,7 @@ const { content } = Astro.props as Props;
     }
     
     if (openButton && closeButton && modal) {
-      // Abrir modal
+      // Abrir modal: mostrar y cargar iframe (si corresponde)
       openButton.addEventListener('click', function() {
         modal.classList.remove('hidden');
         modal.classList.add('flex');
