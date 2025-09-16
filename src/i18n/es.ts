@@ -268,9 +268,10 @@ export default {
     },
   },
   'hidden-risk': {
-    title:
-      'Lo invisible que crece en tu hogar… podría estar afectando la salud de tu familia sin que lo sepas.',
+    title:"Riesgo Oculto en el Hogar",
     section1: {
+      title:
+      'Lo invisible que crece en tu hogar… podría estar afectando la salud de tu familia sin que lo sepas.',
       description:
         "<span class='font-bold'>Respira tranquilo, protege lo que más quieres.</span> <br/> No son solo manchas o verdín: es humedad persistente, esporas de moho, algas y bacterias que se acumulan en techos, paredes, terrazas y en cada rincón donde el agua se estanca o entra la humedad.",
     },

@@ -25,6 +25,7 @@ const modalFormIds = ['U3GCDX5oLDEg29eDySIx', 'O8JsAVTeCMxdVMWSCloh'];
     </div>
   </section>
   <section class="flex flex-col justify-center items-center gap-6 max-w-[1140px] px-4 lg:px-0 py-[60px]">
+    <p class="text-[20px] md:text-[28px] leading-[20px] md:leading-[28px] text-center font-bold max-w-[780px]" >{t['hidden-risk'].section1.title}</p>
     <p set:html={t['hidden-risk'].section1.description} class="text-[16px] md:text-[18px] leading-[20px] md:leading-[22px]"></p>
     <div class="flex justify-center items-start flex-col gap-4 w-full">
       <p class="text-[16px] md:text-[18px] leading-[20px] md:leading-[22px]">{t['hidden-risk'].section2.text}</p>
@@ -59,23 +60,29 @@ const modalFormIds = ['U3GCDX5oLDEg29eDySIx', 'O8JsAVTeCMxdVMWSCloh'];
         ))}
       </ul>
       <p class="text-[16px] md:text-[18px] leading-[20px] md:leading-[22px]">{t['hidden-risk'].section4.description2}</p>
-      <div class="flex flex-col md:flex-row justify-center items-center gap-6 w-full my-5">
-        {t['hidden-risk'].section4.buttons.map((item, idx) => (
-          idx === 2 ? (
-            <a href={`/${lang}/contact#info`} class="bg-main w-full md:w-auto uppercase inline-block  py-3 px-6  rounded-[10px] text-white transition-all duration-300 ease-in-out hover:-translate-y-1 cursor-pointer text-[18px] font-semibold  text-center">
-              {item}
-            </a>
-          ) : (
+      <div class="w-full my-5">
+        <!-- Row for buttons 0 and 1 -->
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6 w-full">
+          {t['hidden-risk'].section4.buttons.slice(0,2).map((item, idx) => (
             <button
-              class={`${idx === 1 ? 'bg-secondary ' : 'bg-main'} w-full md:w-auto uppercase inline-block  py-3 px-6  rounded-[10px] text-white transition-all duration-300 ease-in-out hover:-translate-y-1 cursor-pointer text-[18px] font-semibold  text-center`}
+              class={`${idx === 1 ? 'bg-secondary ' : 'bg-main'} w-full md:w-auto uppercase inline-block py-3 px-6 rounded-[10px] text-white transition-all duration-300 ease-in-out hover:-translate-y-1 cursor-pointer text-[18px] font-semibold text-center`}
               data-open-modal
               data-modal-target={`referralModal-${idx}`}
               data-form-id={modalFormIds[idx] || ''}
             >
               {item}
             </button>
-          )
-        ))}
+          ))}
+        </div>
+
+        <!-- Centered button 2 below -->
+        <div class="w-full flex justify-center mt-6">
+          {t['hidden-risk'].section4.buttons[2] ? (
+            <a href={`/${lang}/contact#info`} class="bg-main inline-block py-3 px-6 rounded-[10px] text-white transition-all duration-300 ease-in-out hover:-translate-y-1 cursor-pointer text-[18px] font-semibold text-center w-full md:w-auto">
+              {t['hidden-risk'].section4.buttons[2]}
+            </a>
+          ) : null}
+        </div>
       </div>
       <p class="text-[16px] md:text-[18px] leading-[20px] md:leading-[22px]" set:html={t['hidden-risk'].section4.description3}></p>
     </div>

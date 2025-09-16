@@ -268,8 +268,9 @@ export default {
   },
   'hidden-risk': {
     title:
-      'The invisible elements growing in your home… may be affecting your family’s health without you even knowing',
+      "Hidden Home Risk",
     section1: {
+      title:'The invisible elements growing in your home… may be affecting your family’s health without you even knowing',
       description:
         "<span class='font-bold'>Breathe easy. Protect what matters most.</span> <br/> It’s not just stains, mildew, grime. It’s persistent moisture, unseen spores of mold, algae, and bacteria accumulating on roofs, walls, terraces, and every corner where water lingers or humidity seeps in.",
     },
