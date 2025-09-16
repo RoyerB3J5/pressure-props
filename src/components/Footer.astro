@@ -82,7 +82,7 @@ const lang = match ? match[1] : 'en';
               {isServices && (
                 <div class="services-dropdown hidden flex-col items-end justify-center gap-2 bg-secondary mt-2 rounded-md shadow-lg overflow-hidden transition-all duration-300 ease-in-out">
                   {content?.types.map(subItem => (
-                    <a href={`/${lang}/services/${subItem.href}`} class={`w-full text-center lg:text-right text-[14px] md:text-[15px] leading-[20px] uppercase hover:font-bold transition-all duration-300 ease-in-out text-white py-3 px-10 md:px-4 hover:bg-main`} set:html={subItem.label}></a>
+                    <a href={subItem.href === 'hidden-risk' ? `/${lang}/hidden-risk` : `/${lang}/services/${subItem.href}`} class={`w-full text-center lg:text-right text-[14px] md:text-[15px] leading-[20px] uppercase hover:font-bold transition-all duration-300 ease-in-out text-white py-3 px-10 md:px-4 hover:bg-main`} set:html={subItem.label}></a>
                   ))}
                 </div>
               )}

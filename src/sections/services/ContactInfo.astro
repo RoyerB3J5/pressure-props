@@ -1,6 +1,5 @@
 ---
 import CarouselServices from '../../components/CarouselServices.astro';
-import CarwashForm from '../../components/CarwashForm.astro';
 import CommercialForm from '../../components/CommercialForm.astro';
 import ResidentialForm from '../../components/ResidentialForm.astro';
 
@@ -15,5 +14,4 @@ const { formType, carouselImages } = Astro.props as Props;
   <CarouselServices images={carouselImages}/>
   {formType === 'residential' && <ResidentialForm />}
   {formType === 'commercial' && <CommercialForm/>}
-  {formType === 'carwash' && <CarwashForm />} 
 </section>

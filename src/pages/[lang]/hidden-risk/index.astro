@@ -1,0 +1,220 @@
+---
+import Button from '../../../components/Button.astro';
+import en from '../../../i18n/en';
+import es from '../../../i18n/es';
+import Layout from '../../../layouts/Layout.astro';
+import Project from '../../../sections/main/Project.astro';
+import type { Language } from '../../../types/language.type';
+export function getStaticPaths() {
+  return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+}
+
+export const defaultRedirect = '/en';
+
+const lang = Astro.params.lang as Language;
+const translations = { es, en };
+const t = translations[lang];
+const modalFormIds = ['U3GCDX5oLDEg29eDySIx', 'O8JsAVTeCMxdVMWSCloh'];
+---
+<Layout lang={lang} t={t}>
+  <section class="py-[150px] md:pt-[371px] md:pb-[250px] lg:py-0 3xl:pt-[371px] 3xl:pb-[250px] h-auto lg:h-[95vh] 3xl:h-auto flex flex-col justify-center items-center w-full relative overflow-hidden">
+    <img src={`/commercial.webp`} alt="Fondos de Contacto" width="3072" height="4096" class="absolute inset-0 w-full h-full object-cover -z-20" loading="lazy" decoding="async">
+    <div class="flex flex-col justify-center items-center gap-2 md:gap-8 translate-y-[10%] lg:translate-y-[30%] 3xl:translate-y-0 max-w-[1140px] px-4" data-aos-offset="300" data-aos="flip-down">
+      <h1 class="text-[32px] md:text-[48px] font-semibold leading-[40px] md:leading-[52px] text-center text-white" set:html={t['hidden-risk'].title} ></h1>
+      <img src="/line.png" alt="Flecha izquierda" width="1286" height="600"  class="w-[100px] md:w-[200px] h-auto ">
+    </div>
+  </section>
+  <section class="flex flex-col justify-center items-center gap-6 max-w-[1140px] px-4 lg:px-0 py-[60px]">
+    <p set:html={t['hidden-risk'].section1.description} class="text-[16px] md:text-[18px] leading-[20px] md:leading-[22px]"></p>
+    <div class="flex justify-center items-start flex-col gap-4 w-full">
+      <p class="text-[16px] md:text-[18px] leading-[20px] md:leading-[22px]">{t['hidden-risk'].section2.text}</p>
+      <ul class="ml-6">
+        {t['hidden-risk'].section2.items.map((item) => (
+          <li class="list-disc list-inside text-[16px] md:text-[18px] leading-[20px] md:leading-[22px] mb-2">{item}</li>
+        ))}
+      </ul>
+    </div>
+    <div class="flex justify-center items-start flex-col gap-4 w-full">
+      <p set:html={t['hidden-risk'].section3.description} class="text-[16px] md:text-[18px] leading-[20px] md:leading-[22px]"></p>
+      <p class="text-[16px] md:text-[18px] leading-[20px] md:leading-[22px] font-bold">{t['hidden-risk'].section3.text}</p>
+      <ul class="ml-6 ">
+        {t['hidden-risk'].section3.items.map((item) => (
+          <li class="list-disc list-inside text-[16px] md:text-[18px] leading-[20px] md:leading-[22px] mb-5">
+            <a href={item.href} class="text-[16px] md:text-[18px] leading-[20px] md:leading-[22px] font-semibold text-main hover:text-black mb-2">{item.title}</a>
+            <ul class="ml-6">
+              {item.list.map((subitem) => (
+                <li class="list-disc list-inside text-[16px] md:text-[18px] leading-[20px] md:leading-[22px] mb-2" set:html={subitem}></li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+      <p class="text-[16px] md:text-[18px] leading-[20px] md:leading-[22px]">{t['hidden-risk'].section3.foot}</p>
+    </div>
+    <div class="flex flex-col justify-center items-start gap-4">
+      <p set:html={t['hidden-risk'].section4.description} class="text-[16px] md:text-[18px] leading-[20px] md:leading-[22px]"></p>
+      <ul>
+        {t['hidden-risk'].section4.items.map((item) => (
+          <li class="list-disc list-inside text-[16px] md:text-[18px] leading-[20px] md:leading-[22px] mb-2" set:html={item}></li>
+        ))}
+      </ul>
+      <p class="text-[16px] md:text-[18px] leading-[20px] md:leading-[22px]">{t['hidden-risk'].section4.description2}</p>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-6 w-full my-5">
+        {t['hidden-risk'].section4.buttons.map((item, idx) => (
+          idx === 2 ? (
+            <a href={`/${lang}/contact#info`} class="bg-main w-full md:w-auto uppercase inline-block  py-3 px-6  rounded-[10px] text-white transition-all duration-300 ease-in-out hover:-translate-y-1 cursor-pointer text-[18px] font-semibold  text-center">
+              {item}
+            </a>
+          ) : (
+            <button
+              class={`${idx === 1 ? 'bg-secondary ' : 'bg-main'} w-full md:w-auto uppercase inline-block  py-3 px-6  rounded-[10px] text-white transition-all duration-300 ease-in-out hover:-translate-y-1 cursor-pointer text-[18px] font-semibold  text-center`}
+              data-open-modal
+              data-modal-target={`referralModal-${idx}`}
+              data-form-id={modalFormIds[idx] || ''}
+            >
+              {item}
+            </button>
+          )
+        ))}
+      </div>
+      <p class="text-[16px] md:text-[18px] leading-[20px] md:leading-[22px]" set:html={t['hidden-risk'].section4.description3}></p>
+    </div>
+  </section>
+  <Project content={t['hidden-risk'].project}/>
+</Layout>
+
+<!-- Modals for buttons -->
+{modalFormIds.map((formId, idx) => (
+  <section id={`referralModal-${idx}`} class="hidden fixed inset-0 bg-black/35 w-full h-screen z-40 top-0 left-0">
+    <div class="relative z-50 w-full h-auto flex justify-center items-center">
+      <div class="rounded-[15px] px-0 md:px-10 bg-white border-2 border-main w-[90%] md:w-[500px] lg:w-[700px] h-auto relative z-50 overflow-y-auto max-h-[calc(100vh-40px)] flex items-center justify-center">
+        <img src="/equis-two.svg" alt="Cerrar imagen" class="absolute top-4 left-4 cursor-pointer w-4 h-4 z-[60] close-modal" data-modal-close/>
+          <div class="form-container w-full" id={`form-${formId}-wrapper`} style="min-height:120px;">
+            <div class="form-placeholder" style="display:flex;align-items:center;justify-content:center;">
+              <small>Cargando formulario…</small>
+            </div>
+            <iframe
+              id={`inline-${formId}`}
+              data-src={`https://link.jzpressurepros.com/widget/form/${formId}`}
+              style="width:100%;height:100%;border:none;border-radius:3px"
+              class="w-full md:w-[400px] lg:w-[600px]"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name={formId === 'U3GCDX5oLDEg29eDySIx' ? 'Pop Up Download our free outdoor wellness checklist' : (formId === 'O8JsAVTeCMxdVMWSCloh' ? 'Pop Up Discover the 10 invisible risk' : 'Form Referral Submission')}
+              data-height={formId === 'U3GCDX5oLDEg29eDySIx' ? '531' : (formId === 'O8JsAVTeCMxdVMWSCloh' ? '716' : '')}
+              data-layout-iframe-id={`inline-${formId}`}
+              data-form-id={formId}
+              title={formId === 'U3GCDX5oLDEg29eDySIx' ? 'Pop Up Download our free outdoor wellness checklist' : (formId === 'O8JsAVTeCMxdVMWSCloh' ? 'Pop Up Discover the 10 invisible risk' : 'Form Referral Submission')}
+              scrolling="no"
+              loading="lazy"
+              sandbox="allow-forms allow-scripts allow-popups allow-same-origin"
+            ></iframe>
+          </div>
+      </div>
+    </div>
+  </section>
+))}
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    const openButtons = document.querySelectorAll('[data-open-modal]');
+    // Debugging aid: log how many modal-open buttons were found
+    if (typeof console !== 'undefined' && openButtons.length === 0) {
+      console.debug('[hidden-risk] No modal open buttons found in DOM.');
+    } else if (typeof console !== 'undefined') {
+      console.debug(`[hidden-risk] Found ${openButtons.length} modal open button(s).`);
+    }
+    const closeButtons = document.querySelectorAll('[data-modal-close]');
+
+    function disableScroll() {
+      document.body.style.overflow = 'hidden';
+    }
+    function enableScroll() {
+      document.body.style.overflow = '';
+    }
+
+    let embedScriptAppended = false;
+
+    function appendEmbedScriptOnce() {
+      if (embedScriptAppended) return;
+      embedScriptAppended = true;
+      const s = document.createElement('script');
+      s.src = 'https://link.jzpressurepros.com/js/form_embed.js';
+      s.async = true;
+      document.body.appendChild(s);
+    }
+
+    function openModal(modalId, formId) {
+      const modal = document.getElementById(modalId);
+      if (!modal) return;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      disableScroll();
+
+      // Lazy load iframe src once
+      const iframe = modal.querySelector('iframe');
+      if (iframe && !iframe.src) {
+        const dataSrc = iframe.getAttribute('data-src');
+        if (dataSrc) {
+          iframe.src = dataSrc;
+          // ensure provider embed script is loaded so it can initialize frames
+          appendEmbedScriptOnce();
+          iframe.addEventListener('load', () => {
+            const placeholder = modal.querySelector('.form-placeholder');
+            if (placeholder) placeholder.style.display = 'none';
+          });
+          // fallback: hide placeholder after 10s even if iframe load doesn't fire
+          setTimeout(() => {
+            const placeholder = modal.querySelector('.form-placeholder');
+            if (placeholder) placeholder.style.display = 'none';
+          }, 10000);
+        }
+      }
+    }
+
+    function closeModalElement(modal) {
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      enableScroll();
+    }
+
+    openButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const target = btn.getAttribute('data-modal-target');
+        const formId = btn.getAttribute('data-form-id');
+        if (!target) return;
+        openModal(target, formId);
+      });
+    });
+
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const modal = btn.closest('section');
+        closeModalElement(modal);
+      });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!target) return;
+      const modalSection = target.closest('section[id^="referralModal-"]');
+      if (!modalSection) return;
+      // If clicked on backdrop (section) then close
+      if (target === modalSection) closeModalElement(modalSection);
+    });
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('section[id^="referralModal-"]').forEach(modal => closeModalElement(modal));
+      }
+    });
+  });
+</script>

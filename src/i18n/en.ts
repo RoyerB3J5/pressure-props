@@ -32,14 +32,14 @@ export default {
         href: 'commercial',
       },
       {
-        label: 'Car Wash',
-        href: 'car-wash',
+        label: 'Hidden Home Risk',
+        href: 'hidden-risk',
       },
     ],
     button: 'Get Estimate',
     phone: 'CALL US',
   },
-  call:"Schedule a Call",
+  call: 'Schedule a Call',
   main: {
     hero: {
       title:
@@ -82,7 +82,7 @@ export default {
       description: 'Our Pressure Washing Services in Orlando',
       title:
         'Residential and Commercial Exterior Cleaning with Guaranteed Results',
-      text: 'We offer a full range of pressure washing solutions to keep your property clean, safe, and beautiful all year round. From driveways to dumpsters, our expert team handles every surface with care and precision. Whether you need a one-time deep clean or a maintenance plan, we’ve got Orlando and nearby areas covered.',
+      text: 'We offer a full range of pressure washing solutions to keep your property clean, safe, and beautiful all year round. Our expert team handles every surface with care and precision. Whether you need a one-time deep clean or a maintenance plan, we’ve got Orlando and nearby areas covered.',
       items: [
         {
           title: 'House Washing',
@@ -105,10 +105,6 @@ export default {
           image: 'drainage',
         },
         {
-          title: 'Car Wash',
-          image: 'turn',
-        },
-        {
           title: 'Paver Cleaning',
           image: 'pool',
         },
@@ -129,8 +125,8 @@ export default {
           image: 'com-clean',
         },
         {
-          title: 'Commercial Carwash',
-          image: 'com-car',
+          title: 'Paver Sealing ',
+          image: 'paver',
         },
       ],
     },
@@ -184,7 +180,7 @@ export default {
       rendering: {
         title:
           "Cleaning <br/> <span class='text-[28px] lg:text-[48px] font-semibold leading-[26px] lg:leading-[58px] text-main'>with Real Results</span>",
-        text: 'Restore your property’s beauty and value with expert pressure washing services. We clean driveways, fences, siding, gutters, and more. Our team uses safe methods, eco-friendly practices, and powerful equipment to deliver spotless results every time.',
+        text: 'Restore your property’s beauty and value with expert pressure washing services. We clean fences, siding, gutters, and more. Our team uses safe methods, eco-friendly practices, and powerful equipment to deliver spotless results every time.',
         button: 'GET AN ESTIMATE',
       },
       design: {
@@ -207,11 +203,6 @@ export default {
           image: 'semipremium',
           href: 'commercial',
         },
-        {
-          title: 'Car Wash',
-          image: 'lavado',
-          href: 'car-wash',
-        },
       ],
     },
     numbers: {
@@ -233,8 +224,8 @@ export default {
           title: 'Client Hours Saved',
         },
       ],
-      text:"EXCELLENT",
-      description:"Base on <span class='font-semibold'>79 reviews</span>"
+      text: 'EXCELLENT',
+      description: "Base on <span class='font-semibold'>79 reviews</span>",
     },
     completed: {
       title:
@@ -243,26 +234,27 @@ export default {
       images: [
         '/main/carousel-4.png',
         '/main/carousel-5.webp',
-        '/main/carousel-6.png',
+        '/main/retainer.webp',
         '/main/sidewalks.webp',
         '/main/tacho.webp',
         '/main/experience1.webp',
         '/main/pool.webp',
         '/main/com-clean.webp',
-        '/main/com-car.webp',
-        '/main/turn.webp',
+        '/main/patios.webp',
+        '/main/paver.webp',
         '/main/wakways.webp',
-        '/lavado.webp',
+        '/main/pergolas.webp',
       ],
       name: 'jzpressurepros',
-      description: 'Professional house washing, roof cleaning, driveway and patio restoration, and mobile car detailing. We clean, protect, and refresh your space.',
-      buttonig:"Follow on Instagram"
+      description:
+        'Professional house washing, roof cleaning, driveway and patio restoration, and mobile car detailing. We clean, protect, and refresh your space.',
+      buttonig: 'Follow on Instagram',
     },
     catalog: {
       title:
-        "Download Our Flyer to Unlock <br/> <span class='font-semibold text-[28px] md:text-[48px] leading-[30px] md:leading-[58px] text-main'>a Special Discount</span>",
+        "Download Our Flyer",
       description:
-        'See all the services and options we offer in one place. Download our flyer and present it during your next service visit to receive an exclusive discount.',
+        'See all the services and options we offer in one place. Download our flyer',
       button: 'DOWNload now',
     },
     project: {
@@ -271,7 +263,90 @@ export default {
         'At Jz Pressure Pros, we don’t just wash. We restore and protect the surfaces that matter most. From homes to businesses, our expert team is ready to deliver spotless results with guaranteed satisfaction. ',
       text: 'Let’s make your property stand out again.',
       button: 'Get a Free Estimate',
-      image:"bg-main.png"
+      image: 'bg-main.png',
+    },
+  },
+  'hidden-risk': {
+    title:
+      'The invisible elements growing in your home… may be affecting your family’s health without you even knowing',
+    section1: {
+      description:
+        "<span class='font-bold'>Breathe easy. Protect what matters most.</span> <br/> It’s not just stains, mildew, grime. It’s persistent moisture, unseen spores of mold, algae, and bacteria accumulating on roofs, walls, terraces, and every corner where water lingers or humidity seeps in.",
+    },
+    section2: {
+      text: 'Every day, without realizing it:',
+      items: [
+        'Kids suffer from allergies, sneezing, or nighttime coughing.',
+        'Pets experience skin irritations or persistent dryness.',
+        'Older adults or immune-compromised individuals face a higher risk of respiratory infections.',
+      ],
+    },
+    section3: {
+      description:
+        "<span class='font-bold'>Mold growth isn’t just unsightly, it’s a health risk. In Florida’s warm and humid climate, protecting your family and property means acting fast.</span>  <br/> <br/> Florida’s warm and humid climate sets the perfect stage for these microorganisms to thrive. Health authorities like the <a href='https://www.ncbi.nlm.nih.gov/books/NBK143940/' class='text-main underline'>CDC</a> and the Florida Department of Health warn that prolonged mold exposure can lead to nasal congestion, eye irritation, coughing, and worsened asthma, especially in children, the elderly, or those with weakened immune systems.",
+      text: 'Common Mold & Bacteria — What They Can Do to Your Health',
+      items: [
+        {
+          title: 'Stachybotrys (“black mold”)',
+          href: 'https://my.clevelandclinic.org/health/diseases/24862-black-mold',
+          list: [
+            'Causes nasal, throat, and eye irritation',
+            'May worsen asthma symptoms',
+            'Linked to headaches and fatigue in sensitive individuals',
+          ],
+        },
+        {
+          title: 'Aspergillus (e.g., A. fumigatus)',
+          href: 'https://www.cpsc.gov/s3fs-public/CPSCStatementmoldmycotoxinhealtheffectsJuly2015.pdf',
+          list: [
+            'Can trigger allergic reactions like sneezing and wheezing',
+            "May lead to lung infections in people with weak immune systems <a href='https://enviroproz.com/blog/dangerous-molds-often-found-in-u-s-homes/?utm_source=chatgpt.com' class='text-main underline'>Mold Inspection Services+1</a>",
+          ],
+        },
+        {
+          title: 'Cladosporium / Penicillium',
+          href: 'https://health.uconn.edu/occupational-environmental/wp-content/uploads/sites/25/2015/12/mold_guide.pdf',
+          list: [
+            'Often triggers allergies: sneezing, nasal congestion, watery eyes',
+            "Can exacerbate asthma and cause fatigue <a href='https://enviroproz.com/blog/dangerous-molds-often-found-in-u-s-homes/?utm_source=chatgpt.com' class='text-main underline'>Mold Inspection Services+1</a>",
+            'Linked to headaches and fatigue in sensitive individuals',
+          ],
+        },
+        {
+          title: 'Bacterial biofilms & persistent moisture',
+          href: 'https://my.clevelandclinic.org/health/diseases/24862-black-mold',
+          list: [
+            'Can lead to skin or eye irritation if there is direct contact',
+            'Contribute to unpleasant odors and gradual damage to exterior surfaces',
+          ],
+        },
+      ],
+      foot: '(Note: Effects vary based on exposure level and individual sensitivity.)',
+    },
+    section4: {
+      description:
+        "<span class='font-bold'>Imagine a Home That Truly Supports Well-Being:</span> <br/> <br/>Children playing safely outdoors; a gentle breeze of clean air flowing through your home; pets relaxing without scratching; parents breathing with confidence. <br/> <br/>Surfaces free from black stains or algae, and a home that doesn’t just look clean—but truly supports well-being.<br/> <br/>Protecting your home can start today:<br/>",
+      items: [
+        'Want to identify hidden trouble spots where mold might be lurking?',
+        'Looking for a practical, free guide to reduce allergy triggers from your home’s exterior?',
+      ],
+      description2:
+        'Download our Free Outdoor Wellness Checklist — uncover the 10 unseen risks many homes in Orlando face, and learn simple steps you can take right now to address them.(Prefer a human touch? Book a Free Exterior Wellness Inspection with one of our experts—no strings attached.)',
+      buttons: [
+        'Free wellness checklist',
+        'DISCOVER 10 INVISIBLE RISKS',
+        'Contact us',
+      ],
+      description3:
+        "Professional exterior cleaning—whether soft wash or pressure wash—is not just about looks. It's about prevention and preserving wellbeing.<br/>When your home is clean on the surface, your family can breathe easier inside.<br/> <br/>If your house could speak, it might ask: <br/> <br/><span class='text-center'>“How much longer will you let the invisible harm those you love most?”</span>",
+    },
+    project: {
+      title: 'Mold Is Common in Orlando',
+      description:
+        'Humidity leads to mold, algae, and bacteria on driveways and patios. These release spores and allergens that may affect your health.',
+      text: 'Breathe easier. Live cleaner.',
+      button: 'Get a Free Estimate',
+      image: 'bg-commercial.webp',
     },
   },
   services: {
@@ -289,10 +364,9 @@ export default {
         'Commercial Cleaning',
         'Driveway Cleaning',
         'Gutter Cleaning',
-        'Car Wash',
         'Soft Wash Roof Cleaning',
         'Trash Bin Wash',
-        'Commercial Carwash',
+        'Paver Sealing'
       ],
       project: {
         title: 'Focus on What Matters',
@@ -300,14 +374,14 @@ export default {
           'Protect your family by keeping your home clean and safe. JZ Pressure Pros handles the washing so you can enjoy peace of mind.',
         text: 'Your home deserves more than clean—it deserves care.',
         button: 'Get a Free Estimate',
-        image:"bg-residential.webp"
+        image: 'bg-residential.webp',
       },
-      carousel:[
-        "/main/techo.webp",
-        "/main/patios.webp",
-        "/main/retainer.webp",
-        "/main/wakways.webp"
-      ]
+      carousel: [
+        '/main/techo.webp',
+        '/main/patios.webp',
+        '/main/retainer.webp',
+        '/main/wakways.webp',
+      ],
     },
     commercial: {
       image: 'commercial',
@@ -328,58 +402,32 @@ export default {
           'Humidity leads to mold, algae, and bacteria on driveways and patios. These release spores and allergens that may affect your health.',
         text: 'Breathe easier. Live cleaner.',
         button: 'Get a Free Estimate',
-        image:"bg-commercial.webp"
+        image: 'bg-commercial.webp',
       },
-      carousel:[
-        "/main/firepits.webp",
-        "/main/com-clean.webp",
-        "/main/pool.webp",
-        "/main/pergolas.webp"
-      ]
-    },
-    'car-wash': {
-      image: 'carwash',
-      title: 'Mobile Car Wash <br/> Services in Orlando',
-      description:
-        "<span class='text-[16px] font-medium leading-[20px] md:leading-[25px]'>We Bring Professional Detailing Right to Your Door</span> <br/> At JZ Pressure Pros, we make car care simple and convenient with our mobile car wash services. Our team travels directly to you, whether at your home, business, or commercial site. We clean both personal and commercial vehicles, including family cars, company trucks, and fleet vans. Choose from four service levels—from a quick exterior wash to deep restoration and interior detailing. No matter which option you select, we’re committed to delivering spotless results and a seamless experience that saves you time and keeps your vehicle looking its best.",
-      list: [
-        'Basic: Exterior wash + tire cleaning',
-        'Complete: Exterior + interior detailing, dashboard shine, full vacuum',
-        'Premium: Complete + exterior wax coating',
-        'Detailed Cleaning: Roof cleaning + custom specific needs',
+      carousel: [
+        '/main/firepits.webp',
+        '/main/com-clean.webp',
+        '/main/pool.webp',
+        '/main/pergolas.webp',
       ],
-      project: {
-        title: 'We Bring the Shine to You',
-        description:
-          ' Skip the lines and the wait. Our mobile car wash service comes directly to your home or business. Every detail is handled with care, using eco-friendly products that protect your vehicle and the environmen',
-        text: 'Your car deserves more than a rinse, it deserves attention.',
-        button: 'Get a Free Estimate',
-        image:"bg-car.webp"
-      },
-      carousel:[
-        "/lavado.webp",
-        "/main/com-car.webp",
-        "/main/turn.webp",
-        "/main/wakways.webp"
-      ]
     },
   },
   gallery: {
     title: 'Gallery',
     image: 'gallery',
-    items:[
-      "/lavado.webp",
-      "/classic.webp",
-      "/main/com-car.webp",
-      "/main/patios.webp",
-      "/main/pergolas.webp",
-      "/main/pool.webp",
-      "/main/turn.webp",
-      "/main/tacho.webp",
-      "/main/wakways.webp",
-      "/main/rendering.webp",
-      "/main/techo.webp",
-      "/main/experience2.webp"
+    items: [
+      '/main/paver.webp',
+      '/classic.webp',
+      '/main/com-clean.webp',
+      '/main/patios.webp',
+      '/main/pergolas.webp',
+      '/main/pool.webp',
+      '/main/paver2.webp',
+      '/main/tacho.webp',
+      '/main/wakways.webp',
+      '/main/rendering.webp',
+      '/main/techo.webp',
+      '/main/experience2.webp',
     ],
     project: {
       title: 'Clean Surfaces, Healthier Air',
@@ -387,14 +435,14 @@ export default {
         'We remove mold, mildew, and bacteria that affect the air your family breathes. Your home feels fresher with every wash.',
       text: 'Fresh air starts with clean surfaces.',
       button: 'Get a Free Estimate',
-      image:"bg-gallery.webp"
+      image: 'bg-gallery.webp',
     },
   },
   'about-us': {
     image: 'about',
     title: 'About Us',
     description:
-      'At Jz Pressure Pros, we specialize in high-quality pressure washing services for homes and businesses throughout Orlando and nearby areas. From restoring driveways to cleaning fences, siding, gutters, and more, we’re committed to transforming each property with professionalism, precision, and care.<br/> <br/> What sets us apart is not just the results we deliver, but how we deliver them — with integrity, transparency, and a focus on customer satisfaction. We believe that a clean property is not only beautiful but also valuable and safe.',
+      'At Jz Pressure Pros, we specialize in high-quality pressure washing services for homes and businesses throughout Orlando and nearby areas. From cleaning fences to siding, gutters, and more, we’re committed to transforming each property with professionalism, precision, and care.<br/> <br/> What sets us apart is not just the results we deliver, but how we deliver them with integrity, transparency, and a focus on customer satisfaction. We believe that cleaning property is not only beautiful but also valuable and safe.',
     team: {
       title: 'Our Team',
       description:
@@ -448,7 +496,7 @@ export default {
         'Pressure washing clears spores that cause itchy eyes, coughing, and nasal issues. A cleaner exterior means fewer symptoms.',
       text: 'Small changes bring real relief.',
       button: 'Get a Free Estimate',
-      image:"bg-about.webp"
+      image: 'bg-about.webp',
     },
   },
   contact: {
@@ -459,8 +507,7 @@ export default {
     schedules: {
       title2: 'Address',
       title: 'Atention',
-      description: 'Mon-Sat',
-      text: 'Sunday',
+      description: 'Mon-Sun',
     },
     project: {
       title: 'Help Your Family Breathe Better',
@@ -468,11 +515,11 @@ export default {
         'Mold increases asthma and lung stress. We eliminate it so your family breathes easier every day.',
       text: 'One wash can improve well-being.',
       button: 'Get a Free Estimate',
-      image:"bg-contact.webp"
+      image: 'bg-contact.webp',
     },
   },
   footer: {
-    text: 'At Jz Pressure Pros, we deliver high-quality pressure washing services that restore the beauty and value of your property. From driveways to siding, our mission is to keep Orlando homes and businesses spotless. Contact us today and let’s bring your property back to life.',
+    text: 'At Jz Pressure Pros, we deliver high-quality pressure washing services that restore the beauty and value of your property. O mission is to keep Orlando homes and businesses spotless. Contact us today and let’s bring your property back to life.',
     hours: 'SERVICE HOURS',
     call: 'CALL US',
     links_title: 'QUICK LINKS',

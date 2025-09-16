@@ -91,7 +91,7 @@ const lang = match ? match[1] : 'en';
                   <div class="dropdown-menu absolute top-full left-0 mt-0 w-[170px] flex-col items-center bg-white z-40 hidden group-hover:flex opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 ease-out -translate-x-[20%] shadow-lg">
                     {content.types.map(sub => (
                       <div class="text-[18px] font-semibold text-secondary py-2 hover:bg-main hover:text-white transition-colors duration-200 ease-in-out cursor-pointer px-6 w-full text-center">
-                        <a href={`/${lang}/services/${sub.href}`} class="block w-full h-full">{sub.label}</a>
+                          <a href={sub.href === 'hidden-risk' ? `/${lang}/hidden-risk` : `/${lang}/services/${sub.href}`} class="block w-full h-full">{sub.label}</a>
                       </div>
                     ))}
                   </div>
@@ -151,6 +151,9 @@ const lang = match ? match[1] : 'en';
     role="button"
     tabindex="0"
   >
+  <a href="/" aria-label="Ir a la página principal" title="Inicio - PressurePros" class="mb-5">
+    <img src="/logo-1.svg" alt="Logo de PressurePros - Servicio de lavado a presión " width="1164" height="457" class="cursor-pointer w-auto h-[50px]">
+  </a>
   <nav class="relative flex items-center flex-col justify-center w-full gap-0">
     {
       content?.nav.map((item, index)=>{
@@ -164,9 +167,9 @@ const lang = match ? match[1] : 'en';
               <span class={`absolute bottom-0 left-0 h-[2px] bg-main transition-all duration-300 ease-out ${isActive ? 'w-full' : 'w-0'}`} />
             </a>
             {isServices && (
-              <div class="flex-col justify-center items-center w-full bg-[#0366FF] divide-y divide-white hidden" id="sub-menu-services">
+              <div class="flex-col justify-center items-center w-full bg-[#0366FF] divide-y divide-white hidden absolute z-[10] top-0 translate-y-[60px]" id="sub-menu-services">
                 {content.types.map(sub => (
-                  <a href={`/${lang}/services/${sub.href}`} class="text-[18px] font-semibold text-white py-3 transition-colors duration-300 ease-in-out cursor-pointer px-6 w-full text-center">{sub.label}</a>
+                  <a href={sub.href === 'hidden-risk' ? `/${lang}/hidden-risk` : `/${lang}/services/${sub.href}`} class="text-[18px] font-semibold text-white py-3 transition-colors duration-300 ease-in-out cursor-pointer px-6 w-full text-center">{sub.label}</a>
                 ))}
               </div>
             )}
@@ -284,39 +287,49 @@ const lang = match ? match[1] : 'en';
   }
 
   function toggleSubMenu(event) {
-    if (isMobile()) {
-      const isSubMenuOpen = !subMenuServices.classList.contains('hidden');
-      
-      // Si el submenu está cerrado, prevenimos la navegación y lo abrimos
-      if (!isSubMenuOpen) {
-        event.preventDefault();
-        subMenuServices.classList.remove('hidden');
-        subMenuServices.classList.add('flex');
-      }
-      // Si el submenu está abierto, permitimos la navegación (no hacemos preventDefault)
-      // y cerramos el submenu después de un pequeño delay para permitir la navegación
-      else {
-        setTimeout(() => {
-          subMenuServices.classList.add('hidden');
-          subMenuServices.classList.remove('flex');
-        }, 100);
-      }
+    // Solo en móvil prestamos atención al toggle
+    if (!isMobile()) return;
+
+    // Seguridad: si no existe el subMenuServices, no hacemos nada
+    if (!subMenuServices) return;
+
+    const isSubMenuOpen = !subMenuServices.classList.contains('hidden');
+
+    // Si el submenu está cerrado, prevenimos la navegación y lo abrimos
+    if (!isSubMenuOpen) {
+      event.preventDefault();
+      subMenuServices.classList.remove('hidden');
+      subMenuServices.classList.add('flex');
+    }
+    // Si el submenu está abierto y se presiona de nuevo, cerramos el submenu
+    // y evitamos la navegación para que el click solo actúe como toggle
+    else {
+      event.preventDefault();
+      subMenuServices.classList.add('hidden');
+      subMenuServices.classList.remove('flex');
     }
   }
 
   openBtn.addEventListener('click', openMenu);
   closeBtn.addEventListener('click', closeMenu);
   
-  // Agregar event listener al enlace dentro del div services-1 (desktop)
-  const servicesLink = servicesDiv?.querySelector('a');
-  if (servicesLink) {
-    servicesLink.addEventListener('click', toggleSubMenu);
+  // Agregar event listener al div padre para que al pulsar el div (no solo el <a>) se active el toggle
+  if (servicesDiv) {
+    servicesDiv.addEventListener('click', (e) => {
+      // Solo actuamos en móvil
+      if (!isMobile()) return;
+      // Ignorar clicks que vayan dirigidos al propio sub-menu (navegación de items)
+      if (e.target.closest('#sub-menu-services')) return;
+      toggleSubMenu(e);
+    });
   }
 
-  // Agregar event listener al enlace dentro del div mobile-services-1 (móvil)
-  const mobileServicesLink = mobileServicesDiv?.querySelector('a');
-  if (mobileServicesLink) {
-    mobileServicesLink.addEventListener('click', toggleSubMenu);
+  if (mobileServicesDiv) {
+    mobileServicesDiv.addEventListener('click', (e) => {
+      if (!isMobile()) return;
+      if (e.target.closest('#sub-menu-services')) return;
+      toggleSubMenu(e);
+    });
   }
 
   // Asegurar estado inicial según tamaño

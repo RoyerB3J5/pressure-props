@@ -20,14 +20,14 @@ const lang = match ? match[1] : 'en';
           href={`/${lang}/services/${item.href}`} 
           id={`col${index + 1}`}
           class={`group flex flex-col justify-center lg:justify-start items-center relative overflow-hidden h-[127px] lg:h-auto py-0 lg:py-[92px] min-h-none lg:min-h-[489px] px-10 md:px-9 transition‑all duration‑300 cursor-pointer transition-all  ${
-            index < 2 ? 'w-full md:w-1/5' : 'w-full md:w-3/5'
-          } ${item.href === 'residential' ? 'rounded-t-[15px] lg:rounded-l-[15px] lg:rounded-t-none' : ''} ${item.href === 'car-wash' ? 'rounded-b-[15px] lg:rounded-r-[15px] lg:rounded-bl-none' : ''}`}
+            index < 1 ? 'w-full md:w-[30%]' : 'w-full md:w-[70%]'
+          } ${item.href === 'residential' ? 'rounded-t-[15px] lg:rounded-l-[15px] lg:rounded-t-none' : ''} ${item.href === 'commercial' ? 'rounded-b-[15px] lg:rounded-r-[15px] lg:rounded-bl-none' : ''}`}
         >
             <img src={`/${item.image}.webp`} alt="Fondos de Galeria" width="3072" height="4096" class="absolute inset-0 w-full h-full object-cover -z-20 " loading="lazy" decoding="async"/>
             <div class="absolute inset-0 service-bg -z-10"></div>
             <div class="h-auto md:h-[143px] w-full flex justify-center items-center"> 
               <h3 class={`text-[20px] md:text-[24px] lg:text-[40px] font-semibold leading-[30px] text-center text-white transition-opacity duration-300 ${
-                index < 2 ? 'md:opacity-0 md:group-hover:opacity-100' : ''
+                index < 1 ? 'md:opacity-0 md:group-hover:opacity-100' : ''
               }`}>
                 {item.title}
               </h3>
@@ -40,17 +40,16 @@ const lang = match ? match[1] : 'en';
 <script is:inline>
 (() => {
   const container = document.getElementById('hover‑container');
-  const [c1, c2, c3] = [
+  const [c1, c2] = [
     document.getElementById('col1'),
     document.getElementById('col2'),
-    document.getElementById('col3')
   ];
 
   // función que resetea al estado inicial
   const reset = () => {
-    c1.style.width = '20%';
-    c2.style.width = '20%';
-    c3.style.width = '60%';
+    c1.style.width = '30%';
+    c2.style.width = '70%';
+
   };
 
   // media query para md (≥768px)
@@ -61,36 +60,28 @@ const lang = match ? match[1] : 'en';
     // primero, quitamos posibles listeners previos
     c1.replaceWith(c1.cloneNode(true));
     c2.replaceWith(c2.cloneNode(true));
-    c3.replaceWith(c3.cloneNode(true));
+
 
     // reobtenemos los nodos después del replace
-    const [nc1, nc2, nc3] = [
+    const [nc1, nc2] = [
       document.getElementById('col1'),
-      document.getElementById('col2'),
-      document.getElementById('col3')
+      document.getElementById('col2')
     ];
 
     if (mql.matches) {
       // solo en md+ aplicamos hover
       nc1.addEventListener('mouseenter', () => {
-        nc1.style.width = '40%';
-        nc2.style.width = '20%';
-        nc3.style.width = '40%';
+        nc1.style.width = '50%';
+        nc2.style.width = '50%';
       });
       nc2.addEventListener('mouseenter', () => {
-        nc1.style.width = '20%';
-        nc2.style.width = '40%';
-        nc3.style.width = '40%';
+        nc1.style.width = '30%';
+        nc2.style.width = '70%';
       });
-      nc3.addEventListener('mouseenter', () => {
-        nc1.style.width = '20%';
-        nc2.style.width = '20%';
-        nc3.style.width = '60%';
-      });
+
       container.addEventListener('mouseleave', () => {
-        nc1.style.width = '20%';
-        nc2.style.width = '20%';
-        nc3.style.width = '60%';
+        nc1.style.width = '30%';
+        nc2.style.width = '70%';
       });
       // y reseteamos para asegurar estado inicial
       reset();
@@ -98,7 +89,6 @@ const lang = match ? match[1] : 'en';
       // en <md devolvemos todo a full width
       nc1.style.width = '100%';
       nc2.style.width = '100%';
-      nc3.style.width = '100%';
     }
   };
 
