@@ -128,6 +128,10 @@ export default {
           title: 'Sellado de adoquines',
           image: 'paver',
         },
+        {
+          title: 'Instalación de mantillo',
+          image: 'mulch',
+        }
       ],
     },
     information: {
@@ -268,7 +272,7 @@ export default {
     },
   },
   'hidden-risk': {
-    title:"Riesgo Oculto en el Hogar",
+    title:"Protege la Salud de Tu Familia",
     section1: {
       title:
       'Lo invisible que crece en tu hogar… podría estar afectando la salud de tu familia sin que lo sepas.',
@@ -302,7 +306,7 @@ export default {
           href: 'https://www.cpsc.gov/s3fs-public/CPSCStatementmoldmycotoxinhealtheffectsJuly2015.pdf',
           list: [
             'Reacciones alérgicas, dificultad para respirar',
-            "Infección pulmonar si el sistema inmunitario está comprometido. <a href='https://enviroproz.com/blog/dangerous-molds-often-found-in-u-s-homes/?utm_source=chatgpt.com' class='text-main underline'>Mold Inspection Services+1</a>",
+            "Infección pulmonar si el sistema inmunitario está comprometido.",
           ],
         },
         {
@@ -310,7 +314,7 @@ export default {
           href: 'https://health.uconn.edu/occupational-environmental/wp-content/uploads/sites/25/2015/12/mold_guide.pdf',
           list: [
             'Estornudos, congestión nasal, fatiga',
-            "Puede exacerbar el asma y causar fatiga <a href='https://enviroproz.com/blog/dangerous-molds-often-found-in-u-s-homes/?utm_source=chatgpt.com' class='text-main underline'>Mold Inspection Services+1</a>",
+            "Puede exacerbar el asma y causar fatiga ",
             'Vinculado a dolores de cabeza y fatiga en individuos sensibles',
           ],
         },
@@ -368,7 +372,8 @@ export default {
         'Limpieza de canaletas',
         'Limpieza suave de techos',
         'Lavado de cubos de basura',
-        'Sellado de adoquines'
+        'Sellado de adoquines',
+        'Instalación de mantillo'
       ],
       project: {
         title: 'Enfócate en lo que Importa',

@@ -128,6 +128,10 @@ export default {
           title: 'Paver Sealing ',
           image: 'paver',
         },
+        {
+          title: 'Mulch Installation',
+          image: 'mulch',
+        }
       ],
     },
     information: {
@@ -268,7 +272,7 @@ export default {
   },
   'hidden-risk': {
     title:
-      "Hidden Home Risk",
+      "Protect Your Family's Health",
     section1: {
       title:'The invisible elements growing in your home… may be affecting your family’s health without you even knowing',
       description:
@@ -301,7 +305,7 @@ export default {
           href: 'https://www.cpsc.gov/s3fs-public/CPSCStatementmoldmycotoxinhealtheffectsJuly2015.pdf',
           list: [
             'Can trigger allergic reactions like sneezing and wheezing',
-            "May lead to lung infections in people with weak immune systems <a href='https://enviroproz.com/blog/dangerous-molds-often-found-in-u-s-homes/?utm_source=chatgpt.com' class='text-main underline'>Mold Inspection Services+1</a>",
+            "May lead to lung infections in people with weak immune system",
           ],
         },
         {
@@ -309,7 +313,7 @@ export default {
           href: 'https://health.uconn.edu/occupational-environmental/wp-content/uploads/sites/25/2015/12/mold_guide.pdf',
           list: [
             'Often triggers allergies: sneezing, nasal congestion, watery eyes',
-            "Can exacerbate asthma and cause fatigue <a href='https://enviroproz.com/blog/dangerous-molds-often-found-in-u-s-homes/?utm_source=chatgpt.com' class='text-main underline'>Mold Inspection Services+1</a>",
+            "Can exacerbate asthma and cause fatigue",
             'Linked to headaches and fatigue in sensitive individuals',
           ],
         },
@@ -367,7 +371,8 @@ export default {
         'Gutter Cleaning',
         'Soft Wash Roof Cleaning',
         'Trash Bin Wash',
-        'Paver Sealing'
+        'Paver Sealing',
+        'Mulch Installation'
       ],
       project: {
         title: 'Focus on What Matters',
