@@ -561,8 +561,8 @@ export default {
         href: 'commercial',
       },
       {
-        label: 'Car Wash',
-        href: 'car-wash',
+        label: 'Hidden Home Risk',
+        href: 'hidden-risk',
       },
     ],
   },
