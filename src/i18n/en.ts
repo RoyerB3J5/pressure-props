@@ -93,6 +93,14 @@ export default {
           image: 'retainer',
         },
         {
+          title: 'Paver Sealing ',
+          image: 'paver-sealing',
+        },
+        {
+          title: 'Soft Wash Roof Cleaning',
+          image: 'paver',
+        },
+        {
           title: 'Fence & Wall Cleaning',
           image: 'wakways',
         },
@@ -107,11 +115,7 @@ export default {
         {
           title: 'Paver Cleaning',
           image: 'pool',
-        },
-        {
-          title: 'Soft Wash Roof Cleaning',
-          image: 'pergolas',
-        },
+        },    
         {
           title: 'Sidewalks Cleaning',
           image: 'sidewalks',
@@ -123,11 +127,7 @@ export default {
         {
           title: 'Commercial Cleaning',
           image: 'com-clean',
-        },
-        {
-          title: 'Paver Sealing ',
-          image: 'paver',
-        },
+        },      
         {
           title: 'Mulch Installation',
           image: 'mulch',

@@ -93,6 +93,14 @@ export default {
           image: 'retainer',
         },
         {
+          title: 'Sellado de adoquines',
+          image: 'paver-sealing',
+        },
+        {
+          title: 'Limpieza Suave de Techos',
+          image: 'paver',
+        },
+        {
           title: 'Limpieza de Cercas y Muros',
           image: 'wakways',
         },
@@ -107,11 +115,7 @@ export default {
         {
           title: 'Limpieza de Pavimentos',
           image: 'pool',
-        },
-        {
-          title: 'Limpieza Suave de Techos',
-          image: 'pergolas',
-        },
+        }, 
         {
           title: 'Limpieza de Veredas',
           image: 'sidewalks',
@@ -123,10 +127,6 @@ export default {
         {
           title: 'Limpieza Comercial',
           image: 'com-clean',
-        },
-        {
-          title: 'Sellado de adoquines',
-          image: 'paver',
         },
         {
           title: 'Instalación de mantillo',
